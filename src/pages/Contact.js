@@ -1,0 +1,440 @@
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { motion } from 'framer-motion';
+import { 
+  FiMail, 
+  FiPhone, 
+  FiMapPin, 
+  FiClock, 
+  FiSend, 
+  FiCheck,
+  FiUser,
+  FiMessageSquare
+} from 'react-icons/fi';
+import { apiService } from '../services/api';
+import LoadingSpinner from '../components/LoadingSpinner';
+
+const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      await apiService.submitContactForm(data);
+      setSubmitSuccess(true);
+      reset();
+      
+      setTimeout(() => {
+        setSubmitSuccess(false);
+      }, 5000);
+    } catch (error) {
+      setSubmitError(
+        error.response?.data?.message || 
+        'Failed to send message. Please try again.'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const contactInfo = [
+    {
+      icon: FiMapPin,
+      title: 'Visit Us',
+      details: [
+        'Main Street, Jinja',
+        'Uganda, East Africa'
+      ],
+      action: {
+        text: 'Get Directions',
+        href: 'https://maps.google.com/?q=Jinja+Town+Church+Uganda'
+      }
+    },
+    {
+      icon: FiPhone,
+      title: 'Call Us',
+      details: [
+        '+256 XXX XXXXXX',
+        '+256 XXX XXXXXX'
+      ],
+      action: {
+        text: 'Call Now',
+        href: 'tel:+256XXXXXXXX'
+      }
+    },
+    {
+      icon: FiMail,
+      title: 'Email Us',
+      details: [
+        'info@jinjatownchurch.org',
+        'pastor@jinjatownchurch.org'
+      ],
+      action: {
+        text: 'Send Email',
+        href: 'mailto:info@jinjatownchurch.org'
+      }
+    },
+    {
+      icon: FiClock,
+      title: 'Office Hours',
+      details: [
+        'Monday - Friday: 9:00 AM - 5:00 PM',
+        'Saturday: 9:00 AM - 1:00 PM',
+        'Sunday: Closed (Worship Services)'
+      ]
+    }
+  ];
+
+  const serviceSchedule = [
+    {
+      day: 'Sunday',
+      services: [
+        { name: 'Main Worship Service', time: '9:00 AM - 11:30 AM' },
+        { name: 'Evening Service', time: '6:00 PM - 8:00 PM' }
+      ]
+    },
+    {
+      day: 'Wednesday',
+      services: [
+        { name: 'Bible Study & Prayer', time: '7:00 PM - 8:30 PM' }
+      ]
+    },
+    {
+      day: 'Friday',
+      services: [
+        { name: 'Youth Meeting', time: '7:00 PM - 9:00 PM' }
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-church-red to-church-burgundy text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative z-10 container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <FiMail className="w-16 h-16 mx-auto mb-6 text-church-gold" />
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-shadow-lg">
+              Get In Touch
+            </h1>
+            <p className="text-xl md:text-2xl leading-relaxed opacity-90">
+              We'd love to hear from you. Reach out with questions, prayer requests, 
+              or to learn more about our church community.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="card p-8"
+            >
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
+                <p className="text-gray-600">
+                  Fill out the form below and we'll get back to you as soon as possible.
+                </p>
+              </div>
+
+              {/* Success Message */}
+              {submitSuccess && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-green-50 border border-green-200 text-green-800 px-6 py-4 rounded-lg mb-6 flex items-center"
+                >
+                  <FiCheck className="w-5 h-5 mr-3 text-green-600" />
+                  <div>
+                    <h3 className="font-semibold mb-1">Message Sent Successfully!</h3>
+                    <p className="text-sm">Thank you for reaching out. We'll respond to you soon.</p>
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Error Message */}
+              {submitError && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-red-50 border border-red-200 text-red-800 px-6 py-4 rounded-lg mb-6"
+                >
+                  <p className="font-semibold">Error</p>
+                  <p className="text-sm">{submitError}</p>
+                </motion.div>
+              )}
+
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label 
+                      htmlFor="firstName" 
+                      className="flex items-center text-sm font-medium text-gray-700 mb-2"
+                    >
+                      <FiUser className="w-4 h-4 mr-2" />
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      {...register('firstName', {
+                        required: 'First name is required'
+                      })}
+                      className={`form-input ${errors.firstName ? 'border-red-500' : ''}`}
+                      placeholder="Enter your first name"
+                      disabled={isSubmitting}
+                    />
+                    {errors.firstName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label 
+                      htmlFor="lastName" 
+                      className="flex items-center text-sm font-medium text-gray-700 mb-2"
+                    >
+                      <FiUser className="w-4 h-4 mr-2" />
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      {...register('lastName', {
+                        required: 'Last name is required'
+                      })}
+                      className={`form-input ${errors.lastName ? 'border-red-500' : ''}`}
+                      placeholder="Enter your last name"
+                      disabled={isSubmitting}
+                    />
+                    {errors.lastName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>
+                    )}
+                  </div>
+                </div>
+
+                <div>
+                  <label 
+                    htmlFor="email" 
+                    className="flex items-center text-sm font-medium text-gray-700 mb-2"
+                  >
+                    <FiMail className="w-4 h-4 mr-2" />
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    {...register('email', {
+                      required: 'Email is required',
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: 'Please enter a valid email address'
+                      }
+                    })}
+                    className={`form-input ${errors.email ? 'border-red-500' : ''}`}
+                    placeholder="Enter your email address"
+                    disabled={isSubmitting}
+                  />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label 
+                    htmlFor="phone" 
+                    className="flex items-center text-sm font-medium text-gray-700 mb-2"
+                  >
+                    <FiPhone className="w-4 h-4 mr-2" />
+                    Phone Number (Optional)
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    {...register('phone')}
+                    className="form-input"
+                    placeholder="Enter your phone number"
+                    disabled={isSubmitting}
+                  />
+                </div>
+
+                <div>
+                  <label 
+                    htmlFor="subject" 
+                    className="flex items-center text-sm font-medium text-gray-700 mb-2"
+                  >
+                    <FiMessageSquare className="w-4 h-4 mr-2" />
+                    Subject
+                  </label>
+                  <select
+                    id="subject"
+                    {...register('subject', {
+                      required: 'Please select a subject'
+                    })}
+                    className={`form-input ${errors.subject ? 'border-red-500' : ''}`}
+                    disabled={isSubmitting}
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="prayer">Prayer Request</option>
+                    <option value="ministry">Ministry Information</option>
+                    <option value="pastoral">Pastoral Care</option>
+                    <option value="volunteer">Volunteer Opportunities</option>
+                    <option value="events">Events & Activities</option>
+                    <option value="technical">Website/Technical Issue</option>
+                    <option value="other">Other</option>
+                  </select>
+                  {errors.subject && (
+                    <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label 
+                    htmlFor="message" 
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={6}
+                    {...register('message', {
+                      required: 'Please enter your message'
+                    })}
+                    className={`form-textarea ${errors.message ? 'border-red-500' : ''}`}
+                    placeholder="Tell us how we can help you..."
+                    disabled={isSubmitting}
+                  />
+                  {errors.message && (
+                    <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+                  )}
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full btn-primary py-4 text-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <LoadingSpinner size="small" />
+                      <span className="ml-3">Sending Message...</span>
+                    </>
+                  ) : (
+                    <>
+                      <FiSend className="w-5 h-5 mr-2" />
+                      Send Message
+                    </>
+                  )}
+                </button>
+              </form>
+            </motion.div>
+
+            {/* Contact Information */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-8"
+            >
+              {/* Contact Details */}
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
+                <div className="space-y-6">
+                  {contactInfo.map((info, index) => (
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-church-red bg-opacity-10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <info.icon className="w-6 h-6 text-church-red" />
+                      </div>
+                      <div className="flex-grow">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
+                        {info.details.map((detail, idx) => (
+                          <p key={idx} className="text-gray-600 mb-1">{detail}</p>
+                        ))}
+                        {info.action && (
+                          <a
+                            href={info.action.href}
+                            target={info.action.href.startsWith('http') ? '_blank' : undefined}
+                            rel={info.action.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            className="text-church-red hover:text-church-burgundy font-medium inline-flex items-center mt-2 transition-colors duration-200"
+                          >
+                            {info.action.text}
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Service Schedule */}
+              <div className="card p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                  <FiClock className="w-6 h-6 mr-3 text-church-red" />
+                  Service Schedule
+                </h3>
+                <div className="space-y-4">
+                  {serviceSchedule.map((schedule, index) => (
+                    <div key={index} className="border-b border-gray-100 last:border-b-0 pb-4 last:pb-0">
+                      <h4 className="font-semibold text-gray-900 mb-2">{schedule.day}</h4>
+                      <div className="space-y-1">
+                        {schedule.services.map((service, idx) => (
+                          <div key={idx} className="flex justify-between items-center">
+                            <span className="text-gray-600">{service.name}</span>
+                            <span className="text-church-red font-medium">{service.time}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Map Embed */}
+              <div className="card p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Find Us</h3>
+                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.123456789!2d33.204167!3d0.431389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJinja%2C%20Uganda!5e0!3m2!1sen!2sus!4v1234567890"
+                    width="100%"
+                    height="250"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Jinja Town Church Location"
+                  ></iframe>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Contact;
