@@ -43,14 +43,21 @@ module.exports = {
           900: '#78350f',
         },
         church: {
-          red: '#760C01',
-          burgundy: '#AD1D0F',
-          gold: '#D4AF37',
+          sage: '#6E9896',
+          'sage-light': '#8FB3B1',
+          'sage-dark': '#5A7D7B',
+          yellow: '#FEC76F',
+          'yellow-light': '#FFD28C',
+          'yellow-dark': '#E5B25E',
+          gray: '#888F92',
+          'gray-light': '#A5ABAE',
+          'gray-dark': '#6B7075',
+          white: '#FFFFFF',
           cream: '#FFF8DC'
         }
       },
       fontFamily: {
-        sans: ['Quicksand', 'Roboto', 'sans-serif'],
+        sans: ['Roboto', 'Quicksand', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

@@ -27,7 +27,10 @@
       "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)",
       "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)",
       "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)",
-      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)"
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)",
+      "WebFetch(domain:jtc.shakesdigital.com)",
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp/**)",
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src/**)"
     ],
     "deny": [],
     "ask": []

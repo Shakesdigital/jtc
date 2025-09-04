@@ -8,7 +8,7 @@
   }
   
   body {
-    @apply font-sans text-gray-900 bg-white;
+    @apply font-sans text-church-sage-dark bg-white;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -46,15 +46,15 @@
   }
   
   .btn-primary {
-    @apply btn bg-church-red hover:bg-church-burgundy text-white focus:ring-church-red;
+    @apply btn bg-church-sage hover:bg-church-sage-dark text-white focus:ring-church-sage;
   }
   
   .btn-secondary {
-    @apply btn bg-transparent border-2 border-church-red text-church-red hover:bg-church-red hover:text-white focus:ring-church-red;
+    @apply btn bg-transparent border-2 border-church-sage text-church-sage hover:bg-church-sage hover:text-white focus:ring-church-sage;
   }
   
   .btn-accent {
-    @apply btn bg-church-gold hover:bg-yellow-600 text-white focus:ring-church-gold;
+    @apply btn bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark focus:ring-church-yellow;
   }
   
   .card {
@@ -62,7 +62,7 @@
   }
   
   .form-input {
-    @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-church-red focus:ring-2 focus:ring-church-red focus:ring-opacity-20 transition-colors duration-200;
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-church-sage focus:ring-2 focus:ring-church-sage focus:ring-opacity-20 transition-colors duration-200;
   }
   
   .form-textarea {
@@ -78,15 +78,15 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-church-red to-church-burgundy bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-church-sage to-church-sage-dark bg-clip-text text-transparent;
   }
   
   .hero-gradient {
-    background: linear-gradient(135deg, rgba(118, 12, 1, 0.9) 0%, rgba(173, 29, 15, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(110, 152, 150, 0.9) 0%, rgba(90, 125, 123, 0.8) 100%);
   }
   
   .loading-spinner {
-    @apply inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-church-red;
+    @apply inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-church-sage;
   }
 }
 
