@@ -1,54 +1,13 @@
 import React from 'react';
-import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  FiPlay, 
-  FiCalendar, 
-  FiUsers, 
   FiHeart,
-  FiArrowRight,
-  FiMapPin,
-  FiClock,
-  FiBookOpen
+  FiClock
 } from 'react-icons/fi';
-import { apiService } from '../services/api';
-import LoadingSpinner from '../components/LoadingSpinner';
 
 const Home = () => {
-  // Fetch data for homepage with error handling
-  const { data: featuredSermons, isLoading: sermonsLoading } = useQuery(
-    'featured-sermons',
-    apiService.getFeaturedSermons,
-    {
-      refetchOnWindowFocus: false,
-      staleTime: 5 * 60 * 1000, // 5 minutes
-      retry: false,
-      enabled: false, // Disable automatic fetching for now
-    }
-  );
-
-  const { data: upcomingEvents, isLoading: eventsLoading } = useQuery(
-    'upcoming-events',
-    apiService.getUpcomingEvents,
-    {
-      refetchOnWindowFocus: false,
-      staleTime: 5 * 60 * 1000,
-      retry: false,
-      enabled: false, // Disable automatic fetching for now
-    }
-  );
-
-  const { data: ministries, isLoading: ministriesLoading } = useQuery(
-    'ministries',
-    apiService.getMinistries,
-    {
-      refetchOnWindowFocus: false,
-      staleTime: 10 * 60 * 1000, // 10 minutes
-      retry: false,
-      enabled: false, // Disable automatic fetching for now
-    }
-  );
+  // Static content mode - API calls disabled for initial deployment
 
 
   return (
@@ -147,87 +106,12 @@ const Home = () => {
             </motion.div>
           </div>
 
-          {sermonsLoading ? (
-            <LoadingSpinner message="Loading latest sermon..." />
-          ) : featuredSermons?.data?.length > 0 ? (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
-            >
-              {featuredSermons.data.slice(0, 1).map((sermon) => (
-                <div key={sermon._id} className="card overflow-hidden">
-                  <div className="relative">
-                    <img 
-                      src={sermon.thumbnail || '/images/sermon-default.jpg'} 
-                      alt={sermon.title}
-                      className="w-full h-64 md:h-80 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                      <Link 
-                        to={`/church-service/sermons/${sermon._id}`}
-                        className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full p-6 hover:bg-opacity-30 transition-all duration-300 hover:scale-110"
-                      >
-                        <FiPlay className="w-8 h-8 text-white ml-1" />
-                      </Link>
-                    </div>
-                    <div className="absolute top-4 right-4 bg-church-red text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Latest
-                    </div>
-                  </div>
-                  <div className="p-6 md:p-8">
-                    <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
-                      <span className="flex items-center">
-                        <FiCalendar className="w-4 h-4 mr-2" />
-                        {new Date(sermon.date).toLocaleDateString()}
-                      </span>
-                      <span className="flex items-center">
-                        <FiUsers className="w-4 h-4 mr-2" />
-                        {sermon.speaker}
-                      </span>
-                      {sermon.series && (
-                        <span className="flex items-center">
-                          <FiBookOpen className="w-4 h-4 mr-2" />
-                          {sermon.series}
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                      {sermon.title}
-                    </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {sermon.description}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Link 
-                        to={`/church-service/sermons/${sermon._id}`}
-                        className="btn-primary flex items-center justify-center"
-                      >
-                        <FiPlay className="w-5 h-5 mr-2" />
-                        Watch Sermon
-                      </Link>
-                      <Link 
-                        to="/church-service/sermons"
-                        className="btn-secondary flex items-center justify-center"
-                      >
-                        View All Sermons
-                        <FiArrowRight className="w-5 h-5 ml-2" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-600 mb-6">No sermons available at the moment.</p>
-              <Link to="/church-service" className="btn-primary">
-                Learn About Our Services
-              </Link>
-            </div>
-          )}
+          <div className="text-center py-12">
+            <p className="text-gray-600 mb-6">Join us for inspiring weekly messages.</p>
+            <Link to="/church-service" className="btn-primary">
+              Learn About Our Services
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -250,48 +134,9 @@ const Home = () => {
             </motion.div>
           </div>
 
-          {ministriesLoading ? (
-            <LoadingSpinner message="Loading ministries..." />
-          ) : ministries?.data?.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {ministries.data.slice(0, 6).map((ministry, index) => (
-                <motion.div
-                  key={ministry._id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Link to={`/ministries/${ministry.slug}`} className="card h-full hover:shadow-xl transition-all duration-300 group">
-                    <div className="relative overflow-hidden">
-                      <img 
-                        src={ministry.featuredImage || '/images/ministry-default.jpg'} 
-                        alt={ministry.name}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-church-red bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-church-red transition-colors duration-200">
-                        {ministry.name}
-                      </h3>
-                      <p className="text-gray-600 mb-4 leading-relaxed">
-                        {ministry.description?.substring(0, 100)}...
-                      </p>
-                      <div className="flex items-center text-church-red group-hover:text-church-burgundy transition-colors duration-200">
-                        <span className="font-medium">Learn More</span>
-                        <FiArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-600 mb-6">Ministry information will be available soon.</p>
-            </div>
-          )}
+          <div className="text-center py-12">
+            <p className="text-gray-600 mb-6">Discover our diverse ministry opportunities for all ages.</p>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -329,68 +174,12 @@ const Home = () => {
             </motion.div>
           </div>
 
-          {eventsLoading ? (
-            <LoadingSpinner message="Loading events..." />
-          ) : upcomingEvents?.data?.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {upcomingEvents.data.slice(0, 3).map((event, index) => (
-                <motion.div
-                  key={event._id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Link to={`/events/${event._id}`} className="card h-full hover:shadow-xl transition-all duration-300 group">
-                    <div className="relative overflow-hidden">
-                      <img 
-                        src={event.featuredImage || '/images/event-default.jpg'} 
-                        alt={event.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute top-4 left-4 bg-church-red text-white px-3 py-1 rounded-full text-sm font-medium">
-                        {new Date(event.startDate).toLocaleDateString('en-US', { 
-                          month: 'short', 
-                          day: 'numeric' 
-                        })}
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-church-red transition-colors duration-200">
-                        {event.title}
-                      </h3>
-                      <div className="space-y-2 mb-4">
-                        <div className="flex items-center text-gray-600">
-                          <FiClock className="w-4 h-4 mr-2 text-church-red" />
-                          <span className="text-sm">
-                            {event.startTime} - {event.endTime}
-                          </span>
-                        </div>
-                        <div className="flex items-center text-gray-600">
-                          <FiMapPin className="w-4 h-4 mr-2 text-church-red" />
-                          <span className="text-sm">{event.location}</span>
-                        </div>
-                      </div>
-                      <p className="text-gray-600 mb-4 leading-relaxed">
-                        {event.description?.substring(0, 100)}...
-                      </p>
-                      <div className="flex items-center text-church-red group-hover:text-church-burgundy transition-colors duration-200">
-                        <span className="font-medium">Learn More</span>
-                        <FiArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-600 mb-6">No upcoming events at the moment.</p>
-              <Link to="/events" className="btn-primary">
-                View Event Calendar
-              </Link>
-            </div>
-          )}
+          <div className="text-center py-12">
+            <p className="text-gray-600 mb-6">Stay connected with our fellowship, worship, and community activities.</p>
+            <Link to="/events" className="btn-primary">
+              View Event Calendar
+            </Link>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

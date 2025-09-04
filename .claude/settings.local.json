@@ -23,7 +23,11 @@
       "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src/**)",
       "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)",
       "Bash(npm install:*)",
-      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\services/**)"
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\services/**)",
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)",
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)",
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)",
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)"
     ],
     "deny": [],
     "ask": []
