@@ -16,13 +16,15 @@ import { apiService } from '../services/api';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const Home = () => {
-  // Fetch data for homepage
+  // Fetch data for homepage with error handling
   const { data: featuredSermons, isLoading: sermonsLoading } = useQuery(
     'featured-sermons',
     apiService.getFeaturedSermons,
     {
       refetchOnWindowFocus: false,
       staleTime: 5 * 60 * 1000, // 5 minutes
+      retry: false,
+      enabled: false, // Disable automatic fetching for now
     }
   );
 
@@ -32,6 +34,8 @@ const Home = () => {
     {
       refetchOnWindowFocus: false,
       staleTime: 5 * 60 * 1000,
+      retry: false,
+      enabled: false, // Disable automatic fetching for now
     }
   );
 
@@ -41,6 +45,8 @@ const Home = () => {
     {
       refetchOnWindowFocus: false,
       staleTime: 10 * 60 * 1000, // 10 minutes
+      retry: false,
+      enabled: false, // Disable automatic fetching for now
     }
   );
 
