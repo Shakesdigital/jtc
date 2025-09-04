@@ -11,7 +11,7 @@ import {
   FiLogOut,
   FiMenu,
   FiX,
-  FiBarChart3,
+  FiBarChart2,
   FiHeart,
   FiGift
 } from 'react-icons/fi';
@@ -142,7 +142,7 @@ const AdminDashboard = () => {
     { name: 'Blog Posts', href: '/admin/blog', icon: FiFileText },
     { name: 'Prayer Requests', href: '/admin/prayer-requests', icon: FiHeart },
     { name: 'Users', href: '/admin/users', icon: FiUsers },
-    { name: 'Analytics', href: '/admin/analytics', icon: FiBarChart3 },
+    { name: 'Analytics', href: '/admin/analytics', icon: FiBarChart2 },
     { name: 'Settings', href: '/admin/settings', icon: FiSettings },
   ];
 

@@ -7,7 +7,13 @@
       "Bash(git init:*)",
       "Bash(git config:*)",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages\\admin/**)",
+      "Bash(npm run build:*)",
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)",
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\pages/**)"
     ],
     "deny": [],
     "ask": []

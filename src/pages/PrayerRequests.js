@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import { FiHeart, FiSend, FiCheck, FiUser, FiMail, FiMessageSquare } from 'react-icons/fi';
+import { FiHeart, FiSend, FiCheck, FiUser, FiMail, FiMessageSquare, FiUsers } from 'react-icons/fi';
 import { apiService } from '../services/api';
 import LoadingSpinner from '../components/LoadingSpinner';
 
