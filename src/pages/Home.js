@@ -14,7 +14,6 @@ import {
 } from 'react-icons/fi';
 import { apiService } from '../services/api';
 import LoadingSpinner from '../components/LoadingSpinner';
-import ErrorMessage from '../components/ErrorMessage';
 
 const Home = () => {
   // Fetch data for homepage
@@ -45,14 +44,6 @@ const Home = () => {
     }
   );
 
-  const { data: featuredPosts, isLoading: postsLoading } = useQuery(
-    'featured-posts',
-    apiService.getFeaturedPosts,
-    {
-      refetchOnWindowFocus: false,
-      staleTime: 5 * 60 * 1000,
-    }
-  );
 
   return (
     <div className="min-h-screen">

@@ -9,7 +9,6 @@ import {
   FiMusic, 
   FiDownload, 
   FiShare2, 
-  FiEye,
   FiFilter,
   FiSearch,
   FiX

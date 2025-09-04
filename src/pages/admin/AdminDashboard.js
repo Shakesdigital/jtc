@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
   FiHome, 
   FiUsers, 

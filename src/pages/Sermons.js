@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiPlay, FiCalendar, FiUser, FiSearch, FiFilter, FiVideo } from 'react-icons/fi';
+import { FiPlay, FiCalendar, FiUser, FiSearch, FiVideo } from 'react-icons/fi';
 import { apiService } from '../services/api';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
