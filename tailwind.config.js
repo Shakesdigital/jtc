@@ -63,6 +63,15 @@ module.exports = {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.6s ease-out',
         'pulse-slow': 'pulse 3s infinite',
+        'bounce-slow': 'bounce 2s infinite',
+      },
+      screens: {
+        'xs': '475px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
       },
       keyframes: {
         fadeIn: {
