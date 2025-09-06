@@ -23,7 +23,7 @@ import {
   FiTarget,
   FiShield,
   FiTrendingUp,
-  FiHandHeart,
+  FiHeart,
   FiGift,
   FiBook,
   FiInfo
@@ -101,7 +101,7 @@ const OutreachMinistry = () => {
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop",
       description: "Free medical clinics, health education, and medication distribution to underserved communities, partnering with healthcare professionals.",
       impact: "1000+ patients treated annually",
-      icon: <FiHandHeart className="w-6 h-6" />,
+      icon: <FiHeart className="w-6 h-6" />,
       color: "from-teal-500 to-teal-600"
     }
   ];
@@ -470,7 +470,7 @@ const OutreachMinistry = () => {
           >
             <div className="flex justify-center mb-8">
               <div className="bg-church-sage bg-opacity-10 rounded-full p-6">
-                <FiHandHeart className="w-12 h-12 text-church-sage" />
+                <FiHeart className="w-12 h-12 text-church-sage" />
               </div>
             </div>
             
