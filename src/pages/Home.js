@@ -334,6 +334,7 @@ const Home = () => {
                       ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
                       ministry.title === "Outreach Ministry" ? "/ministries/outreach-ministry" :
                       ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
+                      ministry.title === "Media and Tech Ministry" ? "/ministries/media-tech-ministry" :
                       "/ministries"
                     }
                     className="inline-flex items-center text-church-sage hover:text-church-sage-dark font-semibold transition-colors duration-300"
