@@ -215,12 +215,12 @@ const MediaTechMinistry = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Video/Image */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-purple-900/80 to-indigo-900/90 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-church-sage/90 via-church-sage-dark/80 to-church-sage/90 z-10"></div>
           <img 
             src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1920&h=1080&fit=crop"
             alt="Media Tech Team"
@@ -242,22 +242,22 @@ const MediaTechMinistry = () => {
             Media & Tech Ministry
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl mb-8 text-blue-100 font-light"
+            className="text-xl md:text-2xl mb-8 text-church-yellow font-light"
             variants={fadeInUp}
           >
             Amplifying God's Message Through Innovation
           </motion.p>
           <motion.p 
-            className="text-lg md:text-xl mb-12 text-gray-200 max-w-3xl mx-auto"
+            className="text-lg md:text-xl mb-12 text-church-yellow/90 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            Using cutting-edge technology to inspire worship, connect communities, and extend our reach across the globe
+            Using cutting-edge technology to inspire worship, connect communities, and extend our reach across Uganda and beyond
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={fadeInUp}
           >
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-church-sage hover:bg-church-sage-dark text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
               Join Our Team
               <FiArrowRight className="inline ml-2" />
             </button>
@@ -293,7 +293,7 @@ const MediaTechMinistry = () => {
             <motion.div variants={fadeInUp}>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Bringing Services to Life with
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"> Cutting-Edge Tech</span>
+                <span className="text-church-yellow"> Cutting-Edge Tech</span>
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Our Media & Tech Ministry is the heartbeat of modern worship at Jinja Town Church. We harness the power of audio, video, live streaming, and digital innovation to create immersive experiences that connect hearts to God and extend our reach far beyond our physical walls.
@@ -302,15 +302,15 @@ const MediaTechMinistry = () => {
                 From seamless Sunday services to global outreach campaigns, we're passionate about using technology as a tool for transformation, ensuring every voice is heard and every message travels where it needs to go.
               </p>
               <div className="flex flex-wrap gap-4">
-                <div className="flex items-center text-blue-600">
+                <div className="flex items-center text-church-sage">
                   <FiGlobe className="mr-2" />
                   <span>Global Reach</span>
                 </div>
-                <div className="flex items-center text-purple-600">
+                <div className="flex items-center text-church-yellow">
                   <FiZap className="mr-2" />
                   <span>Innovation</span>
                 </div>
-                <div className="flex items-center text-indigo-600">
+                <div className="flex items-center text-church-sage-dark">
                   <FiUsers className="mr-2" />
                   <span>Community</span>
                 </div>
@@ -332,7 +332,7 @@ const MediaTechMinistry = () => {
       </section>
 
       {/* Tech Roles Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-church-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -342,7 +342,7 @@ const MediaTechMinistry = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Tech Teams</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-church-gray max-w-3xl mx-auto">
               Discover where your passion and skills can make an eternal impact. Each role is designed to help you grow while serving God's kingdom.
             </p>
           </motion.div>
@@ -366,27 +366,27 @@ const MediaTechMinistry = () => {
                     alt={role.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full p-3">
-                    <role.icon className="w-6 h-6 text-blue-600" />
+                  <div className="absolute top-4 left-4 bg-church-yellow/90 backdrop-blur-sm rounded-full p-3">
+                    <role.icon className="w-6 h-6 text-church-sage-dark" />
                   </div>
                 </div>
                 
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{role.title}</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{role.description}</p>
+                  <p className="text-church-gray mb-4 leading-relaxed">{role.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {role.skills.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex}
-                        className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm"
+                        className="bg-church-sage/10 text-church-sage-dark px-3 py-1 rounded-full text-sm"
                       >
                         {skill}
                       </span>
                     ))}
                   </div>
 
-                  <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group">
+                  <button className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group">
                     Join This Role
                     <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -408,7 +408,7 @@ const MediaTechMinistry = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Work</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-church-gray max-w-3xl mx-auto">
               See the impact of our ministry through the content we create and the services we enhance
             </p>
           </motion.div>
@@ -458,7 +458,7 @@ const MediaTechMinistry = () => {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+            <button className="bg-church-sage hover:bg-church-sage-dark text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
               See More Media
               <FiArrowRight className="inline ml-2" />
             </button>
@@ -467,7 +467,7 @@ const MediaTechMinistry = () => {
       </section>
 
       {/* Resources Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-church-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -477,7 +477,7 @@ const MediaTechMinistry = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Resources & Training</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-church-gray max-w-3xl mx-auto">
               Everything you need to excel in your tech ministry role
             </p>
           </motion.div>
@@ -495,12 +495,12 @@ const MediaTechMinistry = () => {
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
                 variants={fadeInUp}
               >
-                <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-4 mb-4 inline-block">
+                <div className="bg-church-sage rounded-lg p-4 mb-4 inline-block">
                   <resource.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{resource.title}</h3>
-                <p className="text-gray-600 mb-4">{resource.description}</p>
-                <button className="text-blue-600 hover:text-purple-600 font-semibold flex items-center group-hover:translate-x-1 transition-transform">
+                <p className="text-church-gray mb-4">{resource.description}</p>
+                <button className="text-church-sage-dark hover:text-church-sage-dark font-semibold flex items-center group-hover:translate-x-1 transition-transform">
                   Access Now
                   <FiArrowRight className="ml-2" />
                 </button>
@@ -522,15 +522,15 @@ const MediaTechMinistry = () => {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Use Your Tech Skills to 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"> Serve God!</span>
+              <span className="text-church-yellow"> Serve God!</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-church-gray max-w-3xl mx-auto">
               Ready to make an impact? Join our amazing team of tech volunteers and help us amplify God's message through innovation.
             </p>
           </motion.div>
 
           <motion.div 
-            className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8"
+            className="bg-church-cream rounded-2xl p-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -547,7 +547,7 @@ const MediaTechMinistry = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-church-sage transition-colors"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -559,7 +559,7 @@ const MediaTechMinistry = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-church-sage transition-colors"
                       placeholder="Enter your email"
                     />
                   </div>
@@ -573,7 +573,7 @@ const MediaTechMinistry = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-church-sage transition-colors"
                       placeholder="Enter your phone number"
                     />
                   </div>
@@ -583,7 +583,7 @@ const MediaTechMinistry = () => {
                       name="preferredRole"
                       value={formData.preferredRole}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-church-sage transition-colors"
                     >
                       <option value="">Select a role</option>
                       <option value="audio">Audio Engineering</option>
@@ -604,7 +604,7 @@ const MediaTechMinistry = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows="4"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-church-sage transition-colors"
                     placeholder="Share your experience, interests, or questions..."
                   ></textarea>
                 </div>
@@ -613,7 +613,7 @@ const MediaTechMinistry = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 disabled:opacity-50 flex items-center justify-center"
+                    className="flex-1 bg-church-sage hover:bg-church-sage-dark text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 disabled:opacity-50 flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>
@@ -629,7 +629,7 @@ const MediaTechMinistry = () => {
                   </button>
                   <button
                     type="button"
-                    className="flex-1 border-2 border-blue-500 text-blue-600 hover:bg-blue-50 font-bold py-4 px-8 rounded-lg transition-all duration-300"
+                    className="flex-1 border-2 border-blue-500 text-church-sage-dark hover:bg-blue-50 font-bold py-4 px-8 rounded-lg transition-all duration-300"
                   >
                     Attend Training Session
                   </button>
@@ -639,12 +639,12 @@ const MediaTechMinistry = () => {
               <div className="text-center py-8">
                 <FiCheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-church-gray mb-6">
                   We've received your application and will be in touch soon. We're excited to have you join our tech ministry team!
                 </p>
                 <button 
                   onClick={() => setIsSubmitted(false)}
-                  className="text-blue-600 hover:text-purple-600 font-semibold"
+                  className="text-church-sage-dark hover:text-church-sage-dark font-semibold"
                 >
                   Submit Another Application
                 </button>
@@ -655,7 +655,7 @@ const MediaTechMinistry = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-church-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -665,7 +665,7 @@ const MediaTechMinistry = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-church-gray">
               Got questions? We've got answers to help you get started.
             </p>
           </motion.div>
@@ -685,18 +685,18 @@ const MediaTechMinistry = () => {
               >
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === faq.id ? null : faq.id)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-church-sage/5 transition-colors"
                 >
                   <span className="font-semibold text-gray-900">{faq.question}</span>
                   {expandedFAQ === faq.id ? (
-                    <FiChevronUp className="w-5 h-5 text-gray-500" />
+                    <FiChevronUp className="w-5 h-5 text-church-sage" />
                   ) : (
-                    <FiChevronDown className="w-5 h-5 text-gray-500" />
+                    <FiChevronDown className="w-5 h-5 text-church-sage" />
                   )}
                 </button>
                 {expandedFAQ === faq.id && (
                   <div className="px-6 pb-4">
-                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                    <p className="text-church-gray leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </motion.div>
@@ -706,7 +706,7 @@ const MediaTechMinistry = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
+      <section className="py-20 bg-gradient-to-r from-church-sage via-church-sage-dark to-church-sage">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
@@ -717,15 +717,15 @@ const MediaTechMinistry = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Amplify Your Impact?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-church-yellow/90 mb-8 max-w-2xl mx-auto">
               Join a community of passionate tech volunteers who are using their skills to advance God's kingdom and reach hearts around the world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+              <button className="bg-church-yellow text-church-sage-dark hover:bg-church-yellow-dark font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
                 Get Started Today
                 <FiArrowRight className="inline ml-2" />
               </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300">
+              <button className="border-2 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold py-4 px-8 rounded-full text-lg transition-all duration-300">
                 Contact Team Lead
               </button>
             </div>
