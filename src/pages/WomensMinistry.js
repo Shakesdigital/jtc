@@ -193,7 +193,7 @@ const WomensMinistry = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(219, 112, 147, 0.7), rgba(186, 85, 211, 0.7)), url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&h=1080&fit=crop')`
+            backgroundImage: `linear-gradient(rgba(110, 152, 150, 0.8), rgba(90, 125, 123, 0.8)), url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&h=1080&fit=crop')`
           }}
         />
         
@@ -216,7 +216,7 @@ const WomensMinistry = () => {
             <div className="pt-8">
               <Link 
                 to="#get-involved"
-                className="bg-church-yellow hover:bg-church-yellow-dark text-pink-900 font-bold text-lg px-12 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300"
+                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-12 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300"
               >
                 Join Us
               </Link>
@@ -226,7 +226,7 @@ const WomensMinistry = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-20 bg-pink-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -237,30 +237,30 @@ const WomensMinistry = () => {
               className="space-y-6"
             >
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-pink-900 mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
                   We Uplift Women to <span className="text-church-yellow">Thrive in Faith</span>
                 </h2>
                 <div className="w-20 h-1 bg-church-yellow rounded-full mb-6"></div>
               </div>
               
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-church-gray leading-relaxed">
                 Our Women's Ministry is a vibrant community where women discover their God-given purpose through 
                 fellowship, Bible study, mentorship, and service. We believe every woman has unique gifts to share 
                 and dreams to pursue in Christ.
               </p>
               
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-church-gray leading-relaxed">
                 Whether you're seeking deeper spiritual growth, meaningful friendships, or opportunities to serve, 
                 you'll find a welcoming space to flourish in faith and community with us.
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-6">
                 <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-pink-400">
-                  <div className="text-2xl font-bold text-pink-900">80+</div>
+                  <div className="text-2xl font-bold text-church-sage-dark">80+</div>
                   <div className="text-sm text-gray-600">Active Members</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-pink-400">
-                  <div className="text-2xl font-bold text-pink-900">4</div>
+                  <div className="text-2xl font-bold text-church-sage-dark">4</div>
                   <div className="text-sm text-gray-600">Core Programs</div>
                 </div>
               </div>
@@ -296,11 +296,11 @@ const WomensMinistry = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-pink-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
                 Connect and <span className="text-church-yellow">Grow</span>
               </h2>
               <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="text-lg text-church-gray max-w-3xl mx-auto">
                 Discover the program that speaks to your heart and helps you flourish in faith and sisterhood
               </p>
             </motion.div>
@@ -325,26 +325,26 @@ const WomensMinistry = () => {
                       className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                    <div className="absolute top-4 left-4 bg-church-yellow text-pink-900 p-3 rounded-full">
+                    <div className="absolute top-4 left-4 bg-church-yellow text-church-sage-dark p-3 rounded-full">
                       <IconComponent className="w-6 h-6" />
                     </div>
                   </div>
                   
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-pink-900 mb-3 group-hover:text-church-yellow transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-church-sage-dark mb-3 group-hover:text-church-yellow transition-colors duration-300">
                       {program.title}
                     </h3>
                     
-                    <p className="text-gray-700 mb-4 leading-relaxed">
+                    <p className="text-church-gray mb-4 leading-relaxed">
                       {program.description}
                     </p>
 
                     <div className="mb-6">
-                      <h4 className="font-semibold text-pink-900 mb-2 text-sm">What's Included:</h4>
+                      <h4 className="font-semibold text-church-sage-dark mb-2 text-sm">What's Included:</h4>
                       <div className="space-y-1">
                         {program.features.map((feature, idx) => (
                           <div key={idx} className="text-sm text-gray-600 flex items-center">
-                            <FiCheck className="w-4 h-4 text-pink-400 mr-2" />
+                            <FiCheck className="w-4 h-4 text-church-sage mr-2" />
                             {feature}
                           </div>
                         ))}
@@ -352,12 +352,12 @@ const WomensMinistry = () => {
                     </div>
                     
                     <div className="flex space-x-2">
-                      <button className="flex-1 bg-pink-600 hover:bg-pink-700 text-white font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300">
+                      <button className="flex-1 bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300">
                         Learn More
                       </button>
                       <button 
                         onClick={() => setFormData(prev => ({ ...prev, preferredProgram: program.title }))}
-                        className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-pink-900 font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300"
+                        className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300"
                       >
                         Sign Up
                       </button>
@@ -380,11 +380,11 @@ const WomensMinistry = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-pink-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
                 Getting <span className="text-church-yellow">Started</span>
               </h2>
               <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="text-lg text-church-gray max-w-3xl mx-auto">
                 Your journey to sisterhood and spiritual growth is just four simple steps away
               </p>
             </motion.div>
@@ -406,8 +406,8 @@ const WomensMinistry = () => {
                     <IconComponent className="w-8 h-8" />
                   </div>
                   <div className="absolute top-8 left-16 w-full h-0.5 bg-pink-200 hidden lg:block" style={{ display: index === steps.length - 1 ? 'none' : 'block' }}></div>
-                  <h3 className="text-xl font-bold text-pink-900 mb-3">{step.title}</h3>
-                  <p className="text-gray-700 leading-relaxed">{step.description}</p>
+                  <h3 className="text-xl font-bold text-church-sage-dark mb-3">{step.title}</h3>
+                  <p className="text-church-gray leading-relaxed">{step.description}</p>
                 </motion.div>
               );
             })}
@@ -422,7 +422,7 @@ const WomensMinistry = () => {
             className="mt-16 text-center"
           >
             <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto border border-pink-100">
-              <h3 className="text-2xl font-bold text-pink-900 mb-4">Hear from Our Women</h3>
+              <h3 className="text-2xl font-bold text-church-sage-dark mb-4">Hear from Our Women</h3>
               <div className="aspect-video bg-pink-100 rounded-lg mb-4 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -433,7 +433,7 @@ const WomensMinistry = () => {
                   <p className="text-gray-600">Video testimonial coming soon</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">"Joining Women's Ministry changed my life. I found not just friends, but sisters who walk with me in faith." - Grace M.</p>
+              <p className="text-church-gray italic">"Joining Women's Ministry changed my life. I found not just friends, but sisters who walk with me in faith." - Grace M.</p>
             </div>
           </motion.div>
         </div>
@@ -449,11 +449,11 @@ const WomensMinistry = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-pink-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
                 Resources for <span className="text-church-yellow">Growth</span>
               </h2>
               <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="text-lg text-church-gray max-w-3xl mx-auto">
                 Tools and materials to support your spiritual journey and personal development
               </p>
             </motion.div>
@@ -472,7 +472,7 @@ const WomensMinistry = () => {
                   className="bg-white border border-pink-100 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
                 >
                   <IconComponent className="w-8 h-8 text-pink-500 mb-4" />
-                  <h3 className="text-lg font-bold text-pink-900 mb-2">{resource.title}</h3>
+                  <h3 className="text-lg font-bold text-church-sage-dark mb-2">{resource.title}</h3>
                   <p className="text-gray-600 text-sm mb-4 leading-relaxed">{resource.description}</p>
                   <Link 
                     to={resource.link}
@@ -516,7 +516,7 @@ const WomensMinistry = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-pink-900 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-church-sage-dark mb-2">
                     Full Name *
                   </label>
                   <input
@@ -526,13 +526,13 @@ const WomensMinistry = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
                     placeholder="Your full name"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-pink-900 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-church-sage-dark mb-2">
                     Email Address *
                   </label>
                   <input
@@ -542,7 +542,7 @@ const WomensMinistry = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -550,7 +550,7 @@ const WomensMinistry = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-pink-900 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-semibold text-church-sage-dark mb-2">
                     Phone Number
                   </label>
                   <input
@@ -559,13 +559,13 @@ const WomensMinistry = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
                     placeholder="Your phone number"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="preferredProgram" className="block text-sm font-semibold text-pink-900 mb-2">
+                  <label htmlFor="preferredProgram" className="block text-sm font-semibold text-church-sage-dark mb-2">
                     Preferred Program
                   </label>
                   <select
@@ -573,7 +573,7 @@ const WomensMinistry = () => {
                     name="preferredProgram"
                     value={formData.preferredProgram}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
                   >
                     <option value="">Select a program</option>
                     <option value="Women's Bible Study">Women's Bible Study</option>
@@ -586,7 +586,7 @@ const WomensMinistry = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-pink-900 mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-church-sage-dark mb-2">
                   Message
                 </label>
                 <textarea
@@ -595,7 +595,7 @@ const WomensMinistry = () => {
                   rows="4"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-pink-200 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
                   placeholder="Tell us about yourself, your interests, or any questions you have..."
                 ></textarea>
               </div>
@@ -604,7 +604,7 @@ const WomensMinistry = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-church-yellow hover:bg-church-yellow-dark text-pink-900 font-bold text-lg px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center"
+                  className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center"
                 >
                   {isSubmitting ? (
                     <>
@@ -672,11 +672,11 @@ const WomensMinistry = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-pink-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
                 Frequently Asked <span className="text-church-yellow">Questions</span>
               </h2>
               <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-church-gray">
                 Get answers to common questions about joining our Women's Ministry
               </p>
             </motion.div>
@@ -696,7 +696,7 @@ const WomensMinistry = () => {
                   onClick={() => toggleFAQ(faq.id)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors duration-300"
                 >
-                  <span className="font-semibold text-pink-900">{faq.question}</span>
+                  <span className="font-semibold text-church-sage-dark">{faq.question}</span>
                   {openFAQ === faq.id ? (
                     <FiChevronUp className="w-5 h-5 text-pink-600" />
                   ) : (
@@ -705,7 +705,7 @@ const WomensMinistry = () => {
                 </button>
                 {openFAQ === faq.id && (
                   <div className="px-6 pb-4">
-                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                    <p className="text-church-gray leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </motion.div>

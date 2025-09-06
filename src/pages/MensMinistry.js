@@ -194,7 +194,7 @@ const MensMinistry = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(51, 65, 85, 0.85), rgba(71, 85, 105, 0.75)), url('https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=1920&h=1080&fit=crop')`
+            backgroundImage: `linear-gradient(rgba(110, 152, 150, 0.8), rgba(90, 125, 123, 0.8)), url('https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=1920&h=1080&fit=crop')`
           }}
         />
         
@@ -217,7 +217,7 @@ const MensMinistry = () => {
             <div className="pt-8">
               <Link 
                 to="#get-involved"
-                className="bg-church-yellow hover:bg-church-yellow-dark text-slate-800 font-bold text-lg px-12 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300"
+                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-12 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300"
               >
                 Join Us
               </Link>
@@ -227,7 +227,7 @@ const MensMinistry = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -238,30 +238,30 @@ const MensMinistry = () => {
               className="space-y-6"
             >
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
                   Empowering Men to <span className="text-church-yellow">Live Out Their Faith</span>
                 </h2>
                 <div className="w-20 h-1 bg-church-yellow rounded-full mb-6"></div>
               </div>
               
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-church-gray leading-relaxed">
                 We challenge men to live out their faith boldly in every aspect of life. Through authentic fellowship, 
                 biblical study, and service opportunities, we equip men to become the leaders God designed them to be.
               </p>
               
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-church-gray leading-relaxed">
                 Our ministry creates a brotherhood where men can be vulnerable, grow together, and hold each other 
                 accountable as we pursue Christ-like character and purpose.
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-6">
                 <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-church-yellow">
-                  <div className="text-2xl font-bold text-slate-800">50+</div>
-                  <div className="text-sm text-gray-600">Active Members</div>
+                  <div className="text-2xl font-bold text-church-sage-dark">50+</div>
+                  <div className="text-sm text-church-gray">Active Members</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-church-yellow">
-                  <div className="text-2xl font-bold text-slate-800">4</div>
-                  <div className="text-sm text-gray-600">Core Programs</div>
+                  <div className="text-2xl font-bold text-church-sage-dark">4</div>
+                  <div className="text-sm text-church-gray">Core Programs</div>
                 </div>
               </div>
             </motion.div>
@@ -296,11 +296,11 @@ const MensMinistry = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
                 Connect and <span className="text-church-yellow">Grow</span>
               </h2>
               <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="text-lg text-church-gray max-w-3xl mx-auto">
                 Discover the program that fits your journey and helps you grow in faith and brotherhood
               </p>
             </motion.div>
@@ -325,25 +325,25 @@ const MensMinistry = () => {
                       className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                    <div className="absolute top-4 left-4 bg-church-yellow text-slate-800 p-3 rounded-full">
+                    <div className="absolute top-4 left-4 bg-church-yellow text-church-sage-dark p-3 rounded-full">
                       <IconComponent className="w-6 h-6" />
                     </div>
                   </div>
                   
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-church-yellow transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-church-sage-dark mb-3 group-hover:text-church-yellow transition-colors duration-300">
                       {program.title}
                     </h3>
                     
-                    <p className="text-gray-700 mb-4 leading-relaxed">
+                    <p className="text-church-gray mb-4 leading-relaxed">
                       {program.description}
                     </p>
 
                     <div className="mb-6">
-                      <h4 className="font-semibold text-slate-800 mb-2 text-sm">What's Included:</h4>
+                      <h4 className="font-semibold text-church-sage-dark mb-2 text-sm">What's Included:</h4>
                       <div className="space-y-1">
                         {program.features.map((feature, idx) => (
-                          <div key={idx} className="text-sm text-gray-600 flex items-center">
+                          <div key={idx} className="text-sm text-church-gray flex items-center">
                             <FiCheck className="w-4 h-4 text-church-yellow mr-2" />
                             {feature}
                           </div>
@@ -357,7 +357,7 @@ const MensMinistry = () => {
                       </button>
                       <button 
                         onClick={() => setFormData(prev => ({ ...prev, preferredProgram: program.title }))}
-                        className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-slate-800 font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300"
+                        className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300"
                       >
                         Sign Up
                       </button>
@@ -380,11 +380,11 @@ const MensMinistry = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
                 Getting <span className="text-church-yellow">Started</span>
               </h2>
               <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="text-lg text-church-gray max-w-3xl mx-auto">
                 Your journey to brotherhood and spiritual growth is just four simple steps away
               </p>
             </motion.div>
@@ -402,12 +402,12 @@ const MensMinistry = () => {
                   viewport={{ once: true }}
                   className="text-center relative"
                 >
-                  <div className="bg-church-yellow text-slate-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <div className="bg-church-yellow text-church-sage-dark w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <IconComponent className="w-8 h-8" />
                   </div>
                   <div className="absolute top-8 left-16 w-full h-0.5 bg-gray-300 hidden lg:block" style={{ display: index === steps.length - 1 ? 'none' : 'block' }}></div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-3">{step.title}</h3>
-                  <p className="text-gray-700 leading-relaxed">{step.description}</p>
+                  <h3 className="text-xl font-bold text-church-sage-dark mb-3">{step.title}</h3>
+                  <p className="text-church-gray leading-relaxed">{step.description}</p>
                 </motion.div>
               );
             })}
@@ -422,18 +422,18 @@ const MensMinistry = () => {
             className="mt-16 text-center"
           >
             <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-slate-800 mb-4">Hear from Our Men</h3>
+              <h3 className="text-2xl font-bold text-church-sage-dark mb-4">Hear from Our Men</h3>
               <div className="aspect-video bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-church-yellow rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-6 h-6 text-slate-800" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 text-church-sage-dark" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z"/>
                     </svg>
                   </div>
-                  <p className="text-gray-600">Video testimonial coming soon</p>
+                  <p className="text-church-gray">Video testimonial coming soon</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">"Being part of Men's Ministry has transformed my relationship with God and my family. The brotherhood here is real." - James M.</p>
+              <p className="text-church-gray italic">"Being part of Men's Ministry has transformed my relationship with God and my family. The brotherhood here is real." - James M.</p>
             </div>
           </motion.div>
         </div>
@@ -449,11 +449,11 @@ const MensMinistry = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
                 Growth <span className="text-church-yellow">Resources</span>
               </h2>
               <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="text-lg text-church-gray max-w-3xl mx-auto">
                 Tools and materials to support your spiritual journey and personal development
               </p>
             </motion.div>
@@ -472,8 +472,8 @@ const MensMinistry = () => {
                   className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
                 >
                   <IconComponent className="w-8 h-8 text-church-yellow mb-4" />
-                  <h3 className="text-lg font-bold text-slate-800 mb-2">{resource.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">{resource.description}</p>
+                  <h3 className="text-lg font-bold text-church-sage-dark mb-2">{resource.title}</h3>
+                  <p className="text-church-gray text-sm mb-4 leading-relaxed">{resource.description}</p>
                   <Link 
                     to={resource.link}
                     className="text-church-yellow hover:text-church-yellow-dark font-semibold text-sm inline-flex items-center"
@@ -516,7 +516,7 @@ const MensMinistry = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-slate-800 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-church-sage-dark mb-2">
                     Full Name *
                   </label>
                   <input
@@ -532,7 +532,7 @@ const MensMinistry = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-slate-800 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-church-sage-dark mb-2">
                     Email Address *
                   </label>
                   <input
@@ -550,7 +550,7 @@ const MensMinistry = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-slate-800 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-semibold text-church-sage-dark mb-2">
                     Phone Number
                   </label>
                   <input
@@ -565,7 +565,7 @@ const MensMinistry = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="preferredProgram" className="block text-sm font-semibold text-slate-800 mb-2">
+                  <label htmlFor="preferredProgram" className="block text-sm font-semibold text-church-sage-dark mb-2">
                     Preferred Program
                   </label>
                   <select
@@ -586,7 +586,7 @@ const MensMinistry = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-slate-800 mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-church-sage-dark mb-2">
                   Message
                 </label>
                 <textarea
@@ -604,7 +604,7 @@ const MensMinistry = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-church-yellow hover:bg-church-yellow-dark text-slate-800 font-bold text-lg px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center"
+                  className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-12 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center"
                 >
                   {isSubmitting ? (
                     <>
@@ -638,11 +638,11 @@ const MensMinistry = () => {
 
             {/* Alternative CTAs */}
             <div className="mt-8 pt-8 border-t border-gray-200">
-              <p className="text-center text-gray-600 mb-4">Other ways to get involved:</p>
+              <p className="text-center text-church-gray mb-4">Other ways to get involved:</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/events"
-                  className="inline-flex items-center justify-center text-slate-700 hover:text-slate-800 font-semibold transition-colors duration-300"
+                  className="inline-flex items-center justify-center text-slate-700 hover:text-church-sage-dark font-semibold transition-colors duration-300"
                 >
                   <FiCalendar className="w-4 h-4 mr-2" />
                   Attend an Event
@@ -650,7 +650,7 @@ const MensMinistry = () => {
                 </Link>
                 <Link 
                   to="/contact"
-                  className="inline-flex items-center justify-center text-slate-700 hover:text-slate-800 font-semibold transition-colors duration-300"
+                  className="inline-flex items-center justify-center text-slate-700 hover:text-church-sage-dark font-semibold transition-colors duration-300"
                 >
                   <FiMail className="w-4 h-4 mr-2" />
                   Contact Leadership
@@ -672,11 +672,11 @@ const MensMinistry = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
                 Frequently Asked <span className="text-church-yellow">Questions</span>
               </h2>
               <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-church-gray">
                 Get answers to common questions about joining our Men's Ministry
               </p>
             </motion.div>
@@ -696,7 +696,7 @@ const MensMinistry = () => {
                   onClick={() => toggleFAQ(faq.id)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-church-yellow transition-colors duration-300"
                 >
-                  <span className="font-semibold text-slate-800">{faq.question}</span>
+                  <span className="font-semibold text-church-sage-dark">{faq.question}</span>
                   {openFAQ === faq.id ? (
                     <FiChevronUp className="w-5 h-5 text-church-yellow" />
                   ) : (
@@ -705,7 +705,7 @@ const MensMinistry = () => {
                 </button>
                 {openFAQ === faq.id && (
                   <div className="px-6 pb-4">
-                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                    <p className="text-church-gray leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </motion.div>
