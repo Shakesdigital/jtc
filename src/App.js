@@ -9,6 +9,7 @@ import ChildrensMinistry from './pages/ChildrensMinistry';
 import WorshipMinistry from './pages/WorshipMinistry';
 import FamilyGroups from './pages/FamilyGroups';
 import OutreachMinistry from './pages/OutreachMinistry';
+import DiscipleshipEquip from './pages/DiscipleshipEquip';
 import ChurchService from './pages/ChurchService';
 import Sermons from './pages/Sermons';
 import SermonDetail from './pages/SermonDetail';
@@ -39,6 +40,7 @@ function App() {
           <Route path="ministries/worship-ministry" element={<WorshipMinistry />} />
           <Route path="ministries/family-groups" element={<FamilyGroups />} />
           <Route path="ministries/outreach-ministry" element={<OutreachMinistry />} />
+          <Route path="ministries/discipleship-equip" element={<DiscipleshipEquip />} />
           <Route path="church-service" element={<ChurchService />} />
           <Route path="church-service/sermons" element={<Sermons />} />
           <Route path="church-service/sermons/:id" element={<SermonDetail />} />

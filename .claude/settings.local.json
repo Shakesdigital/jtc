@@ -35,7 +35,9 @@
       "WebFetch(domain:elevationchurch.org)",
       "WebFetch(domain:rlcsac.com)",
       "WebFetch(domain:life.church)",
-      "WebFetch(domain:desiringgod.org)"
+      "WebFetch(domain:desiringgod.org)",
+      "Bash(taskkill:*)",
+      "Bash(set PORT=3001)"
     ],
     "deny": [],
     "ask": []
