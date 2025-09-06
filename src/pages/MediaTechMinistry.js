@@ -332,7 +332,7 @@ const MediaTechMinistry = () => {
       </section>
 
       {/* Tech Roles Section */}
-      <section className="py-20 bg-church-cream">
+      <section className="py-20" style={{ backgroundColor: '#f9fafc' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -467,7 +467,7 @@ const MediaTechMinistry = () => {
       </section>
 
       {/* Resources Section */}
-      <section className="py-20 bg-church-cream">
+      <section className="py-20" style={{ backgroundColor: '#f9fafc' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -530,7 +530,8 @@ const MediaTechMinistry = () => {
           </motion.div>
 
           <motion.div 
-            className="bg-church-cream rounded-2xl p-8"
+            className="rounded-2xl p-8"
+            style={{ backgroundColor: '#6e9896' }}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -540,7 +541,7 @@ const MediaTechMinistry = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-gray-700 font-semibold mb-2">Full Name *</label>
+                    <label className="block text-white font-semibold mb-2">Full Name *</label>
                     <input
                       type="text"
                       name="name"
@@ -552,7 +553,7 @@ const MediaTechMinistry = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-semibold mb-2">Email Address *</label>
+                    <label className="block text-white font-semibold mb-2">Email Address *</label>
                     <input
                       type="email"
                       name="email"
@@ -567,7 +568,7 @@ const MediaTechMinistry = () => {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                    <label className="block text-white font-semibold mb-2">Phone Number</label>
                     <input
                       type="tel"
                       name="phone"
@@ -578,7 +579,7 @@ const MediaTechMinistry = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-semibold mb-2">Preferred Role</label>
+                    <label className="block text-white font-semibold mb-2">Preferred Role</label>
                     <select
                       name="preferredRole"
                       value={formData.preferredRole}
@@ -598,7 +599,7 @@ const MediaTechMinistry = () => {
                 </div>
 
                 <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Tell Us About Yourself</label>
+                  <label className="block text-white font-semibold mb-2">Tell Us About Yourself</label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -655,7 +656,7 @@ const MediaTechMinistry = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-church-cream">
+      <section className="py-20" style={{ backgroundColor: '#f9fafc' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
