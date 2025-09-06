@@ -23,7 +23,6 @@ import {
   FiTarget,
   FiShield,
   FiTrendingUp,
-  FiHeart,
   FiGift,
   FiBook,
   FiInfo
