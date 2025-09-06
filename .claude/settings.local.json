@@ -31,7 +31,11 @@
       "WebFetch(domain:jtc.shakesdigital.com)",
       "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp/**)",
       "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src/**)",
-      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\components/**)"
+      "Read(/C:\\Users\\TECH DEAL\\Desktop\\Jinja Town Church Work\\JTCapp\\src\\components/**)",
+      "WebFetch(domain:elevationchurch.org)",
+      "WebFetch(domain:rlcsac.com)",
+      "WebFetch(domain:life.church)",
+      "WebFetch(domain:desiringgod.org)"
     ],
     "deny": [],
     "ask": []

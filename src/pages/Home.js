@@ -331,6 +331,7 @@ const Home = () => {
                     to={
                       ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
                       ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
+                      ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
                       "/ministries"
                     }
                     className="inline-flex items-center text-church-sage hover:text-church-sage-dark font-semibold transition-colors duration-300"
