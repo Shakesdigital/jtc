@@ -4,16 +4,8 @@ import {
   FiHeart, 
   FiGlobe, 
   FiUsers, 
-  FiHome,
-  FiMapPin, 
   FiCalendar, 
-  FiClock, 
-  FiPhone,
-  FiMail,
-  FiUser,
-  FiMessageCircle,
   FiArrowRight,
-  FiDownload,
   FiBookOpen,
   FiPlay,
   FiChevronDown,
@@ -24,7 +16,6 @@ import {
   FiShield,
   FiTrendingUp,
   FiGift,
-  FiBook,
   FiInfo
 } from 'react-icons/fi';
 

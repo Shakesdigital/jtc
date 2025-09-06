@@ -4,10 +4,8 @@ import {
   FiUsers, 
   FiHeart, 
   FiMapPin, 
-  FiCalendar, 
   FiClock, 
   FiPhone,
-  FiMail,
   FiUser,
   FiMessageCircle,
   FiArrowRight,
@@ -19,8 +17,7 @@ import {
   FiChevronUp,
   FiSend,
   FiCheckCircle,
-  FiPlusCircle,
-  FiHome
+  FiPlusCircle
 } from 'react-icons/fi';
 
 const FamilyGroups = () => {
