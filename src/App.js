@@ -12,6 +12,7 @@ import OutreachMinistry from './pages/OutreachMinistry';
 import DiscipleshipEquip from './pages/DiscipleshipEquip';
 import MediaTechMinistry from './pages/MediaTechMinistry';
 import MensMinistry from './pages/MensMinistry';
+import WomensMinistry from './pages/WomensMinistry';
 import ChurchService from './pages/ChurchService';
 import Sermons from './pages/Sermons';
 import SermonDetail from './pages/SermonDetail';
@@ -45,6 +46,7 @@ function App() {
           <Route path="ministries/discipleship-equip" element={<DiscipleshipEquip />} />
           <Route path="ministries/media-tech-ministry" element={<MediaTechMinistry />} />
           <Route path="ministries/mens-ministry" element={<MensMinistry />} />
+          <Route path="ministries/womens-ministry" element={<WomensMinistry />} />
           <Route path="church-service" element={<ChurchService />} />
           <Route path="church-service/sermons" element={<Sermons />} />
           <Route path="church-service/sermons/:id" element={<SermonDetail />} />

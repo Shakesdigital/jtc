@@ -129,6 +129,12 @@ const Home = () => {
       title: "Outreach Ministry",
       image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop",
       description: "Reaching out to the community with God's love through evangelism, charity work, and social services that make a difference."
+    },
+    {
+      id: 8,
+      title: "Women's Ministry",
+      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=300&fit=crop",
+      description: "Empowering women to grow in faith, connect in community, and serve with purpose through fellowship and spiritual development."
     }
   ];
 
@@ -336,6 +342,7 @@ const Home = () => {
                       ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
                       ministry.title === "Media and Tech Ministry" ? "/ministries/media-tech-ministry" :
                       ministry.title === "Men's Ministry" ? "/ministries/mens-ministry" :
+                      ministry.title === "Women's Ministry" ? "/ministries/womens-ministry" :
                       "/ministries"
                     }
                     className="inline-flex items-center text-church-sage hover:text-church-sage-dark font-semibold transition-colors duration-300"

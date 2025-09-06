@@ -98,6 +98,16 @@ const Ministries = () => {
       ageRange: "All Ages Welcome",
       meetingTime: "Monthly & Special Events",
       highlights: ["Community Service", "Mission Trips", "Evangelism", "Charity Work"]
+    },
+    {
+      id: 8,
+      title: "Women's Ministry",
+      icon: FiHeart,
+      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop",
+      description: "Empowering women to grow in faith, connect in community, and serve with purpose. Through fellowship, Bible study, mentorship, and service opportunities, we create a supportive space where women can discover their God-given potential and thrive together.",
+      ageRange: "Adult Women",
+      meetingTime: "Weekly & Bi-weekly",
+      highlights: ["Sisterhood", "Bible Study", "Mentorship", "Service Projects"]
     }
   ];
 
@@ -320,13 +330,14 @@ const Ministries = () => {
                           ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
                           ministry.title === "Media & Tech Ministry" ? "/ministries/media-tech-ministry" :
                           ministry.title === "Men's Ministry" ? "/ministries/mens-ministry" :
+                          ministry.title === "Women's Ministry" ? "/ministries/womens-ministry" :
                           "/contact"
                         }
                         className="flex-1 bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300 text-sm"
                       >
                         Learn More
                       </Link>
-                      {(ministry.title === "Children Ministry" || ministry.title === "Worship Ministry" || ministry.title === "Family Groups Ministry" || ministry.title === "Outreach Ministry" || ministry.title === "Discipleship Equip Ministry" || ministry.title === "Media & Tech Ministry" || ministry.title === "Men's Ministry") ? (
+                      {(ministry.title === "Children Ministry" || ministry.title === "Worship Ministry" || ministry.title === "Family Groups Ministry" || ministry.title === "Outreach Ministry" || ministry.title === "Discipleship Equip Ministry" || ministry.title === "Media & Tech Ministry" || ministry.title === "Men's Ministry" || ministry.title === "Women's Ministry") ? (
                         <Link
                           to={
                             ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
@@ -336,6 +347,7 @@ const Ministries = () => {
                             ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
                             ministry.title === "Media & Tech Ministry" ? "/ministries/media-tech-ministry" :
                             ministry.title === "Men's Ministry" ? "/ministries/mens-ministry" :
+                            ministry.title === "Women's Ministry" ? "/ministries/womens-ministry" :
                             "/contact"
                           }
                           className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300 text-sm"
@@ -453,6 +465,7 @@ const Ministries = () => {
                     <option value="Discipleship Equip Ministry">Discipleship Equip Ministry</option>
                     <option value="Media & Tech Ministry">Media & Tech Ministry</option>
                     <option value="Men's Ministry">Men's Ministry</option>
+                    <option value="Women's Ministry">Women's Ministry</option>
                     <option value="Outreach Ministry">Outreach Ministry</option>
                     <option value="Any/Undecided">Any/Undecided</option>
                   </select>
