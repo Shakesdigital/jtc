@@ -11,8 +11,6 @@ import {
   FiChevronDown,
   FiX,
   FiGrid,
-  FiList,
-  FiExternalLink,
   FiUserPlus,
   FiHeart,
   FiSend,
@@ -223,8 +221,6 @@ const Events = () => {
   const startIndex = (currentPage - 1) * eventsPerPage;
   const paginatedEvents = sortedEvents.slice(startIndex, startIndex + eventsPerPage);
 
-  // Get featured events
-  const featuredEvents = allEvents.filter(event => event.featured).slice(0, 3);
 
   // Reset pagination when filters change
   useEffect(() => {
