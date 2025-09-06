@@ -319,13 +319,14 @@ const Ministries = () => {
                           ministry.title === "Outreach Ministry" ? "/ministries/outreach-ministry" :
                           ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
                           ministry.title === "Media & Tech Ministry" ? "/ministries/media-tech-ministry" :
+                          ministry.title === "Men's Ministry" ? "/ministries/mens-ministry" :
                           "/contact"
                         }
                         className="flex-1 bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300 text-sm"
                       >
                         Learn More
                       </Link>
-                      {(ministry.title === "Children Ministry" || ministry.title === "Worship Ministry" || ministry.title === "Family Groups Ministry" || ministry.title === "Outreach Ministry" || ministry.title === "Discipleship Equip Ministry" || ministry.title === "Media & Tech Ministry") ? (
+                      {(ministry.title === "Children Ministry" || ministry.title === "Worship Ministry" || ministry.title === "Family Groups Ministry" || ministry.title === "Outreach Ministry" || ministry.title === "Discipleship Equip Ministry" || ministry.title === "Media & Tech Ministry" || ministry.title === "Men's Ministry") ? (
                         <Link
                           to={
                             ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
@@ -334,6 +335,7 @@ const Ministries = () => {
                             ministry.title === "Outreach Ministry" ? "/ministries/outreach-ministry" :
                             ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
                             ministry.title === "Media & Tech Ministry" ? "/ministries/media-tech-ministry" :
+                            ministry.title === "Men's Ministry" ? "/ministries/mens-ministry" :
                             "/contact"
                           }
                           className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300 text-sm"
