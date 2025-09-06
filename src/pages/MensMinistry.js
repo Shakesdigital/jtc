@@ -227,7 +227,7 @@ const MensMinistry = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -489,7 +489,7 @@ const MensMinistry = () => {
       </section>
 
       {/* Get Involved Section */}
-      <section id="get-involved" className="py-20 bg-gradient-to-br from-slate-700 to-slate-800">
+      <section id="get-involved" className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

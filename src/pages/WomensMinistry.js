@@ -226,7 +226,7 @@ const WomensMinistry = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -371,7 +371,7 @@ const WomensMinistry = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-pink-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <motion.div
@@ -402,7 +402,7 @@ const WomensMinistry = () => {
                   viewport={{ once: true }}
                   className="text-center relative"
                 >
-                  <div className="bg-pink-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <div className="bg-gray-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <IconComponent className="w-8 h-8" />
                   </div>
                   <div className="absolute top-8 left-16 w-full h-0.5 bg-pink-200 hidden lg:block" style={{ display: index === steps.length - 1 ? 'none' : 'block' }}></div>
@@ -425,7 +425,7 @@ const WomensMinistry = () => {
               <h3 className="text-2xl font-bold text-church-sage-dark mb-4">Hear from Our Women</h3>
               <div className="aspect-video bg-pink-100 rounded-lg mb-4 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gray-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z"/>
                     </svg>
@@ -489,7 +489,7 @@ const WomensMinistry = () => {
       </section>
 
       {/* Get Involved Section */}
-      <section id="get-involved" className="py-20 bg-gradient-to-br from-pink-600 to-purple-600">
+      <section id="get-involved" className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -663,7 +663,7 @@ const WomensMinistry = () => {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-20 bg-pink-50">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <motion.div
@@ -694,7 +694,7 @@ const WomensMinistry = () => {
               >
                 <button
                   onClick={() => toggleFAQ(faq.id)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-pink-50 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors duration-300"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-colors duration-300"
                 >
                   <span className="font-semibold text-church-sage-dark">{faq.question}</span>
                   {openFAQ === faq.id ? (
