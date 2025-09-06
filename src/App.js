@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Ministries from './pages/Ministries';
 import MinistryDetail from './pages/MinistryDetail';
+import ChildrensMinistry from './pages/ChildrensMinistry';
+import WorshipMinistry from './pages/WorshipMinistry';
 import ChurchService from './pages/ChurchService';
 import Sermons from './pages/Sermons';
 import SermonDetail from './pages/SermonDetail';
@@ -31,6 +33,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="ministries" element={<Ministries />} />
           <Route path="ministries/:slug" element={<MinistryDetail />} />
+          <Route path="ministries/childrens-ministry" element={<ChildrensMinistry />} />
+          <Route path="ministries/worship-ministry" element={<WorshipMinistry />} />
           <Route path="church-service" element={<ChurchService />} />
           <Route path="church-service/sermons" element={<Sermons />} />
           <Route path="church-service/sermons/:id" element={<SermonDetail />} />

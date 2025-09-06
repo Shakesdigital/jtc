@@ -328,7 +328,11 @@ const Home = () => {
                   <p className="text-church-gray mb-6 leading-relaxed">{ministry.description}</p>
                   
                   <Link 
-                    to="/ministries"
+                    to={
+                      ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
+                      ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
+                      "/ministries"
+                    }
                     className="inline-flex items-center text-church-sage hover:text-church-sage-dark font-semibold transition-colors duration-300"
                   >
                     Learn More

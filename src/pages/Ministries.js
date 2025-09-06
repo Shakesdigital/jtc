@@ -312,17 +312,34 @@ const Ministries = () => {
                     
                     <div className="flex space-x-2">
                       <Link 
-                        to="/contact"
+                        to={
+                          ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
+                          ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
+                          "/contact"
+                        }
                         className="flex-1 bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300 text-sm"
                       >
                         Learn More
                       </Link>
-                      <button 
-                        onClick={() => setFormData(prev => ({ ...prev, ministry: ministry.title }))}
-                        className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300 text-sm"
-                      >
-                        Join Now
-                      </button>
+                      {(ministry.title === "Children Ministry" || ministry.title === "Worship Ministry") ? (
+                        <Link
+                          to={
+                            ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
+                            ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
+                            "/contact"
+                          }
+                          className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300 text-sm"
+                        >
+                          Join Now
+                        </Link>
+                      ) : (
+                        <button 
+                          onClick={() => setFormData(prev => ({ ...prev, ministry: ministry.title }))}
+                          className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300 text-sm"
+                        >
+                          Join Now
+                        </button>
+                      )}
                     </div>
                   </div>
                 </motion.div>
