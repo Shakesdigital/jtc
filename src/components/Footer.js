@@ -192,12 +192,17 @@ const Footer = () => {
         {/* Banner Section */}
         <div className="py-6 border-t border-white">
           <div className="text-center">
-            <img 
-              src="https://www.telebox.online/f-detail/ZnA1a3MwMDAwbzNx0" 
-              alt="Church Banner" 
-              className="max-w-full h-auto mx-auto rounded-lg shadow-md"
-              style={{ maxHeight: '150px' }}
-            />
+            <div className="bg-gradient-to-r from-church-sage to-church-gold p-8 rounded-lg shadow-md mx-auto max-w-2xl">
+              <img 
+                src="/JTC-Logo.jpg" 
+                alt="Jinja Town Church" 
+                className="w-20 h-20 mx-auto mb-4 rounded-full shadow-lg"
+              />
+              <h3 className="text-white text-xl font-bold mb-2">Join Our Community</h3>
+              <p className="text-white/90 text-sm">
+                Experience faith, fellowship, and transformation at Jinja Town Church
+              </p>
+            </div>
           </div>
         </div>
 
