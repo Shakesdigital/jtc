@@ -560,7 +560,7 @@ const Home = () => {
         </div>
       </section>
 
-      <BannerSection imageUrl="https://www.telebox.online/f-detail/ZnA1a3MwMDAwbzNx0" alt="Church Banner" />
+      <BannerSection alt="Church Banner" />
     </div>
   );
 };
