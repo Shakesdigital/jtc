@@ -558,6 +558,20 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Image Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center">
+            <img 
+              src="https://www.telebox.online/f-detail/ZnA1a3MwMDAwbzNx0" 
+              alt="Church Banner" 
+              className="max-w-full h-auto mx-auto rounded-lg shadow-lg"
+              style={{ maxHeight: '300px' }}
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
