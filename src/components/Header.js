@@ -82,9 +82,11 @@ const Header = () => {
             className="flex items-center space-x-3 flex-shrink-0"
             aria-label="Jinja Town Church Home"
           >
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-church-sage rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg md:text-xl">JTC</span>
-            </div>
+            <img 
+              src="https://www.telebox.online/f-detail/ZnA1a3JzMDAwbnFq0" 
+              alt="Jinja Town Church Logo" 
+              className="w-10 h-10 md:w-12 md:h-12 object-contain"
+            />
             <div className="hidden sm:block">
               <h1 className="text-lg md:text-xl font-bold text-church-sage-dark">
                 Jinja Town Church
