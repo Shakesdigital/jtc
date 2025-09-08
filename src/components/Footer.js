@@ -189,6 +189,18 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Banner Section */}
+        <div className="py-6 border-t border-white">
+          <div className="text-center">
+            <img 
+              src="https://www.telebox.online/f-detail/ZnA1a3MwMDAwbzNx0" 
+              alt="Church Banner" 
+              className="max-w-full h-auto mx-auto rounded-lg shadow-md"
+              style={{ maxHeight: '150px' }}
+            />
+          </div>
+        </div>
+
         {/* Newsletter Signup */}
         <div className="py-8 border-t border-white">
           <div className="max-w-2xl mx-auto text-center">
