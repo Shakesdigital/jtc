@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import BannerSection from '../components/BannerSection';
 import { 
   FiCalendar, 
   FiMapPin, 
@@ -744,19 +745,7 @@ const Events = () => {
         </div>
       </section>
 
-      {/* Image Section */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center">
-            <img 
-              src="https://www.telebox.online/f-detail/ZnA1a3MwMDAwbzNx0" 
-              alt="Church Banner" 
-              className="max-w-full h-auto mx-auto rounded-lg shadow-lg"
-              style={{ maxHeight: '300px' }}
-            />
-          </div>
-        </div>
-      </section>
+      <BannerSection imageUrl="https://www.telebox.online/f-detail/ZnA1a3MwMDAwbzNx0" alt="Church Banner" />
     </div>
   );
 };
