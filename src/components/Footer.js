@@ -190,7 +190,7 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="py-8 border-t border-gray-800">
+        <div className="py-8 border-t border-white">
           <div className="max-w-2xl mx-auto text-center">
             <h4 className="text-xl font-semibold mb-2">Stay Connected</h4>
             <p className="text-gray-300 mb-6">
@@ -214,7 +214,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 border-t border-gray-800">
+        <div className="py-6 border-t border-white">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
               <span>© {currentYear} Jinja Town Church. All rights reserved.</span>
