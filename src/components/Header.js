@@ -79,22 +79,14 @@ const Header = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-3 flex-shrink-0"
+            className="flex items-center flex-shrink-0"
             aria-label="Jinja Town Church Home"
           >
             <img 
               src="/JTC-Logo.jpg" 
               alt="Jinja Town Church Logo" 
-              className="w-10 h-10 md:w-12 md:h-12 object-contain"
+              className="w-16 h-16 md:w-20 md:h-20 object-contain"
             />
-            <div className="hidden sm:block">
-              <h1 className="text-lg md:text-xl font-bold text-church-sage-dark">
-                Jinja Town Church
-              </h1>
-              <p className="text-xs md:text-sm text-church-gray -mt-1">
-                Faith • Hope • Love
-              </p>
-            </div>
           </Link>
 
           {/* Desktop Navigation - Centered */}
