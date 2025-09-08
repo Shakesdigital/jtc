@@ -83,7 +83,7 @@ const Header = () => {
             aria-label="Jinja Town Church Home"
           >
             <img 
-              src="https://www.telebox.online/f-detail/ZnA1a3JzMDAwbnFq0" 
+              src="/JTC-Logo.jpg" 
               alt="Jinja Town Church Logo" 
               className="w-10 h-10 md:w-12 md:h-12 object-contain"
             />
