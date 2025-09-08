@@ -58,7 +58,7 @@ const Header = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg"
     >
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-16 md:h-20 relative">
+        <div className="flex items-center justify-between h-20 md:h-24 lg:h-28 relative">
           {/* Logo */}
           <Link 
             to="/" 
@@ -68,7 +68,7 @@ const Header = () => {
             <img 
               src="/JTC-Logo.jpg" 
               alt="Jinja Town Church Logo" 
-              className="w-16 h-16 md:w-20 md:h-20 object-contain"
+              className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain"
             />
           </Link>
 
