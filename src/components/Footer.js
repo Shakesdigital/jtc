@@ -104,7 +104,7 @@ const Footer = () => {
                         <img 
                           src="https://aht.nuplink3.net/pool/pub/ca/85/7b/4fb485677dcc3f85547c3d1786ca857b/7060?token=b1e369bcc3ce0fa201ca19bcb19c5629&ts=1757413584&ip=154.227.128.100&x-image-process=style/pvd" 
                           alt="Four12 Global Logo"
-                          className="w-10 h-10 object-contain group-hover:opacity-90 transition-opacity duration-200"
+                          className="w-16 h-16 object-contain group-hover:opacity-90 transition-opacity duration-200"
                           onError={(e) => {
                             e.target.style.display = 'none';
                             e.target.nextElementSibling.style.display = 'inline';
