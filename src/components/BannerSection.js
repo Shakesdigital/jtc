@@ -11,7 +11,7 @@ const BannerSection = ({ alt = "Partnership Banner" }) => {
           className="block w-full"
         >
           <img 
-            src="https://aht.nuplink2.net/pool/pub/3d/08/8b/5cbc46dca61f468f305ff993063d088b/54897?token=c57b16ebbfcd788bd85e893391e90927&ts=1757409364&ip=154.227.128.100&x-image-process=style/pvd" 
+            src="https://aht.nuplink3.net/pool/pub/ef/c2/d1/e11ff436ec9deb3d360dd24f64efc2d1/55905?token=5cda1d2760272d4d4fdb64f6d80c1109&ts=1757412504&ip=154.227.128.100&x-image-process=style/pvd" 
             alt={alt}
             className="w-full h-auto object-cover cursor-pointer hover:opacity-90 transition-opacity duration-300"
             style={{ display: 'block' }}
