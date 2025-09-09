@@ -42,7 +42,8 @@
       "Bash(cat:*)",
       "WebFetch(domain:lbx.cx)",
       "WebFetch(domain:www.linkbox.fun)",
-      "Read(//c/Users/TECH DEAL/Pictures/Screenshots/**)"
+      "Read(//c/Users/TECH DEAL/Pictures/Screenshots/**)",
+      "WebFetch(domain:aht.nuplink3.net)"
     ],
     "deny": [],
     "ask": []
