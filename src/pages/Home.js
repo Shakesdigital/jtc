@@ -145,7 +145,12 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://aht.nuplink3.net/pool/pub/2b/d3/d0/f02722e55834c4623e2c0398942bd3d0/423907?token=73f5fa7f293ac096138fcd7e9b8a6ada&ts=1757435876&ip=154.227.128.100&x-image-process=style/pvd')`
+            backgroundImage: `url('https://aht.nuplink3.net/pool/pub/2b/d3/d0/f02722e55834c4623e2c0398942bd3d0/423907?token=73f5fa7f293ac096138fcd7e9b8a6ada&ts=1757435876&ip=154.227.128.100&x-image-process=style/pvd')`,
+            imageRendering: 'crisp-edges',
+            WebkitImageRendering: 'crisp-edges',
+            msImageRendering: 'crisp-edges',
+            filter: 'contrast(1.1) saturate(1.1) brightness(1.05)',
+            backgroundAttachment: 'fixed'
           }}
         />
         
