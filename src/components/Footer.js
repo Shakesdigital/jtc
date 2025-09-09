@@ -74,13 +74,14 @@ const Footer = () => {
             {/* Church Info */}
             <div className="space-y-6">
               <div>
-                <Link to="/" className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-church-red rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">JTC</span>
-                  </div>
-                  <div>
+                <Link to="/" className="flex items-center mb-4">
+                  <img 
+                    src="/JTC-Logo.jpg" 
+                    alt="Jinja Town Church Logo" 
+                    className="w-16 h-16 object-contain rounded-lg"
+                  />
+                  <div className="ml-3">
                     <h3 className="text-xl font-bold">Jinja Town Church</h3>
-                    <p className="text-gray-400 text-sm">Faith • Hope • Love</p>
                   </div>
                 </Link>
                 <p className="text-gray-300 text-sm leading-relaxed">
