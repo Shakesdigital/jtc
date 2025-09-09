@@ -225,25 +225,29 @@ const Footer = () => {
 
         {/* Newsletter Signup */}
         <div className="py-8 border-t border-white">
-          <div className="max-w-2xl mx-auto text-center">
-            <h4 className="text-xl font-semibold mb-2">Stay Connected</h4>
-            <p className="text-gray-300 mb-6">
-              Subscribe to our newsletter for updates on events, sermons, and church news.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 border border-gray-700 focus:border-church-gold focus:ring-2 focus:ring-church-gold focus:ring-opacity-50 outline-none transition-all duration-200"
-                aria-label="Email address for newsletter"
-              />
-              <button
-                type="submit"
-                className="btn-accent px-8 py-3 whitespace-nowrap"
-              >
-                Subscribe
-              </button>
-            </form>
+          <div className="max-w-2xl mx-auto">
+            <div className="rounded-lg p-8 shadow-lg" style={{ backgroundColor: '#6e9896' }}>
+              <div className="text-center">
+                <h4 className="text-xl font-semibold mb-2 text-white">Stay Connected</h4>
+                <p className="text-white mb-6">
+                  Subscribe to our newsletter for updates on events, sermons, and church news.
+                </p>
+                <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="flex-1 px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-500 border border-gray-300 focus:border-white focus:ring-2 focus:ring-white focus:ring-opacity-50 outline-none transition-all duration-200"
+                    aria-label="Email address for newsletter"
+                  />
+                  <button
+                    type="submit"
+                    className="btn-accent px-8 py-3 whitespace-nowrap"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
 
