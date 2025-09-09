@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import BannerSection from '../components/BannerSection';
 import { 
   FiHeart,
   FiClock,
@@ -560,7 +559,6 @@ const Home = () => {
         </div>
       </section>
 
-      <BannerSection alt="Church Banner" />
     </div>
   );
 };

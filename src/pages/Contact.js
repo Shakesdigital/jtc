@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import BannerSection from '../components/BannerSection';
 import { 
   FiMail, 
   FiPhone, 
@@ -435,7 +434,6 @@ const Contact = () => {
         </div>
       </section>
 
-      <BannerSection alt="Church Banner" />
     </div>
   );
 };

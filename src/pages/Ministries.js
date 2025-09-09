@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import BannerSection from '../components/BannerSection';
 import { 
   FiUsers, 
   FiHeart, 
@@ -539,7 +538,6 @@ const Ministries = () => {
         </div>
       </section>
 
-      <BannerSection alt="Church Banner" />
     </div>
   );
 };

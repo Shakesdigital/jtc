@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import BannerSection from '../components/BannerSection';
 import { 
   FiPlay, 
   FiCalendar, 
@@ -659,7 +658,6 @@ const Sermons = () => {
         </div>
       </div>
 
-      <BannerSection alt="Church Banner" />
     </div>
   );
 };

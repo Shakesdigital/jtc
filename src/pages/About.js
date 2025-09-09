@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import BannerSection from '../components/BannerSection';
 import { FiHeart, FiUsers, FiTarget, FiStar } from 'react-icons/fi';
 
 const About = () => {
@@ -304,7 +303,6 @@ const About = () => {
         </div>
       </section>
 
-      <BannerSection alt="Church Banner" />
     </div>
   );
 };
