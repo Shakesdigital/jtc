@@ -39,7 +39,10 @@
       "Bash(taskkill:*)",
       "Bash(set PORT=3001)",
       "WebFetch(domain:www.telebox.online)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "WebFetch(domain:lbx.cx)",
+      "WebFetch(domain:www.linkbox.fun)",
+      "Read(//c/Users/TECH DEAL/Pictures/Screenshots/**)"
     ],
     "deny": [],
     "ask": []
