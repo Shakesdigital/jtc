@@ -9,7 +9,6 @@ import {
   FiShare2,
   FiCalendar,
   FiMapPin,
-  FiUsers,
   FiArrowRight,
   FiChevronLeft,
   FiChevronRight
