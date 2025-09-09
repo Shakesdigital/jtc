@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -10,11 +10,49 @@ import {
   FiCalendar,
   FiMapPin,
   FiUsers,
-  FiArrowRight
+  FiArrowRight,
+  FiChevronLeft,
+  FiChevronRight
 } from 'react-icons/fi';
 
 const Home = () => {
   // Static content mode - API calls disabled for initial deployment
+  
+  // Hero carousel images
+  const heroImages = [
+    {
+      id: 1,
+      url: "https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1920&h=1080&fit=crop",
+      title: "Welcome to Jinja Town Church",
+      subtitle: "Growing in Faith, Serving with Love"
+    },
+    {
+      id: 2,
+      url: "/images/community-banner.jpg",
+      title: "Join Our Community",
+      subtitle: "Experience God's Love Together"
+    }
+  ];
+
+  // Carousel state
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(timer);
+  }, [heroImages.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  };
   
   // Sample data for sections
   const sampleSermons = [
@@ -140,30 +178,66 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Enhanced Hero Banner Section */}
+      {/* Enhanced Hero Banner Section with Carousel */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image/Video Placeholder */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `linear-gradient(rgba(110, 152, 150, 0.8), rgba(90, 125, 123, 0.8)), url('https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1920&h=1080&fit=crop')`
-          }}
-        />
+        {/* Carousel Background Images */}
+        <div className="absolute inset-0">
+          {heroImages.map((image, index) => (
+            <div
+              key={image.id}
+              className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{
+                backgroundImage: `linear-gradient(rgba(110, 152, 150, 0.8), rgba(90, 125, 123, 0.8)), url('${image.url}')`
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Carousel Navigation */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300"
+        >
+          <FiChevronLeft className="w-6 h-6" />
+        </button>
+        
+        <button
+          onClick={nextSlide}
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300"
+        >
+          <FiChevronRight className="w-6 h-6" />
+        </button>
+
+        {/* Carousel Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-church-yellow' : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+              }`}
+            />
+          ))}
+        </div>
         
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 py-20">
           <motion.div
+            key={currentSlide}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Jinja Town Church
+              {heroImages[currentSlide].title}
             </h1>
             
             <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed font-medium">
-              Growing in Faith, Serving with Love
+              {heroImages[currentSlide].subtitle}
             </p>
 
             <div className="bg-black bg-opacity-20 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
