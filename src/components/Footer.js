@@ -89,6 +89,39 @@ const Footer = () => {
                 </p>
               </div>
 
+              {/* Partnership Banner */}
+              <div className="mb-6">
+                <a 
+                  href="https://four12global.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group block"
+                >
+                  <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-200 group-hover:scale-[1.02]">
+                    <div className="flex items-center justify-center space-x-3">
+                      <span className="text-gray-800 font-medium text-base">In Partnership with</span>
+                      <div className="flex items-center space-x-2">
+                        <img 
+                          src="https://aht.nuplink3.net/pool/pub/ca/85/7b/4fb485677dcc3f85547c3d1786ca857b/7060?token=b1e369bcc3ce0fa201ca19bcb19c5629&ts=1757413584&ip=154.227.128.100&x-image-process=style/pvd" 
+                          alt="Four12 Global Logo"
+                          className="w-10 h-10 object-contain group-hover:opacity-90 transition-opacity duration-200"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                            e.target.nextElementSibling.style.display = 'inline';
+                          }}
+                        />
+                        <span 
+                          className="text-base font-bold text-blue-600 group-hover:text-blue-800 transition-colors duration-200 hidden"
+                          style={{display: 'none'}}
+                        >
+                          Four12 Global
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
               {/* Social Links */}
               <div>
                 <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
@@ -108,37 +141,6 @@ const Footer = () => {
                     </motion.a>
                   ))}
                 </div>
-              </div>
-
-              {/* Partnership Banner */}
-              <div className="pt-6 border-t border-gray-700">
-                <a 
-                  href="https://four12global.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group block"
-                >
-                  <div className="flex items-center space-x-3 text-gray-400 hover:text-gray-300 transition-colors duration-200">
-                    <span className="text-sm font-medium">In Partnership with</span>
-                    <div className="flex items-center space-x-2">
-                      <img 
-                        src="https://aht.nuplink3.net/pool/pub/ca/85/7b/4fb485677dcc3f85547c3d1786ca857b/7060?token=b1e369bcc3ce0fa201ca19bcb19c5629&ts=1757413584&ip=154.227.128.100&x-image-process=style/pvd" 
-                        alt="Four12 Global Logo"
-                        className="w-6 h-6 object-contain group-hover:opacity-90 transition-opacity duration-200"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.nextElementSibling.style.display = 'inline';
-                        }}
-                      />
-                      <span 
-                        className="text-sm font-semibold text-blue-400 group-hover:text-blue-300 transition-colors duration-200 hidden"
-                        style={{display: 'none'}}
-                      >
-                        Four12 Global
-                      </span>
-                    </div>
-                  </div>
-                </a>
               </div>
             </div>
 
