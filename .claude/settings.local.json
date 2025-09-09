@@ -41,7 +41,13 @@
       "Read(//d//**)",
       "Bash(mkdir:*)",
       "Bash(copy:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "WebFetch(domain:www.telebox.online)",
+      "Bash(cat:*)",
+      "WebFetch(domain:lbx.cx)",
+      "WebFetch(domain:www.linkbox.fun)",
+      "Read(//c/Users/TECH DEAL/Pictures/Screenshots/**)",
+      "WebFetch(domain:aht.nuplink3.net)"
     ],
     "deny": [],
     "ask": []

@@ -230,16 +230,6 @@ const Ministries = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
               </div>
               
-              {/* Floating Stats Card */}
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl border-l-4 border-church-yellow">
-                <div className="flex items-center space-x-4">
-                  <FiUsers className="w-8 h-8 text-church-sage" />
-                  <div>
-                    <div className="text-2xl font-bold text-church-sage-dark">7</div>
-                    <div className="text-sm text-church-gray">Active Ministries</div>
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
@@ -537,6 +527,7 @@ const Ministries = () => {
           </motion.div>
         </div>
       </section>
+
     </div>
   );
 };

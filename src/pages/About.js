@@ -242,34 +242,6 @@ const About = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-2 gap-6"
-            >
-              <div className="space-y-6">
-                <div className="card p-6 text-center">
-                  <div className="text-3xl font-bold text-church-red mb-2">2008</div>
-                  <div className="text-sm text-gray-600">Church Founded</div>
-                </div>
-                <div className="card p-6 text-center">
-                  <div className="text-3xl font-bold text-church-red mb-2">500+</div>
-                  <div className="text-sm text-gray-600">Active Members</div>
-                </div>
-              </div>
-              <div className="space-y-6 mt-8">
-                <div className="card p-6 text-center">
-                  <div className="text-3xl font-bold text-church-red mb-2">8</div>
-                  <div className="text-sm text-gray-600">Ministry Programs</div>
-                </div>
-                <div className="card p-6 text-center">
-                  <div className="text-3xl font-bold text-church-red mb-2">15+</div>
-                  <div className="text-sm text-gray-600">Years of Service</div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -302,6 +274,7 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
     </div>
   );
 };

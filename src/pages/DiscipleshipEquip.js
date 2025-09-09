@@ -309,38 +309,6 @@ const DiscipleshipEquip = () => {
           </motion.div>
         </div>
 
-        {/* Floating Impact Cards */}
-        <div className="absolute bottom-8 left-8 right-8 hidden lg:flex justify-between max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 text-white"
-          >
-            <div className="text-3xl font-bold text-church-yellow">500+</div>
-            <div className="text-sm opacity-90">Disciples Equipped</div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 text-white"
-          >
-            <div className="text-3xl font-bold text-church-yellow">15</div>
-            <div className="text-sm opacity-90">Active Programs</div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 text-white"
-          >
-            <div className="text-3xl font-bold text-church-yellow">50+</div>
-            <div className="text-sm opacity-90">Mentors & Leaders</div>
-          </motion.div>
-        </div>
       </section>
 
       {/* Overview Section */}

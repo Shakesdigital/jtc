@@ -319,19 +319,6 @@ const WorshipMinistry = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent"></div>
                 
-                {/* Floating Stats */}
-                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border-l-4 border-church-yellow">
-                  <div className="text-center">
-                    <div className="text-xl font-bold text-church-sage-dark">20+</div>
-                    <div className="text-xs text-gray-600">Team Members</div>
-                  </div>
-                </div>
-                <div className="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-xl border-l-4 border-church-sage">
-                  <div className="text-center">
-                    <div className="text-xl font-bold text-church-sage-dark">3</div>
-                    <div className="text-xs text-gray-600">Services Weekly</div>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>
