@@ -25,13 +25,12 @@ const Footer = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
-  const ministryLinks = [
-    { name: "Children's Ministry", href: '/ministries/childrens' },
-    { name: 'Youth Ministry', href: '/ministries/youth' },
-    { name: 'Family Groups', href: '/ministries/family-groups' },
-    { name: 'Outreach', href: '/ministries/outreach' },
-    { name: 'Worship & Music', href: '/ministries/worship' },
-    { name: 'Bible Study', href: '/ministries/bible-study' },
+  const resourceLinks = [
+    { name: 'All Resources', href: '/resources' },
+    { name: 'All Article Reads', href: '/articles' },
+    { name: 'All Events', href: '/events' },
+    { name: 'All News', href: '/news' },
+    { name: 'All Bible Series', href: '/bible-series' },
   ];
 
   const socialLinks = [
@@ -163,11 +162,11 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Ministries */}
+            {/* Resources */}
             <div>
-              <h4 className="text-lg font-semibold mb-6">Our Ministries</h4>
+              <h4 className="text-lg font-semibold mb-6">Resources</h4>
               <ul className="space-y-3">
-                {ministryLinks.map((link) => (
+                {resourceLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}
