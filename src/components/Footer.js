@@ -97,7 +97,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="group block"
                 >
-                  <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-200 group-hover:scale-[1.02]">
+                  <div className="bg-white rounded-lg px-4 py-2 shadow-md hover:shadow-lg transition-all duration-200 group-hover:scale-[1.02]">
                     <div className="flex items-center justify-center space-x-3">
                       <span className="text-gray-800 font-medium text-base">In Partnership with</span>
                       <div className="flex items-center space-x-2">
