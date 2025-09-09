@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   FiFacebook, 
-  FiTwitter, 
   FiInstagram, 
   FiYoutube,
   FiMail,
@@ -11,6 +10,7 @@ import {
   FiClock,
   FiHeart
 } from 'react-icons/fi';
+import { FaXTwitter } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -34,10 +34,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', icon: FiFacebook, href: 'https://facebook.com/jinjatownchurch', color: 'hover:text-blue-600' },
-    { name: 'Twitter', icon: FiTwitter, href: 'https://twitter.com/jinjatownchurch', color: 'hover:text-blue-400' },
-    { name: 'Instagram', icon: FiInstagram, href: 'https://instagram.com/jinjatownchurch', color: 'hover:text-pink-600' },
-    { name: 'YouTube', icon: FiYoutube, href: 'https://youtube.com/jinjatownchurch', color: 'hover:text-red-600' },
+    { name: 'Facebook', icon: FiFacebook, href: 'https://facebook.com/jinjatownchurch', bgColor: 'hover:bg-[#1877F2]', textColor: 'hover:text-white' },
+    { name: 'X', icon: FaXTwitter, href: 'https://x.com/jinjatownchurch', bgColor: 'hover:bg-black', textColor: 'hover:text-white' },
+    { name: 'Instagram', icon: FiInstagram, href: 'https://instagram.com/jinjatownchurch', bgColor: 'hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737]', textColor: 'hover:text-white' },
+    { name: 'YouTube', icon: FiYoutube, href: 'https://youtube.com/jinjatownchurch', bgColor: 'hover:bg-[#FF0000]', textColor: 'hover:text-white' },
   ];
 
   const contactInfo = [
@@ -132,12 +132,12 @@ const Footer = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-3 bg-gray-800 rounded-full transition-all duration-300 ${social.color} hover:scale-110`}
+                      className={`p-3 bg-gray-800 rounded-full transition-all duration-300 ${social.bgColor} ${social.textColor} hover:scale-110`}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       aria-label={`Follow us on ${social.name}`}
                     >
-                      <social.icon className="w-5 h-5" />
+                      <social.icon className="w-5 h-5 text-white" />
                     </motion.a>
                   ))}
                 </div>
