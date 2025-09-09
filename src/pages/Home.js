@@ -219,7 +219,7 @@ const Home = () => {
               </div>
               
               <p className="text-lg text-church-gray leading-relaxed">
-                For over 15 years, Jinja Town Church has been a beacon of hope and love in the heart of Uganda. 
+                Jinja Town Church has been a beacon of hope and love in the heart of Uganda. 
                 We are a vibrant community committed to growing in faith, serving our neighbors, and spreading 
                 God's love throughout our region.
               </p>
