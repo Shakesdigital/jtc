@@ -226,7 +226,7 @@ const Footer = () => {
         {/* Newsletter Signup */}
         <div className="py-8 border-t border-white">
           <div className="max-w-2xl mx-auto">
-            <div className="rounded-lg p-8 shadow-lg" style={{ backgroundColor: '#6e9896' }}>
+            <div className="rounded-lg p-8 shadow-lg border-2 border-white" style={{ backgroundColor: '#6e9896' }}>
               <div className="text-center">
                 <h4 className="text-xl font-semibold mb-2 text-white">Stay Connected</h4>
                 <p className="text-white mb-6">
