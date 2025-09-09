@@ -196,21 +196,6 @@ const Home = () => {
               </Link>
             </div>
 
-            {/* Quick Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto pt-16">
-              <div className="text-center bg-black bg-opacity-20 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-4xl font-bold text-church-yellow mb-2">500+</div>
-                <div className="text-sm uppercase tracking-wide opacity-90">Church Members</div>
-              </div>
-              <div className="text-center bg-black bg-opacity-20 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-4xl font-bold text-church-yellow mb-2">15+</div>
-                <div className="text-sm uppercase tracking-wide opacity-90">Years Serving</div>
-              </div>
-              <div className="text-center bg-black bg-opacity-20 backdrop-blur-sm rounded-lg p-4">
-                <div className="text-4xl font-bold text-church-yellow mb-2">7</div>
-                <div className="text-sm uppercase tracking-wide opacity-90">Active Ministries</div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -275,16 +260,6 @@ const Home = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
               </div>
               
-              {/* Floating Stats Card */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border-l-4 border-church-yellow">
-                <div className="flex items-center space-x-4">
-                  <FiUsers className="w-8 h-8 text-church-sage" />
-                  <div>
-                    <div className="text-2xl font-bold text-church-sage-dark">500+</div>
-                    <div className="text-sm text-church-gray">Active Members</div>
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>

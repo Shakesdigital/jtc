@@ -339,13 +339,6 @@ const Events = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
               </div>
               
-              {/* Floating Stats Card */}
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl border-l-4 border-church-yellow">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-church-sage-dark">{allEvents.length}+</div>
-                  <div className="text-sm text-church-gray">Events This Year</div>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>

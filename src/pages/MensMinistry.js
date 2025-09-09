@@ -254,16 +254,6 @@ const MensMinistry = () => {
                 accountable as we pursue Christ-like character and purpose.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 pt-6">
-                <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-church-yellow">
-                  <div className="text-2xl font-bold text-church-sage-dark">50+</div>
-                  <div className="text-sm text-church-gray">Active Members</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-church-yellow">
-                  <div className="text-2xl font-bold text-church-sage-dark">4</div>
-                  <div className="text-sm text-church-gray">Core Programs</div>
-                </div>
-              </div>
             </motion.div>
 
             <motion.div
