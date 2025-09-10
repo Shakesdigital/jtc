@@ -125,7 +125,7 @@ const Contact = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1516826957135-700dedea698c?w=1920&h=1080&fit=crop')`
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/contact-us.jpg')`
           }}
         />
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
