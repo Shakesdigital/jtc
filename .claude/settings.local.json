@@ -47,7 +47,10 @@
       "WebFetch(domain:lbx.cx)",
       "WebFetch(domain:www.linkbox.fun)",
       "Read(//c/Users/TECH DEAL/Pictures/Screenshots/**)",
-      "WebFetch(domain:aht.nuplink3.net)"
+      "WebFetch(domain:aht.nuplink3.net)",
+      "Bash(dir:*)",
+      "Bash(cmd /c copy:*)",
+      "Bash(xcopy:*)"
     ],
     "deny": [],
     "ask": []

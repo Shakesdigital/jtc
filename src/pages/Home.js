@@ -21,15 +21,21 @@ const Home = () => {
   const heroImages = [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1920&h=1080&fit=crop",
+      url: "/images/home-banner-1.jpg",
       title: "Welcome to Jinja Town Church",
       subtitle: "Growing in Faith, Serving with Love"
     },
     {
       id: 2,
-      url: "/images/community-banner.jpg",
+      url: "/images/home-banner-2.jpg",
       title: "Join Our Community",
       subtitle: "Experience God's Love Together"
+    },
+    {
+      id: 3,
+      url: "/images/community-banner.jpg",
+      title: "Building Community Together",
+      subtitle: "United in Faith and Service"
     }
   ];
 
