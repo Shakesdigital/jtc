@@ -103,4 +103,120 @@
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.8);
   }
+
+  /* Enhanced responsive hero utilities */
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
+  .hero-content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 2rem);
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 2rem);
+  }
+
+  .responsive-text-balance {
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Improved button scaling */
+  .btn-hero {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+
+  .btn-hero:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  .btn-hero:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  /* Enhanced responsive spacing */
+  .hero-spacing-xs { padding: 2rem 1rem; }
+  .hero-spacing-sm { padding: 3rem 1.5rem; }
+  .hero-spacing-md { padding: 4rem 2rem; }
+  .hero-spacing-lg { padding: 5rem 3rem; }
+  .hero-spacing-xl { padding: 6rem 4rem; }
+  .hero-spacing-2xl { padding: 7rem 5rem; }
+
+  /* Image aspect ratio preservation */
+  .aspect-hero {
+    aspect-ratio: 16 / 9;
+  }
+
+  @media (max-aspect-ratio: 1/1) {
+    .aspect-hero {
+      aspect-ratio: 4 / 5;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-image {
+      object-position: center top;
+    }
+    
+    .aspect-hero {
+      aspect-ratio: 3 / 4;
+    }
+  }
+
+  /* Improved mobile text readability */
+  @media (max-width: 768px) {
+    .responsive-text-balance {
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  /* Tablet optimizations */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .hero-content-center {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  /* Desktop optimizations */
+  @media (min-width: 1024px) {
+    .hero-image {
+      object-position: center center;
+    }
+    
+    .hero-content-center {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  /* Ultra-wide screen optimizations */
+  @media (min-width: 1536px) {
+    .hero-content-center {
+      padding-left: 8rem;
+      padding-right: 8rem;
+    }
+  }
+
+  /* High DPI display optimizations */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-image {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  }
 }

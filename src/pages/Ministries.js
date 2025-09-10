@@ -147,13 +147,13 @@ const Ministries = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Banner Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen hero-content-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
             src="/images/ministries-theme.jpg"
             alt="Ministries Hero"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="hero-image"
             style={{
               filter: 'brightness(0.6)'
             }}
@@ -162,26 +162,26 @@ const Ministries = () => {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
+        <div className="relative z-10 text-center text-white max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <FiHeart className="w-20 h-20 mx-auto mb-3 sm:mb-4 text-church-yellow" />
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+            <FiHeart className="w-20 sm:w-24 md:w-28 lg:w-32 xl:w-36 h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 mx-auto mb-4 sm:mb-6 md:mb-8 text-church-yellow" />
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
               Our Ministries: <span className="text-church-yellow">Serving Together in Faith</span>
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-4xl mx-auto leading-relaxed font-medium responsive-text-balance text-shadow">
               Discover how you can get involved and grow in community through our diverse ministry opportunities
             </p>
 
             <div className="pt-6 sm:pt-8">
               <button 
                 onClick={scrollToMinistries}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 w-full sm:w-auto border-2 sm:border-3"
+                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl px-10 sm:px-12 md:px-16 lg:px-20 py-4 sm:py-5 md:py-6 lg:py-7 rounded-full shadow-2xl hover:shadow-3xl btn-hero w-full sm:w-auto border-2 sm:border-3 md:border-4"
               >
                 Explore Ministries
               </button>
