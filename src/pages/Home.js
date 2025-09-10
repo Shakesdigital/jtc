@@ -229,25 +229,25 @@ const Home = () => {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 pt-24 pb-20">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               {heroImages[currentSlide].title}
             </h1>
             
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed font-medium">
+            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed font-medium">
               {heroImages[currentSlide].subtitle}
             </p>
 
-            <div className="bg-black bg-opacity-20 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
-              <p className="text-lg mb-4 opacity-95">Join us for worship every Sunday</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center text-base">
+            <div className="bg-black bg-opacity-20 backdrop-blur-sm rounded-xl p-4 sm:p-6 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg mb-3 sm:mb-4 opacity-95">Join us for worship every Sunday</p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center text-sm sm:text-base">
                 <div className="flex items-center justify-center">
                   <FiClock className="w-4 h-4 mr-2" />
                   First Service: 9:00 AM
@@ -259,17 +259,17 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 sm:pt-8">
               <Link 
                 to="/contact"
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto"
               >
                 Plan Your Visit
               </Link>
               
               <Link 
                 to="/about"
-                className="bg-transparent border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-lg px-10 py-4 rounded-full shadow-xl transition-all duration-300"
+                className="bg-transparent border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-xl transition-all duration-300 w-full sm:w-auto"
               >
                 Learn More
               </Link>

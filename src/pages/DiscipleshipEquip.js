@@ -270,38 +270,38 @@ const DiscipleshipEquip = () => {
         />
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 pt-24 pb-20">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-3 sm:mb-4">
               <div className="bg-church-yellow bg-opacity-20 backdrop-blur-sm rounded-full p-6">
                 <FiBookOpen className="w-16 h-16 text-church-yellow" />
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Discipleship Equip Ministry: <br />
               <span className="text-church-yellow">Growing Deeper in Faith</span>
             </h1>
             
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90">
+            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
               Equipping you to live out God's purpose through transformational learning and spiritual growth
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-6 sm:pt-8">
               <button 
                 onClick={scrollToForm}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300"
+                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto border-2 sm:border-3"
               >
                 Start Your Journey
               </button>
               <button 
                 onClick={() => document.getElementById('programs').scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-white text-white hover:bg-white hover:text-church-sage font-bold text-lg px-8 py-4 rounded-full transition-all duration-300"
+                className="border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
               >
                 Explore Programs
               </button>

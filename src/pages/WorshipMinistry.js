@@ -227,12 +227,12 @@ const WorshipMinistry = () => {
         />
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 pt-24 pb-20">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6"
           >
             <motion.div
               animate={{ 
@@ -245,28 +245,28 @@ const WorshipMinistry = () => {
                 ease: "easeInOut" 
               }}
             >
-              <FiMusic className="w-24 h-24 mx-auto mb-8 text-church-yellow" />
+              <FiMusic className="w-24 h-24 mx-auto mb-3 sm:mb-4 text-church-yellow" />
             </motion.div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Worship Ministry: <span className="text-church-yellow drop-shadow-lg">Glorifying God Through Song</span>
             </h1>
             
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
               Join us in passionate, Spirit-led worship that creates space for authentic encounters with God
             </p>
 
-            <div className="pt-8 space-x-4">
+            <div className="pt-6 sm:pt-8 gap-3 sm:gap-4 flex flex-col sm:flex-row justify-center">
               <button 
                 onClick={() => document.getElementById('worship-experience').scrollIntoView({ behavior: 'smooth' })}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-12 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 inline-flex items-center"
+                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 inline-flex items-center justify-center w-full sm:w-auto border-2 sm:border-3"
               >
                 <FiPlay className="mr-2" />
                 Experience Worship
               </button>
               <button 
                 onClick={() => document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-lg px-12 py-5 rounded-full transition-all duration-300"
+                className="border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
               >
                 Join Us Sunday
               </button>

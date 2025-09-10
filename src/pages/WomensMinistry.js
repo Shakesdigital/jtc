@@ -197,26 +197,26 @@ const WomensMinistry = () => {
           }}
         />
         
-        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 pt-24 pb-20">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <FiHeart className="w-20 h-20 mx-auto mb-8 text-church-yellow" />
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <FiHeart className="w-20 h-20 mx-auto mb-3 sm:mb-4 text-church-yellow" />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Women's Ministry: <span className="text-church-yellow">Empowering Godly Women</span>
             </h1>
             
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
               Connect, grow, and shine in faith together
             </p>
 
-            <div className="pt-8">
+            <div className="pt-6 sm:pt-8">
               <Link 
                 to="#get-involved"
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-12 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300"
+                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 w-full sm:w-auto border-2 sm:border-3"
               >
                 Join Us
               </Link>
