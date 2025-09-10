@@ -190,13 +190,20 @@ const Home = () => {
           {heroImages.map((image, index) => (
             <div
               key={image.id}
-              className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+              className={`absolute inset-0 transition-opacity duration-1000 ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${image.url}')`
-              }}
-            />
+            >
+              <img
+                src={image.url}
+                alt={image.title}
+                className="absolute inset-0 w-full h-full object-cover object-center"
+                style={{
+                  filter: 'brightness(0.6)'
+                }}
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+            </div>
           ))}
         </div>
 

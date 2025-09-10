@@ -191,12 +191,17 @@ const MensMinistry = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Banner Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=1920&h=1080&fit=crop')`
-          }}
-        />
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=1920&h=1080&fit=crop"
+            alt="Men's Ministry Hero"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            style={{
+              filter: 'brightness(0.6)'
+            }}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        </div>
         
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
           <motion.div

@@ -51,12 +51,17 @@ const About = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/about-us.jpg')`
-          }}
-        />
+        <div className="absolute inset-0">
+          <img
+            src="/images/about-us.jpg"
+            alt="About Us Hero"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            style={{
+              filter: 'brightness(0.6)'
+            }}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        </div>
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
