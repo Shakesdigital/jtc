@@ -134,49 +134,49 @@ const Home = () => {
     {
       id: 1,
       title: "Children Ministry",
-      image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
+      image: "/images/ministries/children-ministry.jpg",
       description: "Creating a fun, safe environment where children learn about God's love through stories, songs, and activities that build their faith foundation."
     },
     {
       id: 2,
       title: "Worship Ministry",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop",
+      image: "/images/ministries/worship-ministry.jpg",
       description: "Leading the congregation in heartfelt worship through music, praise, and creating an atmosphere of reverence and spiritual connection."
     },
     {
       id: 3,
       title: "Family Groups Ministry",
-      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=300&fit=crop",
+      image: "/images/ministries/family-groups-ministry.jpg",
       description: "Building strong family bonds and community connections through small group fellowship, prayer, and mutual support in faith."
     },
     {
       id: 4,
       title: "Discipleship Equip Ministry",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+      image: "/images/ministries/discipleship-equip-ministry.jpg",
       description: "Equipping believers with biblical knowledge, spiritual disciplines, and practical skills for Christian living and ministry service."
     },
     {
       id: 5,
       title: "Media and Tech Ministry",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop",
+      image: "/images/ministries/media-tech-ministry.jpg",
       description: "Supporting worship services and church communications through audio-visual technology, live streaming, and digital outreach."
     },
     {
       id: 6,
       title: "Men's Ministry",
-      image: "https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=400&h=300&fit=crop",
+      image: "/images/ministries/mens-ministry.jpg",
       description: "Building strong Christian men through brotherhood, accountability, service projects, and spiritual growth in community."
     },
     {
       id: 7,
       title: "Outreach Ministry",
-      image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop",
+      image: "/images/ministries/outreach-ministry.jpg",
       description: "Reaching out to the community with God's love through evangelism, charity work, and social services that make a difference."
     },
     {
       id: 8,
       title: "Women's Ministry",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=300&fit=crop",
+      image: "/images/ministries/womens-ministry.jpg",
       description: "Empowering women to grow in faith, connect in community, and serve with purpose through fellowship and spiritual development."
     }
   ];
@@ -373,7 +373,7 @@ const Home = () => {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="ministry-grid">
             {ministries.map((ministry, index) => (
               <motion.div
                 key={ministry.id}
@@ -381,38 +381,40 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ministry-card"
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden ministry-card-image">
                   <img
                     src={ministry.image}
                     alt={ministry.title}
-                    className="w-full h-48 object-cover transform hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 object-cover object-center transform hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 </div>
                 
-                <div className="p-6">
+                <div className="ministry-card-content">
                   <h3 className="text-xl font-bold text-church-sage-dark mb-3">{ministry.title}</h3>
-                  <p className="text-church-gray mb-6 leading-relaxed">{ministry.description}</p>
+                  <p className="text-church-gray mb-6 leading-relaxed ministry-card-description">{ministry.description}</p>
                   
-                  <Link 
-                    to={
-                      ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
-                      ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
-                      ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
-                      ministry.title === "Outreach Ministry" ? "/ministries/outreach-ministry" :
-                      ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
-                      ministry.title === "Media and Tech Ministry" ? "/ministries/media-tech-ministry" :
-                      ministry.title === "Men's Ministry" ? "/ministries/mens-ministry" :
-                      ministry.title === "Women's Ministry" ? "/ministries/womens-ministry" :
-                      "/ministries"
-                    }
-                    className="inline-flex items-center text-church-sage hover:text-church-sage-dark font-semibold transition-colors duration-300"
-                  >
-                    Learn More
-                    <FiArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                  <div className="ministry-card-actions">
+                    <Link 
+                      to={
+                        ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
+                        ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
+                        ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
+                        ministry.title === "Outreach Ministry" ? "/ministries/outreach-ministry" :
+                        ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
+                        ministry.title === "Media and Tech Ministry" ? "/ministries/media-tech-ministry" :
+                        ministry.title === "Men's Ministry" ? "/ministries/mens-ministry" :
+                        ministry.title === "Women's Ministry" ? "/ministries/womens-ministry" :
+                        "/ministries"
+                      }
+                      className="inline-flex items-center text-church-sage hover:text-church-sage-dark font-semibold transition-colors duration-300"
+                    >
+                      Learn More
+                      <FiArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             ))}

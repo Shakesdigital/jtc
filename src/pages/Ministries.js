@@ -33,7 +33,7 @@ const Ministries = () => {
       id: 1,
       title: "Children Ministry",
       icon: FiUsers,
-      image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop",
+      image: "/images/ministries/children-ministry.jpg",
       description: "Nurturing young faith through fun, Bible-based programs for ages 0-12. We create a safe, loving environment where children can learn about God's love through interactive stories, worship songs, crafts, and activities that build a strong foundation for their spiritual journey.",
       ageRange: "Ages 0-12",
       meetingTime: "Sundays during service",
@@ -43,7 +43,7 @@ const Ministries = () => {
       id: 2,
       title: "Worship Ministry",
       icon: FiMic,
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
+      image: "/images/ministries/worship-ministry.jpg",
       description: "Leading heartfelt praise and music to connect the congregation with God. Our worship team creates an atmosphere of reverence and joy through contemporary Christian music, traditional hymns, and spirit-led worship that invites everyone to encounter God's presence.",
       ageRange: "All Ages",
       meetingTime: "Sundays & Rehearsals Wednesdays",
@@ -53,7 +53,7 @@ const Ministries = () => {
       id: 3,
       title: "Family Groups Ministry",
       icon: FiHome,
-      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=400&fit=crop",
+      image: "/images/ministries/family-groups-ministry.jpg",
       description: "Building strong family bonds through small group gatherings and support. We focus on strengthening relationships within families and creating connections between families in our church community through shared meals, Bible study, prayer, and mutual encouragement.",
       ageRange: "Families of All Sizes",
       meetingTime: "Weekly in Homes",
@@ -63,7 +63,7 @@ const Ministries = () => {
       id: 4,
       title: "Discipleship Equip Ministry",
       icon: FiBookOpen,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      image: "/images/ministries/discipleship-equip-ministry.jpg",
       description: "Equipping believers with tools for deeper spiritual growth and leadership. Through systematic Bible study, mentorship programs, and practical training, we help members develop their faith, discover their spiritual gifts, and prepare for ministry service.",
       ageRange: "Teen & Adult",
       meetingTime: "Sundays & Weekday Classes",
@@ -73,7 +73,7 @@ const Ministries = () => {
       id: 5,
       title: "Media & Tech Ministry",
       icon: FiMonitor,
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop",
+      image: "/images/ministries/media-tech-ministry.jpg",
       description: "Supporting worship services through audio-visual technology and digital outreach. We handle sound engineering, lighting, video production, live streaming, and maintain our digital presence to ensure quality worship experiences and reach people beyond our physical walls.",
       ageRange: "Teen & Adult",
       meetingTime: "Sundays & Technical Training",
@@ -83,7 +83,7 @@ const Ministries = () => {
       id: 6,
       title: "Men's Ministry",
       icon: FiUser,
-      image: "https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=600&h=400&fit=crop",
+      image: "/images/ministries/mens-ministry.jpg",
       description: "Building strong Christian men through brotherhood and accountability. We create opportunities for men to grow in their faith, build meaningful friendships, tackle life's challenges together, and develop godly character through Bible study, service projects, and fellowship.",
       ageRange: "Adult Men",
       meetingTime: "Bi-weekly Saturdays",
@@ -93,7 +93,7 @@ const Ministries = () => {
       id: 7,
       title: "Outreach Ministry",
       icon: FiHeart,
-      image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop",
+      image: "/images/ministries/outreach-ministry.jpg",
       description: "Serving the community through missions, volunteering, and compassion initiatives. We extend God's love beyond our church walls through community service, evangelism, charity work, and mission trips, making a tangible difference in people's lives.",
       ageRange: "All Ages Welcome",
       meetingTime: "Monthly & Special Events",
@@ -103,7 +103,7 @@ const Ministries = () => {
       id: 8,
       title: "Women's Ministry",
       icon: FiHeart,
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop",
+      image: "/images/ministries/womens-ministry.jpg",
       description: "Empowering women to grow in faith, connect in community, and serve with purpose. Through fellowship, Bible study, mentorship, and service opportunities, we create a supportive space where women can discover their God-given potential and thrive together.",
       ageRange: "Adult Women",
       meetingTime: "Weekly & Bi-weekly",
@@ -260,7 +260,7 @@ const Ministries = () => {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="ministry-grid">
             {ministries.map((ministry, index) => {
               const IconComponent = ministry.icon;
               return (
@@ -270,13 +270,13 @@ const Ministries = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group"
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group ministry-card"
                 >
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden ministry-card-image">
                     <img
                       src={ministry.image}
                       alt={ministry.title}
-                      className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-48 object-cover object-center transform group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     <div className="absolute top-4 left-4 bg-church-yellow text-church-sage-dark p-3 rounded-full">
@@ -287,12 +287,12 @@ const Ministries = () => {
                     </div>
                   </div>
                   
-                  <div className="p-6">
+                  <div className="ministry-card-content">
                     <h3 className="text-xl font-bold text-church-sage-dark mb-3 group-hover:text-church-yellow transition-colors duration-300">
                       {ministry.title}
                     </h3>
                     
-                    <p className="text-church-gray mb-4 leading-relaxed text-sm">
+                    <p className="text-church-gray mb-4 leading-relaxed text-sm ministry-card-description">
                       {ministry.description}
                     </p>
 
@@ -315,7 +315,7 @@ const Ministries = () => {
                       </div>
                     </div>
                     
-                    <div className="flex space-x-2">
+                    <div className="flex space-x-2 ministry-card-actions">
                       <Link 
                         to={
                           ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
