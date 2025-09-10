@@ -228,7 +228,7 @@ const OutreachMinistry = () => {
         />
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 py-16">
+        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 pt-24 pb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -241,7 +241,7 @@ const OutreachMinistry = () => {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Outreach Ministry: <br />
               <span className="text-church-yellow">Serving Our Community with Love</span>
             </h1>

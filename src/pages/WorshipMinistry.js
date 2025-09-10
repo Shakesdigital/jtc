@@ -227,7 +227,7 @@ const WorshipMinistry = () => {
         />
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 py-20">
+        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 pt-24 pb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -248,7 +248,7 @@ const WorshipMinistry = () => {
               <FiMusic className="w-24 h-24 mx-auto mb-8 text-church-yellow" />
             </motion.div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Worship Ministry: <span className="text-church-yellow drop-shadow-lg">Glorifying God Through Song</span>
             </h1>
             

@@ -229,7 +229,7 @@ const Home = () => {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 py-16">
+        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 pt-24 pb-20">
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0, y: 30 }}
@@ -237,7 +237,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               {heroImages[currentSlide].title}
             </h1>
             
