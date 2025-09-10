@@ -210,25 +210,25 @@ const Home = () => {
         {/* Carousel Navigation */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 sm:left-6 md:left-8 lg:left-12 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 sm:p-4 md:p-5 lg:p-6 rounded-full transition-all duration-300 hover:scale-110"
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300"
         >
-          <FiChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
+          <FiChevronLeft className="w-6 h-6" />
         </button>
         
         <button
           onClick={nextSlide}
-          className="absolute right-4 sm:right-6 md:right-8 lg:right-12 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 sm:p-4 md:p-5 lg:p-6 rounded-full transition-all duration-300 hover:scale-110"
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300"
         >
-          <FiChevronRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
+          <FiChevronRight className="w-6 h-6" />
         </button>
 
         {/* Carousel Indicators */}
-        <div className="absolute bottom-6 sm:bottom-8 md:bottom-10 lg:bottom-12 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3 sm:space-x-4 md:space-x-5">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
           {heroImages.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 rounded-full transition-all duration-300 ${
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide ? 'bg-church-yellow' : 'bg-white bg-opacity-50 hover:bg-opacity-75'
               }`}
             />
@@ -236,50 +236,52 @@ const Home = () => {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-28">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8"
+            className="space-y-6"
           >
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold leading-tight tracking-tight px-2 sm:px-4 md:px-0 responsive-text-balance text-shadow-lg">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
               {heroImages[currentSlide].title}
             </h1>
             
-            <p className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl max-w-sm xs:max-w-md sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto leading-relaxed font-medium px-2 sm:px-4 md:px-0 responsive-text-balance text-shadow">
+            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
               {heroImages[currentSlide].subtitle}
             </p>
 
-            <div className="bg-black bg-opacity-20 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 max-w-sm xs:max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto">
-              <p className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-3 sm:mb-4 md:mb-6 lg:mb-8 opacity-95 font-medium">Join us for worship every Sunday</p>
-              <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-center text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
+            <div className="bg-black bg-opacity-20 backdrop-blur-sm rounded-xl p-4 sm:p-6 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg mb-3 sm:mb-4 opacity-95">Join us for worship every Sunday</p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center text-sm sm:text-base">
                 <div className="flex items-center justify-center">
-                  <FiClock className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 mr-2 sm:mr-3 md:mr-4" />
+                  <FiClock className="w-4 h-4 mr-2" />
                   First Service: 9:00 AM
                 </div>
                 <div className="flex items-center justify-center">
-                  <FiClock className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 mr-2 sm:mr-3 md:mr-4" />
+                  <FiClock className="w-4 h-4 mr-2" />
                   Second Service: 11:00 AM
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col xs:flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 justify-center items-center pt-6 sm:pt-8 md:pt-12 lg:pt-16">
-              <Link 
-                to="/contact"
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl px-8 xs:px-10 sm:px-12 md:px-16 lg:px-20 py-3 xs:py-4 sm:py-5 md:py-6 lg:py-7 rounded-full shadow-xl hover:shadow-2xl btn-hero w-full xs:w-full sm:w-auto max-w-sm xs:max-w-md sm:max-w-none"
-              >
-                Plan Your Visit
-              </Link>
-              
-              <Link 
-                to="/about"
-                className="bg-transparent border-2 sm:border-3 md:border-4 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl px-8 xs:px-10 sm:px-12 md:px-16 lg:px-20 py-3 xs:py-4 sm:py-5 md:py-6 lg:py-7 rounded-full shadow-xl btn-hero w-full xs:w-full sm:w-auto max-w-sm xs:max-w-md sm:max-w-none"
-              >
-                Learn More
-              </Link>
+            <div className="pt-6 sm:pt-8">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                <Link 
+                  to="/contact"
+                  className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl btn-hero w-full sm:w-auto border-2 sm:border-3"
+                >
+                  Plan Your Visit
+                </Link>
+                
+                <Link 
+                  to="/about"
+                  className="bg-transparent border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-xl btn-hero w-full sm:w-auto"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
 
           </motion.div>

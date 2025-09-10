@@ -133,18 +133,18 @@ const Contact = () => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
-        <div className="relative z-10 text-center text-white max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <FiMail className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32 mx-auto mb-4 sm:mb-6 md:mb-8 text-church-yellow" />
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
+            <FiMail className="w-20 h-20 mx-auto mb-3 sm:mb-4 text-church-yellow" />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
               Get In Touch
             </h1>
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-4xl mx-auto leading-relaxed font-medium responsive-text-balance text-shadow">
+            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
               We'd love to hear from you. Reach out with questions, prayer requests, 
               or to learn more about our church community.
             </p>
