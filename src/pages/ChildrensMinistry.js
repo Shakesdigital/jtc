@@ -200,17 +200,17 @@ const ChildrensMinistry = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Banner Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background with Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(110, 152, 150, 0.85), rgba(254, 199, 111, 0.75)), url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1920&h=1080&fit=crop')`
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1920&h=1080&fit=crop')`
           }}
         />
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 py-20">
+        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

@@ -50,7 +50,11 @@
       "WebFetch(domain:aht.nuplink3.net)",
       "Bash(dir:*)",
       "Bash(cmd /c copy:*)",
-      "Bash(xcopy:*)"
+      "Bash(xcopy:*)",
+      "Bash(for:*)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(grep:*)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []

@@ -184,7 +184,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Enhanced Hero Banner Section with Carousel */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Carousel Background Images */}
         <div className="absolute inset-0">
           {heroImages.map((image, index) => (
@@ -194,7 +194,7 @@ const Home = () => {
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
               style={{
-                backgroundImage: `linear-gradient(rgba(110, 152, 150, 0.8), rgba(90, 125, 123, 0.8)), url('${image.url}')`
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${image.url}')`
               }}
             />
           ))}
@@ -229,7 +229,7 @@ const Home = () => {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 py-20">
+        <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-6 py-16">
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0, y: 30 }}
