@@ -50,19 +50,24 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-church-red to-church-burgundy text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative z-10 container-custom">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1920&h=1080&fit=crop')`
+          }}
+        />
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            className="space-y-6"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-shadow-lg">
-              About Us
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+              About Our Church
             </h1>
-            <p className="text-xl md:text-2xl leading-relaxed opacity-90">
+            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed font-medium">
               A vibrant community of believers in Jinja, Uganda, dedicated to sharing God's love 
               and transforming lives through worship, fellowship, and service.
             </p>
