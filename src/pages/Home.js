@@ -22,20 +22,20 @@ const Home = () => {
     {
       id: 1,
       url: "/images/home-banner-1.jpg",
-      title: "Welcome to Jinja Town Church",
-      subtitle: "Growing in Faith, Serving with Love"
+      title: "Welcome to Arise Africa Jinja Town Church",
+      subtitle: "All people can be saved if they believe in Christ Jesus our Lord"
     },
     {
       id: 2,
       url: "/images/home-banner-2.jpg",
-      title: "Join Our Community",
-      subtitle: "Experience God's Love Together"
+      title: "A Welcoming Christian Community",
+      subtitle: "Breaking down barriers of race, upbringing, and social status"
     },
     {
       id: 3,
       url: "/images/community-banner.jpg",
-      title: "Building Community Together",
-      subtitle: "United in Faith and Service"
+      title: "Richly Diverse Church Family",
+      subtitle: "People of all ethnicities and backgrounds worshipping together"
     }
   ];
 
@@ -63,70 +63,70 @@ const Home = () => {
   const sampleSermons = [
     {
       id: 1,
-      title: "Walking in Faith",
-      speaker: "Pastor John Mukasa",
+      title: "Breaking Down Barriers",
+      speaker: "Pr. Richard",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
-      description: "Discovering God's purpose in our daily walk"
+      description: "Unity in Christ transcends race, upbringing, and social status"
     },
     {
       id: 2,
-      title: "Love Without Borders",
-      speaker: "Pastor Sarah Nakato",
+      title: "All People Can Be Saved",
+      speaker: "Pr. Jonathan",
       image: "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=400&h=300&fit=crop",
-      description: "Extending Christ's love to our community"
+      description: "Exploring John 3:16 and God's inclusive love"
     },
     {
       id: 3,
-      title: "Hope in Christ",
-      speaker: "Pastor David Ssemakula",
+      title: "Building Diverse Community",
+      speaker: "Pr. Kenneth",
       image: "https://images.unsplash.com/photo-1520637836862-4d197d17c46a?w=400&h=300&fit=crop",
-      description: "Finding strength in God's promises"
+      description: "How diversity strengthens the body of Christ"
     },
     {
       id: 4,
-      title: "Serving with Joy",
-      speaker: "Pastor Mary Akello",
+      title: "From Guesthouse to Church",
+      speaker: "Elder Joshua",
       image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?w=400&h=300&fit=crop",
-      description: "The heart of Christian service"
+      description: "God's unexpected ways of building His kingdom"
     }
   ];
 
   const sampleEvents = [
     {
       id: 1,
-      title: "Youth Conference 2024",
-      date: "December 15, 2024",
-      time: "9:00 AM - 5:00 PM",
-      location: "Main Sanctuary",
+      title: "Annual Youth Jam",
+      date: "September 2025",
+      time: "6:00 PM - 10:00 PM",
+      location: "Church Sanctuary",
       image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=300&fit=crop",
-      description: "Annual youth gathering with worship, teaching, and fellowship"
+      description: "A lively celebration of Jesus through music, dance, and testimonies"
     },
     {
       id: 2,
-      title: "Christmas Service",
-      date: "December 25, 2024",
-      time: "10:00 AM",
-      location: "Main Sanctuary",
-      image: "https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=400&h=300&fit=crop",
-      description: "Celebrate the birth of our Savior with special music and message"
+      title: "Mega Fellowship",
+      date: "Every Quarter",
+      time: "10:00 AM - 2:00 PM",
+      location: "Church Grounds",
+      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=300&fit=crop",
+      description: "Quarterly celebration with worship, preaching, and community meals"
     },
     {
       id: 3,
-      title: "New Year Prayer Night",
-      date: "December 31, 2024",
-      time: "10:00 PM - 1:00 AM",
-      location: "Main Sanctuary",
+      title: "Tuesday Prayer Meeting",
+      date: "Every Tuesday",
+      time: "4:00 PM - 6:00 PM",
+      location: "Church Sanctuary",
       image: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=400&h=300&fit=crop",
-      description: "Welcome the new year with prayer, worship, and dedication"
+      description: "Breaking fast, prayer, and fellowship with our church community family"
     },
     {
       id: 4,
-      title: "Community Outreach",
-      date: "January 12, 2025",
-      time: "8:00 AM - 12:00 PM",
-      location: "Community Center",
+      title: "Family Groups Meetup",
+      date: "Weekly",
+      time: "6:00 PM - 9:00 PM",
+      location: "Various Homes",
       image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop",
-      description: "Serving our local community with love and compassion"
+      description: "Home-based fellowship for deeper connections and Bible study"
     }
   ];
 
@@ -257,13 +257,14 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center text-sm sm:text-base">
                 <div className="flex items-center justify-center">
                   <FiClock className="w-4 h-4 mr-2" />
-                  First Service: 9:00 AM
+                  Prayer & Fellowship: 9:00 AM
                 </div>
                 <div className="flex items-center justify-center">
                   <FiClock className="w-4 h-4 mr-2" />
-                  Second Service: 11:00 AM
+                  Main Service: 10:00 AM - 12:30 PM
                 </div>
               </div>
+              <p className="text-sm opacity-90 mt-3">Tuesday Prayer Meetings: 4:00 PM - 6:00 PM</p>
             </div>
 
             <div className="pt-6 sm:pt-8">
@@ -307,20 +308,21 @@ const Home = () => {
               </div>
               
               <p className="text-lg text-church-gray leading-relaxed">
-                For over 15 years, Jinja Town Church has been a beacon of hope and love in the heart of Uganda. 
-                We are a vibrant community committed to growing in faith, serving our neighbors, and spreading 
-                God's love throughout our region.
+                Arise Africa Jinja Town Church is a welcoming Christian community affiliated with Arise Africa International – 
+                an organization spreading the Gospel across Uganda, East Africa, and beyond through church planting, 
+                orphan rescue, pastor training, and community development.
               </p>
               
               <p className="text-lg text-church-gray leading-relaxed">
-                Our mission is to create an inclusive environment where everyone can encounter God's grace, 
-                build meaningful relationships, and discover their purpose in Christ. We believe in the power 
-                of community and the transformative love of Jesus.
+                Our story began almost by accident, holding Sunday services for staff at the Arise Africa Guesthouse. 
+                As attendance grew, we recognized a deep hunger in the Jinja community for a church that embraces 
+                diversity and unity in Christ. Today, we are a richly diverse family.
               </p>
 
               <p className="text-lg text-church-gray leading-relaxed">
-                Through our various ministries and outreach programs, we continue to impact lives and build 
-                a stronger, more compassionate community for all.
+                <strong>Our mission is rooted in John 3:16 and 1 Timothy 2:1-4:</strong> "All people can be saved if they believe in Christ Jesus our Lord." 
+                We strive to reach out to ALL people in Jinja Town, breaking down barriers of race, upbringing, 
+                social status, or any other division.
               </p>
 
               <Link 
@@ -600,24 +602,24 @@ const Home = () => {
           >
             <FiHeart className="w-16 h-16 mx-auto mb-8 text-church-yellow" />
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Join Our Church Family
+              Ready to Join Our Diverse Family?
             </h2>
             <p className="text-xl md:text-2xl mb-12 opacity-95 leading-relaxed">
-              Whether you're new to faith or have been walking with God for years, 
-              there's a place for you in our loving, welcoming community.
+              Whether you're new to faith or a lifelong believer, we invite you to experience 
+              the life-changing love of Jesus with us. Come as you are - everyone is welcome.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link 
                 to="/contact"
                 className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-12 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300"
               >
-                Get Connected Today
+                Contact Us or Visit This Sunday!
               </Link>
               <Link 
                 to="/about"
                 className="bg-transparent border-3 border-church-yellow text-church-yellow hover:bg-church-yellow hover:text-church-sage-dark font-bold text-lg px-12 py-5 rounded-full shadow-xl transition-all duration-300"
               >
-                Learn About Us
+                Learn Our Story
               </Link>
             </div>
           </motion.div>

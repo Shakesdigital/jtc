@@ -9,34 +9,39 @@ const ChurchService = () => {
       day: 'Sunday',
       services: [
         {
-          name: 'Main Worship Service',
-          time: '9:00 AM - 11:30 AM',
-          description: 'Join us for inspiring worship, biblical teaching, and community fellowship.'
+          name: 'Prayer & Fellowship',
+          time: '9:00 AM',
+          description: 'Gathering for prayer and fellowship before the main service. Come as you are!'
         },
         {
-          name: 'Evening Service',
-          time: '6:00 PM - 8:00 PM',
-          description: 'A more intimate worship experience with prayer and reflection.'
+          name: 'Main Church Service',
+          time: '10:00 AM - 12:30 PM',
+          description: 'Vibrant worship, biblical teaching, and opportunities for communion and prayer. Children, families, and visitors are all encouraged to participate.'
         }
       ]
     },
     {
-      day: 'Wednesday',
+      day: 'Tuesday',
       services: [
         {
-          name: 'Bible Study & Prayer',
-          time: '7:00 PM - 8:30 PM',
-          description: 'Deep dive into God\'s word and corporate prayer time.'
+          name: 'Prayer Meeting',
+          time: '4:00 PM - 6:00 PM',
+          description: 'A time of breaking fast, prayer, and fellowship with our church community family. Mid-week gathering for personal needs, community, and global missions.'
         }
       ]
     },
     {
-      day: 'Friday',
+      day: 'Special Events',
       services: [
         {
-          name: 'Youth Meeting',
-          time: '7:00 PM - 9:00 PM',
-          description: 'Dynamic worship and teaching designed for young people.'
+          name: 'Annual Youth Jam',
+          time: 'September (Check for updates)',
+          description: 'A lively event celebrating Jesus through music, dance, and testimonies.'
+        },
+        {
+          name: 'Mega Fellowships',
+          time: 'Quarterly',
+          description: 'Quarterly celebrations with worship, preaching, and community meals.'
         }
       ]
     }

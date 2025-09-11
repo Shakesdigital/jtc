@@ -33,67 +33,67 @@ const FamilyGroups = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [expandedFAQ, setExpandedFAQ] = useState(null);
 
-  // Group types data for Jinja locations
+  // Family Groups data for Arise Africa Jinja Town Church
   const groupTypes = [
     {
       id: 1,
-      name: "Bukaya Family Group",
-      location: "Bukaya, Jinja",
+      name: "Njeru Family Group",
+      location: "Njeru, Jinja",
       image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=400&fit=crop",
-      description: "A vibrant community of families focused on Bible study, prayer, and fellowship. We meet weekly for spiritual growth and mutual support.",
-      meetingTime: "Sundays, 4:00 PM",
-      focus: "Bible Study & Fellowship",
-      leader: "Pastor Samuel Wamala"
+      description: "Building community through prayer and discussion. A supportive environment for spiritual growth and fellowship.",
+      meetingTime: "Wednesdays, 6:00 PM - 9:00 PM",
+      focus: "Building community through prayer and discussion",
+      leaders: "Freda and Aron"
     },
     {
       id: 2,
-      name: "Njeru Family Group",
-      location: "Njeru, Jinja",
+      name: "Bukaya Family Group",
+      location: "Bukaya, Jinja",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop",
-      description: "Dedicated to strengthening family bonds through Christ-centered activities, parenting support, and community service projects.",
-      meetingTime: "Saturdays, 5:00 PM",
-      focus: "Family Building & Service",
-      leader: "Pastor Grace Namuli"
+      description: "Family-oriented fellowship with emphasis on practical faith application. Perfect for families seeking to live out their faith daily.",
+      meetingTime: "Wednesdays, 6:00 PM - 9:00 PM",
+      focus: "Family-oriented fellowship with practical faith application",
+      leaders: "Kate and Elisha"
     },
     {
       id: 3,
-      name: "Bugembe Family Group",
-      location: "Bugembe, Jinja",
+      name: "Jinja Town Group (Women's Focus)",
+      location: "Jinja Town Center",
       image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?w=600&h=400&fit=crop",
-      description: "A welcoming group emphasizing worship, prayer, and discipleship. Perfect for families seeking deeper spiritual connection and growth.",
-      meetingTime: "Wednesdays, 7:00 PM",
-      focus: "Worship & Discipleship",
-      leader: "Pastor David Kigozi"
+      description: "Empowering women through shared stories, prayer, and Bible study. A safe space for women to grow in faith and support each other.",
+      meetingTime: "Wednesdays, 6:00 PM - 9:00 PM",
+      focus: "Empowering women through shared stories, prayer, and Bible study",
+      leaders: "Esther and Ruth"
     },
     {
       id: 4,
-      name: "Jinja Town Family Group",
-      location: "Jinja Town Center",
+      name: "Bugembe Group",
+      location: "Bugembe, Jinja",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
-      description: "Located in the heart of Jinja, this group focuses on urban ministry, evangelism, and reaching out to the local community with God's love.",
-      meetingTime: "Fridays, 6:30 PM",
-      focus: "Evangelism & Outreach",
-      leader: "Pastor John Mukasa"
+      description: "Focused on discipleship and outreach strategies. For those passionate about evangelism and making disciples.",
+      meetingTime: "Fridays, 6:00 PM - 9:00 PM",
+      focus: "Discipleship and outreach strategies",
+      leaders: "Pr. Ken and Elder Joshua"
     },
     {
       id: 5,
-      name: "Walukuba Family Group",
+      name: "Walukuba Group",
       location: "Walukuba, Jinja",
       image: "https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=600&h=400&fit=crop",
-      description: "A close-knit community focusing on men's and women's ministries, youth development, and practical Christian living in daily life.",
-      meetingTime: "Sundays, 2:00 PM",
-      focus: "Men's & Women's Ministry",
-      leader: "Pastor Mary Akello"
+      description: "Support for daily life challenges with scriptural encouragement. A caring community focused on practical Christian living.",
+      meetingTime: "Thursdays, 6:00 PM - 9:00 PM",
+      focus: "Support for daily life challenges with scriptural encouragement",
+      leaders: "Charity and Sarah"
     },
     {
       id: 6,
-      name: "Kimaka Family Group",
+      name: "Kimaka Group",
       location: "Kimaka, Jinja",
       image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop",
-      description: "Committed to community development through faith, education support for children, and economic empowerment for families.",
-      meetingTime: "Thursdays, 6:00 PM",
-      focus: "Community Development",
-      leader: "Pastor Sarah Nakato"
+      description: "Youth and young adult engagement. A vibrant group focused on reaching the next generation with God's love and truth.",
+      meetingTime: "Wednesdays, 6:00 PM - 9:00 PM",
+      focus: "Youth and young adult engagement",
+      leaders: "Taylor"
     }
   ];
 

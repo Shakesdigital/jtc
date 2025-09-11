@@ -53,45 +53,46 @@ const Contact = () => {
       icon: FiMapPin,
       title: 'Visit Us',
       details: [
-        'Main Street, Jinja',
-        'Uganda, East Africa'
+        'Arise Africa Guesthouse, Wilson Ave Plot 23',
+        'Jinja, Uganda (15-minute walk from town center)'
       ],
       action: {
         text: 'Get Directions',
-        href: 'https://maps.google.com/?q=Jinja+Town+Church+Uganda'
+        href: 'https://maps.google.com/?q=Wilson+Ave+Plot+23+Jinja+Uganda'
       }
     },
     {
       icon: FiPhone,
-      title: 'Call Us',
+      title: 'Call Our Leaders',
       details: [
-        '+256 XXX XXXXXX',
-        '+256 XXX XXXXXX'
+        'Pr. Richard: +31627997562',
+        'Pr. Jonathan: +256784805817',
+        'Elder Joshua: +256774775058'
       ],
       action: {
         text: 'Call Now',
-        href: 'tel:+256XXXXXXXX'
+        href: 'tel:+31627997562'
       }
     },
     {
       icon: FiMail,
       title: 'Email Us',
       details: [
-        'info@jinjatownchurch.org',
-        'pastor@jinjatownchurch.org'
+        'info@ariseafricajinja.org',
+        'Contact us for ministry involvement'
       ],
       action: {
         text: 'Send Email',
-        href: 'mailto:info@jinjatownchurch.org'
+        href: 'mailto:info@ariseafricajinja.org'
       }
     },
     {
       icon: FiClock,
-      title: 'Office Hours',
+      title: 'Service Times',
       details: [
-        'Monday - Friday: 9:00 AM - 5:00 PM',
-        'Saturday: 9:00 AM - 1:00 PM',
-        'Sunday: Closed (Worship Services)'
+        'Sunday: 9:00 AM (Prayer), 10:00 AM - 12:30 PM (Service)',
+        'Tuesday: 4:00 PM - 6:00 PM (Prayer Meeting)',
+        'Family Groups: Various times (see Family Groups page)'
       ]
     }
   ];
@@ -100,20 +101,21 @@ const Contact = () => {
     {
       day: 'Sunday',
       services: [
-        { name: 'Main Worship Service', time: '9:00 AM - 11:30 AM' },
-        { name: 'Evening Service', time: '6:00 PM - 8:00 PM' }
+        { name: 'Prayer & Fellowship', time: '9:00 AM' },
+        { name: 'Main Church Service', time: '10:00 AM - 12:30 PM' }
       ]
     },
     {
-      day: 'Wednesday',
+      day: 'Tuesday',
       services: [
-        { name: 'Bible Study & Prayer', time: '7:00 PM - 8:30 PM' }
+        { name: 'Prayer Meeting', time: '4:00 PM - 6:00 PM' }
       ]
     },
     {
-      day: 'Friday',
+      day: 'Special Events',
       services: [
-        { name: 'Youth Meeting', time: '7:00 PM - 9:00 PM' }
+        { name: 'Annual Youth Jam', time: 'September (Check for updates)' },
+        { name: 'Mega Fellowships', time: 'Quarterly'
       ]
     }
   ];

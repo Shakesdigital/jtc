@@ -6,44 +6,53 @@ const About = () => {
   const values = [
     {
       icon: FiHeart,
-      title: 'Faith',
-      description: 'We believe in the transformative power of faith in Jesus Christ and seek to grow deeper in our relationship with God.'
+      title: 'Inclusivity',
+      description: 'Everyone is welcome, just as they are. We break down barriers of race, upbringing, social status, or any other division in Christ.'
     },
     {
       icon: FiUsers,
       title: 'Community',
-      description: 'We are committed to building strong, supportive relationships within our church family and the broader Jinja community.'
+      description: 'Building strong bonds through fellowship and service. We are a richly diverse family united in faith.'
     },
     {
       icon: FiTarget,
-      title: 'Service',
-      description: 'We actively serve others as an expression of God\'s love, both within our congregation and in our local community.'
+      title: 'Growth',
+      description: 'Equipping believers to live out their faith daily, discovering their purpose in Christ through discipleship and service.'
     },
     {
       icon: FiStar,
-      title: 'Excellence',
-      description: 'We strive for excellence in all we do, from worship and teaching to community outreach and ministry programs.'
+      title: 'Outreach',
+      description: 'Sharing the Gospel locally and beyond through church planting, orphan rescue, pastor training, and community development.'
     }
   ];
 
   const leadership = [
     {
-      name: 'Pastor John Mukasa',
-      role: 'Senior Pastor',
-      image: '/images/pastor-john.jpg',
-      bio: 'Pastor John has been leading Jinja Town Church for over 10 years, bringing a heart for community outreach and biblical teaching.'
+      name: 'Pr. Richard',
+      role: 'Senior Leader',
+      image: '/images/pr-richard.jpg',
+      bio: 'Pr. Richard oversees the overall vision and ministries of Jinja Town Church, with a heart for breaking down barriers and building inclusive community.',
+      contact: '+31627997562'
     },
     {
-      name: 'Pastor Mary Nakato',
-      role: 'Associate Pastor',
-      image: '/images/pastor-mary.jpg',
-      bio: 'Pastor Mary leads our women\'s ministry and youth programs, with a passion for discipleship and mentoring.'
+      name: 'Pr. Jonathan',
+      role: 'Leader - Discipleship & Outreach',
+      image: '/images/pr-jonathan.jpg',
+      bio: 'Pr. Jonathan focuses on discipleship training and evangelism, equipping believers to share the Gospel with confidence and love.',
+      contact: '+256784805817'
     },
     {
-      name: 'Elder Samuel Kizza',
-      role: 'Church Elder',
-      image: '/images/elder-samuel.jpg',
-      bio: 'Elder Samuel oversees our community outreach programs and serves as a spiritual guide to our congregation.'
+      name: 'Pr. Kenneth',
+      role: 'Leader - Worship & Family Groups',
+      image: '/images/pr-kenneth.jpg',
+      bio: 'Pr. Kenneth guides our worship ministry and oversees family group coordination, fostering deeper spiritual connections.'
+    },
+    {
+      name: 'Elder Joshua',
+      role: 'Elder - Men\'s Ministry',
+      image: '/images/elder-joshua.jpg',
+      bio: 'Elder Joshua supports men\'s ministry and serves on the elders\' council, providing spiritual guidance and mentorship.',
+      contact: '+256774775058'
     }
   ];
 
@@ -70,11 +79,11 @@ const About = () => {
             className="space-y-6"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
-              About Our Church
+              About <span className="text-church-yellow">Arise Africa</span> Jinja Town Church
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
-              A vibrant community of believers in Jinja, Uganda, dedicated to sharing God's love 
-              and transforming lives through worship, fellowship, and service.
+              A welcoming Christian community affiliated with Arise Africa International, 
+              breaking down barriers and embracing diversity in Christ.
             </p>
           </motion.div>
         </div>
@@ -109,18 +118,20 @@ const About = () => {
                   Our <span className="text-gradient">Mission</span>
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  To be a beacon of hope and love in Jinja, Uganda, by sharing the Gospel of Jesus Christ, 
-                  building strong community relationships, and serving those in need with compassion and excellence.
+                  <strong>Rooted in John 3:16 and 1 Timothy 2:1-4:</strong> "All people can be saved if they believe in Christ Jesus our Lord." 
+                  We strive to reach out to ALL people in Jinja Town, breaking down barriers of race, upbringing, 
+                  social status, or any other division.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Our <span className="text-gradient">Vision</span>
+                  Our <span className="text-gradient">Story</span>
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  To see transformed lives and a transformed community through the power of God's love, 
-                  creating a place where everyone can find hope, healing, and purpose.
+                  Our story began almost by accident, holding Sunday services for staff at the Arise Africa Guesthouse 
+                  who couldn't attend church due to work commitments. As attendance grew, we recognized a deep hunger 
+                  in the Jinja community for a church that embraces diversity and unity in Christ.
                 </p>
               </div>
             </motion.div>
