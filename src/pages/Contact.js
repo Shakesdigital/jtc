@@ -115,7 +115,7 @@ const Contact = () => {
       day: 'Special Events',
       services: [
         { name: 'Annual Youth Jam', time: 'September (Check for updates)' },
-        { name: 'Mega Fellowships', time: 'Quarterly'
+        { name: 'Mega Fellowships', time: 'Quarterly' }
       ]
     }
   ];
@@ -430,14 +430,14 @@ const Contact = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Find Us</h3>
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.123456789!2d33.204167!3d0.431389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJinja%2C%20Uganda!5e0!3m2!1sen!2sus!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.4!2d33.204167!3d0.431389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sWilson+Ave+Plot+23+Jinja+Uganda!5e0!3m2!1sen!2sus!4v1234567890"
                     width="100%"
                     height="250"
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Jinja Town Church Location"
+                    title="Arise Africa Jinja Town Church Location - Wilson Ave Plot 23"
                   ></iframe>
                 </div>
               </div>

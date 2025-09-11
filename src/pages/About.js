@@ -118,9 +118,9 @@ const About = () => {
                   Our <span className="text-gradient">Mission</span>
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  <strong>Rooted in John 3:16 and 1 Timothy 2:1-4:</strong> "All people can be saved if they believe in Christ Jesus our Lord." 
+                  <strong>Our mission is rooted in John 3:16 and 1 Timothy 2:1-4:</strong> "All people can be saved if they believe in Christ Jesus our Lord." 
                   We strive to reach out to ALL people in Jinja Town, breaking down barriers of race, upbringing, 
-                  social status, or any other division.
+                  social status, or any other division. Whether you're new to faith or a lifelong believer, we invite you to experience the life-changing love of Jesus with us.
                 </p>
               </div>
 
@@ -129,9 +129,8 @@ const About = () => {
                   Our <span className="text-gradient">Story</span>
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Our story began almost by accident, holding Sunday services for staff at the Arise Africa Guesthouse 
-                  who couldn't attend church due to work commitments. As attendance grew, we recognized a deep hunger 
-                  in the Jinja community for a church that embraces diversity and unity in Christ.
+                  Our story began almost by accident. We initially held Sunday services for the staff at the Arise Africa Guesthouse, as they were unable to attend church due to work commitments. As attendance grew, we recognized a deep hunger 
+                  in the Jinja community for a church that embraces diversity and unity in Christ. Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve.
                 </p>
               </div>
             </motion.div>
@@ -242,23 +241,15 @@ const About = () => {
               
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Jinja Town Church was founded in 2008 with a simple vision: to create a welcoming 
-                  community where people could encounter God's love and grow in their faith journey. 
-                  What started as a small group meeting in homes has grown into a vibrant congregation 
-                  of over 500 members.
+                  <strong>Founded as part of Arise Africa International</strong> (which oversees over 260 churches in Uganda and neighboring countries), Jinja Town Church serves as a key hub in Eastern Uganda. We've grown from humble beginnings into a beacon of hope, hosting events like youth jams, mega fellowships, and community outreaches.
                 </p>
                 
                 <p>
-                  Over the years, we have been blessed to witness countless lives transformed through 
-                  the power of the Gospel. From our humble beginnings, we have expanded our ministries 
-                  to include children's programs, youth activities, community outreach, and various 
-                  support groups.
+                  Our story began almost by accident. We initially held Sunday services for the staff at the Arise Africa Guesthouse, as they were unable to attend church due to work commitments. As attendance grew, we recognized a deep hunger in the Jinja community for a church that embraces diversity and unity in Christ.
                 </p>
                 
                 <p>
-                  Today, we continue to be rooted in our core mission while adapting to meet the 
-                  evolving needs of our community. We are committed to being a church that not only 
-                  serves our members but also makes a positive impact in Jinja and beyond.
+                  Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve. We are affiliated with Arise Africa International – an organization dedicated to spreading the Gospel across Uganda, East Africa, and beyond through church planting, orphan rescue, pastor training, education, and community development.
                 </p>
               </div>
             </motion.div>
@@ -285,12 +276,12 @@ const About = () => {
               and discover a community where you can grow, serve, and thrive.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="btn-accent text-lg px-8 py-4 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                Visit This Sunday
-              </button>
-              <button className="btn-secondary text-lg px-8 py-4 bg-transparent border-white text-white hover:bg-white hover:text-church-red shadow-xl">
+              <Link to="/church-service" className="btn-accent text-lg px-8 py-4 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 inline-block">
+                Contact us or visit this Sunday!
+              </Link>
+              <Link to="/contact" className="btn-secondary text-lg px-8 py-4 bg-transparent border-white text-white hover:bg-white hover:text-church-red shadow-xl inline-block">
                 Contact Us
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

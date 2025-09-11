@@ -43,25 +43,25 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: FiMapPin,
-      text: 'Main Street, Jinja, Uganda',
-      href: 'https://maps.google.com/?q=Jinja+Town+Church+Uganda'
+      text: 'Wilson Ave Plot 23, Jinja, Uganda',
+      href: 'https://maps.google.com/?q=Wilson+Ave+Plot+23+Jinja+Uganda'
     },
     {
       icon: FiPhone,
-      text: '+256 XXX XXXXXX',
-      href: 'tel:+256XXXXXXXX'
+      text: 'Pr. Richard: +31627997562',
+      href: 'tel:+31627997562'
     },
     {
       icon: FiMail,
-      text: 'info@jinjatownchurch.org',
-      href: 'mailto:info@jinjatownchurch.org'
+      text: 'info@ariseafricajinja.org',
+      href: 'mailto:info@ariseafricajinja.org'
     }
   ];
 
   const serviceSchedule = [
-    { day: 'Sunday', time: '9:00 AM - 11:30 AM', service: 'Main Service' },
-    { day: 'Wednesday', time: '7:00 PM - 8:30 PM', service: 'Bible Study' },
-    { day: 'Friday', time: '7:00 PM - 9:00 PM', service: 'Youth Meeting' },
+    { day: 'Sunday', time: '9:00 AM - Fellowship', service: 'Prayer & Fellowship' },
+    { day: 'Sunday', time: '10:00 AM - 12:30 PM', service: 'Main Service' },
+    { day: 'Tuesday', time: '4:00 PM - 6:00 PM', service: 'Prayer Meeting' },
   ];
 
   return (
@@ -80,12 +80,11 @@ const Footer = () => {
                     className="w-16 h-16 object-contain rounded-lg"
                   />
                   <div className="ml-3">
-                    <h3 className="text-xl font-bold">Jinja Town Church</h3>
+                    <h3 className="text-xl font-bold">Arise Africa<br />Jinja Town Church</h3>
                   </div>
                 </Link>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  A vibrant community of believers in Jinja, Uganda, dedicated to sharing God's love 
-                  and transforming lives through worship, fellowship, and service.
+                  Arise Africa Jinja Town Church - A welcoming Christian community where all are welcome in Christ's love. Breaking down barriers and embracing diversity in our faith journey together.
                 </p>
               </div>
 
@@ -255,7 +254,7 @@ const Footer = () => {
         <div className="py-6 border-t border-white">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>© {currentYear} Jinja Town Church. All rights reserved.</span>
+              <span>© {currentYear} Arise Africa Jinja Town Church. All rights reserved.</span>
             </div>
             
             <div className="flex items-center space-x-6 text-sm">

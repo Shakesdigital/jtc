@@ -34,9 +34,9 @@ const Ministries = () => {
       title: "Children Ministry",
       icon: FiUsers,
       image: "/images/ministries/children-ministry.jpg",
-      description: "Nurturing young faith through fun, Bible-based programs for ages 0-12. We create a safe, loving environment where children can learn about God's love through interactive stories, worship songs, crafts, and activities that build a strong foundation for their spiritual journey.",
+      description: "Our Children Ministry is dedicated to helping young ones (ages 3-12) grow in faith through fun, interactive Bible lessons, prayer times, and creative activities. We aim to instill a lifelong love for God and His Word, drawing from Proverbs 22:6: 'Train up a child in the way he should go...' We also partner with Arise Africa International's orphan rescue programs for community outreach.",
       ageRange: "Ages 0-12",
-      meetingTime: "Sundays during service",
+      meetingTime: "Sundays during services & Annual kids camps",
       highlights: ["Bible Stories", "Interactive Worship", "Age-appropriate Activities", "Safe Environment"]
     },
     {
@@ -46,7 +46,7 @@ const Ministries = () => {
       image: "/images/ministries/worship-ministry.jpg",
       description: "Leading heartfelt praise and music to connect the congregation with God. Our worship team creates an atmosphere of reverence and joy through contemporary Christian music, traditional hymns, and spirit-led worship that invites everyone to encounter God's presence.",
       ageRange: "All Ages",
-      meetingTime: "Sundays & Rehearsals Wednesdays",
+      meetingTime: "Sundays & Worship rehearsals",
       highlights: ["Contemporary Music", "Traditional Hymns", "Team Collaboration", "Spiritual Connection"]
     },
     {
@@ -54,7 +54,7 @@ const Ministries = () => {
       title: "Family Groups Ministry",
       icon: FiHome,
       image: "/images/ministries/family-groups-ministry.jpg",
-      description: "Building strong family bonds through small group gatherings and support. We focus on strengthening relationships within families and creating connections between families in our church community through shared meals, Bible study, prayer, and mutual encouragement.",
+      description: "This ministry oversees our scattered family groups, building strong bonds within the church family through regular home-based fellowships. Inspired by Acts 2:46-47, we emphasize breaking bread, prayer, and mutual support to create a sense of belonging.",
       ageRange: "Families of All Sizes",
       meetingTime: "Weekly in Homes",
       highlights: ["Small Group Fellowship", "Family Support", "Shared Meals", "Prayer Partnership"]
@@ -64,9 +64,9 @@ const Ministries = () => {
       title: "Discipleship Equip Ministry",
       icon: FiBookOpen,
       image: "/images/ministries/discipleship-equip-ministry.jpg",
-      description: "Equipping believers with tools for deeper spiritual growth and leadership. Through systematic Bible study, mentorship programs, and practical training, we help members develop their faith, discover their spiritual gifts, and prepare for ministry service.",
+      description: "Focused on training church members to share the Gospel confidently, this ministry equips believers to disciple others and lead souls to Christ. Based on Matthew 28:19-20, we prepare you to 'go and make disciples of all nations' through bi-weekly training sessions every other Saturday, evangelism workshops, role-playing scenarios, and community outreach events.",
       ageRange: "Teen & Adult",
-      meetingTime: "Sundays & Weekday Classes",
+      meetingTime: "Bi-weekly Saturdays & Community outreach",
       highlights: ["Bible Study", "Leadership Training", "Mentorship", "Spiritual Gifts Discovery"]
     },
     {
@@ -74,9 +74,9 @@ const Ministries = () => {
       title: "Media & Tech Ministry",
       icon: FiMonitor,
       image: "/images/ministries/media-tech-ministry.jpg",
-      description: "Supporting worship services through audio-visual technology and digital outreach. We handle sound engineering, lighting, video production, live streaming, and maintain our digital presence to ensure quality worship experiences and reach people beyond our physical walls.",
+      description: "This team ensures seamless integration of technology to amplify God's Word, reaching people in Jinja and globally. From live streaming services to social media outreach, we use tools to connect and inspire, aligned with Psalm 96:3: 'Declare His glory among the nations.' We manage audio-visual equipment, produce online content, maintain websites, and train volunteers in digital evangelism.",
       ageRange: "Teen & Adult",
-      meetingTime: "Sundays & Technical Training",
+      meetingTime: "Sundays & Tech training sessions",
       highlights: ["Audio/Visual Systems", "Live Streaming", "Digital Outreach", "Technical Training"]
     },
     {
@@ -84,9 +84,9 @@ const Ministries = () => {
       title: "Men's Ministry",
       icon: FiUser,
       image: "/images/ministries/mens-ministry.jpg",
-      description: "Building strong Christian men through brotherhood and accountability. We create opportunities for men to grow in their faith, build meaningful friendships, tackle life's challenges together, and develop godly character through Bible study, service projects, and fellowship.",
+      description: "Dedicated to mentoring men to grow in Christ, lead responsibly, and serve their families and community. Drawing from Titus 2:6-8, we focus on spiritual maturity, accountability, and practical life skills through monthly men's breakfasts, Bible studies on leadership, mentorship programs, and service projects. We address topics like fatherhood, work-life balance, and faith in daily challenges.",
       ageRange: "Adult Men",
-      meetingTime: "Bi-weekly Saturdays",
+      meetingTime: "Monthly men's breakfasts & Bible studies",
       highlights: ["Brotherhood", "Accountability Groups", "Service Projects", "Character Development"]
     },
     {
@@ -94,7 +94,7 @@ const Ministries = () => {
       title: "Outreach Ministry",
       icon: FiHeart,
       image: "/images/ministries/outreach-ministry.jpg",
-      description: "Serving the community through missions, volunteering, and compassion initiatives. We extend God's love beyond our church walls through community service, evangelism, charity work, and mission trips, making a tangible difference in people's lives.",
+      description: "Serving the community through missions, volunteering, and compassion initiatives. We extend God's love beyond our church walls through community service, evangelism, charity work, and social services that make a difference. This ministry focuses on reaching out to the community with practical assistance and sharing the Gospel.",
       ageRange: "All Ages Welcome",
       meetingTime: "Monthly & Special Events",
       highlights: ["Community Service", "Mission Trips", "Evangelism", "Charity Work"]
@@ -104,7 +104,7 @@ const Ministries = () => {
       title: "Women's Ministry",
       icon: FiHeart,
       image: "/images/ministries/womens-ministry.jpg",
-      description: "Empowering women to grow in faith, connect in community, and serve with purpose. Through fellowship, Bible study, mentorship, and service opportunities, we create a supportive space where women can discover their God-given potential and thrive together.",
+      description: "Building on the Jinja Town women's group, this ministry focuses on empowering women to grow in faith, connect in community, and serve with purpose. Through fellowship, Bible study, mentorship, prayer, and service opportunities, we create a supportive space where women can discover their God-given potential and thrive together.",
       ageRange: "Adult Women",
       meetingTime: "Weekly & Bi-weekly",
       highlights: ["Sisterhood", "Bible Study", "Mentorship", "Service Projects"]
@@ -209,13 +209,11 @@ const Ministries = () => {
               </div>
               
               <p className="text-lg text-church-gray leading-relaxed">
-                At Jinja Town Church, our ministries are the heartbeat of our community. They provide meaningful ways for 
-                every member to connect with God, grow in faith, and serve others with purpose and joy.
+                At Arise Africa Jinja Town Church, our ministries are the heartbeat of our community. They equip believers, nurture growth, and extend God's love to Jinja and beyond. Whether you're passionate about children, media, or outreach, there's a place for you to serve.
               </p>
               
               <p className="text-lg text-church-gray leading-relaxed">
-                Whether you're looking to use your talents, develop new skills, or simply find your place in our church family, 
-                there's a ministry where you can make a difference and experience the fulfillment that comes from serving together.
+                Our ministries provide meaningful ways for every member to connect with God, grow in faith, and serve others with purpose and joy. Whether you're looking to use your talents, develop new skills, or simply find your place in our church family, there's a ministry where you can make a difference and experience the fulfillment that comes from serving together.
               </p>
             </motion.div>
 

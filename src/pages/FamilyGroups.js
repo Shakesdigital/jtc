@@ -418,7 +418,7 @@ const FamilyGroups = () => {
                     </div>
                     <div className="flex items-center text-sm text-church-gray">
                       <FiUser className="w-4 h-4 mr-2 text-church-sage" />
-                      {group.leader}
+                      {group.leaders}
                     </div>
                   </div>
                   

@@ -22,8 +22,8 @@ const Home = () => {
     {
       id: 1,
       url: "/images/home-banner-1.jpg",
-      title: "Welcome to Arise Africa Jinja Town Church",
-      subtitle: "All people can be saved if they believe in Christ Jesus our Lord"
+      title: "Welcome to Arise Africa Jinja Town Church – Where All Are Welcome in Christ's Love",
+      subtitle: "Join our diverse community in Jinja, Uganda, as we worship, grow, and serve together. Experience the transformative power of Jesus every Sunday and beyond."
     },
     {
       id: 2,
@@ -59,6 +59,25 @@ const Home = () => {
     setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
   };
   
+  // Quick Sections - Upcoming Events
+  const upcomingEvents = [
+    {
+      title: "Sunday Service",
+      time: "Every Sunday, 10:00 AM – 12:30 PM",
+      description: "Prayer & Fellowship at 9:00 AM"
+    },
+    {
+      title: "Tuesday Prayer",
+      time: "4:00 PM – 6:00 PM", 
+      description: "Breaking fast and fellowship"
+    },
+    {
+      title: "Family Group Meetings",
+      time: "Various days",
+      description: "Home-based fellowship"
+    }
+  ];
+
   // Sample data for sections
   const sampleSermons = [
     {
@@ -270,10 +289,10 @@ const Home = () => {
             <div className="pt-6 sm:pt-8">
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
                 <Link 
-                  to="/contact"
+                  to="/church-service"
                   className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl btn-hero w-full sm:w-auto border-2 sm:border-3"
                 >
-                  Plan Your Visit
+                  Join Us This Sunday at 10:00 AM
                 </Link>
                 
                 <Link 
@@ -286,6 +305,46 @@ const Home = () => {
             </div>
 
           </motion.div>
+        </div>
+      </section>
+
+      {/* Quick Sections - Upcoming Events */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-church-sage-dark mb-6">Upcoming Events</h3>
+              <div className="space-y-4">
+                {upcomingEvents.map((event, index) => (
+                  <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-church-sage-dark">{event.title}</h4>
+                    <p className="text-church-gray text-sm">{event.time}</p>
+                    <p className="text-church-gray text-xs">{event.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-church-sage-dark mb-6">Testimonial Highlight</h3>
+              <div className="bg-church-yellow bg-opacity-10 p-6 rounded-lg border-l-4 border-church-yellow">
+                <p className="text-church-gray italic mb-4">
+                  "This church feels like family – a place where everyone belongs."
+                </p>
+                <p className="text-church-sage-dark font-semibold">– A Church Member</p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-church-sage-dark mb-6">Quick Links</h3>
+              <div className="space-y-3">
+                <Link to="/about" className="block bg-church-sage text-white py-2 px-4 rounded-lg hover:bg-church-sage-dark transition-colors duration-300">About Us</Link>
+                <Link to="/church-service" className="block bg-church-sage text-white py-2 px-4 rounded-lg hover:bg-church-sage-dark transition-colors duration-300">Services</Link>
+                <Link to="/ministries" className="block bg-church-sage text-white py-2 px-4 rounded-lg hover:bg-church-sage-dark transition-colors duration-300">Ministries</Link>
+                <Link to="/contact" className="block bg-church-sage text-white py-2 px-4 rounded-lg hover:bg-church-sage-dark transition-colors duration-300">Contact</Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -308,21 +367,21 @@ const Home = () => {
               </div>
               
               <p className="text-lg text-church-gray leading-relaxed">
-                Arise Africa Jinja Town Church is a welcoming Christian community affiliated with Arise Africa International – 
-                an organization spreading the Gospel across Uganda, East Africa, and beyond through church planting, 
-                orphan rescue, pastor training, and community development.
+                Arise Africa Jinja Town Church is a welcoming Christian community located in Jinja, Uganda, affiliated with Arise Africa International – 
+                an organization dedicated to spreading the Gospel across Uganda, East Africa, and beyond through church planting, 
+                orphan rescue, pastor training, education, and community development.
               </p>
               
               <p className="text-lg text-church-gray leading-relaxed">
-                Our story began almost by accident, holding Sunday services for staff at the Arise Africa Guesthouse. 
+                Our story began almost by accident. We initially held Sunday services for the staff at the Arise Africa Guesthouse, as they were unable to attend church due to work commitments. 
                 As attendance grew, we recognized a deep hunger in the Jinja community for a church that embraces 
-                diversity and unity in Christ. Today, we are a richly diverse family.
+                diversity and unity in Christ. Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve.
               </p>
 
               <p className="text-lg text-church-gray leading-relaxed">
                 <strong>Our mission is rooted in John 3:16 and 1 Timothy 2:1-4:</strong> "All people can be saved if they believe in Christ Jesus our Lord." 
                 We strive to reach out to ALL people in Jinja Town, breaking down barriers of race, upbringing, 
-                social status, or any other division.
+                social status, or any other division. Whether you're new to faith or a lifelong believer, we invite you to experience the life-changing love of Jesus with us.
               </p>
 
               <Link 

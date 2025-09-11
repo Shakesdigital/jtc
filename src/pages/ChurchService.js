@@ -11,12 +11,12 @@ const ChurchService = () => {
         {
           name: 'Prayer & Fellowship',
           time: '9:00 AM',
-          description: 'Gathering for prayer and fellowship before the main service. Come as you are!'
+          description: 'We gather every Sunday starting at 9:00 AM for prayer and fellowship, with the main Church Service from 10:00 AM to 12:30 PM.'
         },
         {
           name: 'Main Church Service',
           time: '10:00 AM - 12:30 PM',
-          description: 'Vibrant worship, biblical teaching, and opportunities for communion and prayer. Children, families, and visitors are all encouraged to participate.'
+          description: 'Services include vibrant worship, biblical teaching, and opportunities for communion and prayer. Come as you are – children, families, and visitors are all encouraged to participate.'
         }
       ]
     },
@@ -24,9 +24,9 @@ const ChurchService = () => {
       day: 'Tuesday',
       services: [
         {
-          name: 'Prayer Meeting',
+          name: 'Tuesday Prayer Meeting',
           time: '4:00 PM - 6:00 PM',
-          description: 'A time of breaking fast, prayer, and fellowship with our church community family. Mid-week gathering for personal needs, community, and global missions.'
+          description: 'Join us every Tuesday from 4:00 PM to 6:00 PM for a time of breaking fast, prayer, and fellowship with our church community family. This mid-week gathering strengthens our bonds and focuses on intercession for personal needs, the community, and global missions.'
         }
       ]
     },
@@ -36,7 +36,7 @@ const ChurchService = () => {
         {
           name: 'Annual Youth Jam',
           time: 'September (Check for updates)',
-          description: 'A lively event celebrating Jesus through music, dance, and testimonies.'
+          description: 'A lively event celebrating Jesus through music, dance, and testimonies (typically held in September – check for updates).'
         },
         {
           name: 'Mega Fellowships',
@@ -124,8 +124,8 @@ const ChurchService = () => {
           >
             <FiMapPin className="w-12 h-12 mx-auto mb-4 text-church-gold" />
             <h3 className="text-2xl font-bold mb-4">Location</h3>
-            <p className="text-lg mb-2">Jinja Town Church</p>
-            <p className="opacity-90 mb-6">Main Street, Jinja, Uganda</p>
+            <p className="text-lg mb-2">Arise Africa Jinja Town Church</p>
+            <p className="opacity-90 mb-6">Wilson Ave Plot 23, Jinja, Uganda (15-minute walk from town center)</p>
             <button className="btn-accent">Get Directions</button>
           </motion.div>
         </div>
