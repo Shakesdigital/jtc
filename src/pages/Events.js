@@ -504,7 +504,8 @@ const Events = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group border border-church-sage"
+                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group"
+                    style={{ border: '1px solid #6e9896' }}
                   >
                     <div className="relative overflow-hidden">
                       <img
