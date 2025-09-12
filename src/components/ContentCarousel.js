@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import { 
   FiChevronLeft, 
   FiChevronRight,
-  FiPlay,
-  FiVolume2,
-  FiShare2,
   FiCalendar,
   FiClock,
   FiMapPin,
