@@ -59,24 +59,6 @@ const Home = () => {
     setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
   };
   
-  // Quick Sections - Upcoming Events
-  const upcomingEvents = [
-    {
-      title: "Sunday Service",
-      time: "Every Sunday, 10:00 AM – 12:30 PM",
-      description: "Prayer & Fellowship at 9:00 AM"
-    },
-    {
-      title: "Tuesday Prayer",
-      time: "4:00 PM – 6:00 PM", 
-      description: "Breaking fast and fellowship"
-    },
-    {
-      title: "Family Group Meetings",
-      time: "Various days",
-      description: "Home-based fellowship"
-    }
-  ];
 
   // Sample data for sections
   const sampleSermons = [
