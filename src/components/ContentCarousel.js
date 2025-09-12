@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -58,13 +58,14 @@ const ContentCarousel = ({
     }, scrollInterval);
 
     return () => clearInterval(timer);
-  }, [currentIndex, autoScroll, scrollInterval, itemsPerView, isHovered]);
+  }, [autoScroll, scrollInterval, isHovered, handleNext]);
 
   const maxIndex = Math.max(0, Math.ceil(items.length / itemsPerView) - 1);
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  };
+  const handleNext = useCallback(() => {
+    const currentMaxIndex = Math.max(0, Math.ceil(items.length / itemsPerView) - 1);
+    setCurrentIndex((prev) => (prev >= currentMaxIndex ? 0 : prev + 1));
+  }, [items.length, itemsPerView]);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
