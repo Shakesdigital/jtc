@@ -310,21 +310,9 @@ const Home = () => {
               </div>
               
               <p className="text-lg text-church-gray leading-relaxed">
-                Arise Africa Jinja Town Church is a welcoming Christian community located in Jinja, Uganda, affiliated with Arise Africa International – 
-                an organization dedicated to spreading the Gospel across Uganda, East Africa, and beyond through church planting, 
-                orphan rescue, pastor training, education, and community development.
-              </p>
-              
-              <p className="text-lg text-church-gray leading-relaxed">
                 Our story began almost by accident. We initially held Sunday services for the staff at the Arise Africa Guesthouse, as they were unable to attend church due to work commitments. 
                 As attendance grew, we recognized a deep hunger in the Jinja community for a church that embraces 
                 diversity and unity in Christ. Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve.
-              </p>
-
-              <p className="text-lg text-church-gray leading-relaxed">
-                <strong>Our mission is rooted in John 3:16 and 1 Timothy 2:1-4:</strong> "All people can be saved if they believe in Christ Jesus our Lord." 
-                We strive to reach out to ALL people in Jinja Town, breaking down barriers of race, upbringing, 
-                social status, or any other division. Whether you're new to faith or a lifelong believer, we invite you to experience the life-changing love of Jesus with us.
               </p>
 
               <Link 
