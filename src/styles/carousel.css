@@ -1,0 +1,377 @@
+/* Carousel Component Styles */
+
+.carousel-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container {
+  position: relative;
+  padding: 0 60px;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-items-container {
+  width: 100%;
+}
+
+/* Carousel Cards */
+.carousel-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-card-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.carousel-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.carousel-card:hover .carousel-card-image img {
+  transform: scale(1.05);
+}
+
+.carousel-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+/* Navigation Buttons */
+.carousel-nav {
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.carousel-nav:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav-prev {
+  left: 0;
+}
+
+.carousel-nav-next {
+  right: 0;
+}
+
+/* Dots Indicator */
+.carousel-dots {
+  margin-top: 2rem;
+}
+
+.carousel-dot {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .carousel-container {
+    padding: 0 60px;
+  }
+  
+  .carousel-card-image {
+    height: 220px;
+  }
+  
+  .carousel-card-content {
+    padding: 1.5rem;
+  }
+  
+  .carousel-items {
+    gap: 1.5rem;
+  }
+  
+  .carousel-nav {
+    left: 10px;
+    right: 10px;
+  }
+  
+  .carousel-nav-prev {
+    left: -20px;
+  }
+  
+  .carousel-nav-next {
+    right: -20px;
+  }
+}
+
+/* Large Desktop (1280px+) */
+@media (min-width: 1280px) {
+  .carousel-container {
+    padding: 0 80px;
+  }
+  
+  .carousel-nav-prev {
+    left: -30px;
+  }
+  
+  .carousel-nav-next {
+    right: -30px;
+  }
+}
+
+/* Tablet (481px–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .carousel-container {
+    padding: 0 50px;
+  }
+  
+  .carousel-card-image {
+    height: 180px;
+  }
+  
+  .carousel-card-content {
+    padding: 1.25rem;
+  }
+  
+  .carousel-items {
+    gap: 1rem;
+  }
+  
+  .carousel-nav {
+    padding: 0.5rem;
+  }
+  
+  .carousel-nav svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* Mobile (320px–480px) */
+@media (max-width: 480px) {
+  .carousel-container {
+    padding: 0 1rem;
+  }
+  
+  .carousel-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .carousel-card-image {
+    height: 160px;
+  }
+  
+  .carousel-card-content {
+    padding: 1rem;
+  }
+  
+  .carousel-nav {
+    display: none; /* Hide arrows on mobile, use swipe only */
+  }
+  
+  .carousel-items {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .carousel-section {
+    padding: 3rem 0;
+  }
+  
+  .carousel-section h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  /* Improve touch target sizes */
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .carousel-track {
+    cursor: grab;
+  }
+  
+  .carousel-track:active {
+    cursor: grabbing;
+  }
+}
+
+/* Smooth transitions */
+.carousel-items-container {
+  will-change: transform;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Ensure uniform card sizing */
+.carousel-card {
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-card-content > *:last-child {
+  margin-top: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carousel-card {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-card {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-card {
+    min-height: 360px;
+  }
+}
+
+/* Specific styles for different content types */
+
+/* Sermon cards */
+.carousel-section[data-type="sermons"] .carousel-card {
+  background: linear-gradient(to bottom, #ffffff 0%, #f9fafb 100%);
+}
+
+/* Article cards */
+.carousel-section[data-type="articles"] .carousel-card {
+  border-top: 3px solid #6e9896;
+}
+
+/* Event cards already have border-left styling */
+
+/* Auto-scroll pause on hover */
+.carousel-container:hover {
+  /* This will be handled in JavaScript by pausing the timer */
+}
+
+/* Accessibility improvements */
+.carousel-nav:focus,
+.carousel-dot:focus {
+  outline: 2px solid #6e9896;
+  outline-offset: 2px;
+}
+
+/* Loading state */
+.carousel-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.carousel-loading-spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid #e5e7eb;
+  border-top-color: #6e9896;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Final responsive improvements */
+@media (min-width: 481px) and (max-width: 1023px) {
+  .carousel-section h2 {
+    font-size: 2.25rem;
+    line-height: 1.3;
+  }
+  
+  .carousel-section p {
+    font-size: 1rem;
+  }
+  
+  .carousel-nav {
+    padding: 0.625rem;
+  }
+  
+  .carousel-nav svg {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+}
+
+/* Very large screens */
+@media (min-width: 1536px) {
+  .carousel-container {
+    padding: 0 100px;
+  }
+  
+  .carousel-card-image {
+    height: 240px;
+  }
+  
+  .carousel-nav-prev {
+    left: -40px;
+  }
+  
+  .carousel-nav-next {
+    right: -40px;
+  }
+}
+
+/* Smooth scroll behavior */
+.carousel-section {
+  scroll-margin-top: 100px;
+}
+
+/* Enhanced focus states */
+.carousel-nav:focus-visible,
+.carousel-dot:focus-visible {
+  outline: 3px solid #6e9896;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px white, 0 0 0 5px #6e9896;
+}
+
+/* Better hover states */
+.carousel-nav:hover {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}

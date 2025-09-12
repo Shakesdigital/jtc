@@ -4,15 +4,12 @@ import { motion } from 'framer-motion';
 import { 
   FiHeart,
   FiClock,
-  FiPlay,
-  FiVolume2,
-  FiShare2,
-  FiCalendar,
-  FiMapPin,
   FiArrowRight,
   FiChevronLeft,
   FiChevronRight
 } from 'react-icons/fi';
+import ContentCarousel from '../components/ContentCarousel';
+import '../styles/carousel.css';
 
 const Home = () => {
   // Static content mode - API calls disabled for initial deployment
@@ -60,35 +57,49 @@ const Home = () => {
   };
   
 
-  // Sample data for sections
+  // Sample data for sections with additional items for carousel
   const sampleSermons = [
     {
       id: 1,
       title: "Breaking Down Barriers",
       speaker: "Pr. Richard",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
-      description: "Unity in Christ transcends race, upbringing, and social status"
+      description: "Unity in Christ transcends race, upbringing, and social status. A powerful message about how the church breaks down walls that divide us."
     },
     {
       id: 2,
       title: "All People Can Be Saved",
       speaker: "Pr. Jonathan",
       image: "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=400&h=300&fit=crop",
-      description: "Exploring John 3:16 and God's inclusive love"
+      description: "Exploring John 3:16 and God's inclusive love. Discover how Christ's sacrifice opens the door of salvation to everyone."
     },
     {
       id: 3,
       title: "Building Diverse Community",
       speaker: "Pr. Kenneth",
       image: "https://images.unsplash.com/photo-1520637836862-4d197d17c46a?w=400&h=300&fit=crop",
-      description: "How diversity strengthens the body of Christ"
+      description: "How diversity strengthens the body of Christ. Learn about the beauty of different cultures coming together in worship."
     },
     {
       id: 4,
       title: "From Guesthouse to Church",
       speaker: "Elder Joshua",
       image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?w=400&h=300&fit=crop",
-      description: "God's unexpected ways of building His kingdom"
+      description: "God's unexpected ways of building His kingdom. The amazing story of how our church began in a simple guesthouse."
+    },
+    {
+      id: 5,
+      title: "Living Water for All Nations",
+      speaker: "Pr. Richard",
+      image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=400&h=300&fit=crop",
+      description: "Jesus offers living water to everyone who thirsts. A message about spiritual fulfillment across all backgrounds."
+    },
+    {
+      id: 6,
+      title: "Unity in the Spirit",
+      speaker: "Pr. Sarah",
+      image: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=400&h=300&fit=crop",
+      description: "How the Holy Spirit unites believers from every tribe and tongue. Celebrating our diversity in Christ."
     }
   ];
 
@@ -100,7 +111,7 @@ const Home = () => {
       time: "6:00 PM - 10:00 PM",
       location: "Church Sanctuary",
       image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=300&fit=crop",
-      description: "A lively celebration of Jesus through music, dance, and testimonies"
+      description: "A lively celebration of Jesus through music, dance, and testimonies. Join us for an evening of worship designed especially for young people."
     },
     {
       id: 2,
@@ -109,7 +120,7 @@ const Home = () => {
       time: "10:00 AM - 2:00 PM",
       location: "Church Grounds",
       image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=300&fit=crop",
-      description: "Quarterly celebration with worship, preaching, and community meals"
+      description: "Quarterly celebration with worship, preaching, and community meals. A time for the entire church family to come together in fellowship."
     },
     {
       id: 3,
@@ -118,7 +129,7 @@ const Home = () => {
       time: "4:00 PM - 6:00 PM",
       location: "Church Sanctuary",
       image: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=400&h=300&fit=crop",
-      description: "Breaking fast, prayer, and fellowship with our church community family"
+      description: "Breaking fast, prayer, and fellowship with our church community family. Experience the power of corporate prayer and intercession."
     },
     {
       id: 4,
@@ -127,7 +138,76 @@ const Home = () => {
       time: "6:00 PM - 9:00 PM",
       location: "Various Homes",
       image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop",
-      description: "Home-based fellowship for deeper connections and Bible study"
+      description: "Home-based fellowship for deeper connections and Bible study. Build lasting relationships in a small group setting."
+    },
+    {
+      id: 5,
+      title: "Women's Conference",
+      date: "October 2025",
+      time: "9:00 AM - 4:00 PM",
+      location: "Church Hall",
+      image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=400&h=300&fit=crop",
+      description: "Empowering women to grow in faith and purpose. A day of worship, teaching, and fellowship designed for women of all ages."
+    },
+    {
+      id: 6,
+      title: "Community Outreach Day",
+      date: "Monthly",
+      time: "8:00 AM - 1:00 PM",
+      location: "Jinja Community",
+      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=300&fit=crop",
+      description: "Serving our local community with love and practical support. Join us as we demonstrate Christ's love through action."
+    }
+  ];
+
+  const sampleArticles = [
+    {
+      id: 1,
+      title: "How Do We Measure Devotion?",
+      excerpt: "Cultivating the root for better fruit. Exploring what true devotion to God looks like in our daily lives and how we can grow deeper in our faith.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+      slug: "how-do-we-measure-devotion",
+      author: "Richard van de Ruit"
+    },
+    {
+      id: 2,
+      title: "Follow Him to Calvary",
+      excerpt: "Counting the cost of living for Jesus. Understanding the sacrificial love of Christ and what it means to take up our cross daily.",
+      image: "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=400&h=300&fit=crop",
+      slug: "follow-him-to-calvary",
+      author: "Richard van de Ruit"
+    },
+    {
+      id: 3,
+      title: "The Opinion Virus",
+      excerpt: "Are we building up or voicing unhelpful judgments? Learning to speak life and encouragement in a world full of criticism.",
+      image: "https://images.unsplash.com/photo-1520637836862-4d197d17c46a?w=400&h=300&fit=crop",
+      slug: "the-opinion-virus",
+      author: "Richard van de Ruit"
+    },
+    {
+      id: 4,
+      title: "Dunk or Sprinkle?",
+      excerpt: "What is the pattern of Scripture when it comes to water baptism? An in-depth look at biblical baptism and its significance.",
+      image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?w=400&h=300&fit=crop",
+      slug: "dunk-or-sprinkle",
+      author: "Richard van de Ruit"
+    },
+    {
+      id: 5,
+      title: "Grace Under Pressure",
+      excerpt: "Finding God's strength in challenging times. Discovering how God's grace sustains us through life's most difficult moments.",
+      image: "https://images.unsplash.com/photo-1492176273113-2d51f47b23b0?w=400&h=300&fit=crop",
+      slug: "grace-under-pressure",
+      author: "Richard van de Ruit"
+    },
+    {
+      id: 6,
+      title: "The Power of Forgiveness",
+      excerpt: "Breaking free from the chains of unforgiveness. Learn how forgiveness transforms both the forgiver and the forgiven.",
+      image: "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=400&h=300&fit=crop",
+      slug: "the-power-of-forgiveness",
+      author: "Richard van de Ruit"
     }
   ];
 
@@ -423,261 +503,47 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Sermons Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-                Recent <span className="text-church-yellow">Sermons</span>
-              </h2>
-              <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-church-gray max-w-3xl mx-auto">
-                Be inspired by God's word through our powerful messages and teachings
-              </p>
-            </motion.div>
-          </div>
+      {/* Featured Sermons Section with Carousel */}
+      <div className="bg-gray-50">
+        <ContentCarousel
+          title={<>Recent <span className="text-church-yellow">Sermons</span></>}
+          subtitle="Be inspired by God's word through our powerful messages and teachings"
+          items={sampleSermons}
+          type="sermons"
+          autoScroll={true}
+          scrollInterval={6000}
+          ctaLink="/sermons/archive"
+          ctaText="View All Sermons"
+        />
+      </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {sampleSermons.map((sermon, index) => (
-              <motion.div
-                key={sermon.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={sermon.image}
-                    alt={sermon.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-church-sage-dark mb-2">{sermon.title}</h3>
-                  <p className="text-sm text-church-gray mb-3">{sermon.speaker}</p>
-                  <p className="text-sm text-church-gray mb-6 leading-relaxed">{sermon.description}</p>
-                  
-                  <div className="flex justify-center space-x-4">
-                    <button className="flex items-center space-x-1 text-church-sage hover:text-church-sage-dark transition-colors duration-300">
-                      <FiVolume2 className="w-4 h-4" />
-                      <span className="text-sm font-medium">Listen</span>
-                    </button>
-                    <button className="flex items-center space-x-1 text-church-sage hover:text-church-sage-dark transition-colors duration-300">
-                      <FiPlay className="w-4 h-4" />
-                      <span className="text-sm font-medium">Watch</span>
-                    </button>
-                    <button className="flex items-center space-x-1 text-church-sage hover:text-church-sage-dark transition-colors duration-300">
-                      <FiShare2 className="w-4 h-4" />
-                      <span className="text-sm font-medium">Share</span>
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+      {/* Resources Section with Carousel */}
+      <div className="bg-gray-50">
+        <ContentCarousel
+          title={<>Latest <span className="text-church-yellow">Articles</span></>}
+          subtitle="Discover inspiring articles by Richard van de Ruit and other spiritual resources to deepen your faith journey"
+          items={sampleArticles}
+          type="articles"
+          autoScroll={true}
+          scrollInterval={7000}
+          ctaLink="/resources/articles/archive"
+          ctaText="View All Articles"
+        />
+      </div>
 
-          <div className="text-center mt-12">
-            <Link 
-              to="/sermons"
-              className="bg-church-sage hover:bg-church-sage-dark text-white font-bold text-lg px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
-            >
-              View All Sermons
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Resources Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-                Latest <span className="text-church-yellow">Articles</span>
-              </h2>
-              <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-church-gray max-w-3xl mx-auto">
-                Discover inspiring articles by Richard van de Ruit and other spiritual resources to deepen your faith journey
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                id: 1,
-                title: "How Do We Measure Devotion?",
-                excerpt: "Cultivating the root for better fruit.",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
-                slug: "how-do-we-measure-devotion",
-                author: "Richard van de Ruit"
-              },
-              {
-                id: 2,
-                title: "Follow Him to Calvary",
-                excerpt: "Counting the cost of living for Jesus.",
-                image: "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=400&h=300&fit=crop",
-                slug: "follow-him-to-calvary",
-                author: "Richard van de Ruit"
-              },
-              {
-                id: 3,
-                title: "The Opinion Virus",
-                excerpt: "Are we building up or voicing unhelpful judgments?",
-                image: "https://images.unsplash.com/photo-1520637836862-4d197d17c46a?w=400&h=300&fit=crop",
-                slug: "the-opinion-virus",
-                author: "Richard van de Ruit"
-              },
-              {
-                id: 4,
-                title: "Dunk or Sprinkle?",
-                excerpt: "What is the pattern of Scripture when it comes to water baptism?",
-                image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?w=400&h=300&fit=crop",
-                slug: "dunk-or-sprinkle",
-                author: "Richard van de Ruit"
-              }
-            ].map((article, index) => (
-              <motion.div
-                key={article.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    className="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-church-sage-dark mb-2 line-clamp-2">{article.title}</h3>
-                  <p className="text-xs text-church-sage mb-3 font-medium">By {article.author}</p>
-                  <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{article.excerpt}</p>
-                  
-                  <Link 
-                    to={`/resources/articles/${article.slug}`}
-                    className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
-                  >
-                    Read Article
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link 
-              to="/resources"
-              className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
-            >
-              View All Resources
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-                Upcoming <span className="text-church-yellow">Events</span>
-              </h2>
-              <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-church-gray max-w-3xl mx-auto">
-                Join us for fellowship, worship, and community activities that bring us closer together
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {sampleEvents.map((event, index) => (
-              <motion.div
-                key={event.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-l-4 border-church-yellow"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-church-yellow text-church-sage-dark px-3 py-1 rounded-full text-xs font-bold">
-                    UPCOMING
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-church-sage-dark mb-3">{event.title}</h3>
-                  
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center text-sm text-church-gray">
-                      <FiCalendar className="w-4 h-4 mr-2 text-church-sage" />
-                      {event.date}
-                    </div>
-                    <div className="flex items-center text-sm text-church-gray">
-                      <FiClock className="w-4 h-4 mr-2 text-church-sage" />
-                      {event.time}
-                    </div>
-                    <div className="flex items-center text-sm text-church-gray">
-                      <FiMapPin className="w-4 h-4 mr-2 text-church-sage" />
-                      {event.location}
-                    </div>
-                  </div>
-                  
-                  <p className="text-sm text-church-gray mb-6 leading-relaxed">{event.description}</p>
-                  
-                  <Link 
-                    to="/events"
-                    className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link 
-              to="/events"
-              className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
-            >
-              See Full Calendar
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Upcoming Events Section with Carousel */}
+      <div className="bg-white">
+        <ContentCarousel
+          title={<>Upcoming <span className="text-church-yellow">Events</span></>}
+          subtitle="Join us for fellowship, worship, and community activities that bring us closer together"
+          items={sampleEvents}
+          type="events"
+          autoScroll={true}
+          scrollInterval={8000}
+          ctaLink="/events/archive"
+          ctaText="See Full Calendar"
+        />
+      </div>
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-br from-church-sage to-church-sage-dark text-white">
