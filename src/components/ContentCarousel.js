@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import { 
   FiChevronLeft, 
   FiChevronRight,
+  FiPlay,
+  FiVolume2,
+  FiShare2,
   FiCalendar,
   FiClock,
   FiMapPin,
@@ -98,12 +101,12 @@ const ContentCarousel = ({
   };
 
   const renderSermonCard = (sermon) => (
-    <div className="carousel-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+    <div className="carousel-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-church-sage">
       <div className="relative overflow-hidden carousel-card-image">
         <img
           src={sermon.image || "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=400&h=300&fit=crop"}
           alt={sermon.title}
-          className="w-full h-full object-contain bg-gray-100"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
       </div>
@@ -111,25 +114,33 @@ const ContentCarousel = ({
       <div className="carousel-card-content">
         <h3 className="text-lg font-bold text-church-sage-dark mb-2 line-clamp-2">{sermon.title}</h3>
         <p className="text-sm text-church-gray mb-3">{sermon.speaker}</p>
-        <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{sermon.description || 'Join us for this inspiring sermon that will strengthen your faith and deepen your understanding of God\'s word. Experience powerful worship and life-changing messages.'}</p>
+        <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{sermon.description}</p>
         
-        <Link 
-          to="/sermons/archive"
-          className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
-        >
-          Watch Sermon
-        </Link>
+        <div className="flex justify-center space-x-4">
+          <Link to="/sermons/archive" className="flex items-center space-x-1 text-church-sage hover:text-church-sage-dark transition-colors duration-300">
+            <FiVolume2 className="w-4 h-4" />
+            <span className="text-sm font-medium">Listen</span>
+          </Link>
+          <Link to="/sermons/archive" className="flex items-center space-x-1 text-church-sage hover:text-church-sage-dark transition-colors duration-300">
+            <FiPlay className="w-4 h-4" />
+            <span className="text-sm font-medium">Watch</span>
+          </Link>
+          <button className="flex items-center space-x-1 text-church-sage hover:text-church-sage-dark transition-colors duration-300">
+            <FiShare2 className="w-4 h-4" />
+            <span className="text-sm font-medium">Share</span>
+          </button>
+        </div>
       </div>
     </div>
   );
 
   const renderArticleCard = (article) => (
-    <div className="carousel-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+    <div className="carousel-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-church-sage">
       <div className="relative overflow-hidden carousel-card-image">
         <img
           src={article.image || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"}
           alt={article.title}
-          className="w-full h-full object-contain bg-gray-100 transform hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       </div>
@@ -137,7 +148,7 @@ const ContentCarousel = ({
       <div className="carousel-card-content">
         <h3 className="text-lg font-bold text-church-sage-dark mb-2 line-clamp-2">{article.title}</h3>
         <p className="text-xs text-church-sage mb-3 font-medium">By {article.author || 'Church Staff'}</p>
-        <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{article.excerpt || 'Discover insights and wisdom that will help you grow in your spiritual journey. This article explores practical applications of biblical truths for everyday life.'}</p>
+        <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{article.excerpt}</p>
         
         <Link 
           to={article.slug ? `/resources/articles/${article.slug}` : '/resources/articles/archive'}
@@ -150,12 +161,12 @@ const ContentCarousel = ({
   );
 
   const renderEventCard = (event) => (
-    <div className="carousel-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-l-4 border-church-yellow">
+    <div className="carousel-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-l-4 border-church-yellow border border-church-sage">
       <div className="relative overflow-hidden carousel-card-image">
         <img
           src={event.image || "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=300&fit=crop"}
           alt={event.title}
-          className="w-full h-full object-contain bg-gray-100"
+          className="w-full h-full object-cover"
         />
         <div className="absolute top-4 right-4 bg-church-yellow text-church-sage-dark px-3 py-1 rounded-full text-xs font-bold">
           UPCOMING
@@ -180,7 +191,7 @@ const ContentCarousel = ({
           </div>
         </div>
         
-        <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{event.description || 'Join us for this special event where we come together as a community to worship, learn, and fellowship. All are welcome to attend and participate.'}</p>
+        <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{event.description}</p>
         
         <Link 
           to="/events/archive"
