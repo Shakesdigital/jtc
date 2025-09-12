@@ -504,7 +504,7 @@ const Events = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group"
+                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group border border-church-sage"
                   >
                     <div className="relative overflow-hidden">
                       <img
@@ -519,7 +519,7 @@ const Events = () => {
                           day: 'numeric' 
                         })}
                       </div>
-                      <div className="absolute top-4 right-4 bg-church-yellow text-church-sage-dark px-3 py-1 rounded-full text-xs font-bold">
+                      <div className="absolute top-4 right-4 bg-church-sage text-white px-3 py-1 rounded-full text-xs font-bold">
                         {event.category}
                       </div>
                       {event.featured && (
