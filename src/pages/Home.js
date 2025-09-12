@@ -308,45 +308,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Quick Sections - Upcoming Events */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-church-sage-dark mb-6">Upcoming Events</h3>
-              <div className="space-y-4">
-                {upcomingEvents.map((event, index) => (
-                  <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-church-sage-dark">{event.title}</h4>
-                    <p className="text-church-gray text-sm">{event.time}</p>
-                    <p className="text-church-gray text-xs">{event.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-church-sage-dark mb-6">Testimonial Highlight</h3>
-              <div className="bg-church-yellow bg-opacity-10 p-6 rounded-lg border-l-4 border-church-yellow">
-                <p className="text-church-gray italic mb-4">
-                  "This church feels like family – a place where everyone belongs."
-                </p>
-                <p className="text-church-sage-dark font-semibold">– A Church Member</p>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-church-sage-dark mb-6">Quick Links</h3>
-              <div className="space-y-3">
-                <Link to="/about" className="block bg-church-sage text-white py-2 px-4 rounded-lg hover:bg-church-sage-dark transition-colors duration-300">About Us</Link>
-                <Link to="/church-service" className="block bg-church-sage text-white py-2 px-4 rounded-lg hover:bg-church-sage-dark transition-colors duration-300">Services</Link>
-                <Link to="/ministries" className="block bg-church-sage text-white py-2 px-4 rounded-lg hover:bg-church-sage-dark transition-colors duration-300">Ministries</Link>
-                <Link to="/contact" className="block bg-church-sage text-white py-2 px-4 rounded-lg hover:bg-church-sage-dark transition-colors duration-300">Contact</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* About the Church Section */}
       <section className="py-20 bg-gray-50">
