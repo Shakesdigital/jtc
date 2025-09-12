@@ -54,7 +54,8 @@
       "Bash(for:*)",
       "Bash(do echo \"=== $file ===\")",
       "Bash(grep:*)",
-      "Bash(done)"
+      "Bash(done)",
+      "Read(//d/Jinja Town Church Work/Website Images/media_library_export-2025_09_09_10_42_07/media_library_export-2025_09_09_10_42_07/**)"
     ],
     "deny": [],
     "ask": []

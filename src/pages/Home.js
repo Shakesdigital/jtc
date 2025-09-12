@@ -497,6 +497,105 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Resources Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
+                Latest <span className="text-church-yellow">Articles</span>
+              </h2>
+              <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
+              <p className="text-lg text-church-gray max-w-3xl mx-auto">
+                Discover inspiring articles by Richard van de Ruit and other spiritual resources to deepen your faith journey
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                id: 1,
+                title: "How Do We Measure Devotion?",
+                excerpt: "Cultivating the root for better fruit.",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+                slug: "how-do-we-measure-devotion",
+                author: "Richard van de Ruit"
+              },
+              {
+                id: 2,
+                title: "Follow Him to Calvary",
+                excerpt: "Counting the cost of living for Jesus.",
+                image: "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=400&h=300&fit=crop",
+                slug: "follow-him-to-calvary",
+                author: "Richard van de Ruit"
+              },
+              {
+                id: 3,
+                title: "The Opinion Virus",
+                excerpt: "Are we building up or voicing unhelpful judgments?",
+                image: "https://images.unsplash.com/photo-1520637836862-4d197d17c46a?w=400&h=300&fit=crop",
+                slug: "the-opinion-virus",
+                author: "Richard van de Ruit"
+              },
+              {
+                id: 4,
+                title: "Dunk or Sprinkle?",
+                excerpt: "What is the pattern of Scripture when it comes to water baptism?",
+                image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?w=400&h=300&fit=crop",
+                slug: "dunk-or-sprinkle",
+                author: "Richard van de Ruit"
+              }
+            ].map((article, index) => (
+              <motion.div
+                key={article.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-church-sage-dark mb-2 line-clamp-2">{article.title}</h3>
+                  <p className="text-xs text-church-sage mb-3 font-medium">By {article.author}</p>
+                  <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{article.excerpt}</p>
+                  
+                  <Link 
+                    to={`/resources/articles/${article.slug}`}
+                    className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
+                  >
+                    Read Article
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link 
+              to="/resources"
+              className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              View All Resources
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Upcoming Events Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">

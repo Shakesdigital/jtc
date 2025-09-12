@@ -24,6 +24,8 @@ import Donate from './pages/Donate';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import PrayerRequests from './pages/PrayerRequests';
+import Resources from './pages/Resources';
+import ArticleDetail from './pages/ArticleDetail';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -60,6 +62,8 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:id" element={<BlogPost />} />
           <Route path="prayer-requests" element={<PrayerRequests />} />
+          <Route path="resources" element={<Resources />} />
+          <Route path="resources/articles/:slug" element={<ArticleDetail />} />
         </Route>
 
         {/* Admin Routes */}

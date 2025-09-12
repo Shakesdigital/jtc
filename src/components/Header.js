@@ -9,7 +9,8 @@ import {
   FiHeart,
   FiCalendar,
   FiVideo,
-  FiMail
+  FiMail,
+  FiBook
 } from 'react-icons/fi';
 
 const Header = () => {
@@ -45,6 +46,11 @@ const Header = () => {
       name: 'About',
       href: '/about',
       icon: FiUsers,
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      icon: FiBook,
     },
     {
       name: 'Contact',
