@@ -49,6 +49,14 @@ const ContentCarousel = ({
     return () => window.removeEventListener('resize', handleResize);
   }, [type]);
 
+  // Navigation functions
+  const handleNext = useCallback(() => {
+    const currentMaxIndex = Math.max(0, Math.ceil(items.length / itemsPerView) - 1);
+    setCurrentIndex((prev) => (prev >= currentMaxIndex ? 0 : prev + 1));
+  }, [items.length, itemsPerView]);
+
+  const maxIndex = Math.max(0, Math.ceil(items.length / itemsPerView) - 1);
+
   // Auto-scroll functionality
   useEffect(() => {
     if (!autoScroll || isHovered) return;
@@ -59,13 +67,6 @@ const ContentCarousel = ({
 
     return () => clearInterval(timer);
   }, [autoScroll, scrollInterval, isHovered, handleNext]);
-
-  const maxIndex = Math.max(0, Math.ceil(items.length / itemsPerView) - 1);
-
-  const handleNext = useCallback(() => {
-    const currentMaxIndex = Math.max(0, Math.ceil(items.length / itemsPerView) - 1);
-    setCurrentIndex((prev) => (prev >= currentMaxIndex ? 0 : prev + 1));
-  }, [items.length, itemsPerView]);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
