@@ -104,7 +104,7 @@ const ContentCarousel = ({
     <div className="carousel-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-church-sage">
       <div className="relative overflow-hidden carousel-card-image">
         <img
-          src={sermon.image || "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=400&h=300&fit=crop"}
+          src={sermon.image || "/images/pr-richard-preaching.jpg"}
           alt={sermon.title}
           className="w-full h-full object-cover"
         />
@@ -138,7 +138,7 @@ const ContentCarousel = ({
     <div className="carousel-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-church-sage">
       <div className="relative overflow-hidden carousel-card-image">
         <img
-          src={article.image || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"}
+          src={article.image || "/images/dealing-with-temptation.jpg"}
           alt={article.title}
           className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
         />
@@ -164,7 +164,7 @@ const ContentCarousel = ({
     <div className="carousel-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-l-4 border-church-yellow border border-church-sage">
       <div className="relative overflow-hidden carousel-card-image">
         <img
-          src={event.image || "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=300&fit=crop"}
+          src={event.image || "/images/full-church.jpg"}
           alt={event.title}
           className="w-full h-full object-cover"
         />

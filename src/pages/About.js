@@ -63,7 +63,7 @@ const About = () => {
       <section className="relative h-screen hero-content-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/about-us.jpg"
+            src="/images/about-hero.jpg"
             alt="About Us Hero"
             className="hero-image"
             style={{
@@ -101,7 +101,7 @@ const About = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/images/church-community.jpg"
+                src="/images/diverse-community.jpg"
                 alt="Church Community"
                 className="rounded-xl shadow-lg w-full h-64 md:h-80 object-cover"
               />

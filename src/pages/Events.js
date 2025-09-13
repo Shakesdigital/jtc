@@ -42,7 +42,7 @@ const Events = () => {
       endTime: "11:00 AM",
       location: "Main Sanctuary",
       description: "Join us for inspiring worship, powerful music, and a life-changing message. Experience the presence of God in community with fellow believers.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      image: "/images/full-church-congregation.jpg",
       isRecurring: true,
       registrationRequired: false,
       maxAttendees: null,
@@ -58,7 +58,7 @@ const Events = () => {
       endTime: "09:00 PM",
       location: "Youth Hall",
       description: "Celebrate the season with games, worship, hot chocolate, and a special Christmas message designed for teens and young adults.",
-      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&h=400&fit=crop",
+      image: "/images/young-community.jpg",
       isRecurring: false,
       registrationRequired: true,
       maxAttendees: 80,
@@ -74,7 +74,7 @@ const Events = () => {
       endTime: "02:00 PM",
       location: "Church Parking Lot",
       description: "Help us serve our local community by collecting and distributing food to families in need during the holiday season.",
-      image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop",
+      image: "/images/diverse-community.jpg",
       isRecurring: false,
       registrationRequired: true,
       maxAttendees: 50,
@@ -90,7 +90,7 @@ const Events = () => {
       endTime: "08:30 PM",
       location: "Main Sanctuary",
       description: "A beautiful, traditional candlelight service celebrating the birth of our Savior with special music, readings, and communion.",
-      image: "https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=600&h=400&fit=crop",
+      image: "/images/worship-gathering.jpg",
       isRecurring: false,
       registrationRequired: false,
       maxAttendees: null,
@@ -106,7 +106,7 @@ const Events = () => {
       endTime: "01:00 AM",
       location: "Prayer Chapel",
       description: "Start the new year right with dedicated prayer, fasting, and seeking God's direction for the year ahead.",
-      image: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=600&h=400&fit=crop",
+      image: "/images/pray-together.jpg",
       isRecurring: false,
       registrationRequired: false,
       maxAttendees: null,
@@ -122,7 +122,7 @@ const Events = () => {
       endTime: "09:00 PM",
       location: "Fellowship Hall",
       description: "Bring the whole family for board games, snacks, fellowship, and fun activities for all ages. Great opportunity to meet other families!",
-      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=400&fit=crop",
+      image: "/images/joyful-fellowship.jpg",
       isRecurring: false,
       registrationRequired: true,
       maxAttendees: 60,
@@ -138,7 +138,7 @@ const Events = () => {
       endTime: "09:00 AM",
       location: "Fellowship Hall",
       description: "Join other men for hearty breakfast, fellowship, and Bible study focused on Christian leadership and brotherhood.",
-      image: "https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=600&h=400&fit=crop",
+      image: "/images/community-worship.jpg",
       isRecurring: true,
       registrationRequired: false,
       maxAttendees: null,
@@ -154,7 +154,7 @@ const Events = () => {
       endTime: "04:00 PM",
       location: "Main Sanctuary",
       description: "Annual women's conference featuring inspiring speakers, worship, workshops, and fellowship focused on growing in faith and purpose.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop",
+      image: "/images/worship-gathering.jpg",
       isRecurring: false,
       registrationRequired: true,
       maxAttendees: 200,
@@ -265,7 +265,7 @@ const Events = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="/images/events-hero.jpg"
+            src="/images/full-church-congregation.jpg"
             alt="Events Hero"
             className="absolute inset-0 w-full h-full object-cover object-center"
             style={{
@@ -337,7 +337,7 @@ const Events = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop"
+                  src="/images/diverse-community.jpg"
                   alt="Church Community Events"
                   className="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-500"
                 />

@@ -14,23 +14,23 @@ import '../styles/carousel.css';
 const Home = () => {
   // Static content mode - API calls disabled for initial deployment
   
-  // Hero carousel images
+  // Hero carousel images - using authentic church photos
   const heroImages = [
     {
       id: 1,
-      url: "/images/home-banner-1.jpg",
+      url: "/images/full-church-congregation.jpg",
       title: "Welcome to Arise Africa Jinja Town Church – Where All Are Welcome in Christ's Love",
       subtitle: "Join our diverse community in Jinja, Uganda, as we worship, grow, and serve together. Experience the transformative power of Jesus every Sunday and beyond."
     },
     {
       id: 2,
-      url: "/images/home-banner-2.jpg",
+      url: "/images/diverse-community.jpg",
       title: "A Welcoming Christian Community",
       subtitle: "Breaking down barriers of race, upbringing, and social status"
     },
     {
       id: 3,
-      url: "/images/community-banner.jpg",
+      url: "/images/joyful-fellowship.jpg",
       title: "Richly Diverse Church Family",
       subtitle: "People of all ethnicities and backgrounds worshipping together"
     }
@@ -63,42 +63,42 @@ const Home = () => {
       id: 1,
       title: "Breaking Down Barriers",
       speaker: "Pr. Richard",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+      image: "/images/pr-richard-authentic.jpg",
       description: "Unity in Christ transcends race, upbringing, and social status. A powerful message about how the church breaks down walls that divide us."
     },
     {
       id: 2,
       title: "All People Can Be Saved",
       speaker: "Pr. Jonathan",
-      image: "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=400&h=300&fit=crop",
+      image: "/images/full-church-congregation.jpg",
       description: "Exploring John 3:16 and God's inclusive love. Discover how Christ's sacrifice opens the door of salvation to everyone."
     },
     {
       id: 3,
       title: "Building Diverse Community",
       speaker: "Pr. Kenneth",
-      image: "https://images.unsplash.com/photo-1520637836862-4d197d17c46a?w=400&h=300&fit=crop",
+      image: "/images/diverse-community.jpg",
       description: "How diversity strengthens the body of Christ. Learn about the beauty of different cultures coming together in worship."
     },
     {
       id: 4,
       title: "From Guesthouse to Church",
       speaker: "Elder Joshua",
-      image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?w=400&h=300&fit=crop",
+      image: "/images/church-congregation-authentic.jpg",
       description: "God's unexpected ways of building His kingdom. The amazing story of how our church began in a simple guesthouse."
     },
     {
       id: 5,
       title: "Living Water for All Nations",
       speaker: "Pr. Richard",
-      image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=400&h=300&fit=crop",
+      image: "/images/charity-worship.jpg",
       description: "Jesus offers living water to everyone who thirsts. A message about spiritual fulfillment across all backgrounds."
     },
     {
       id: 6,
       title: "Unity in the Spirit",
       speaker: "Pr. Sarah",
-      image: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=400&h=300&fit=crop",
+      image: "/images/joyful-fellowship.jpg",
       description: "How the Holy Spirit unites believers from every tribe and tongue. Celebrating our diversity in Christ."
     }
   ];
@@ -110,7 +110,7 @@ const Home = () => {
       date: "September 2025",
       time: "6:00 PM - 10:00 PM",
       location: "Church Sanctuary",
-      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=300&fit=crop",
+      image: "/images/young-community.jpg",
       description: "A lively celebration of Jesus through music, dance, and testimonies. Join us for an evening of worship designed especially for young people."
     },
     {
@@ -119,7 +119,7 @@ const Home = () => {
       date: "Every Quarter",
       time: "10:00 AM - 2:00 PM",
       location: "Church Grounds",
-      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=300&fit=crop",
+      image: "/images/full-church-congregation.jpg",
       description: "Quarterly celebration with worship, preaching, and community meals. A time for the entire church family to come together in fellowship."
     },
     {
@@ -128,7 +128,7 @@ const Home = () => {
       date: "Every Tuesday",
       time: "4:00 PM - 6:00 PM",
       location: "Church Sanctuary",
-      image: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=400&h=300&fit=crop",
+      image: "/images/pray-together.jpg",
       description: "Breaking fast, prayer, and fellowship with our church community family. Experience the power of corporate prayer and intercession."
     },
     {
@@ -137,7 +137,7 @@ const Home = () => {
       date: "Weekly",
       time: "6:00 PM - 9:00 PM",
       location: "Various Homes",
-      image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop",
+      image: "/images/joyful-fellowship.jpg",
       description: "Home-based fellowship for deeper connections and Bible study. Build lasting relationships in a small group setting."
     },
     {
@@ -146,7 +146,7 @@ const Home = () => {
       date: "October 2025",
       time: "9:00 AM - 4:00 PM",
       location: "Church Hall",
-      image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=400&h=300&fit=crop",
+      image: "/images/worship-gathering.jpg",
       description: "Empowering women to grow in faith and purpose. A day of worship, teaching, and fellowship designed for women of all ages."
     },
     {
@@ -155,7 +155,7 @@ const Home = () => {
       date: "Monthly",
       time: "8:00 AM - 1:00 PM",
       location: "Jinja Community",
-      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=300&fit=crop",
+      image: "/images/diverse-community.jpg",
       description: "Serving our local community with love and practical support. Join us as we demonstrate Christ's love through action."
     }
   ];
@@ -165,7 +165,7 @@ const Home = () => {
       id: 1,
       title: "How Do We Measure Devotion?",
       excerpt: "Cultivating the root for better fruit. Exploring what true devotion to God looks like in our daily lives and how we can grow deeper in our faith.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+      image: "/images/dealing-with-temptation.jpg",
       slug: "how-do-we-measure-devotion",
       author: "Richard van de Ruit"
     },
@@ -173,7 +173,7 @@ const Home = () => {
       id: 2,
       title: "Follow Him to Calvary",
       excerpt: "Counting the cost of living for Jesus. Understanding the sacrificial love of Christ and what it means to take up our cross daily.",
-      image: "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=400&h=300&fit=crop",
+      image: "/images/pr-richard-preaching.jpg",
       slug: "follow-him-to-calvary",
       author: "Richard van de Ruit"
     },
@@ -181,7 +181,7 @@ const Home = () => {
       id: 3,
       title: "The Opinion Virus",
       excerpt: "Are we building up or voicing unhelpful judgments? Learning to speak life and encouragement in a world full of criticism.",
-      image: "https://images.unsplash.com/photo-1520637836862-4d197d17c46a?w=400&h=300&fit=crop",
+      image: "/images/sermon-2.jpg",
       slug: "the-opinion-virus",
       author: "Richard van de Ruit"
     },
@@ -189,7 +189,7 @@ const Home = () => {
       id: 4,
       title: "Dunk or Sprinkle?",
       excerpt: "What is the pattern of Scripture when it comes to water baptism? An in-depth look at biblical baptism and its significance.",
-      image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?w=400&h=300&fit=crop",
+      image: "/images/sermons.jpg",
       slug: "dunk-or-sprinkle",
       author: "Richard van de Ruit"
     },
@@ -197,7 +197,7 @@ const Home = () => {
       id: 5,
       title: "Grace Under Pressure",
       excerpt: "Finding God's strength in challenging times. Discovering how God's grace sustains us through life's most difficult moments.",
-      image: "https://images.unsplash.com/photo-1492176273113-2d51f47b23b0?w=400&h=300&fit=crop",
+      image: "/images/pray-together.jpg",
       slug: "grace-under-pressure",
       author: "Richard van de Ruit"
     },
@@ -205,7 +205,7 @@ const Home = () => {
       id: 6,
       title: "The Power of Forgiveness",
       excerpt: "Breaking free from the chains of unforgiveness. Learn how forgiveness transforms both the forgiver and the forgiven.",
-      image: "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=400&h=300&fit=crop",
+      image: "/images/charity-worship.jpg",
       slug: "the-power-of-forgiveness",
       author: "Richard van de Ruit"
     }
