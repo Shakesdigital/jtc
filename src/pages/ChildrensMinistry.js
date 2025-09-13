@@ -43,7 +43,7 @@ const ChildrensMinistry = () => {
       ageRange: "0-2 years",
       description: "Safe, nurturing care with sensory play, gentle music, and loving volunteers. Parents welcome to stay!",
       features: ["Changing stations", "Quiet play areas", "Simple songs", "Parent partnership"],
-      image: "https://images.unsplash.com/photo-1555062893-db2917894aa1?w=400&h=300&fit=crop",
+      image: "/images/children-ministry/little-lambs.jpg",
       color: "bg-church-sage-light/20 border-church-sage"
     },
     {
@@ -52,7 +52,7 @@ const ChildrensMinistry = () => {
       ageRange: "2-3 years",
       description: "Interactive Bible stories, movement activities, and creative play to explore God's love in age-appropriate ways.",
       features: ["Story time", "Music & movement", "Simple crafts", "Snack time"],
-      image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
+      image: "/images/children-ministry/tiny-tots.jpg",
       color: "bg-church-yellow/20 border-church-yellow"
     },
     {
@@ -61,7 +61,7 @@ const ChildrensMinistry = () => {
       ageRange: "3-5 years",
       description: "Engaging Bible adventures, worship songs, games, and hands-on activities that bring scripture to life!",
       features: ["Bible adventures", "Worship time", "Creative activities", "Character building"],
-      image: "https://images.unsplash.com/photo-1503919005314-30d93d07d823?w=400&h=300&fit=crop",
+      image: "/images/children-ministry/preschool-power.jpg",
       color: "bg-church-sage/20 border-church-sage-dark"
     },
     {
@@ -70,7 +70,7 @@ const ChildrensMinistry = () => {
       ageRange: "6-8 years",
       description: "Deep Bible discoveries, team challenges, and mission projects that help kids apply God's truth in their lives.",
       features: ["Bible study", "Team games", "Mission projects", "Leadership skills"],
-      image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=400&h=300&fit=crop",
+      image: "/images/children-ministry/elementary-explorers.jpg",
       color: "bg-church-gray-light/20 border-church-gray"
     },
     {
@@ -79,7 +79,7 @@ const ChildrensMinistry = () => {
       ageRange: "9-12 years",
       description: "Advanced Bible study, servant leadership opportunities, and preparation for youth ministry with mentoring.",
       features: ["Advanced Bible study", "Leadership training", "Service projects", "Youth prep"],
-      image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&h=300&fit=crop",
+      image: "/images/children-ministry/big-kids-brigade.jpg",
       color: "bg-church-cream/50 border-church-yellow-dark"
     }
   ];
@@ -204,8 +204,8 @@ const ChildrensMinistry = () => {
         {/* Background with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1920&h=1080&fit=crop"
-            alt="Children's Ministry Hero"
+            src="/images/children-ministry/hero-image.jpg"
+            alt="Joyful children singing and praising God in Sunday school"
             className="absolute inset-0 w-full h-full object-cover object-center"
             style={{
               filter: 'brightness(0.6)'
@@ -302,8 +302,8 @@ const ChildrensMinistry = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop"
-                  alt="Happy children in ministry activities"
+                  src="/images/children-ministry/overview-image.jpg"
+                  alt="Children participating in Bible stories and craft activities"
                   className="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
@@ -346,7 +346,14 @@ const ChildrensMinistry = () => {
                 <div className="relative overflow-hidden">
                   <img
                     src={group.image}
-                    alt={group.title}
+                    alt={
+                      group.title === "Little Lambs" ? "Toddlers engaged in sensory play and gentle music activities" :
+                      group.title === "Tiny Tots" ? "Young children enjoying interactive Bible stories and movement" :
+                      group.title === "Preschool Power" ? "Preschoolers participating in Bible adventures and worship" :
+                      group.title === "Elementary Explorers" ? "School-age children in Bible study and team challenges" :
+                      group.title === "Big Kids Brigade" ? "Pre-teens in advanced Bible study and leadership training" :
+                      group.title
+                    }
                     className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
                   />
