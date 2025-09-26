@@ -300,18 +300,18 @@ const ChildrensMinistry = () => {
               <div className="prose prose-lg text-church-gray leading-relaxed space-y-4">
                 <p>
                   Our Children's Ministry offers carefully designed programs for every stage of your child's development.
-                  <strong className="text-church-sage-dark"> Little Lambs (0-2 years)</strong> provides safe, nurturing care with sensory play, gentle music, and loving volunteers where parents are welcome to stay.
-                  <strong className="text-church-sage-dark"> Tiny Tots (2-3 years)</strong> features interactive Bible stories, movement activities, and creative play to explore God's love in age-appropriate ways.
+                  <strong className="text-church-sage-dark">Ages 0-2</strong> receive safe, nurturing care with sensory play and gentle music where parents are welcome to stay.
+                  <strong className="text-church-sage-dark">Ages 2-3</strong> enjoy interactive Bible stories and movement activities that explore God's love.
                 </p>
 
                 <p>
-                  As children grow, <strong className="text-church-sage-dark">Preschool Power (3-5 years)</strong> brings engaging Bible adventures, worship songs, games, and hands-on activities that bring scripture to life.
-                  <strong className="text-church-sage-dark"> Elementary Explorers (6-8 years)</strong> dive deeper with Bible discoveries, team challenges, and mission projects that help kids apply God's truth in their lives.
+                  <strong className="text-church-sage-dark">Ages 3-5</strong> experience engaging Bible adventures, worship songs, and hands-on activities that bring scripture to life.
+                  <strong className="text-church-sage-dark">Ages 6-8</strong> dive deeper with Bible discoveries, team challenges, and mission projects that apply God's truth to daily life.
                 </p>
 
                 <p>
-                  Finally, our <strong className="text-church-sage-dark">Big Kids Brigade (9-12 years)</strong> offers advanced Bible study, servant leadership opportunities, and preparation for youth ministry with mentoring.
-                  Each program includes age-appropriate worship, creative activities, character building, and meaningful friendships that help children develop a lifelong relationship with Jesus Christ.
+                  <strong className="text-church-sage-dark">Ages 9-12</strong> participate in advanced Bible study, leadership opportunities, and youth ministry preparation.
+                  Every program includes worship, creative activities, and meaningful friendships that help children develop a lifelong relationship with Jesus.
                 </p>
               </div>
 
