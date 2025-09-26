@@ -60,7 +60,8 @@
       "Bash(rm:*)",
       "Read(//d/Jinja Town Church Work/Website Images/media_library_export-2025_09_09_10_42_07/**)",
       "Read(//d/Jinja Town Church Work/Website Images/**)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(npm ci:*)"
     ],
     "deny": [],
     "ask": []
