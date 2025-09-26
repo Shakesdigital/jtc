@@ -373,7 +373,7 @@ const Home = () => {
 
       {/* About the Church Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -427,7 +427,7 @@ const Home = () => {
 
       {/* Church Ministries Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="container-custom">
           <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -541,7 +541,7 @@ const Home = () => {
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-br from-church-sage to-church-sage-dark text-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
