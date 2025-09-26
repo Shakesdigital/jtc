@@ -35,54 +35,6 @@ const ChildrensMinistry = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [expandedFAQ, setExpandedFAQ] = useState(null);
 
-  // Age groups data
-  const ageGroups = [
-    {
-      id: 1,
-      title: "Little Lambs",
-      ageRange: "0-2 years",
-      description: "Safe, nurturing care with sensory play, gentle music, and loving volunteers. Parents welcome to stay!",
-      features: ["Changing stations", "Quiet play areas", "Simple songs", "Parent partnership"],
-      image: "/images/children-ministry/little-lambs.jpg",
-      color: "bg-church-sage-light/20 border-church-sage"
-    },
-    {
-      id: 2,
-      title: "Tiny Tots",
-      ageRange: "2-3 years",
-      description: "Interactive Bible stories, movement activities, and creative play to explore God's love in age-appropriate ways.",
-      features: ["Story time", "Music & movement", "Simple crafts", "Snack time"],
-      image: "/images/children-ministry/tiny-tots.jpg",
-      color: "bg-church-yellow/20 border-church-yellow"
-    },
-    {
-      id: 3,
-      title: "Preschool Power",
-      ageRange: "3-5 years",
-      description: "Engaging Bible adventures, worship songs, games, and hands-on activities that bring scripture to life!",
-      features: ["Bible adventures", "Worship time", "Creative activities", "Character building"],
-      image: "/images/children-ministry/preschool-power.jpg",
-      color: "bg-church-sage/20 border-church-sage-dark"
-    },
-    {
-      id: 4,
-      title: "Elementary Explorers",
-      ageRange: "6-8 years",
-      description: "Deep Bible discoveries, team challenges, and mission projects that help kids apply God's truth in their lives.",
-      features: ["Bible study", "Team games", "Mission projects", "Leadership skills"],
-      image: "/images/children-ministry/elementary-explorers.jpg",
-      color: "bg-church-gray-light/20 border-church-gray"
-    },
-    {
-      id: 5,
-      title: "Big Kids Brigade",
-      ageRange: "9-12 years",
-      description: "Advanced Bible study, servant leadership opportunities, and preparation for youth ministry with mentoring.",
-      features: ["Advanced Bible study", "Leadership training", "Service projects", "Youth prep"],
-      image: "/images/children-ministry/big-kids-brigade.jpg",
-      color: "bg-church-cream/50 border-church-yellow-dark"
-    }
-  ];
 
   // What to expect steps
   const experienceSteps = [
