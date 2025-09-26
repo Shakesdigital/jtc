@@ -10,6 +10,7 @@ import {
   FiCheckCircle,
   FiDownload,
   FiBookOpen,
+  FiMusic,
   FiVideo,
   FiGift,
   FiSmile,
