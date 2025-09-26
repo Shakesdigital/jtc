@@ -222,34 +222,6 @@ const Footer = () => {
         </div>
 
 
-        {/* Newsletter Signup */}
-        <div className="py-8 border-t border-white">
-          <div className="max-w-2xl mx-auto">
-            <div className="rounded-lg p-8 shadow-lg border-2 border-white" style={{ backgroundColor: '#6e9896' }}>
-              <div className="text-center">
-                <h4 className="text-xl font-semibold mb-2 text-white">Stay Connected</h4>
-                <p className="text-white mb-6">
-                  Subscribe to our newsletter for updates on events, sermons, and church news.
-                </p>
-                <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-500 border border-gray-300 focus:border-white focus:ring-2 focus:ring-white focus:ring-opacity-50 outline-none transition-all duration-200"
-                    aria-label="Email address for newsletter"
-                  />
-                  <button
-                    type="submit"
-                    className="btn-accent px-8 py-3 whitespace-nowrap"
-                  >
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Bar */}
         <div className="py-6 border-t border-white">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
