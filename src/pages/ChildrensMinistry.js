@@ -333,60 +333,63 @@ const ChildrensMinistry = () => {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ageGroups.map((group, index) => (
-              <motion.div
-                key={group.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`${group.color} rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group`}
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={group.image}
-                    alt={
-                      group.title === "Little Lambs" ? "Toddlers engaged in sensory play and gentle music activities" :
-                      group.title === "Tiny Tots" ? "Young children enjoying interactive Bible stories and movement" :
-                      group.title === "Preschool Power" ? "Preschoolers participating in Bible adventures and worship" :
-                      group.title === "Elementary Explorers" ? "School-age children in Bible study and team challenges" :
-                      group.title === "Big Kids Brigade" ? "Pre-teens in advanced Bible study and leadership training" :
-                      group.title
-                    }
-                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 right-4 bg-white text-church-sage font-bold px-3 py-1 rounded-full text-sm">
-                    {group.ageRange}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 lg:p-12 shadow-2xl"
+          >
+            <div className="space-y-6">
+              <h3 className="text-3xl font-bold text-church-sage-dark mb-8">
+                Age-Appropriate Faith Adventures
+              </h3>
+
+              <div className="prose prose-lg text-church-gray leading-relaxed space-y-4">
+                <p>
+                  Our Children's Ministry offers carefully designed programs for every stage of your child's development.
+                  <strong className="text-church-sage-dark"> Little Lambs (0-2 years)</strong> provides safe, nurturing care with sensory play, gentle music, and loving volunteers where parents are welcome to stay.
+                  <strong className="text-church-sage-dark"> Tiny Tots (2-3 years)</strong> features interactive Bible stories, movement activities, and creative play to explore God's love in age-appropriate ways.
+                </p>
+
+                <p>
+                  As children grow, <strong className="text-church-sage-dark">Preschool Power (3-5 years)</strong> brings engaging Bible adventures, worship songs, games, and hands-on activities that bring scripture to life.
+                  <strong className="text-church-sage-dark"> Elementary Explorers (6-8 years)</strong> dive deeper with Bible discoveries, team challenges, and mission projects that help kids apply God's truth in their lives.
+                </p>
+
+                <p>
+                  Finally, our <strong className="text-church-sage-dark">Big Kids Brigade (9-12 years)</strong> offers advanced Bible study, servant leadership opportunities, and preparation for youth ministry with mentoring.
+                  Each program includes age-appropriate worship, creative activities, character building, and meaningful friendships that help children develop a lifelong relationship with Jesus Christ.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3 mt-6">
+                <span className="bg-church-sage text-white px-4 py-2 rounded-full text-sm font-medium">0-2 Years</span>
+                <span className="bg-church-yellow text-church-sage-dark px-4 py-2 rounded-full text-sm font-medium">2-3 Years</span>
+                <span className="bg-church-sage-dark text-white px-4 py-2 rounded-full text-sm font-medium">3-5 Years</span>
+                <span className="bg-church-gray text-white px-4 py-2 rounded-full text-sm font-medium">6-8 Years</span>
+                <span className="bg-church-cream text-church-sage-dark border border-church-sage px-4 py-2 rounded-full text-sm font-medium">9-12 Years</span>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img
+                  src="/images/children-ministry/age-groups-overview.jpg"
+                  alt="Children of various ages engaged in Bible stories, worship, crafts, and fellowship activities"
+                  className="w-full h-96 lg:h-[500px] object-cover transform hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4">
+                    <h4 className="font-bold text-church-sage-dark text-lg mb-2">Every Age, Every Stage</h4>
+                    <p className="text-church-gray text-sm">Nurturing faith from infancy through pre-teen years</p>
                   </div>
                 </div>
-                
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-church-sage-dark mb-3">
-                    {group.title}
-                  </h3>
-                  
-                  <p className="text-church-gray mb-4 leading-relaxed">
-                    {group.description}
-                  </p>
-                  
-                  <div className="space-y-2 mb-6">
-                    {group.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-church-gray">
-                        <FiCheckCircle className="w-4 h-4 mr-2 text-church-sage" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <button className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
-                    Learn More
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
