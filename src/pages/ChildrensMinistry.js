@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
   FiHeart,
   FiUsers,
   FiPlay,
@@ -10,14 +10,10 @@ import {
   FiCheckCircle,
   FiDownload,
   FiBookOpen,
-  FiMusic,
   FiVideo,
   FiGift,
   FiSmile,
   FiSend,
-  FiChevronDown,
-  FiChevronUp,
-  FiMail,
   FiExternalLink,
   FiArrowRight
 } from 'react-icons/fi';
@@ -33,32 +29,8 @@ const ChildrensMinistry = () => {
     message: ''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
 
 
-  // What to expect steps
-  const experienceSteps = [
-    {
-      icon: FiCheckCircle,
-      title: "Secure Check-In",
-      description: "Safe, organized process with matching tags for parents and children. Background-checked volunteers ensure security."
-    },
-    {
-      icon: FiMusic,
-      title: "Engaging Worship",
-      description: "Age-appropriate songs, interactive Bible stories, and fun activities that help kids connect with God."
-    },
-    {
-      icon: FiStar,
-      title: "Fun Learning",
-      description: "Games, crafts, and hands-on activities that make Bible truths memorable and applicable to daily life."
-    },
-    {
-      icon: FiShield,
-      title: "Safe Environment",
-      description: "Trained volunteers, secure facilities, and careful supervision ensure your child's safety and comfort."
-    }
-  ];
 
   // Parent resources
   const resources = [
@@ -92,33 +64,6 @@ const ChildrensMinistry = () => {
     }
   ];
 
-  // FAQ data
-  const faqs = [
-    {
-      question: "What if my child has special needs?",
-      answer: "We welcome all children! Our team is trained to accommodate various needs and we work with parents to ensure every child feels loved and included. Please let us know how we can best serve your family."
-    },
-    {
-      question: "Do I need to register in advance?",
-      answer: "While registration helps us prepare, walk-ins are always welcome! Pre-registration just ensures we have materials ready and can expedite check-in on Sunday morning."
-    },
-    {
-      question: "What should my child bring?",
-      answer: "Just bring your child ready to have fun and learn! We provide all materials, snacks, and activities. You may want to bring a comfort item for very young children."
-    },
-    {
-      question: "How can I volunteer?",
-      answer: "We'd love your help! Volunteers undergo a background check and brief training. Opportunities include teaching, assisting with activities, check-in help, and special event support."
-    },
-    {
-      question: "What about child dedication?",
-      answer: "Child dedication is a beautiful way to commit to raising your child in faith. We offer dedication services quarterly - contact us to learn more about this special milestone."
-    },
-    {
-      question: "Is there a cost?",
-      answer: "Children's Ministry is completely free! We believe every child deserves to hear about God's love regardless of family financial situation."
-    }
-  ];
 
   // Handle form submission
   const handleFormSubmit = (e) => {
@@ -144,10 +89,6 @@ const ChildrensMinistry = () => {
     }));
   };
 
-  // Toggle FAQ
-  const toggleFAQ = (index) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -345,68 +286,6 @@ const ChildrensMinistry = () => {
         </div>
       </section>
 
-      {/* What to Expect Section */}
-      <section className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-                What to <span className="text-church-yellow">Expect</span>
-              </h2>
-              <p className="text-xl text-church-gray max-w-3xl mx-auto">
-                Your child's Sunday morning adventure, step by step
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {experienceSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300"
-              >
-                <div className="bg-church-sage rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-church-sage-dark mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-church-gray leading-relaxed">
-                  {step.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Video Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-              <div className="relative bg-gradient-to-r from-church-sage to-church-sage-light h-64 flex items-center justify-center">
-                <FiPlay className="w-20 h-20 text-white opacity-80 hover:opacity-100 cursor-pointer transform hover:scale-110 transition-all duration-300" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h4 className="font-bold text-lg">Welcome to Children's Ministry</h4>
-                  <p className="text-sm opacity-90">See what a typical Sunday looks like</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Parent Resources Section */}
       <section className="py-20 bg-white">
@@ -639,77 +518,6 @@ const ChildrensMinistry = () => {
         </div>
       </section>
 
-      {/* FAQs Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-                Frequently Asked <span className="text-church-yellow">Questions</span>
-              </h2>
-              <p className="text-xl text-church-gray">
-                Quick answers to help you feel confident about joining us
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
-                >
-                  <h3 className="text-lg font-semibold text-church-sage-dark pr-4">
-                    {faq.question}
-                  </h3>
-                  {expandedFAQ === index ? (
-                    <FiChevronUp className="w-5 h-5 text-church-sage flex-shrink-0" />
-                  ) : (
-                    <FiChevronDown className="w-5 h-5 text-church-sage flex-shrink-0" />
-                  )}
-                </button>
-                
-                {expandedFAQ === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="px-6 pb-4"
-                  >
-                    <p className="text-church-gray leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-church-gray mb-4">Still have questions?</p>
-            <Link 
-              to="/contact" 
-              className="bg-church-sage hover:bg-church-sage-dark text-white font-bold px-8 py-3 rounded-lg transition-all duration-300 inline-flex items-center"
-            >
-              <FiMail className="w-4 h-4 mr-2" />
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
