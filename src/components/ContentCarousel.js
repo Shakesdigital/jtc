@@ -218,6 +218,7 @@ const ContentCarousel = ({
 
   return (
     <section className="carousel-section py-20">
+      {/* Using container-custom for consistent website alignment */}
       <div className="container-custom">
         <div className="text-center mb-16">
           <motion.div
