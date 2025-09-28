@@ -41,7 +41,7 @@ const WorshipMinistry = () => {
       description: "Lead congregation in passionate worship with harmony, heart, and authentic praise.",
       responsibilities: ["Lead vocals", "Backing vocals", "Harmony arrangements"],
       requirements: "Heart for worship, vocal ability, team spirit",
-      color: "bg-church-sage-light/20 border-church-sage"
+      color: "bg-church-red-light/20 border-church-red"
     },
     {
       id: 2,
@@ -61,7 +61,7 @@ const WorshipMinistry = () => {
       description: "Ensure excellent audio quality and seamless technical production.",
       responsibilities: ["Sound mixing", "Equipment setup", "Live streaming"],
       requirements: "Technical aptitude, attention to detail, servant heart",
-      color: "bg-church-sage/20 border-church-sage-dark"
+      color: "bg-church-red/20 border-church-red-dark"
     },
     {
       id: 4,
@@ -189,14 +189,14 @@ const WorshipMinistry = () => {
             <div className="pt-6 sm:pt-8 gap-3 sm:gap-4 flex flex-col sm:flex-row justify-center">
               <button
                 onClick={() => document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' })}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 inline-flex items-center justify-center w-full sm:w-auto border-2 sm:border-3"
+                className="bg-church-yellow hover:bg-church-yellow-dark text-church-red-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 inline-flex items-center justify-center w-full sm:w-auto border-2 sm:border-3"
               >
                 <FiUsers className="mr-2" />
                 Join Our Team
               </button>
               <button
                 onClick={() => document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
+                className="border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-red-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
               >
                 Join Us Sunday
               </button>
@@ -206,7 +206,7 @@ const WorshipMinistry = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -217,7 +217,7 @@ const WorshipMinistry = () => {
               className="space-y-6"
             >
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-church-red-dark mb-6">
                   Creating Space for <span className="text-church-yellow">Divine Encounters</span>
                 </h2>
                 <div className="w-20 h-1 bg-church-yellow rounded-full mb-6"></div>
@@ -247,7 +247,7 @@ const WorshipMinistry = () => {
                   alt="Worship team leading congregation"
                   className="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-church-red-dark/30 to-transparent"></div>
                 
               </div>
             </motion.div>
@@ -257,7 +257,7 @@ const WorshipMinistry = () => {
 
 
       {/* Teams and Roles Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-yellow-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <motion.div
@@ -266,8 +266,8 @@ const WorshipMinistry = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-                Join Our <span className="text-yellow-500">Worship Team</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-church-red-dark mb-6">
+                Join Our <span className="text-church-yellow">Worship Team</span>
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                 Discover your place in creating powerful worship experiences
@@ -275,64 +275,87 @@ const WorshipMinistry = () => {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {teamRoles.map((role, index) => (
-              <motion.div
-                key={role.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`${role.color} rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group`}
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={role.image}
-                    alt={role.title}
-                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 left-4 bg-white rounded-full p-3">
-                    <role.icon className="w-6 h-6 text-church-sage" />
-                  </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Descriptive Text */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div>
+                <h3 className="text-2xl font-bold text-church-red-dark mb-4 flex items-center">
+                  <FiMic className="w-6 h-6 text-church-yellow mr-3" />
+                  Vocal Team
+                </h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Lead congregation in passionate worship with harmony, heart, and authentic praise. We're looking for individuals with a heart for worship, vocal ability, and team spirit to join our vocal ministry team.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-church-red-dark mb-4 flex items-center">
+                  <FiMusic className="w-6 h-6 text-church-yellow mr-3" />
+                  Instrumental Team
+                </h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Provide musical foundation with guitars, keys, drums, and other instruments. Join us if you have musical proficiency, reliability, and a collaborative spirit to create beautiful worship music together.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-church-red-dark mb-4 flex items-center">
+                  <FiHeadphones className="w-6 h-6 text-church-yellow mr-3" />
+                  Tech & Sound
+                </h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Ensure excellent audio quality and seamless technical production. We need team members with technical aptitude, attention to detail, and a servant heart to support our worship services.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-church-red-dark mb-4 flex items-center">
+                  <FiStar className="w-6 h-6 text-church-yellow mr-3" />
+                  Creative Team
+                </h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Develop worship themes, visuals, and creative elements for services. Bring your creative vision, collaboration skills, and passion for worship to help design meaningful worship experiences.
+                </p>
+              </div>
+
+              <div className="pt-6">
+                <button
+                  onClick={() => document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-church-red hover:bg-church-red-dark text-white font-bold text-lg px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+                >
+                  <FiUsers className="w-5 h-5 mr-2" />
+                  Join Our Team Today
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Right Column - Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=500&fit=crop"
+                  alt="Worship team leading congregation in praise"
+                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-church-red-dark/20 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-white">
+                  <p className="text-lg font-semibold">Join our worship family</p>
+                  <p className="text-sm opacity-90">Where every voice and talent matters</p>
                 </div>
-                
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-church-sage-dark mb-3">
-                    {role.title}
-                  </h3>
-                  
-                  <p className="text-gray-700 mb-4 leading-relaxed">
-                    {role.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-church-sage-dark mb-2">Key Responsibilities:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {role.responsibilities.map((responsibility, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-                          {responsibility}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-church-sage-dark mb-2">Requirements:</h4>
-                    <p className="text-sm text-gray-600">{role.requirements}</p>
-                  </div>
-                  
-                  <button 
-                    onClick={() => setVolunteerForm(prev => ({ ...prev, role: role.title }))}
-                    className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
-                  >
-                    <FiUsers className="w-4 h-4 mr-2" />
-                    Join the Team
-                  </button>
-                </div>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -347,8 +370,8 @@ const WorshipMinistry = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-                Worship <span className="text-yellow-500">Resources</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-church-red-dark mb-6">
+                Worship <span className="text-church-yellow">Resources</span>
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                 Tools and resources to enhance your worship experience at home and church
@@ -364,13 +387,13 @@ const WorshipMinistry = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
+                className="bg-gray-50 rounded-xl shadow-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
               >
-                <div className="bg-church-sage text-white rounded-full w-14 h-14 flex items-center justify-center mb-4 group-hover:bg-church-sage-dark transition-colors duration-300">
+                <div className="bg-church-red text-white rounded-full w-14 h-14 flex items-center justify-center mb-4 group-hover:bg-church-red-dark transition-colors duration-300">
                   <resource.icon className="w-7 h-7" />
                 </div>
                 
-                <h3 className="text-lg font-bold text-church-sage-dark mb-2 group-hover:text-purple-700 transition-colors duration-300">
+                <h3 className="text-lg font-bold text-church-red-dark mb-2 group-hover:text-church-yellow transition-colors duration-300">
                   {resource.title}
                 </h3>
                 
@@ -384,7 +407,7 @@ const WorshipMinistry = () => {
                       <a
                         key={idx}
                         href={link.url}
-                        className="flex items-center text-church-sage hover:text-purple-800 font-medium text-sm"
+                        className="flex items-center text-church-red hover:text-church-red-dark font-medium text-sm"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -398,7 +421,7 @@ const WorshipMinistry = () => {
                 {resource.type === 'download' && (
                   <div className="space-y-1">
                     {resource.files.map((file, idx) => (
-                      <div key={idx} className="flex items-center text-church-sage font-medium text-sm">
+                      <div key={idx} className="flex items-center text-church-red font-medium text-sm">
                         <FiDownload className="w-4 h-4 mr-2" />
                         {file}
                       </div>
@@ -409,7 +432,7 @@ const WorshipMinistry = () => {
                 {(resource.type === 'blog' || resource.type === 'audio') && (
                   <Link 
                     to={resource.link}
-                    className="flex items-center text-church-sage hover:text-purple-800 font-medium text-sm"
+                    className="flex items-center text-church-red hover:text-church-red-dark font-medium text-sm"
                   >
                     <FiExternalLink className="w-4 h-4 mr-2" />
                     Access Resource
@@ -422,7 +445,7 @@ const WorshipMinistry = () => {
       </section>
 
       {/* Get Involved Section */}
-      <section id="get-involved" className="py-20 bg-gradient-to-br from-church-sage to-church-sage-dark">
+      <section id="get-involved" className="py-20 bg-gradient-to-br from-church-red to-church-red-dark">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -449,14 +472,14 @@ const WorshipMinistry = () => {
               viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-2xl p-8"
             >
-              <h3 className="text-2xl font-bold text-church-sage-dark mb-6">
+              <h3 className="text-2xl font-bold text-church-red-dark mb-6">
                 Sign Up to Serve
               </h3>
               
               {formSubmitted ? (
                 <div className="text-center py-8">
                   <FiMusic className="w-16 h-16 mx-auto mb-4 text-church-yellow" />
-                  <h4 className="text-xl font-bold text-church-sage-dark mb-2">Application Received!</h4>
+                  <h4 className="text-xl font-bold text-church-red-dark mb-2">Application Received!</h4>
                   <p className="text-gray-700">We'll contact you soon about joining our worship team. God bless!</p>
                 </div>
               ) : (
@@ -467,7 +490,7 @@ const WorshipMinistry = () => {
                       placeholder="Your Name"
                       value={volunteerForm.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-red focus:border-church-red outline-none"
                       required
                     />
                     <input
@@ -475,7 +498,7 @@ const WorshipMinistry = () => {
                       placeholder="Email Address"
                       value={volunteerForm.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-red focus:border-church-red outline-none"
                       required
                     />
                   </div>
@@ -486,13 +509,13 @@ const WorshipMinistry = () => {
                       placeholder="Phone Number"
                       value={volunteerForm.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-red focus:border-church-red outline-none"
                       required
                     />
                     <select
                       value={volunteerForm.role}
                       onChange={(e) => handleInputChange('role', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-red focus:border-church-red outline-none"
                       required
                     >
                       <option value="">Select Preferred Role</option>
@@ -509,13 +532,13 @@ const WorshipMinistry = () => {
                     value={volunteerForm.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
                     rows="4"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-purple-600 outline-none resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-red focus:border-church-red outline-none resize-none"
                     required
                   />
                   
                   <button
                     type="submit"
-                    className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-bold py-4 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+                    className="w-full bg-church-red hover:bg-church-red-dark text-white font-bold py-4 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
                   >
                     <FiSend className="w-5 h-5 mr-2" />
                     Sign Up to Serve
@@ -532,46 +555,46 @@ const WorshipMinistry = () => {
               viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-2xl p-8"
             >
-              <h3 className="text-2xl font-bold text-church-sage-dark mb-6">
+              <h3 className="text-2xl font-bold text-church-red-dark mb-6">
                 Other Ways to Connect
               </h3>
               
               <div className="space-y-4">
-                <div className="flex items-center p-4 bg-church-sage/10 rounded-lg hover:bg-church-sage/20 transition-colors duration-200 cursor-pointer">
-                  <FiCalendar className="w-6 h-6 text-church-sage mr-4" />
+                <div className="flex items-center p-4 bg-church-red/10 rounded-lg hover:bg-church-red/20 transition-colors duration-200 cursor-pointer">
+                  <FiCalendar className="w-6 h-6 text-church-red mr-4" />
                   <div>
-                    <h4 className="font-semibold text-church-sage-dark">Attend Rehearsals</h4>
+                    <h4 className="font-semibold text-church-red-dark">Attend Rehearsals</h4>
                     <p className="text-sm text-gray-600">Wednesdays 7:00-9:00 PM • Sanctuary</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center p-4 bg-church-yellow/10 rounded-lg hover:bg-church-yellow/20 transition-colors duration-200 cursor-pointer">
-                  <FiMic className="w-6 h-6 text-church-sage mr-4" />
+                  <FiMic className="w-6 h-6 text-church-red mr-4" />
                   <div>
-                    <h4 className="font-semibold text-church-sage-dark">Monthly Auditions</h4>
+                    <h4 className="font-semibold text-church-red-dark">Monthly Auditions</h4>
                     <p className="text-sm text-gray-600">First Saturday of each month • 10:00 AM</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center p-4 bg-church-gray/10 rounded-lg hover:bg-church-gray/20 transition-colors duration-200 cursor-pointer">
-                  <FiUsers className="w-6 h-6 text-church-sage mr-4" />
+                  <FiUsers className="w-6 h-6 text-church-red mr-4" />
                   <div>
-                    <h4 className="font-semibold text-church-sage-dark">Team Fellowship</h4>
+                    <h4 className="font-semibold text-church-red-dark">Team Fellowship</h4>
                     <p className="text-sm text-gray-600">Monthly team dinners and bonding activities</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center p-4 bg-church-cream/30 rounded-lg hover:bg-church-cream/50 transition-colors duration-200 cursor-pointer">
-                  <FiStar className="w-6 h-6 text-church-sage mr-4" />
+                  <FiStar className="w-6 h-6 text-church-red mr-4" />
                   <div>
-                    <h4 className="font-semibold text-church-sage-dark">Special Events</h4>
+                    <h4 className="font-semibold text-church-red-dark">Special Events</h4>
                     <p className="text-sm text-gray-600">Christmas, Easter & conference worship leading</p>
                   </div>
                 </div>
               </div>
               
               <div className="mt-6 pt-6 border-t border-gray-200">
-                <h4 className="font-bold text-church-sage-dark mb-3">Contact Our Team</h4>
+                <h4 className="font-bold text-church-red-dark mb-3">Contact Our Team</h4>
                 <div className="space-y-2">
                   <div className="flex items-center text-gray-700">
                     <FiMail className="w-4 h-4 mr-2" />
