@@ -225,7 +225,7 @@ const About = () => {
 
 
       {/* Call to Action - Enhanced Visibility */}
-      <section className="section-padding bg-gradient-to-br from-church-sage via-church-sage-dark to-church-sage text-white relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-church-sage via-church-sage-dark to-church-sage text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 bg-church-yellow rounded-full blur-xl"></div>
@@ -241,25 +241,13 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center max-w-5xl mx-auto"
           >
-            {/* Eye-catching Icon */}
-            <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3, type: "spring", bounce: 0.4 }}
-              viewport={{ once: true }}
-              className="mb-8"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-church-yellow rounded-full mb-6 shadow-xl">
-                <FiHeart className="w-8 h-8 text-church-sage-dark" />
-              </div>
-            </motion.div>
 
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold mb-6 text-shadow-lg"
+              className="text-4xl md:text-5xl font-bold mb-4 text-shadow-lg"
             >
               <span className="text-church-yellow">Join Our Family</span>
             </motion.h2>
@@ -267,9 +255,9 @@ const About = () => {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-lg sm:text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto text-shadow"
+              className="text-lg sm:text-xl md:text-2xl mb-6 leading-relaxed max-w-3xl mx-auto text-shadow"
             >
               We invite you to become part of our church family. Come as you are,
               and discover a community where you can grow, serve, and thrive in Jesus Christ.
@@ -278,7 +266,7 @@ const About = () => {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.8, type: "spring" }}
+              transition={{ duration: 0.8, delay: 0.6, type: "spring" }}
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
@@ -303,9 +291,9 @@ const About = () => {
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
-              className="text-base mt-6 opacity-90 italic"
+              className="text-base mt-4 opacity-90 italic"
             >
               "Come and see!" - John 1:46
             </motion.p>
