@@ -79,7 +79,7 @@ const Footer = () => {
                     className="w-16 h-16 object-contain rounded-lg"
                   />
                   <div className="ml-3">
-                    <h3 className="text-xl font-bold">Arise Africa<br />Jinja Town Church</h3>
+                    <h3 className="text-xl font-bold">Arise<br />Jinja Town Church</h3>
                   </div>
                 </Link>
                 <p className="text-gray-300 text-sm leading-relaxed">

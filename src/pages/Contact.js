@@ -53,7 +53,7 @@ const Contact = () => {
       icon: FiMapPin,
       title: 'Visit Us',
       details: [
-        'Arise Africa Guesthouse, Wilson Ave Plot 23',
+        'Four12 Global Guesthouse, Wilson Ave Plot 23',
         'Jinja, Uganda (15-minute walk from town center)'
       ],
       action: {

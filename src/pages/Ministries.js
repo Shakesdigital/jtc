@@ -34,7 +34,20 @@ const Ministries = () => {
       title: "Children Ministry",
       icon: FiUsers,
       image: "/images/ministries/children-ministry.jpg",
-      description: "Our Children Ministry is dedicated to helping young ones (ages 3-12) grow in faith through fun, interactive Bible lessons, prayer times, and creative activities. We aim to instill a lifelong love for God and His Word, drawing from Proverbs 22:6: 'Train up a child in the way he should go...' We also partner with Arise Africa International's orphan rescue programs for community outreach.",
+      description: (
+        <>
+          Our Children Ministry is dedicated to helping young ones (ages 3-12) grow in faith through fun, interactive Bible lessons, prayer times, and creative activities. We aim to instill a lifelong love for God and His Word, drawing from Proverbs 22:6: 'Train up a child in the way he should go...' We also partner with{' '}
+          <a
+            href="https://four12global.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300"
+          >
+            Four12 Global's
+          </a>{' '}
+          community development programs for outreach.
+        </>
+      ),
       ageRange: "Ages 0-12",
       meetingTime: "Sundays during services & Annual kids camps",
       highlights: ["Bible Stories", "Interactive Worship", "Age-appropriate Activities", "Safe Environment"]

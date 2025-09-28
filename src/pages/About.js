@@ -23,7 +23,7 @@ const About = () => {
     {
       icon: FiStar,
       title: 'Outreach',
-      description: 'Sharing the Gospel locally and beyond through church planting, orphan rescue, pastor training, and community development.'
+      description: 'Sharing the Gospel locally and beyond through church planting, community development, pastor training, and global missions.'
     }
   ];
 
@@ -80,10 +80,10 @@ const About = () => {
             className="space-y-6"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
-              About <span className="text-church-yellow">Arise Africa</span> Jinja Town Church
+              About <span className="text-church-yellow">Arise</span> Jinja Town Church
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
-              A welcoming Christian community affiliated with Arise Africa International, 
+              A welcoming Christian community in partnership with <a href="https://four12global.com/" target="_blank" rel="noopener noreferrer" className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300">Four12 Global</a>, 
               breaking down barriers and embracing diversity in Christ.
             </p>
           </motion.div>
@@ -130,7 +130,7 @@ const About = () => {
                   Our <span className="text-gradient">Story</span>
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Our story began almost by accident. We initially held Sunday services for the staff at the Arise Africa Guesthouse, as they were unable to attend church due to work commitments. As attendance grew, we recognized a deep hunger 
+                  Our story began almost by accident. We initially held Sunday services for the staff at the Four12 Global Guesthouse, as they were unable to attend church due to work commitments. As attendance grew, we recognized a deep hunger
                   in the Jinja community for a church that embraces diversity and unity in Christ. Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve.
                 </p>
               </div>
@@ -242,15 +242,15 @@ const About = () => {
               
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  <strong>Founded as part of Arise Africa International</strong> (which oversees over 260 churches in Uganda and neighboring countries), Jinja Town Church serves as a key hub in Eastern Uganda. We've grown from humble beginnings into a beacon of hope, hosting events like youth jams, mega fellowships, and community outreaches.
+                  <strong>Founded in partnership with <a href="https://four12global.com/" target="_blank" rel="noopener noreferrer" className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300">Four12 Global</a></strong> (a global mission organization dedicated to church planting and community development), Jinja Town Church serves as a key hub in Eastern Uganda. We've grown from humble beginnings into a beacon of hope, hosting events like youth jams, mega fellowships, and community outreaches.
                 </p>
                 
                 <p>
-                  Our story began almost by accident. We initially held Sunday services for the staff at the Arise Africa Guesthouse, as they were unable to attend church due to work commitments. As attendance grew, we recognized a deep hunger in the Jinja community for a church that embraces diversity and unity in Christ.
+                  Our story began almost by accident. We initially held Sunday services for the staff at the Four12 Global Guesthouse, as they were unable to attend church due to work commitments. As attendance grew, we recognized a deep hunger in the Jinja community for a church that embraces diversity and unity in Christ.
                 </p>
                 
                 <p>
-                  Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve. We are affiliated with Arise Africa International – an organization dedicated to spreading the Gospel across Uganda, East Africa, and beyond through church planting, orphan rescue, pastor training, education, and community development.
+                  Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve. We are partnered with <a href="https://four12global.com/" target="_blank" rel="noopener noreferrer" className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300">Four12 Global</a> – an organization dedicated to spreading the Gospel across Uganda, East Africa, and beyond through church planting, community development, pastor training, and global missions.
                 </p>
               </div>
             </motion.div>
