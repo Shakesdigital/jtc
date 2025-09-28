@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  FiFacebook, 
-  FiInstagram, 
+import {
+  FiFacebook,
+  FiInstagram,
   FiYoutube,
   FiMail,
   FiPhone,
   FiMapPin,
-  FiClock,
-  FiHeart
+  FiClock
 } from 'react-icons/fi';
 import { FaXTwitter } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
@@ -245,9 +244,15 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>Made with</span>
-              <FiHeart className="w-4 h-4 text-church-red" />
-              <span>in Uganda</span>
+              <span>Designed and Powered by</span>
+              <a
+                href="https://www.shakesdigital.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300 font-medium"
+              >
+                Shakes Digital
+              </a>
             </div>
           </div>
         </div>
