@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiHeart, FiUsers, FiTarget, FiStar } from 'react-icons/fi';
+import { FiHeart, FiUsers, FiTarget, FiStar, FiMail } from 'react-icons/fi';
 
 const About = () => {
   const values = [
@@ -249,31 +249,98 @@ const About = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="section-padding bg-church-red text-white">
-        <div className="container-custom">
+      {/* Call to Action - Enhanced Visibility */}
+      <section className="py-24 md:py-32 lg:py-40 bg-gradient-to-br from-church-sage via-church-sage-dark to-church-sage text-white relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-32 h-32 bg-church-yellow rounded-full blur-xl"></div>
+          <div className="absolute bottom-20 right-20 w-48 h-48 bg-church-yellow rounded-full blur-xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white rounded-full blur-2xl opacity-5"></div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center max-w-5xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Join Our Family
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-              We invite you to become part of our church family. Come as you are, 
-              and discover a community where you can grow, serve, and thrive.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link to="/church-service" className="btn-accent text-lg px-8 py-4 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 inline-block">
-                Contact us or visit this Sunday!
+            {/* Eye-catching Icon */}
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3, type: "spring", bounce: 0.4 }}
+              viewport={{ once: true }}
+              className="mb-8"
+            >
+              <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 bg-church-yellow rounded-full mb-6 shadow-2xl">
+                <FiHeart className="w-10 h-10 md:w-12 md:h-12 text-church-sage-dark" />
+              </div>
+            </motion.div>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-shadow-lg"
+            >
+              <span className="text-church-yellow">Join Our Family</span>
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-xl md:text-2xl lg:text-3xl mb-12 leading-relaxed max-w-4xl mx-auto text-shadow"
+            >
+              We invite you to become part of our church family. Come as you are,
+              and discover a community where you can grow, serve, and thrive in Jesus Christ.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.8, type: "spring" }}
+              viewport={{ once: true }}
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            >
+              <Link
+                to="/church-service"
+                className="group bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-xl px-12 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 inline-flex items-center border-4 border-church-yellow-light hover:border-church-yellow"
+              >
+                <FiUsers className="w-6 h-6 mr-3 group-hover:animate-bounce" />
+                Visit This Sunday!
+                <motion.div
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5 }}
+                  className="ml-2"
+                >
+                  →
+                </motion.div>
               </Link>
-              <Link to="/contact" className="btn-secondary text-lg px-8 py-4 bg-transparent border-white text-white hover:bg-white hover:text-church-red shadow-xl inline-block">
+
+              <Link
+                to="/contact"
+                className="group bg-transparent border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-xl px-12 py-5 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center"
+              >
+                <FiMail className="w-6 h-6 mr-3 group-hover:animate-pulse" />
                 Contact Us
               </Link>
-            </div>
+            </motion.div>
+
+            {/* Additional encouragement text */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+              viewport={{ once: true }}
+              className="text-lg mt-8 opacity-90 italic"
+            >
+              "Come and see!" - John 1:46
+            </p>
           </motion.div>
         </div>
       </section>
