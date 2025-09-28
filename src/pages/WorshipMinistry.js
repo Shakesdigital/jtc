@@ -17,7 +17,8 @@ import {
   FiPhone,
   FiCalendar,
   FiYoutube,
-  FiInstagram
+  FiInstagram,
+  FiPlay
 } from 'react-icons/fi';
 
 const WorshipMinistry = () => {
