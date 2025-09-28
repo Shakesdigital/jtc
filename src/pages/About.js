@@ -101,7 +101,7 @@ const About = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/images/diverse-community.jpg"
+                src="/images/mission-story.jpg"
                 alt="Church Community"
                 className="rounded-xl shadow-lg w-full h-64 md:h-80 object-cover"
               />
