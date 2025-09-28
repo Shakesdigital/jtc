@@ -8,7 +8,7 @@ const About = () => {
     {
       icon: FiHeart,
       title: 'Inclusivity',
-      description: 'Everyone is welcome, just as they are. We break down barriers of race, upbringing, social status, or any other division in Christ.'
+      description: 'Everyone is welcome, just as they are. Encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ.'
     },
     {
       icon: FiUsers,
@@ -32,7 +32,7 @@ const About = () => {
       name: 'Pr. Richard',
       role: 'Senior Leader',
       image: '/images/pr-richard.jpg',
-      bio: 'Pr. Richard oversees the overall vision and ministries of Jinja Town Church, with a heart for breaking down barriers and building inclusive community.',
+      bio: 'Pr. Richard oversees the overall vision and ministries of Jinja Town Church, with a heart for encouraging people to love God and love one another as a faith family community.',
       contact: '+31627997562'
     },
     {
@@ -84,7 +84,7 @@ const About = () => {
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
               A welcoming Christian community in partnership with <a href="https://four12global.com/" target="_blank" rel="noopener noreferrer" className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300">Four12 Global</a>, 
-              breaking down barriers and embracing diversity in Christ.
+              encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ.
             </p>
           </motion.div>
         </div>
@@ -120,8 +120,7 @@ const About = () => {
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   <strong>Our mission is rooted in John 3:16 and 1 Timothy 2:1-4:</strong> "All people can be saved if they believe in Christ Jesus our Lord." 
-                  We strive to reach out to ALL people in Jinja Town, breaking down barriers of race, upbringing, 
-                  social status, or any other division. Whether you're new to faith or a lifelong believer, we invite you to experience the life-changing love of Jesus with us.
+                  We strive to reach out to ALL people in Jinja Town, encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ. Whether you're new to faith or a lifelong believer, we invite you to experience the life-changing love of Jesus with us.
                 </p>
               </div>
 

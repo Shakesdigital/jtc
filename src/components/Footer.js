@@ -83,7 +83,7 @@ const Footer = () => {
                   </div>
                 </Link>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Arise Jinja Town Church - A welcoming Christian community where all are welcome in Christ's love. Breaking down barriers and embracing diversity in our faith journey together.
+                  Arise Jinja Town Church - A welcoming Christian community where all are welcome in Christ's love. Encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ.
                 </p>
               </div>
 

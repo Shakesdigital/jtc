@@ -26,7 +26,7 @@ const Home = () => {
       id: 2,
       url: "/images/diverse-community.jpg",
       title: "A Welcoming Christian Community",
-      subtitle: "Breaking down barriers of race, upbringing, and social status"
+      subtitle: "Encouraging people to love God and love one another as one faith family community"
     },
     {
       id: 3,
@@ -61,10 +61,10 @@ const Home = () => {
   const sampleSermons = [
     {
       id: 1,
-      title: "Breaking Down Barriers",
+      title: "Growing Together in Faith",
       speaker: "Pr. Richard",
       image: "/images/pr-richard-authentic.jpg",
-      description: "Unity in Christ transcends race, upbringing, and social status. A powerful message about how the church breaks down walls that divide us."
+      description: "Encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ. A powerful message about unity and fellowship in Christ."
     },
     {
       id: 2,
