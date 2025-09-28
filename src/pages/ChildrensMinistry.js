@@ -268,8 +268,8 @@ const ChildrensMinistry = () => {
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="/images/children-ministry/age-groups-overview.jpg"
-                  alt="Children of various ages engaged in Bible stories, worship, crafts, and fellowship activities"
+                  src="/images/children-ministry/theme.jpg"
+                  alt="Children's Ministry theme showcasing faith activities and community"
                   className="w-full h-96 lg:h-[500px] object-cover transform hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
