@@ -103,7 +103,7 @@ const About = () => {
               <img
                 src="/images/mission-story.jpg"
                 alt="Church Community"
-                className="rounded-xl shadow-lg w-full h-64 md:h-80 object-cover"
+                className="rounded-xl shadow-lg w-full h-80 md:h-96 lg:h-[28rem] object-cover"
               />
             </motion.div>
 
