@@ -119,8 +119,18 @@ const About = () => {
                   Our <span className="text-gradient">Mission</span>
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  <strong>Our mission is rooted in John 3:16 and 1 Timothy 2:1-4:</strong> "All people can be saved if they believe in Christ Jesus our Lord." 
+                  <strong>Our mission is rooted in John 3:16 and 1 Timothy 2:1-4:</strong> "All people can be saved if they believe in Christ Jesus our Lord."
                   We strive to reach out to ALL people in Jinja Town, encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ. Whether you're new to faith or a lifelong believer, we invite you to experience the life-changing love of Jesus with us.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Our <span className="text-gradient">Story</span>
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Our story began almost by accident. We initially held Sunday services for the staff at the Four12 Global Guesthouse, as they were unable to attend church due to work commitments. As attendance grew, we recognized a deep hunger
+                  in the Jinja community for a church that embraces diversity and unity in Christ. Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve.
                 </p>
               </div>
 
@@ -215,39 +225,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* History */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h2 className="text-4xl font-bold text-gray-900">
-                Our <span className="text-gradient">Story</span>
-              </h2>
-              
-              <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>
-                  <strong>Founded in partnership with <a href="https://four12global.com/" target="_blank" rel="noopener noreferrer" className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300">Four12 Global</a></strong> (a global mission organization dedicated to church planting and community development), Jinja Town Church serves as a key hub in Eastern Uganda. We've grown from humble beginnings into a beacon of hope, hosting events like youth jams, mega fellowships, and community outreaches.
-                </p>
-                
-                <p>
-                  Our story began almost by accident. We initially held Sunday services for the staff at the Four12 Global Guesthouse, as they were unable to attend church due to work commitments. As attendance grew, we recognized a deep hunger in the Jinja community for a church that embraces diversity and unity in Christ.
-                </p>
-                
-                <p>
-                  Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve. We are partnered with <a href="https://four12global.com/" target="_blank" rel="noopener noreferrer" className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300">Four12 Global</a> – an organization dedicated to spreading the Gospel across Uganda, East Africa, and beyond through church planting, community development, pastor training, and global missions.
-                </p>
-              </div>
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action - Enhanced Visibility */}
       <section className="py-24 md:py-32 lg:py-40 bg-gradient-to-br from-church-sage via-church-sage-dark to-church-sage text-white relative overflow-hidden">
