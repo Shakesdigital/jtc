@@ -209,7 +209,7 @@ const Ministries = () => {
               </div>
               
               <p className="text-lg text-church-gray leading-relaxed">
-                At Arise Africa Jinja Town Church, our ministries are the heartbeat of our community. They equip believers, nurture growth, and extend God's love to Jinja and beyond. Whether you're passionate about children, media, or outreach, there's a place for you to serve.
+                At Arise Jinja Town Church, our ministries are the heartbeat of our community. They equip believers, nurture growth, and extend God's love to Jinja and beyond. Whether you're passionate about children, media, or outreach, there's a place for you to serve.
               </p>
               
               <p className="text-lg text-church-gray leading-relaxed">

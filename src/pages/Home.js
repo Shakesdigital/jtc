@@ -19,7 +19,7 @@ const Home = () => {
     {
       id: 1,
       url: "/images/full-church-congregation.jpg",
-      title: "Welcome to Arise Africa Jinja Town Church – Where All Are Welcome in Christ's Love",
+      title: "Welcome to Arise Jinja Town Church – Where All Are Welcome in Christ's Love",
       subtitle: "Join our diverse community in Jinja, Uganda, as we worship, grow, and serve together. Experience the transformative power of Jesus every Sunday and beyond."
     },
     {

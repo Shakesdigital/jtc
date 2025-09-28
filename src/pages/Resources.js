@@ -290,7 +290,7 @@ const Resources = () => {
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-95 max-w-4xl mx-auto">
               Discover articles, events, books, news, and Bible series to deepen your faith 
-              and connect with our community at Arise Africa Jinja Town Church.
+              and connect with our community at Arise Jinja Town Church.
             </p>
             <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto"></div>
           </motion.div>

@@ -33,7 +33,7 @@ const FamilyGroups = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [expandedFAQ, setExpandedFAQ] = useState(null);
 
-  // Family Groups data for Arise Africa Jinja Town Church
+  // Family Groups data for Arise Jinja Town Church
   const groupTypes = [
     {
       id: 1,

@@ -437,7 +437,7 @@ const Contact = () => {
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Arise Africa Jinja Town Church Location - Wilson Ave Plot 23"
+                    title="Arise Jinja Town Church Location - Wilson Ave Plot 23"
                   ></iframe>
                 </div>
               </div>

@@ -124,7 +124,7 @@ const ChurchService = () => {
           >
             <FiMapPin className="w-12 h-12 mx-auto mb-4 text-church-gold" />
             <h3 className="text-2xl font-bold mb-4">Location</h3>
-            <p className="text-lg mb-2">Arise Africa Jinja Town Church</p>
+            <p className="text-lg mb-2">Arise Jinja Town Church</p>
             <p className="opacity-90 mb-6">Wilson Ave Plot 23, Jinja, Uganda (15-minute walk from town center)</p>
             <button className="btn-accent">Get Directions</button>
           </motion.div>
