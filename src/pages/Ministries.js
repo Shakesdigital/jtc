@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  FiUsers, 
-  FiHeart, 
-  FiClock, 
-  FiArrowRight, 
-  FiMail, 
-  FiSend,
-  FiUser,
-  FiMic,
-  FiHome,
-  FiBookOpen,
-  FiMonitor
+import {
+  FiHeart,
+  FiClock,
+  FiArrowRight,
+  FiMail,
+  FiSend
 } from 'react-icons/fi';
 
 const Ministries = () => {
@@ -32,7 +26,6 @@ const Ministries = () => {
     {
       id: 1,
       title: "Children Ministry",
-      icon: FiUsers,
       image: "/images/ministries/children-ministry.jpg",
       description: (
         <>
@@ -55,7 +48,6 @@ const Ministries = () => {
     {
       id: 2,
       title: "Worship Ministry",
-      icon: FiMic,
       image: "/images/ministries/worship-ministry.jpg",
       description: "Leading heartfelt praise and music to connect the congregation with God. Our worship team creates an atmosphere of reverence and joy through contemporary Christian music, traditional hymns, and spirit-led worship that invites everyone to encounter God's presence.",
       ageRange: "All Ages",
@@ -65,7 +57,6 @@ const Ministries = () => {
     {
       id: 3,
       title: "Family Groups Ministry",
-      icon: FiHome,
       image: "/images/ministries/family-groups-ministry.jpg",
       description: "This ministry oversees our scattered family groups, building strong bonds within the church family through regular home-based fellowships. Inspired by Acts 2:46-47, we emphasize breaking bread, prayer, and mutual support to create a sense of belonging.",
       ageRange: "Families of All Sizes",
@@ -75,7 +66,6 @@ const Ministries = () => {
     {
       id: 4,
       title: "Discipleship Equip Ministry",
-      icon: FiBookOpen,
       image: "/images/ministries/discipleship-equip-ministry.jpg",
       description: "Focused on training church members to share the Gospel confidently, this ministry equips believers to disciple others and lead souls to Christ. Based on Matthew 28:19-20, we prepare you to 'go and make disciples of all nations' through bi-weekly training sessions every other Saturday, evangelism workshops, role-playing scenarios, and community outreach events.",
       ageRange: "Teen & Adult",
@@ -85,7 +75,6 @@ const Ministries = () => {
     {
       id: 5,
       title: "Media & Tech Ministry",
-      icon: FiMonitor,
       image: "/images/ministries/media-tech-ministry.jpg",
       description: "This team ensures seamless integration of technology to amplify God's Word, reaching people in Jinja and globally. From live streaming services to social media outreach, we use tools to connect and inspire, aligned with Psalm 96:3: 'Declare His glory among the nations.' We manage audio-visual equipment, produce online content, maintain websites, and train volunteers in digital evangelism.",
       ageRange: "Teen & Adult",
@@ -95,7 +84,6 @@ const Ministries = () => {
     {
       id: 6,
       title: "Men's Ministry",
-      icon: FiUser,
       image: "/images/ministries/mens-ministry.jpg",
       description: "Dedicated to mentoring men to grow in Christ, lead responsibly, and serve their families and community. Drawing from Titus 2:6-8, we focus on spiritual maturity, accountability, and practical life skills through monthly men's breakfasts, Bible studies on leadership, mentorship programs, and service projects. We address topics like fatherhood, work-life balance, and faith in daily challenges.",
       ageRange: "Adult Men",
@@ -105,7 +93,6 @@ const Ministries = () => {
     {
       id: 7,
       title: "Outreach Ministry",
-      icon: FiHeart,
       image: "/images/ministries/outreach-ministry.jpg",
       description: "Serving the community through missions, volunteering, and compassion initiatives. We extend God's love beyond our church walls through community service, evangelism, charity work, and social services that make a difference. This ministry focuses on reaching out to the community with practical assistance and sharing the Gospel.",
       ageRange: "All Ages Welcome",
@@ -115,7 +102,6 @@ const Ministries = () => {
     {
       id: 8,
       title: "Women's Ministry",
-      icon: FiHeart,
       image: "/images/ministries/womens-ministry.jpg",
       description: "Building on the Jinja Town women's group, this ministry focuses on empowering women to grow in faith, connect in community, and serve with purpose. Through fellowship, Bible study, mentorship, prayer, and service opportunities, we create a supportive space where women can discover their God-given potential and thrive together.",
       ageRange: "Adult Women",
@@ -273,7 +259,6 @@ const Ministries = () => {
 
           <div className="ministry-grid">
             {ministries.map((ministry, index) => {
-              const IconComponent = ministry.icon;
               return (
                 <motion.div
                   key={ministry.id}
@@ -290,9 +275,6 @@ const Ministries = () => {
                       className="w-full h-48 object-cover object-center transform group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                    <div className="absolute top-4 left-4 bg-church-yellow text-church-sage-dark p-3 rounded-full">
-                      <IconComponent className="w-6 h-6" />
-                    </div>
                     <div className="absolute bottom-4 right-4 bg-white bg-opacity-90 text-church-sage-dark px-3 py-1 rounded-full text-sm font-medium">
                       {ministry.ageRange}
                     </div>
