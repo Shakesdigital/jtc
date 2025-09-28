@@ -63,8 +63,8 @@ const About = () => {
       <section className="relative h-screen hero-content-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/about-us.jpg"
-            alt="About Us Hero"
+            src="/images/about-hero-prayer.jpg"
+            alt="About Us Hero - Prayer"
             className="hero-image"
             style={{
               filter: 'brightness(0.6)'
