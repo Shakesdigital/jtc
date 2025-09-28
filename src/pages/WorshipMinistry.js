@@ -11,8 +11,6 @@ import {
   FiHeart,
   FiStar,
   FiSend,
-  FiChevronDown,
-  FiChevronUp,
   FiMail,
   FiPhone,
   FiCalendar,
@@ -31,7 +29,6 @@ const WorshipMinistry = () => {
     message: ''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
 
 
   // Team roles and opportunities
@@ -117,33 +114,6 @@ const WorshipMinistry = () => {
     }
   ];
 
-  // FAQ data
-  const faqs = [
-    {
-      question: "Do I need musical experience to join?",
-      answer: "While musical ability is helpful, we welcome all skill levels! We provide mentoring, training, and opportunities to grow. What matters most is a heart for worship and willingness to serve."
-    },
-    {
-      question: "How do I audition for the worship team?",
-      answer: "Simply fill out our volunteer form and attend one of our monthly audition sessions. We'll have you play/sing a song of your choice and chat about your heart for worship ministry."
-    },
-    {
-      question: "What's the time commitment?",
-      answer: "Team members typically serve 2-3 Sundays per month, attend weekly rehearsals on Wednesday evenings (7-9 PM), and participate in special services and events."
-    },
-    {
-      question: "Can I serve if I'm new to the church?",
-      answer: "We love welcoming new members! We recommend attending services for a few weeks to get familiar with our worship style, then joining our team is a great way to get connected."
-    },
-    {
-      question: "Do you provide instruments and equipment?",
-      answer: "Yes! We provide all major instruments (drums, keyboards, guitars, mics) and sound equipment. You're welcome to bring your own instruments if you prefer."
-    },
-    {
-      question: "What if I can only help occasionally?",
-      answer: "That's perfectly fine! We have opportunities for regular team members and occasional volunteers. Every contribution is valuable in creating meaningful worship experiences."
-    }
-  ];
 
   // Handle form submission
   const handleFormSubmit = (e) => {
@@ -168,10 +138,6 @@ const WorshipMinistry = () => {
     }));
   };
 
-  // Toggle FAQ
-  const toggleFAQ = (index) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -626,77 +592,6 @@ const WorshipMinistry = () => {
         </div>
       </section>
 
-      {/* FAQs Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-                Frequently Asked <span className="text-yellow-500">Questions</span>
-              </h2>
-              <p className="text-xl text-gray-700">
-                Everything you need to know about joining our worship ministry
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-church-sage/10 transition-colors duration-200"
-                >
-                  <h3 className="text-lg font-semibold text-church-sage-dark pr-4">
-                    {faq.question}
-                  </h3>
-                  {expandedFAQ === index ? (
-                    <FiChevronUp className="w-5 h-5 text-church-sage flex-shrink-0" />
-                  ) : (
-                    <FiChevronDown className="w-5 h-5 text-church-sage flex-shrink-0" />
-                  )}
-                </button>
-                
-                {expandedFAQ === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="px-6 pb-4"
-                  >
-                    <p className="text-gray-700 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-700 mb-4">Have more questions?</p>
-            <Link 
-              to="/contact" 
-              className="bg-church-sage hover:bg-church-sage-dark text-white font-bold px-8 py-3 rounded-lg transition-all duration-300 inline-flex items-center"
-            >
-              <FiMail className="w-4 h-4 mr-2" />
-              Contact Our Worship Team
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
