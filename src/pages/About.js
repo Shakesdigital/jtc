@@ -216,9 +216,7 @@ const About = () => {
                     }}
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{leader.name}</h3>
-                <p className="text-church-red font-medium mb-4">{leader.role}</p>
-                <p className="text-gray-600 leading-relaxed">{leader.bio}</p>
+                <h3 className="text-xl font-bold text-gray-900">{leader.name}</h3>
               </motion.div>
             ))}
           </div>
