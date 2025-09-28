@@ -63,7 +63,7 @@ const About = () => {
       <section className="relative h-screen hero-content-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/about-hero.jpg"
+            src="/images/about-us.jpg"
             alt="About Us Hero"
             className="hero-image"
             style={{
@@ -340,7 +340,7 @@ const About = () => {
               className="text-lg mt-8 opacity-90 italic"
             >
               "Come and see!" - John 1:46
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
