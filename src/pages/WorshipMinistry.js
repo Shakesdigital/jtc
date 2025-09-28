@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
   FiMusic,
   FiMic,
   FiHeadphones,
-  FiPlay,
-  FiPause,
-  FiVolumeX,
-  FiVolume2,
   FiDownload,
   FiExternalLink,
   FiUsers,
@@ -35,36 +31,7 @@ const WorshipMinistry = () => {
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [expandedFAQ, setExpandedFAQ] = useState(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
 
-  // Worship Experience data
-  const worshipExperiences = [
-    {
-      id: 1,
-      title: "Live Worship",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
-      description: "Experience powerful, Spirit-led worship every Sunday as we lift voices and hearts together in praise.",
-      cta: "Watch Live",
-      link: "/live-worship"
-    },
-    {
-      id: 2,
-      title: "Original Songwriting",
-      image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&h=400&fit=crop",
-      description: "Creating original worship songs inspired by Scripture and life experiences in our community.",
-      cta: "Hear Our Songs",
-      link: "/original-music"
-    },
-    {
-      id: 3,
-      title: "Instrumental Excellence",
-      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop",
-      description: "Skilled musicians crafting beautiful arrangements that enhance worship and glorify God.",
-      cta: "Meet the Band",
-      link: "/instrumental-team"
-    }
-  ];
 
   // Team roles and opportunities
   const teamRoles = [
@@ -205,15 +172,6 @@ const WorshipMinistry = () => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 
-  // Media controls
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-  };
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Banner Section */}
@@ -232,7 +190,7 @@ const WorshipMinistry = () => {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -262,14 +220,14 @@ const WorshipMinistry = () => {
             </p>
 
             <div className="pt-6 sm:pt-8 gap-3 sm:gap-4 flex flex-col sm:flex-row justify-center">
-              <button 
-                onClick={() => document.getElementById('worship-experience').scrollIntoView({ behavior: 'smooth' })}
+              <button
+                onClick={() => document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' })}
                 className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 inline-flex items-center justify-center w-full sm:w-auto border-2 sm:border-3"
               >
-                <FiPlay className="mr-2" />
-                Experience Worship
+                <FiUsers className="mr-2" />
+                Join Our Team
               </button>
-              <button 
+              <button
                 onClick={() => document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' })}
                 className="border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
               >
@@ -330,110 +288,6 @@ const WorshipMinistry = () => {
         </div>
       </section>
 
-      {/* Worship Experience Section */}
-      <section id="worship-experience" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-                The <span className="text-church-yellow">Worship Experience</span>
-              </h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Discover the heart of our worship ministry through these key expressions
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {worshipExperiences.map((experience, index) => (
-              <motion.div
-                key={experience.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={experience.image}
-                    alt={experience.title}
-                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-purple-900/40 to-transparent"></div>
-                  <div className="absolute top-4 right-4 bg-yellow-400 text-church-sage-dark px-3 py-1 rounded-full text-sm font-bold">
-                    Featured
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-church-sage-dark mb-3">
-                    {experience.title}
-                  </h3>
-                  
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    {experience.description}
-                  </p>
-                  
-                  <Link 
-                    to={experience.link}
-                    className="inline-flex items-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
-                  >
-                    <FiPlay className="w-4 h-4 mr-2" />
-                    {experience.cta}
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Featured Worship Video */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-gradient-to-r from-purple-900 to-blue-900 rounded-2xl shadow-2xl overflow-hidden">
-              <div className="relative h-64 md:h-80 flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20"></div>
-                
-                <div className="relative z-10 text-center">
-                  <button
-                    onClick={togglePlay}
-                    className="w-20 h-20 bg-yellow-400 hover:bg-yellow-500 rounded-full flex items-center justify-center text-church-sage-dark transform hover:scale-110 transition-all duration-300 mb-4 mx-auto"
-                  >
-                    {isPlaying ? <FiPause className="w-8 h-8" /> : <FiPlay className="w-8 h-8 ml-1" />}
-                  </button>
-                  
-                  <h4 className="font-bold text-xl text-white mb-2">
-                    "How Great Is Our God" - Live Worship
-                  </h4>
-                  <p className="text-white/80 text-sm">
-                    Experience our Sunday morning worship atmosphere
-                  </p>
-                </div>
-
-                <div className="absolute bottom-4 right-4">
-                  <button
-                    onClick={toggleMute}
-                    className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-all duration-200"
-                  >
-                    {isMuted ? <FiVolumeX className="w-4 h-4" /> : <FiVolume2 className="w-4 h-4" />}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Teams and Roles Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-yellow-50">
