@@ -226,8 +226,8 @@ const Ministries = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop"
-                  alt="Ministry Volunteers"
+                  src="/images/worship-theme-serving.jpg"
+                  alt="Worship and Serving Together"
                   className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
