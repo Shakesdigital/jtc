@@ -181,7 +181,7 @@ const ChildrensMinistry = () => {
               </p>
               
               <p className="text-lg text-church-gray leading-relaxed">
-                From nursery care to pre-teen adventures, every program is crafted to meet children where they are and 
+                From nursery care to pre-teen activities, every program is crafted to meet children where they are and 
                 help them grow in faith, character, and community. Join us in raising the next generation of world-changers!
               </p>
             </motion.div>
@@ -221,7 +221,7 @@ const ChildrensMinistry = () => {
                 Programs for <span className="text-church-yellow">Every Age</span>
               </h2>
               <p className="text-xl text-church-gray max-w-3xl mx-auto">
-                Age-appropriate adventures in faith designed to meet your child exactly where they are
+                Age-appropriate activities in faith designed to meet your child exactly where they are
               </p>
             </motion.div>
           </div>
@@ -235,7 +235,7 @@ const ChildrensMinistry = () => {
           >
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-church-sage-dark mb-8">
-                Age-Appropriate Faith Adventures
+                Age-Appropriate Faith Activities
               </h3>
 
               <div className="prose prose-lg text-church-gray leading-relaxed space-y-4">
@@ -246,7 +246,7 @@ const ChildrensMinistry = () => {
                 </p>
 
                 <p>
-                  <strong className="text-church-sage-dark">Ages 3-5</strong> experience engaging Bible adventures, worship songs, and hands-on activities that bring scripture to life.
+                  <strong className="text-church-sage-dark">Ages 3-5</strong> experience engaging Bible activities, worship songs, and hands-on activities that bring scripture to life.
                   <strong className="text-church-sage-dark">Ages 6-8</strong> dive deeper with Bible discoveries, team challenges, and mission projects that apply God's truth to daily life.
                 </p>
 
@@ -352,7 +352,7 @@ const ChildrensMinistry = () => {
           >
             <FiSmile className="w-16 h-16 mx-auto mb-8 text-church-yellow" />
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Join the Adventure—Volunteer or Sign Up Your Child Today!
+              Join the Activities—Volunteer or Sign Up Your Child Today!
             </h2>
             <p className="text-xl text-white opacity-90 max-w-3xl mx-auto">
               Ready to be part of something amazing? Let's connect and get your family involved!
