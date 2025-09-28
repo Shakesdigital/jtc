@@ -124,15 +124,6 @@ const About = () => {
                 </p>
               </div>
 
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Our <span className="text-gradient">Story</span>
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Our story began almost by accident. We initially held Sunday services for the staff at the Arise Africa Guest House, as they were unable to attend church due to work commitments. As attendance grew, we recognized a deep hunger
-                  in the Jinja community for a church that embraces diversity and unity in Christ. Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve.
-                </p>
-              </div>
             </motion.div>
           </div>
         </div>
