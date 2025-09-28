@@ -206,7 +206,7 @@ const About = () => {
                 viewport={{ once: true }}
                 className="card text-center p-8 hover:shadow-xl transition-all duration-300"
               >
-                <div className="relative w-32 h-32 mx-auto mb-6">
+                <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-52 lg:h-52 mx-auto mb-6">
                   <img
                     src={leader.image}
                     alt={leader.name}
@@ -225,7 +225,7 @@ const About = () => {
 
 
       {/* Call to Action - Enhanced Visibility */}
-      <section className="py-24 md:py-32 lg:py-40 bg-gradient-to-br from-church-sage via-church-sage-dark to-church-sage text-white relative overflow-hidden">
+      <section className="section-padding bg-gradient-to-br from-church-sage via-church-sage-dark to-church-sage text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 bg-church-yellow rounded-full blur-xl"></div>
@@ -249,8 +249,8 @@ const About = () => {
               viewport={{ once: true }}
               className="mb-8"
             >
-              <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 bg-church-yellow rounded-full mb-6 shadow-2xl">
-                <FiHeart className="w-10 h-10 md:w-12 md:h-12 text-church-sage-dark" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-church-yellow rounded-full mb-6 shadow-xl">
+                <FiHeart className="w-8 h-8 text-church-sage-dark" />
               </div>
             </motion.div>
 
@@ -259,7 +259,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-shadow-lg"
+              className="text-4xl md:text-5xl font-bold mb-6 text-shadow-lg"
             >
               <span className="text-church-yellow">Join Our Family</span>
             </motion.h2>
@@ -269,7 +269,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
-              className="text-xl md:text-2xl lg:text-3xl mb-12 leading-relaxed max-w-4xl mx-auto text-shadow"
+              className="text-lg sm:text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto text-shadow"
             >
               We invite you to become part of our church family. Come as you are,
               and discover a community where you can grow, serve, and thrive in Jesus Christ.
@@ -280,28 +280,21 @@ const About = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.8, type: "spring" }}
               viewport={{ once: true }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <Link
                 to="/church-service"
-                className="group bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-xl px-12 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 inline-flex items-center border-4 border-church-yellow-light hover:border-church-yellow"
+                className="btn-accent text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center"
               >
-                <FiUsers className="w-6 h-6 mr-3 group-hover:animate-bounce" />
+                <FiUsers className="w-5 h-5 mr-2" />
                 Visit This Sunday!
-                <motion.div
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.5 }}
-                  className="ml-2"
-                >
-                  →
-                </motion.div>
               </Link>
 
               <Link
                 to="/contact"
-                className="group bg-transparent border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-xl px-12 py-5 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center"
+                className="btn-secondary text-lg px-8 py-4 bg-transparent border-white text-white hover:bg-white hover:text-church-sage-dark rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center"
               >
-                <FiMail className="w-6 h-6 mr-3 group-hover:animate-pulse" />
+                <FiMail className="w-5 h-5 mr-2" />
                 Contact Us
               </Link>
             </motion.div>
@@ -312,7 +305,7 @@ const About = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.2 }}
               viewport={{ once: true }}
-              className="text-lg mt-8 opacity-90 italic"
+              className="text-base mt-6 opacity-90 italic"
             >
               "Come and see!" - John 1:46
             </motion.p>
