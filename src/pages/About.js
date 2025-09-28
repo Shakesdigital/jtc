@@ -206,11 +206,11 @@ const About = () => {
                 viewport={{ once: true }}
                 className="card text-center p-8 hover:shadow-xl transition-all duration-300"
               >
-                <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-52 lg:h-52 mx-auto mb-6">
+                <div className="relative w-full h-64 md:h-72 lg:h-80 mb-6">
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-full object-cover rounded-lg shadow-lg"
                     onError={(e) => {
                       e.target.src = '/images/placeholder-avatar.jpg';
                     }}
