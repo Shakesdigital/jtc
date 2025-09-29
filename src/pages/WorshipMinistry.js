@@ -31,49 +31,6 @@ const WorshipMinistry = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
 
-  // Team roles and opportunities
-  const teamRoles = [
-    {
-      id: 1,
-      title: "Vocal Team",
-      icon: FiMic,
-      image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=300&fit=crop",
-      description: "Lead congregation in passionate worship with harmony, heart, and authentic praise.",
-      responsibilities: ["Lead vocals", "Backing vocals", "Harmony arrangements"],
-      requirements: "Heart for worship, vocal ability, team spirit",
-      color: "bg-church-red-light/20 border-church-red"
-    },
-    {
-      id: 2,
-      title: "Instrumental Team",
-      icon: FiMusic,
-      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=300&fit=crop",
-      description: "Provide musical foundation with guitars, keys, drums, and other instruments.",
-      responsibilities: ["Live performance", "Rehearsal prep", "Song arrangement"],
-      requirements: "Musical proficiency, reliability, collaborative spirit",
-      color: "bg-church-yellow/20 border-church-yellow"
-    },
-    {
-      id: 3,
-      title: "Tech & Sound",
-      icon: FiHeadphones,
-      image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400&h=300&fit=crop",
-      description: "Ensure excellent audio quality and seamless technical production.",
-      responsibilities: ["Sound mixing", "Equipment setup", "Live streaming"],
-      requirements: "Technical aptitude, attention to detail, servant heart",
-      color: "bg-church-red/20 border-church-red-dark"
-    },
-    {
-      id: 4,
-      title: "Creative Team",
-      icon: FiStar,
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop",
-      description: "Develop worship themes, visuals, and creative elements for services.",
-      responsibilities: ["Visual design", "Theme development", "Creative planning"],
-      requirements: "Creative vision, collaboration skills, passion for worship",
-      color: "bg-church-cream/50 border-church-yellow-dark"
-    }
-  ];
 
   // Resources data
   const resources = [

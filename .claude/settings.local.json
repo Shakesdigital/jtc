@@ -61,7 +61,8 @@
       "Read(//d/Jinja Town Church Work/Website Images/media_library_export-2025_09_09_10_42_07/**)",
       "Read(//d/Jinja Town Church Work/Website Images/**)",
       "Bash(findstr:*)",
-      "Bash(npm ci:*)"
+      "Bash(npm ci:*)",
+      "Bash(powershell:*)"
     ],
     "deny": [],
     "ask": []
