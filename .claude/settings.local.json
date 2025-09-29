@@ -62,7 +62,8 @@
       "Read(//d/Jinja Town Church Work/Website Images/**)",
       "Bash(findstr:*)",
       "Bash(npm ci:*)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []
