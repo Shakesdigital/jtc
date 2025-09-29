@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiHeart, FiUsers, FiTarget, FiStar, FiMail, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
@@ -9,7 +9,7 @@ const About = () => {
   const [heroHeight, setHeroHeight] = useState('100vh');
 
   // Hero carousel slides - maintaining single image as requested
-  const heroSlides = [
+  const heroSlides = useMemo(() => [
     {
       image: '/images/about-us-hero.jpg',
       alt: 'About Us Hero - Church Community',
@@ -17,7 +17,7 @@ const About = () => {
       highlight: 'Arise',
       description: 'A welcoming Christian community in partnership with Four12 Global, encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ.'
     }
-  ];
+  ], []);
 
   // Auto-advance carousel (optional for single image)
   useEffect(() => {
