@@ -179,19 +179,6 @@ const WorshipMinistry = () => {
             transition={{ duration: 0.8 }}
             className="space-y-4 sm:space-y-6 md:space-y-8"
           >
-            <motion.div
-              animate={{ 
-                scale: [1, 1.1, 1],
-                rotate: [0, 5, -5, 0]
-              }}
-              transition={{ 
-                duration: 4, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-            >
-              <FiMusic className="w-24 h-24 mx-auto mb-3 sm:mb-4 text-church-yellow" />
-            </motion.div>
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
               Worship Ministry: <span className="text-church-yellow drop-shadow-lg">Glorifying God Through Song</span>
@@ -362,10 +349,6 @@ const WorshipMinistry = () => {
                   className="w-full h-96 md:h-[500px] lg:h-[550px] object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 text-white">
-                  <p className="text-lg font-semibold">Join our worship family</p>
-                  <p className="text-sm opacity-90">Where every voice and talent matters</p>
-                </div>
               </div>
             </motion.div>
           </div>
@@ -466,7 +449,6 @@ const WorshipMinistry = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <FiHeart className="w-16 h-16 mx-auto mb-8 text-church-yellow" />
             <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
               Be Part of the Worship Movement!
             </h2>
