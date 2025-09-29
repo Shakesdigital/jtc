@@ -41,7 +41,6 @@ const About = () => {
         // Device breakpoints
         const isMobile = viewportWidth < 768;
         const isTablet = viewportWidth >= 768 && viewportWidth < 1024;
-        const isDesktop = viewportWidth >= 1024;
 
         let calculatedHeight;
 
