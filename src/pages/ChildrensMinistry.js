@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -29,6 +29,51 @@ const ChildrensMinistry = () => {
     message: ''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
+
+  // Responsive height state for hero section
+  const [heroHeight, setHeroHeight] = useState('100vh');
+
+  // Calculate responsive height based on device type
+  useEffect(() => {
+    const calculateResponsiveHeight = () => {
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+
+      // Device breakpoints
+      const isMobile = viewportWidth < 768;
+      const isTablet = viewportWidth >= 768 && viewportWidth < 1024;
+
+      let calculatedHeight;
+
+      if (isMobile || isTablet) {
+        // Mobile & Tablet: Full viewport coverage without padding
+        calculatedHeight = viewportHeight;
+      } else {
+        // Desktop: Full viewport minimum
+        calculatedHeight = viewportHeight;
+      }
+
+      setHeroHeight(`${calculatedHeight}px`);
+    };
+
+    calculateResponsiveHeight();
+
+    // Recalculate on window resize with debounce for performance
+    let resizeTimeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(calculateResponsiveHeight, 150);
+    };
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', calculateResponsiveHeight);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', calculateResponsiveHeight);
+      clearTimeout(resizeTimeout);
+    };
+  }, []);
 
 
 
@@ -93,27 +138,40 @@ const ChildrensMinistry = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Banner Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section
+        className="relative w-full flex items-center justify-center overflow-hidden"
+        style={{
+          height: heroHeight,
+          minHeight: '100vh'
+        }}
+      >
         {/* Background with Overlay */}
-        <div className="absolute inset-0">
-          <img
-            src="/images/children-ministry/hero-image.jpg"
-            alt="Joyful children singing and praising God in Sunday school"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-            style={{
-              filter: 'brightness(0.6)'
-            }}
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div className="absolute inset-0 w-full h-full">
+          <motion.div
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="w-full h-full relative"
+          >
+            <img
+              src="/images/children-ministry/hero-image.jpg"
+              alt="Joyful children singing and praising God in Sunday school"
+              className="w-full h-full object-cover object-center transition-all duration-300"
+              style={{
+                filter: 'brightness(0.6)'
+              }}
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+          </motion.div>
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 lg:py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6 md:space-y-8"
           >
             <motion.div
               animate={{ 
@@ -129,11 +187,11 @@ const ChildrensMinistry = () => {
               <FiHeart className="w-24 h-24 mx-auto mb-3 sm:mb-4 text-church-yellow" />
             </motion.div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
               Children's Ministry: <span className="text-white drop-shadow-lg">Growing in Faith and Fun!</span>
             </h1>
-            
-            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed">
               Safe, exciting spaces for kids ages 0-12 to discover Jesus through play, worship, and community
             </p>
 
