@@ -257,7 +257,7 @@ const WorshipMinistry = () => {
                 <img
                   src="/images/worship-divine-encounters.jpg"
                   alt="Creating Space for Divine Encounters"
-                  className="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-96 md:h-[500px] lg:h-[550px] object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
                 
@@ -359,7 +359,7 @@ const WorshipMinistry = () => {
                 <img
                   src="/images/worship-team-join.jpg"
                   alt="Join Our Worship Team"
-                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-96 md:h-[500px] lg:h-[550px] object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
