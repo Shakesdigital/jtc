@@ -181,13 +181,10 @@ const WorshipMinistry = () => {
               </div>
               
               <p className="text-lg text-gray-700 leading-relaxed">
-                Our Worship Ministry exists to lead the congregation into God's presence through music, prayer, and praise. 
-                We believe worship is more than songs—it's about creating authentic moments where hearts connect with our Creator.
-              </p>
-              
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Through Spirit-led worship, contemporary music, and heartfelt praise, we invite you to encounter God's love, 
-                mercy, and glory in ways that transform lives and inspire authentic faith.
+                Our Worship Ministry aims to guide the congregation into God's presence through praise, worship, and prayer.
+                We believe worship transcends songs and musical instruments; it's about creating heartfelt moments that connect us with our Creator.
+                Through Spirit-led worship and genuine praise, we invite you to experience God's love, mercy, and glory in life-transforming ways,
+                all for the glory of our Heavenly Father.
               </p>
             </motion.div>
 
