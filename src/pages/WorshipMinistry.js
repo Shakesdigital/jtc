@@ -221,7 +221,7 @@ const WorshipMinistry = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -269,7 +269,7 @@ const WorshipMinistry = () => {
 
 
       {/* Teams and Roles Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-church-sage-light to-church-sage">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <motion.div
@@ -278,10 +278,10 @@ const WorshipMinistry = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Join Our <span className="text-church-yellow">Worship Team</span>
               </h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              <p className="text-xl text-white/90 max-w-3xl mx-auto">
                 Discover your place in creating powerful worship experiences
               </p>
             </motion.div>
@@ -297,41 +297,41 @@ const WorshipMinistry = () => {
               className="space-y-8"
             >
               <div>
-                <h3 className="text-2xl font-bold text-church-sage-dark mb-4 flex items-center">
+                <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
                   <FiMic className="w-6 h-6 text-church-yellow mr-3" />
                   Vocal Team
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   Lead congregation in passionate worship with harmony, heart, and authentic praise. We're looking for individuals with a heart for worship, vocal ability, and team spirit to join our vocal ministry team.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-church-sage-dark mb-4 flex items-center">
+                <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
                   <FiMusic className="w-6 h-6 text-church-yellow mr-3" />
                   Instrumental Team
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   Provide musical foundation with guitars, keys, drums, and other instruments. Join us if you have musical proficiency, reliability, and a collaborative spirit to create beautiful worship music together.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-church-sage-dark mb-4 flex items-center">
+                <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
                   <FiHeadphones className="w-6 h-6 text-church-yellow mr-3" />
                   Tech & Sound
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   Ensure excellent audio quality and seamless technical production. We need team members with technical aptitude, attention to detail, and a servant heart to support our worship services.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-church-sage-dark mb-4 flex items-center">
+                <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
                   <FiStar className="w-6 h-6 text-church-yellow mr-3" />
                   Creative Team
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   Develop worship themes, visuals, and creative elements for services. Bring your creative vision, collaboration skills, and passion for worship to help design meaningful worship experiences.
                 </p>
               </div>
@@ -339,7 +339,7 @@ const WorshipMinistry = () => {
               <div className="pt-6">
                 <button
                   onClick={() => document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-church-sage hover:bg-church-sage-dark text-white font-bold text-lg px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+                  className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
                 >
                   <FiUsers className="w-5 h-5 mr-2" />
                   Join Our Team Today
@@ -373,7 +373,7 @@ const WorshipMinistry = () => {
       </section>
 
       {/* Resources Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <motion.div
@@ -457,7 +457,7 @@ const WorshipMinistry = () => {
       </section>
 
       {/* Get Involved Section */}
-      <section id="get-involved" className="py-20 bg-gradient-to-br from-church-sage-light to-church-sage">
+      <section id="get-involved" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -467,10 +467,10 @@ const WorshipMinistry = () => {
             className="text-center mb-12"
           >
             <FiHeart className="w-16 h-16 mx-auto mb-8 text-church-yellow" />
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
               Be Part of the Worship Movement!
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Join our team and help create powerful worship experiences that touch hearts and transform lives
             </p>
           </motion.div>
