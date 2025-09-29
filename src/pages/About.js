@@ -35,22 +35,15 @@ const About = () => {
       const img = new Image();
       img.onload = () => {
         const imageAspectRatio = img.naturalWidth / img.naturalHeight;
-        const viewportAspectRatio = window.innerWidth / window.innerHeight;
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
 
-        // Always ensure minimum viewport height, but allow taller if needed
-        const minHeight = window.innerHeight;
-        let calculatedHeight;
-
-        if (imageAspectRatio > viewportAspectRatio) {
-          // Image is wider - height will be constrained by viewport width
-          calculatedHeight = window.innerWidth / imageAspectRatio;
-        } else {
-          // Image is taller - use full width and calculate height
-          calculatedHeight = window.innerWidth / imageAspectRatio;
-        }
+        // Calculate height needed to fit entire image width-wise
+        const heightForFullWidth = viewportWidth / imageAspectRatio;
 
         // Use the larger of calculated height or minimum viewport height
-        const finalHeight = Math.max(calculatedHeight, minHeight);
+        // This ensures the full image is visible without cropping
+        const finalHeight = Math.max(heightForFullWidth, viewportHeight);
         setHeroHeight(`${finalHeight}px`);
       };
 
@@ -131,7 +124,7 @@ const About = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Carousel Section */}
       <section
-        className="relative w-full flex items-center justify-center overflow-hidden"
+        className="relative w-full flex items-center justify-center overflow-hidden bg-gray-900"
         style={{
           height: heroHeight,
           minHeight: '100vh'
@@ -149,10 +142,10 @@ const About = () => {
             <img
               src={heroSlides[currentSlide].image}
               alt={heroSlides[currentSlide].alt}
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-contain object-center"
               style={{
                 filter: 'brightness(0.6)',
-                objectFit: 'cover',
+                objectFit: 'contain',
                 width: '100%',
                 height: '100%'
               }}
