@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiHeart, FiUsers, FiTarget, FiStar, FiMail } from 'react-icons/fi';
+import { FiHeart, FiUsers, FiTarget, FiStar, FiMail, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 const About = () => {
+  // Carousel state for hero section
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Hero carousel slides - maintaining single image as requested
+  const heroSlides = [
+    {
+      image: '/images/about-us-hero.jpg',
+      alt: 'About Us Hero - Church Community',
+      title: 'About Arise Jinja Town Church',
+      highlight: 'Arise',
+      description: 'A welcoming Christian community in partnership with Four12 Global, encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ.'
+    }
+  ];
+
+  // Auto-advance carousel (optional for single image)
+  useEffect(() => {
+    if (heroSlides.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+      }, 6000);
+      return () => clearInterval(interval);
+    }
+  }, [heroSlides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+  };
+
   const values = [
     {
       icon: FiHeart,
@@ -59,32 +91,104 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative h-screen hero-content-center overflow-hidden">
+      {/* Hero Carousel Section */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Carousel Background */}
         <div className="absolute inset-0">
-          <img
-            src="/images/about-hero-prayer.jpg"
-            alt="About Us Hero - Prayer"
-            className="hero-image"
-            style={{
-              filter: 'brightness(0.6)'
-            }}
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0"
+          >
+            <img
+              src={heroSlides[currentSlide].image}
+              alt={heroSlides[currentSlide].alt}
+              className="absolute inset-0 w-full h-full object-cover object-center"
+              style={{
+                filter: 'brightness(0.6)'
+              }}
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+          </motion.div>
         </div>
+
+        {/* Navigation Arrows - Hidden for single image but ready for multiple */}
+        {heroSlides.length > 1 && (
+          <>
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+              aria-label="Previous slide"
+            >
+              <FiChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+              aria-label="Next slide"
+            >
+              <FiChevronRight className="w-6 h-6" />
+            </button>
+          </>
+        )}
+
+        {/* Slide Indicators - Hidden for single image but ready for multiple */}
+        {heroSlides.length > 1 && (
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+            {heroSlides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide
+                    ? 'bg-church-yellow scale-125'
+                    : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Hero Content */}
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
           <motion.div
+            key={`content-${currentSlide}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             className="space-y-6"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
-              About <span className="text-church-yellow">Arise</span> Jinja Town Church
+              {heroSlides[currentSlide].title.split(heroSlides[currentSlide].highlight).map((part, index, array) => {
+                if (index === array.length - 1) return part;
+                return (
+                  <React.Fragment key={index}>
+                    {part}
+                    <span className="text-church-yellow">{heroSlides[currentSlide].highlight}</span>
+                  </React.Fragment>
+                );
+              })}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
-              A welcoming Christian community in partnership with <a href="https://four12global.com/" target="_blank" rel="noopener noreferrer" className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300">Four12 Global</a>, 
-              encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ.
+              {heroSlides[currentSlide].description.includes('Four12 Global') ? (
+                <>
+                  A welcoming Christian community in partnership with{' '}
+                  <a
+                    href="https://four12global.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300"
+                  >
+                    Four12 Global
+                  </a>
+                  , encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ.
+                </>
+              ) : (
+                heroSlides[currentSlide].description
+              )}
             </p>
           </motion.div>
         </div>
