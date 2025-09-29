@@ -6,6 +6,7 @@ import { FiHeart, FiUsers, FiTarget, FiStar, FiMail, FiChevronLeft, FiChevronRig
 const About = () => {
   // Carousel state for hero section
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [heroHeight, setHeroHeight] = useState('100vh');
 
   // Hero carousel slides - maintaining single image as requested
   const heroSlides = [
@@ -27,6 +28,43 @@ const About = () => {
       return () => clearInterval(interval);
     }
   }, [heroSlides.length]);
+
+  // Calculate optimal height based on image aspect ratio
+  useEffect(() => {
+    const calculateHeroHeight = () => {
+      const img = new Image();
+      img.onload = () => {
+        const imageAspectRatio = img.naturalWidth / img.naturalHeight;
+        const viewportAspectRatio = window.innerWidth / window.innerHeight;
+
+        // Always ensure minimum viewport height, but allow taller if needed
+        const minHeight = window.innerHeight;
+        let calculatedHeight;
+
+        if (imageAspectRatio > viewportAspectRatio) {
+          // Image is wider - height will be constrained by viewport width
+          calculatedHeight = window.innerWidth / imageAspectRatio;
+        } else {
+          // Image is taller - use full width and calculate height
+          calculatedHeight = window.innerWidth / imageAspectRatio;
+        }
+
+        // Use the larger of calculated height or minimum viewport height
+        const finalHeight = Math.max(calculatedHeight, minHeight);
+        setHeroHeight(`${finalHeight}px`);
+      };
+
+      img.src = heroSlides[currentSlide].image;
+    };
+
+    calculateHeroHeight();
+
+    // Recalculate on window resize
+    const handleResize = () => calculateHeroHeight();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, [currentSlide, heroSlides]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -92,22 +130,31 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Carousel Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section
+        className="relative w-full flex items-center justify-center overflow-hidden"
+        style={{
+          height: heroHeight,
+          minHeight: '100vh'
+        }}
+      >
         {/* Carousel Background */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 w-full h-full">
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0, scale: 1.1 }}
+            initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="absolute inset-0"
+            className="w-full h-full relative"
           >
             <img
               src={heroSlides[currentSlide].image}
               alt={heroSlides[currentSlide].alt}
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center"
               style={{
-                filter: 'brightness(0.6)'
+                filter: 'brightness(0.6)',
+                objectFit: 'cover',
+                width: '100%',
+                height: '100%'
               }}
             />
             <div className="absolute inset-0 bg-black bg-opacity-20"></div>
