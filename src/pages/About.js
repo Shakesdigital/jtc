@@ -45,17 +45,11 @@ const About = () => {
         let calculatedHeight;
 
         if (isMobile) {
-          // Mobile: Prioritize fitting full image while maintaining readability
-          const mobileHeight = viewportWidth / imageAspectRatio;
-          const minMobileHeight = viewportHeight * 0.7; // At least 70% of viewport
-          const maxMobileHeight = viewportHeight * 1.2; // Max 120% for very tall images
-          calculatedHeight = Math.min(Math.max(mobileHeight, minMobileHeight), maxMobileHeight);
+          // Mobile: Full viewport coverage without padding
+          calculatedHeight = viewportHeight;
         } else if (isTablet) {
-          // Tablet: Balance between full image and viewport utilization
-          const tabletHeight = viewportWidth / imageAspectRatio;
-          const minTabletHeight = viewportHeight * 0.8; // At least 80% of viewport
-          const maxTabletHeight = viewportHeight * 1.3; // Max 130% for tall images
-          calculatedHeight = Math.min(Math.max(tabletHeight, minTabletHeight), maxTabletHeight);
+          // Tablet: Full viewport coverage without padding
+          calculatedHeight = viewportHeight;
         } else {
           // Desktop: Full image display with generous space
           const desktopHeight = viewportWidth / imageAspectRatio;
@@ -153,10 +147,10 @@ const About = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Carousel Section */}
       <section
-        className="relative w-full flex items-center justify-center overflow-hidden bg-gray-900"
+        className="relative w-full flex items-center justify-center overflow-hidden"
         style={{
           height: heroHeight,
-          minHeight: '50vh'
+          minHeight: '100vh'
         }}
       >
         {/* Carousel Background */}
@@ -171,14 +165,12 @@ const About = () => {
             <img
               src={heroSlides[currentSlide].image}
               alt={heroSlides[currentSlide].alt}
-              className="w-full h-full object-contain object-center transition-all duration-300"
+              className="w-full h-full object-cover object-center transition-all duration-300"
               style={{
                 filter: 'brightness(0.6)',
-                objectFit: 'contain',
+                objectFit: 'cover',
                 width: '100%',
-                height: '100%',
-                maxWidth: '100%',
-                maxHeight: '100%'
+                height: '100%'
               }}
             />
             <div className="absolute inset-0 bg-black bg-opacity-20"></div>
@@ -224,7 +216,7 @@ const About = () => {
         )}
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-24 lg:py-32">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 lg:py-20">
           <motion.div
             key={`content-${currentSlide}`}
             initial={{ opacity: 0, y: 30 }}
