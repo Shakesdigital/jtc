@@ -160,7 +160,7 @@ const WorshipMinistry = () => {
             className="w-full h-full relative"
           >
             <img
-              src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1920&h=1080&fit=crop"
+              src="/images/worship-hero.jpg"
               alt="Worship Ministry Hero"
               className="w-full h-full object-cover object-center transition-all duration-300"
               style={{
@@ -255,8 +255,8 @@ const WorshipMinistry = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&h=400&fit=crop"
-                  alt="Worship team leading congregation"
+                  src="/images/worship-divine-encounters.jpg"
+                  alt="Creating Space for Divine Encounters"
                   className="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
@@ -357,8 +357,8 @@ const WorshipMinistry = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=500&fit=crop"
-                  alt="Worship team leading congregation in praise"
+                  src="/images/worship-team-join.jpg"
+                  alt="Join Our Worship Team"
                   className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
