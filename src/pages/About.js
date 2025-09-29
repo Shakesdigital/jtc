@@ -29,34 +29,64 @@ const About = () => {
     }
   }, [heroSlides.length]);
 
-  // Calculate optimal height based on image aspect ratio
+  // Calculate responsive height based on device type and image aspect ratio
   useEffect(() => {
-    const calculateHeroHeight = () => {
+    const calculateResponsiveHeight = () => {
       const img = new Image();
       img.onload = () => {
         const imageAspectRatio = img.naturalWidth / img.naturalHeight;
         const viewportWidth = window.innerWidth;
         const viewportHeight = window.innerHeight;
 
-        // Calculate height needed to fit entire image width-wise
-        const heightForFullWidth = viewportWidth / imageAspectRatio;
+        // Device breakpoints
+        const isMobile = viewportWidth < 768;
+        const isTablet = viewportWidth >= 768 && viewportWidth < 1024;
+        const isDesktop = viewportWidth >= 1024;
 
-        // Use the larger of calculated height or minimum viewport height
-        // This ensures the full image is visible without cropping
-        const finalHeight = Math.max(heightForFullWidth, viewportHeight);
-        setHeroHeight(`${finalHeight}px`);
+        let calculatedHeight;
+
+        if (isMobile) {
+          // Mobile: Prioritize fitting full image while maintaining readability
+          const mobileHeight = viewportWidth / imageAspectRatio;
+          const minMobileHeight = viewportHeight * 0.7; // At least 70% of viewport
+          const maxMobileHeight = viewportHeight * 1.2; // Max 120% for very tall images
+          calculatedHeight = Math.min(Math.max(mobileHeight, minMobileHeight), maxMobileHeight);
+        } else if (isTablet) {
+          // Tablet: Balance between full image and viewport utilization
+          const tabletHeight = viewportWidth / imageAspectRatio;
+          const minTabletHeight = viewportHeight * 0.8; // At least 80% of viewport
+          const maxTabletHeight = viewportHeight * 1.3; // Max 130% for tall images
+          calculatedHeight = Math.min(Math.max(tabletHeight, minTabletHeight), maxTabletHeight);
+        } else {
+          // Desktop: Full image display with generous space
+          const desktopHeight = viewportWidth / imageAspectRatio;
+          const minDesktopHeight = viewportHeight; // At least full viewport
+          calculatedHeight = Math.max(desktopHeight, minDesktopHeight);
+        }
+
+        setHeroHeight(`${calculatedHeight}px`);
       };
 
       img.src = heroSlides[currentSlide].image;
     };
 
-    calculateHeroHeight();
+    calculateResponsiveHeight();
 
-    // Recalculate on window resize
-    const handleResize = () => calculateHeroHeight();
+    // Recalculate on window resize with debounce for performance
+    let resizeTimeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(calculateResponsiveHeight, 150);
+    };
+
     window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', calculateResponsiveHeight);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', calculateResponsiveHeight);
+      clearTimeout(resizeTimeout);
+    };
   }, [currentSlide, heroSlides]);
 
   const nextSlide = () => {
@@ -127,7 +157,7 @@ const About = () => {
         className="relative w-full flex items-center justify-center overflow-hidden bg-gray-900"
         style={{
           height: heroHeight,
-          minHeight: '100vh'
+          minHeight: '50vh'
         }}
       >
         {/* Carousel Background */}
@@ -142,12 +172,14 @@ const About = () => {
             <img
               src={heroSlides[currentSlide].image}
               alt={heroSlides[currentSlide].alt}
-              className="w-full h-full object-contain object-center"
+              className="w-full h-full object-contain object-center transition-all duration-300"
               style={{
                 filter: 'brightness(0.6)',
                 objectFit: 'contain',
                 width: '100%',
-                height: '100%'
+                height: '100%',
+                maxWidth: '100%',
+                maxHeight: '100%'
               }}
             />
             <div className="absolute inset-0 bg-black bg-opacity-20"></div>
@@ -193,15 +225,15 @@ const About = () => {
         )}
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-24 lg:py-32">
           <motion.div
             key={`content-${currentSlide}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6 md:space-y-8"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
               {heroSlides[currentSlide].title.split(heroSlides[currentSlide].highlight).map((part, index, array) => {
                 if (index === array.length - 1) return part;
                 return (
@@ -212,7 +244,7 @@ const About = () => {
                 );
               })}
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
               {heroSlides[currentSlide].description.includes('Four12 Global') ? (
                 <>
                   A welcoming Christian community in partnership with{' '}
@@ -220,7 +252,7 @@ const About = () => {
                     href="https://four12global.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300"
+                    className="text-church-yellow hover:text-church-yellow-dark transition-colors duration-300 underline"
                   >
                     Four12 Global
                   </a>
