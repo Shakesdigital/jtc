@@ -264,7 +264,7 @@ const DiscipleshipEquip = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop"
+            src="/images/discipleship-equip-hero.jpg"
             alt="Discipleship Hero"
             className="absolute inset-0 w-full h-full object-cover object-center"
             style={{
@@ -282,11 +282,6 @@ const DiscipleshipEquip = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <div className="flex justify-center mb-3 sm:mb-4">
-              <div className="bg-church-yellow bg-opacity-20 backdrop-blur-sm rounded-full p-6">
-                <FiBookOpen className="w-16 h-16 text-church-yellow" />
-              </div>
-            </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Discipleship Equip Ministry: <br />
@@ -419,19 +414,10 @@ const DiscipleshipEquip = () => {
                   <img
                     src={program.image}
                     alt={program.title}
-                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className={`absolute top-4 right-4 bg-gradient-to-r ${program.color} text-white px-3 py-1 rounded-full text-sm font-bold`}>
-                    {program.category}
-                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
-                  {/* Floating Icon */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="bg-church-yellow bg-opacity-90 backdrop-blur-sm rounded-full p-4">
-                      {program.icon}
-                    </div>
-                  </div>
                 </div>
                 
                 <div className="p-6">
@@ -443,23 +429,7 @@ const DiscipleshipEquip = () => {
                     {program.description}
                   </p>
                   
-                  <div className="flex items-center justify-between mb-6 text-sm">
-                    <div className="flex items-center text-church-sage">
-                      <FiClock className="w-4 h-4 mr-2" />
-                      {program.duration}
-                    </div>
-                    <div className="text-church-yellow font-semibold">
-                      {program.level}
-                    </div>
-                  </div>
                   
-                  <button 
-                    onClick={scrollToForm}
-                    className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center"
-                  >
-                    Sign Up
-                    <FiArrowRight className="w-4 h-4 ml-2" />
-                  </button>
                 </div>
               </motion.div>
             ))}
@@ -500,9 +470,6 @@ const DiscipleshipEquip = () => {
                   <div className="mx-auto w-16 h-16 bg-church-sage text-white rounded-full flex items-center justify-center group-hover:bg-church-sage-dark transition-colors duration-300 mb-4">
                     {step.icon}
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-church-yellow text-church-sage-dark rounded-full flex items-center justify-center text-sm font-bold">
-                    {step.id}
-                  </div>
                 </div>
                 
                 <h3 className="text-xl font-bold text-church-sage-dark mb-4">
@@ -513,42 +480,10 @@ const DiscipleshipEquip = () => {
                   {step.description}
                 </p>
                 
-                <div className="overflow-hidden rounded-lg shadow-md">
-                  <img
-                    src={step.image}
-                    alt={step.title}
-                    className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full">
-                    <FiArrowRight className="w-6 h-6 text-church-sage mx-auto" />
-                  </div>
-                )}
               </motion.div>
             ))}
           </div>
 
-          {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mt-16"
-          >
-            <div className="bg-gradient-to-r from-church-sage-light to-church-sage p-8 rounded-2xl text-white">
-              <h3 className="text-2xl font-bold mb-4">Ready to Begin Your Journey?</h3>
-              <p className="mb-6 opacity-90">Join thousands of believers who have experienced transformation through our discipleship programs.</p>
-              <button 
-                onClick={scrollToForm}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold px-8 py-3 rounded-full transition-all duration-300"
-              >
-                Start Today
-              </button>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -617,11 +552,6 @@ const DiscipleshipEquip = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <div className="flex justify-center mb-8">
-              <div className="bg-church-sage bg-opacity-10 rounded-full p-6">
-                <FiTarget className="w-12 h-12 text-church-sage" />
-              </div>
-            </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
               Take the next step in your <span className="text-church-yellow">faith journey!</span>
@@ -632,13 +562,33 @@ const DiscipleshipEquip = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-church-sage-light to-church-sage rounded-2xl shadow-2xl p-8 text-white"
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Image Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                <img
+                  src="/images/discipleship-equip-hero.jpg"
+                  alt="Discipleship Community"
+                  className="w-full h-[600px] object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
+              </div>
+            </motion.div>
+
+            {/* Form Column */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-church-sage-light to-church-sage rounded-2xl shadow-2xl p-8 text-white"
+            >
             {isSubmitted ? (
               <div className="text-center py-12">
                 <FiCheckCircle className="w-16 h-16 mx-auto mb-6 text-church-yellow" />
@@ -771,7 +721,8 @@ const DiscipleshipEquip = () => {
                 </div>
               </form>
             )}
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
