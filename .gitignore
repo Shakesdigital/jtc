@@ -44,3 +44,7 @@ lerna-debug.log*
 # Local development
 /public/images/*
 /temp/
+
+# Large sermon media files (upload directly to server)
+/public/sermons/audio/*.m4a
+/public/sermons/notes/*.docx

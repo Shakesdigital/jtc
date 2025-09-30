@@ -63,7 +63,11 @@
       "Bash(findstr:*)",
       "Bash(npm ci:*)",
       "Bash(powershell:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Read(//d/Jinja Town Church Work/JTC sermons/**)",
+      "Bash(test:*)",
+      "Bash(git lfs:*)",
+      "Bash(git reset:*)"
     ],
     "deny": [],
     "ask": []

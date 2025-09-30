@@ -6,9 +6,12 @@ import {
   FiClock,
   FiArrowRight,
   FiChevronLeft,
-  FiChevronRight
+  FiChevronRight,
+  FiHeadphones,
+  FiPlay
 } from 'react-icons/fi';
 import ContentCarousel from '../components/ContentCarousel';
+import { getRecentSermons } from '../data/sermonsData';
 import '../styles/carousel.css';
 
 const Home = () => {
@@ -102,51 +105,8 @@ const Home = () => {
   };
   
 
-  // Sample data for sections with additional items for carousel
-  const sampleSermons = [
-    {
-      id: 1,
-      title: "Growing Together in Faith",
-      speaker: "Pr. Richard",
-      image: "/images/pr-richard-authentic.jpg",
-      description: "Encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ. A powerful message about unity and fellowship in Christ."
-    },
-    {
-      id: 2,
-      title: "All People Can Be Saved",
-      speaker: "Pr. Jonathan",
-      image: "/images/full-church-congregation.jpg",
-      description: "Exploring John 3:16 and God's inclusive love. Discover how Christ's sacrifice opens the door of salvation to everyone."
-    },
-    {
-      id: 3,
-      title: "Building Diverse Community",
-      speaker: "Pr. Kenneth",
-      image: "/images/diverse-community.jpg",
-      description: "How diversity strengthens the body of Christ. Learn about the beauty of different cultures coming together in worship."
-    },
-    {
-      id: 4,
-      title: "From Guesthouse to Church",
-      speaker: "Elder Joshua",
-      image: "/images/church-congregation-authentic.jpg",
-      description: "God's unexpected ways of building His kingdom. The amazing story of how our church began in a simple guesthouse."
-    },
-    {
-      id: 5,
-      title: "Living Water for All Nations",
-      speaker: "Pr. Richard",
-      image: "/images/charity-worship.jpg",
-      description: "Jesus offers living water to everyone who thirsts. A message about spiritual fulfillment across all backgrounds."
-    },
-    {
-      id: 6,
-      title: "Unity in the Spirit",
-      speaker: "Pr. Sarah",
-      image: "/images/joyful-fellowship.jpg",
-      description: "How the Holy Spirit unites believers from every tribe and tongue. Celebrating our diversity in Christ."
-    }
-  ];
+  // Get real sermon data
+  const recentSermons = getRecentSermons(3);
 
   const sampleEvents = [
     {
@@ -563,7 +523,7 @@ const Home = () => {
         <ContentCarousel
           title={<>Recent <span className="text-church-yellow">Sermons</span></>}
           subtitle="Be inspired by God's word through our powerful messages and teachings"
-          items={sampleSermons}
+          items={recentSermons}
           type="sermons"
           ctaLink="/sermons/archive"
           ctaText="View All Sermons"

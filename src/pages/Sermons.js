@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  FiPlay, 
-  FiCalendar, 
-  FiUser, 
-  FiSearch, 
-  FiVideo, 
+import {
+  FiPlay,
+  FiCalendar,
+  FiUser,
+  FiSearch,
+  FiVideo,
   FiVolume2,
   FiDownload,
   FiShare2,
@@ -16,8 +17,10 @@ import {
   FiClock,
   FiEye,
   FiHeart,
-  FiTrendingUp
+  FiTrendingUp,
+  FiHeadphones
 } from 'react-icons/fi';
+import { sermonsData } from '../data/sermonsData';
 
 const Sermons = () => {
   // Static sermon data with comprehensive information
@@ -42,135 +45,16 @@ const Sermons = () => {
     'Jude', 'Revelation'
   ];
 
-  // Sample sermon data
-  const allSermons = [
-    {
-      id: 1,
-      title: "Walking in Faith Through Uncertainty",
-      speaker: "Pastor John Mukasa",
-      date: "2024-11-24",
-      series: "Faith Journey",
-      description: "In times of uncertainty, our faith becomes our anchor. This message explores how we can trust God's plan even when we cannot see the path ahead, drawing lessons from Abraham's journey.",
-      thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop",
-      bibleReference: "Hebrews 11:8-10",
-      duration: "42 mins",
-      views: 1234,
-      isFeatured: true,
-      tags: ["faith", "trust", "guidance"]
-    },
-    {
-      id: 2,
-      title: "The Power of Forgiveness",
-      speaker: "Pastor Sarah Nakato",
-      date: "2024-11-17",
-      series: "Hope & Healing",
-      description: "Forgiveness is not just about letting others off the hook—it's about freeing ourselves from the chains of bitterness. Discover the transformative power of God's forgiveness in our lives.",
-      thumbnail: "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=500&h=300&fit=crop",
-      bibleReference: "Ephesians 4:31-32",
-      duration: "38 mins",
-      views: 987,
-      isFeatured: false,
-      tags: ["forgiveness", "healing", "restoration"]
-    },
-    {
-      id: 3,
-      title: "Finding Joy in the Journey",
-      speaker: "Pastor David Ssemakula",
-      date: "2024-11-10",
-      series: "Living with Purpose",
-      description: "Joy is not dependent on our circumstances but on our relationship with Christ. Learn how to cultivate lasting joy regardless of life's challenges and setbacks.",
-      thumbnail: "https://images.unsplash.com/photo-1520637836862-4d197d17c46a?w=500&h=300&fit=crop",
-      bibleReference: "Philippians 4:4-7",
-      duration: "45 mins",
-      views: 756,
-      isFeatured: false,
-      tags: ["joy", "purpose", "contentment"]
-    },
-    {
-      id: 4,
-      title: "The Heart of Worship",
-      speaker: "Pastor Mary Akello",
-      date: "2024-11-03",
-      series: "Worship & Praise",
-      description: "True worship goes beyond singing songs—it's about the posture of our hearts before God. Explore what it means to be a worshipper in spirit and truth.",
-      thumbnail: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?w=500&h=300&fit=crop",
-      bibleReference: "John 4:23-24",
-      duration: "40 mins",
-      views: 1456,
-      isFeatured: true,
-      tags: ["worship", "praise", "heart"]
-    },
-    {
-      id: 5,
-      title: "Building Strong Families",
-      speaker: "Pastor John Mukasa",
-      date: "2024-10-27",
-      series: "Family Values",
-      description: "God designed the family as the foundation of society. Discover practical principles for building strong, Christ-centered families that honor God and bless the community.",
-      thumbnail: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=500&h=300&fit=crop",
-      bibleReference: "Deuteronomy 6:6-9",
-      duration: "50 mins",
-      views: 823,
-      isFeatured: false,
-      tags: ["family", "parenting", "values"]
-    },
-    {
-      id: 6,
-      title: "Love Without Limits",
-      speaker: "Pastor Sarah Nakato",
-      date: "2024-10-20",
-      series: "Love & Relationships",
-      description: "God's love for us is unconditional and limitless. This message explores how we can reflect that same love in our relationships with others, creating communities of grace.",
-      thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=300&fit=crop",
-      bibleReference: "1 John 4:7-12",
-      duration: "43 mins",
-      views: 1089,
-      isFeatured: false,
-      tags: ["love", "relationships", "grace"]
-    },
-    {
-      id: 7,
-      title: "Standing Firm in Prayer",
-      speaker: "Pastor David Ssemakula",
-      date: "2024-10-13",
-      series: "Prayer Life",
-      description: "Prayer is our direct line of communication with God. Learn how to develop a consistent prayer life that brings breakthrough, peace, and deeper intimacy with the Father.",
-      thumbnail: "https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=500&h=300&fit=crop",
-      bibleReference: "1 Thessalonians 5:17",
-      duration: "47 mins",
-      views: 934,
-      isFeatured: false,
-      tags: ["prayer", "communication", "breakthrough"]
-    },
-    {
-      id: 8,
-      title: "Hope for Tomorrow",
-      speaker: "Pastor Mary Akello",
-      date: "2024-10-06",
-      series: "Hope & Healing",
-      description: "No matter how dark today may seem, God has a bright future planned for you. This encouraging message reminds us that our hope is anchored in Christ's promises.",
-      thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop",
-      bibleReference: "Jeremiah 29:11",
-      duration: "41 mins",
-      views: 1367,
-      isFeatured: true,
-      tags: ["hope", "future", "promises"]
-    },
-    {
-      id: 9,
-      title: "Serving with Excellence",
-      speaker: "Pastor John Mukasa",
-      date: "2024-09-29",
-      series: "Ministry & Service",
-      description: "God has called each of us to serve in His kingdom. Discover your unique gifts and learn how to use them with excellence for God's glory and the building of His church.",
-      thumbnail: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500&h=300&fit=crop",
-      bibleReference: "1 Peter 4:10-11",
-      duration: "44 mins",
-      views: 678,
-      isFeatured: false,
-      tags: ["service", "gifts", "excellence"]
-    }
-  ];
+  // Use real sermon data
+  const allSermons = sermonsData.map(sermon => ({
+    ...sermon,
+    thumbnail: sermon.image,
+    bibleReference: sermon.scripture,
+    series: sermon.category,
+    views: Math.floor(Math.random() * 2000) + 500,
+    isFeatured: sermon.id <= 2,
+    tags: sermon.category.toLowerCase().split(' ')
+  }));
 
   // Get unique speakers and series for filter options
   const speakers = [...new Set(allSermons.map(sermon => sermon.speaker))];
@@ -496,19 +380,33 @@ const Sermons = () => {
                         )}
                         
                         <div className="flex space-x-2">
-                          <button className="flex-1 flex items-center justify-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-sm">
-                            <FiPlay className="w-4 h-4 mr-2" />
-                            Watch
-                          </button>
-                          <button className="flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-church-sage-dark p-3 rounded-lg transition-all duration-300" title="Listen">
-                            <FiVolume2 className="w-4 h-4" />
-                          </button>
-                          <button className="flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-church-sage-dark p-3 rounded-lg transition-all duration-300" title="Download">
-                            <FiDownload className="w-4 h-4" />
-                          </button>
-                          <button className="flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-church-sage-dark p-3 rounded-lg transition-all duration-300" title="Share">
-                            <FiShare2 className="w-4 h-4" />
-                          </button>
+                          {sermon.hasAudio && (
+                            <Link
+                              to={`/sermon/${sermon.slug}`}
+                              className="flex-1 flex items-center justify-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-sm"
+                            >
+                              <FiHeadphones className="w-4 h-4 mr-2" />
+                              Listen
+                            </Link>
+                          )}
+                          {sermon.hasVideo && (
+                            <Link
+                              to={`/sermon/${sermon.slug}`}
+                              className="flex-1 flex items-center justify-center bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-sm"
+                            >
+                              <FiPlay className="w-4 h-4 mr-2" />
+                              Watch
+                            </Link>
+                          )}
+                          {!sermon.hasAudio && !sermon.hasVideo && (
+                            <Link
+                              to={`/sermon/${sermon.slug}`}
+                              className="flex-1 flex items-center justify-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-sm"
+                            >
+                              <FiBookOpen className="w-4 h-4 mr-2" />
+                              Read
+                            </Link>
+                          )}
                         </div>
                       </div>
                     </motion.div>
