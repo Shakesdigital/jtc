@@ -262,7 +262,7 @@ const DiscipleshipEquip = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="/images/IMG-20250824-WA0064.jpg"
+            src="/images/Jamesii.jpg"
             alt="Discipleship Hero"
             className="absolute inset-0 w-full h-full object-contain object-center"
             style={{
