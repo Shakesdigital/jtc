@@ -262,7 +262,7 @@ const DiscipleshipEquip = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="/images/discipleship-equip-hero.jpg"
+            src="/images/IMG-20250824-WA0064.jpg"
             alt="Discipleship Hero"
             className="absolute inset-0 w-full h-full object-cover object-center"
             style={{
@@ -360,19 +360,11 @@ const DiscipleshipEquip = () => {
             >
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=500&fit=crop"
+                  src="/images/IMG-20250914-WA0044.jpg"
                   alt="Discipleship Study Group"
                   className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
-              </div>
-              
-              {/* Floating Quote Card */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border-l-4 border-church-yellow max-w-xs">
-                <p className="text-sm text-church-gray italic mb-3">
-                  "The discipleship program transformed my relationship with God and gave me confidence to lead others."
-                </p>
-                <div className="text-xs font-semibold text-church-sage-dark">- Patricia Nalongo, Program Graduate</div>
               </div>
             </motion.div>
           </div>
@@ -409,7 +401,7 @@ const DiscipleshipEquip = () => {
             >
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <img
-                  src="/images/discipleship-equip-hero.jpg"
+                  src="/images/IMG-20250914-WA0047.jpg"
                   alt="Discipleship Programs"
                   className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
                 />
