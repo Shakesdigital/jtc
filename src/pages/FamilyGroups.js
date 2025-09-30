@@ -239,7 +239,7 @@ const FamilyGroups = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1920&h=1080&fit=crop"
+            src="/images/family-groups-hero.jpg"
             alt="Family Groups Hero"
             className="absolute inset-0 w-full h-full object-cover object-center"
             style={{
@@ -342,7 +342,7 @@ const FamilyGroups = () => {
             >
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=500&fit=crop"
+                  src="/images/family-groups-community.jpg"
                   alt="Families in Fellowship"
                   className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
                 />
