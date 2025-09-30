@@ -258,48 +258,51 @@ const DiscipleshipEquip = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Banner Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0">
-          <img
-            src="/images/Jamesii.jpg"
-            alt="Discipleship Hero"
-            className="absolute inset-0 w-full h-full object-contain object-center"
-            style={{
-              filter: 'brightness(0.6)'
-            }}
-          />
+      <section className="relative min-h-screen flex items-center justify-center bg-gray-900">
+        {/* Background Image Container with Padding */}
+        <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10">
+          <div className="relative w-full h-full max-w-7xl mx-auto">
+            <img
+              src="/images/Jamesii.jpg"
+              alt="Discipleship Hero"
+              className="w-full h-full object-contain"
+              style={{
+                filter: 'brightness(0.6)',
+                maxHeight: '100%'
+              }}
+            />
+          </div>
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
-        
+
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24 lg:py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
-            
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
               Discipleship Equip Ministry: <br />
               <span className="text-church-yellow">Growing Deeper in Faith</span>
             </h1>
-            
-            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
+
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
               Equipping you to live out God's purpose through transformational learning and spiritual growth
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-6 sm:pt-8">
-              <button 
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 sm:pt-6 md:pt-8">
+              <button
                 onClick={scrollToForm}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto border-2 sm:border-3"
+                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-3 lg:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto border-2"
               >
                 Start Your Journey
               </button>
-              <button 
+              <button
                 onClick={() => document.getElementById('programs').scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
+                className="border-2 border-white text-white hover:bg-white hover:text-church-sage font-bold text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-3 lg:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
               >
                 Explore Programs
               </button>
