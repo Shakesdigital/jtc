@@ -427,90 +427,6 @@ const FamilyGroups = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-              How It <span className="text-church-yellow">Works</span>
-            </h2>
-            <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-            <p className="text-xl text-church-gray max-w-3xl mx-auto">
-              Join our family groups through these simple steps and start building meaningful connections today
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <motion.div
-                key={step.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="text-center group"
-              >
-                <div className="relative mb-6">
-                  <div className="mx-auto w-16 h-16 bg-church-sage text-white rounded-full flex items-center justify-center group-hover:bg-church-sage-dark transition-colors duration-300 mb-4">
-                    {step.icon}
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-church-yellow text-church-sage-dark rounded-full flex items-center justify-center text-sm font-bold">
-                    {step.id}
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-bold text-church-sage-dark mb-4">
-                  {step.title}
-                </h3>
-                
-                <p className="text-church-gray mb-6 leading-relaxed">
-                  {step.description}
-                </p>
-                
-                <div className="overflow-hidden rounded-lg shadow-md">
-                  <img
-                    src={step.image}
-                    alt={step.title}
-                    className="w-full h-32 object-cover transform group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full">
-                    <FiArrowRight className="w-6 h-6 text-church-sage mx-auto" />
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mt-16"
-          >
-            <div className="bg-gradient-to-r from-church-sage-light to-church-sage p-8 rounded-2xl text-white">
-              <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-              <p className="mb-6 opacity-90">We offer both in-person and online options to fit your family's needs and schedule.</p>
-              <button 
-                onClick={scrollToForm}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold px-8 py-3 rounded-full transition-all duration-300"
-              >
-                Join a Family Group Today
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Resources Section */}
       <section className="py-20 bg-gray-50">
@@ -567,9 +483,58 @@ const FamilyGroups = () => {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
+              How It <span className="text-church-yellow">Works</span>
+            </h2>
+            <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
+            <p className="text-xl text-church-gray max-w-3xl mx-auto">
+              Join our family groups through these simple steps and start building meaningful connections today
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="text-center group"
+              >
+                <div className="relative mb-6">
+                  <div className="mx-auto w-16 h-16 bg-church-sage text-white rounded-full flex items-center justify-center group-hover:bg-church-sage-dark transition-colors duration-300 mb-4">
+                    {step.icon}
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-church-sage-dark mb-4">
+                  {step.title}
+                </h3>
+
+                <p className="text-church-gray mb-6 leading-relaxed">
+                  {step.description}
+                </p>
+
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Get Involved Section */}
       <section id="get-involved" className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -592,13 +557,33 @@ const FamilyGroups = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-church-sage-light to-church-sage rounded-2xl shadow-2xl p-8 text-white"
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Image Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                <img
+                  src="/images/family-groups-community.jpg"
+                  alt="Family Groups Community"
+                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
+              </div>
+            </motion.div>
+
+            {/* Form Column */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-church-sage-light to-church-sage rounded-2xl shadow-2xl p-8 text-white"
+            >
             {isSubmitted ? (
               <div className="text-center py-12">
                 <FiCheckCircle className="w-16 h-16 mx-auto mb-6 text-church-yellow" />
@@ -731,7 +716,8 @@ const FamilyGroups = () => {
                 </div>
               </form>
             )}
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
