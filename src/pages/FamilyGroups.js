@@ -394,11 +394,8 @@ const FamilyGroups = () => {
                   <img
                     src={group.image}
                     alt={group.name}
-                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 right-4 bg-church-sage text-white px-3 py-1 rounded-full text-sm font-bold">
-                    {group.focus}
-                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
@@ -422,17 +419,7 @@ const FamilyGroups = () => {
                     </div>
                   </div>
                   
-                  <p className="text-church-gray mb-6 text-sm leading-relaxed">
-                    {group.description}
-                  </p>
                   
-                  <button 
-                    onClick={scrollToForm}
-                    className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center"
-                  >
-                    Explore This Group
-                    <FiArrowRight className="w-4 h-4 ml-2" />
-                  </button>
                 </div>
               </motion.div>
             ))}
