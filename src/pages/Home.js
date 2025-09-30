@@ -27,7 +27,7 @@ const Home = () => {
     },
     {
       id: 2,
-      url: "/images/IMG-20250914-WA0038.jpg",
+      url: "/images/community-banner.jpg",
       title: "A Welcoming Christian Community",
       subtitle: "Encouraging people to love God and love one another as one faith family community"
     },
