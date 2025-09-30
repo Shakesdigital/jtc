@@ -264,7 +264,7 @@ const DiscipleshipEquip = () => {
           <img
             src="/images/IMG-20250824-WA0064.jpg"
             alt="Discipleship Hero"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-contain object-center"
             style={{
               filter: 'brightness(0.6)'
             }}
@@ -362,7 +362,7 @@ const DiscipleshipEquip = () => {
                 <img
                   src="/images/IMG-20250914-WA0044.jpg"
                   alt="Discipleship Study Group"
-                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[500px] object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>
@@ -403,7 +403,7 @@ const DiscipleshipEquip = () => {
                 <img
                   src="/images/IMG-20250914-WA0047.jpg"
                   alt="Discipleship Programs"
-                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[500px] object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>
