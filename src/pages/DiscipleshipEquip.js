@@ -258,20 +258,17 @@ const DiscipleshipEquip = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Banner Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gray-900">
-        {/* Background Image Container with Padding */}
-        <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10">
-          <div className="relative w-full h-full max-w-7xl mx-auto">
-            <img
-              src="/images/Jamesii.jpg"
-              alt="Discipleship Hero"
-              className="w-full h-full object-contain"
-              style={{
-                filter: 'brightness(0.6)',
-                maxHeight: '100%'
-              }}
-            />
-          </div>
+      <section className="relative h-screen w-full flex items-center justify-center">
+        {/* Background Image - Full Width */}
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src="/images/Jamesii.jpg"
+            alt="Discipleship Hero"
+            className="w-full h-full object-cover"
+            style={{
+              filter: 'brightness(0.6)'
+            }}
+          />
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
 
