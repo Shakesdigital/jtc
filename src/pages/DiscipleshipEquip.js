@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FiBookOpen, 
-  FiUsers, 
-  FiTarget, 
+import {
+  FiBookOpen,
+  FiUsers,
   FiTrendingUp,
-  FiCalendar, 
-  FiClock, 
+  FiCalendar,
   FiMessageCircle,
   FiArrowRight,
   FiPlay,
