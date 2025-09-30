@@ -344,13 +344,6 @@ const FamilyGroups = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>
               
-              {/* Floating Quote Card */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border-l-4 border-church-yellow max-w-xs">
-                <p className="text-sm text-church-gray italic mb-3">
-                  "Our family group has become our second family. The support and love we've found here has transformed our faith journey."
-                </p>
-                <div className="text-xs font-semibold text-church-sage-dark">- The Mukasa Family</div>
-              </div>
             </motion.div>
           </div>
         </div>
@@ -560,7 +553,7 @@ const FamilyGroups = () => {
                 <img
                   src="/images/family-groups-form-image.jpg"
                   alt="Family Groups Community"
-                  className="w-full h-[500px] object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[600px] object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>
