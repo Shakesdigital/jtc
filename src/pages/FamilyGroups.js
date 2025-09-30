@@ -257,11 +257,6 @@ const FamilyGroups = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <div className="flex justify-center mb-3 sm:mb-4">
-              <div className="bg-church-yellow bg-opacity-20 backdrop-blur-sm rounded-full p-6">
-                <FiUsers className="w-16 h-16 text-church-yellow" />
-              </div>
-            </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Family Groups Ministry: <br />
@@ -542,11 +537,6 @@ const FamilyGroups = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <div className="flex justify-center mb-8">
-              <div className="bg-church-sage bg-opacity-10 rounded-full p-6">
-                <FiHeart className="w-12 h-12 text-church-sage" />
-              </div>
-            </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
               Join a Family Group and <span className="text-church-yellow">Grow Together!</span>
@@ -568,9 +558,9 @@ const FamilyGroups = () => {
             >
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <img
-                  src="/images/family-groups-community.jpg"
+                  src="/images/family-groups-form-image.jpg"
                   alt="Family Groups Community"
-                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[500px] object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>
