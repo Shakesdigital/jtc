@@ -21,19 +21,19 @@ const Home = () => {
   const heroImages = [
     {
       id: 1,
-      url: "/images/full-church-congregation.jpg",
+      url: "/images/IMG-20250928-WA0038.jpg",
       title: "Welcome to Arise Jinja Town Church – Where All Are Welcome in Christ's Love",
       subtitle: "Join our diverse community in Jinja, Uganda, as we worship, grow, and serve together. Experience the transformative power of Jesus every Sunday and beyond."
     },
     {
       id: 2,
-      url: "/images/diverse-community.jpg",
+      url: "/images/IMG-20250914-WA0038.jpg",
       title: "A Welcoming Christian Community",
       subtitle: "Encouraging people to love God and love one another as one faith family community"
     },
     {
       id: 3,
-      url: "/images/joyful-fellowship.jpg",
+      url: "/images/IMG-20250923-WA0375.jpg",
       title: "Richly Diverse Church Family",
       subtitle: "People of all ethnicities and backgrounds worshipping together"
     }
