@@ -398,39 +398,37 @@ const DiscipleshipEquip = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {programs.map((program, index) => (
-              <motion.div
-                key={program.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={program.image}
-                    alt={program.title}
-                    className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-church-sage-dark mb-2 group-hover:text-church-sage transition-colors duration-300">
-                    {program.title}
-                  </h3>
-                  
-                  <p className="text-church-gray mb-4 text-sm leading-relaxed">
-                    {program.description}
-                  </p>
-                  
-                  
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                <img
+                  src="/images/discipleship-equip-hero.jpg"
+                  alt="Discipleship Programs"
+                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
+              </div>
+            </motion.div>
+
+            {/* Content Column */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <p className="text-lg text-church-gray leading-relaxed">
+                Our comprehensive discipleship programs are designed to meet you where you are and take you where God wants you to be. Through our <strong className="text-church-sage-dark">Bible Study Classes</strong>, experience a deep dive into Scripture through systematic study courses designed for all levels, helping you learn to study God's Word with confidence over 12 weeks. Our <strong className="text-church-sage-dark">Leadership Training</strong> is an 8-week intermediate program that equips you with biblical leadership principles and practical skills to serve effectively in ministry and your community with confidence and wisdom. Join our ongoing <strong className="text-church-sage-dark">Mentorship Groups</strong> where experienced believers provide guidance, accountability, and encouragement for your spiritual journey and personal development in small group settings. Deepen your communion with God through our 4-week <strong className="text-church-sage-dark">Prayer Workshops</strong> available for all levels, where you'll learn different prayer methods and develop a consistent prayer life that transforms your relationship with the Father. Develop practical abilities through our 6-week intermediate <strong className="text-church-sage-dark">Ministry Skills Training</strong>, covering teaching, counseling, worship leading, and community outreach to serve more effectively in various ministry areas. Finally, discover your divine purpose through our 10-week <strong className="text-church-sage-dark">Life Purpose Discovery</strong> program, available for all levels, that helps you identify your God-given gifts, talents, and calling through assessments, reflection, and biblical teaching about purpose and destiny in God's kingdom.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
