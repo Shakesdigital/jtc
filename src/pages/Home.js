@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fi';
 import ContentCarousel from '../components/ContentCarousel';
 import { getRecentSermons } from '../data/sermonsData';
-import { getRecentArticles, articlesData } from '../data/articlesData';
+import { articlesData } from '../data/articlesData';
 import '../styles/carousel.css';
 
 const Home = () => {
