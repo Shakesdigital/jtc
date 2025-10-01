@@ -56,7 +56,7 @@ function App() {
           <Route path="sermons/archive" element={<Sermons />} />
           <Route path="sermon/:slug" element={<SermonDetail />} />
           <Route path="events" element={<Events />} />
-          <Route path="events/:id" element={<EventDetail />} />
+          <Route path="events/:slug" element={<EventDetail />} />
           <Route path="multimedia" element={<Multimedia />} />
           <Route path="multimedia/videos" element={<Multimedia />} />
           <Route path="multimedia/audio" element={<Multimedia />} />

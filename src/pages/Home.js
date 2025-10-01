@@ -11,6 +11,7 @@ import {
 import ContentCarousel from '../components/ContentCarousel';
 import { getRecentSermons } from '../data/sermonsData';
 import { articlesData } from '../data/articlesData';
+import { getUpcomingEvents } from '../data/eventsData';
 import '../styles/carousel.css';
 
 const Home = () => {
@@ -107,62 +108,8 @@ const Home = () => {
   // Get real sermon data
   const recentSermons = getRecentSermons(3);
 
-  const sampleEvents = [
-    {
-      id: 1,
-      title: "Annual Youth Jam",
-      date: "September 2025",
-      time: "6:00 PM - 10:00 PM",
-      location: "Church Sanctuary",
-      image: "/images/young-community.jpg",
-      description: "A lively celebration of Jesus through music, dance, and testimonies. Join us for an evening of worship designed especially for young people."
-    },
-    {
-      id: 2,
-      title: "Mega Fellowship",
-      date: "Every Quarter",
-      time: "10:00 AM - 2:00 PM",
-      location: "Church Grounds",
-      image: "/images/full-church-congregation.jpg",
-      description: "Quarterly celebration with worship, preaching, and community meals. A time for the entire church family to come together in fellowship."
-    },
-    {
-      id: 3,
-      title: "Tuesday Prayer Meeting",
-      date: "Every Tuesday",
-      time: "4:00 PM - 6:00 PM",
-      location: "Church Sanctuary",
-      image: "/images/pray-together.jpg",
-      description: "Breaking fast, prayer, and fellowship with our church community family. Experience the power of corporate prayer and intercession."
-    },
-    {
-      id: 4,
-      title: "Family Groups Meetup",
-      date: "Weekly",
-      time: "6:00 PM - 9:00 PM",
-      location: "Various Homes",
-      image: "/images/joyful-fellowship.jpg",
-      description: "Home-based fellowship for deeper connections and Bible study. Build lasting relationships in a small group setting."
-    },
-    {
-      id: 5,
-      title: "Women's Conference",
-      date: "October 2025",
-      time: "9:00 AM - 4:00 PM",
-      location: "Church Hall",
-      image: "/images/worship-gathering.jpg",
-      description: "Empowering women to grow in faith and purpose. A day of worship, teaching, and fellowship designed for women of all ages."
-    },
-    {
-      id: 6,
-      title: "Community Outreach Day",
-      date: "Monthly",
-      time: "8:00 AM - 1:00 PM",
-      location: "Jinja Community",
-      image: "/images/diverse-community.jpg",
-      description: "Serving our local community with love and practical support. Join us as we demonstrate Christ's love through action."
-    }
-  ];
+  // Get events from eventsData
+  const sampleEvents = getUpcomingEvents(3);
 
   // Get ALL articles from articlesData (not just recent ones)
   const sampleArticles = [...articlesData].sort((a, b) => b.publishDate - a.publishDate);
@@ -500,7 +447,7 @@ const Home = () => {
           subtitle="Join us for fellowship, worship, and community activities that bring us closer together"
           items={sampleEvents}
           type="events"
-          ctaLink="/events/archive"
+          ctaLink="/events"
           ctaText="See Full Calendar"
         />
       </div>

@@ -12,34 +12,14 @@ import {
   FiBookOpen
 } from 'react-icons/fi';
 import { articlesData } from '../data/articlesData';
+import { getUpcomingEvents } from '../data/eventsData';
 
 const Resources = () => {
   // Get articles from articlesData - sorted by publish date (most recent first)
   const articles = [...articlesData].sort((a, b) => b.publishDate - a.publishDate);
 
-  const events = [
-    {
-      id: 1,
-      title: "Annual Youth Jam",
-      excerpt: "A lively celebration of Jesus through music, dance, and testimonies. Join us for an unforgettable evening.",
-      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=300&fit=crop",
-      date: "September 2025"
-    },
-    {
-      id: 2,
-      title: "Mega Fellowship",
-      excerpt: "Quarterly celebration with worship, preaching, and community meals. Bringing our church family together.",
-      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=300&fit=crop",
-      date: "Every Quarter"
-    },
-    {
-      id: 3,
-      title: "Tuesday Prayer Meeting",
-      excerpt: "Breaking fast, prayer, and fellowship with our church community family. Come hungry for God's presence.",
-      image: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=400&h=300&fit=crop",
-      date: "Every Tuesday"
-    }
-  ];
+  // Get events from eventsData
+  const events = getUpcomingEvents(3);
 
   const books = [
     {
@@ -275,7 +255,7 @@ const Resources = () => {
         items={events}
         type="events"
         sectionTitle="All Events"
-        archivePath="/resources/events/archive"
+        archivePath="/events"
       />
 
       {/* All Books Section */}

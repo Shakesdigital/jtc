@@ -194,7 +194,7 @@ const ContentCarousel = ({
         <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{event.description}</p>
         
         <Link 
-          to="/events/archive"
+          to={event.slug ? `/events/${event.slug}` : '/events/archive'}
           className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
         >
           View Event Details
