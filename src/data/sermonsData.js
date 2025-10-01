@@ -82,6 +82,11 @@ export const sermonsData = [
   }
 ];
 
+// Helper function to get all sermons
+export const getAllSermons = () => {
+  return sermonsData;
+};
+
 // Helper function to get sermon by slug
 export const getSermonBySlug = (slug) => {
   return sermonsData.find(sermon => sermon.slug === slug);
