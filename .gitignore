@@ -45,6 +45,6 @@ lerna-debug.log*
 /public/images/*
 /temp/
 
-# Large sermon media files (upload directly to server)
-/public/sermons/audio/*.m4a
+# Note: Sermon audio files are tracked with Git LFS
+# Large sermon notes (upload directly to server)
 /public/sermons/notes/*.docx
