@@ -205,10 +205,23 @@
   .carousel-track {
     cursor: grab;
   }
-  
+
   .carousel-track:active {
     cursor: grabbing;
   }
+}
+
+/* Improved touch interactions for all touch devices */
+.carousel-track {
+  touch-action: pan-y pinch-zoom;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.carousel-track:active {
+  cursor: grabbing;
 }
 
 /* Smooth transitions */
@@ -373,4 +386,39 @@
 .carousel-nav:hover {
   background-color: #f8fafc;
   border: 1px solid #e2e8f0;
+}
+
+/* Mobile navigation buttons */
+.carousel-mobile-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.carousel-mobile-nav button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.carousel-mobile-nav button:active {
+  transform: scale(0.95);
+}
+
+/* Page indicator */
+.carousel-page-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .carousel-mobile-nav {
+    display: none;
+  }
 }
