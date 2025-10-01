@@ -67,7 +67,8 @@
       "Read(//d/Jinja Town Church Work/JTC sermons/**)",
       "Bash(test:*)",
       "Bash(git lfs:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(git log:*)"
     ],
     "deny": [],
     "ask": []

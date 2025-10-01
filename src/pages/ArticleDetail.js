@@ -12,12 +12,45 @@ import {
   FiMail,
   FiClock
 } from 'react-icons/fi';
-import { getArticleBySlug } from '../data/articlesData';
+import { getArticleBySlug, articlesData } from '../data/articlesData';
+import { processArticleContent } from '../utils/contentUtils';
+import ArticlesCarousel from '../components/ArticlesCarousel';
 
 const ArticleDetail = () => {
   const { slug } = useParams();
   const [article, setArticle] = useState(null);
   const [readingTime, setReadingTime] = useState(0);
+
+  // Function to get related articles based on category and tags
+  const getRelatedArticles = (currentArticle, limit = 3) => {
+    if (!currentArticle) return [];
+    
+    // Filter out the current article and find related ones by category
+    let related = articlesData
+      .filter(a => a.id !== currentArticle.id)
+      .filter(a => a.category === currentArticle.category);
+    
+    // If we don't have enough related by category, add by tags
+    if (related.length < limit) {
+      const tagBased = articlesData
+        .filter(a => a.id !== currentArticle.id && !related.some(r => r.id === a.id))
+        .filter(a => 
+          a.tags.some(tag => currentArticle.tags.includes(tag))
+        );
+      related = [...related, ...tagBased];
+    }
+    
+    // If still not enough, add recent articles
+    if (related.length < limit) {
+      const recent = articlesData
+        .filter(a => a.id !== currentArticle.id && !related.some(r => r.id === a.id))
+        .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
+        .slice(0, limit - related.length);
+      related = [...related, ...recent];
+    }
+    
+    return related.slice(0, limit);
+  };
 
   useEffect(() => {
     const foundArticle = getArticleBySlug(slug);
@@ -67,11 +100,11 @@ const ArticleDetail = () => {
 
   if (!article) {
     return (
-      <div className="min-h-screen bg-white py-20">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h1 className="text-3xl font-bold text-church-sage-dark mb-4">Article Not Found</h1>
-          <p className="text-church-gray mb-8">The article you're looking for doesn't exist.</p>
-          <Link to="/resources" className="bg-church-sage text-white px-6 py-3 rounded-lg">
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">Article Not Found</h1>
+          <p className="text-gray-600 mb-8">The article you're looking for doesn't exist.</p>
+          <Link to="/resources" className="bg-church-sage text-white px-6 py-3 rounded-lg hover:bg-church-sage-dark transition-colors">
             Back to Resources
           </Link>
         </div>
@@ -80,151 +113,160 @@ const ArticleDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-church-sage to-church-sage-dark text-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <Link 
-            to="/resources"
-            className="inline-flex items-center text-church-yellow hover:text-white transition-colors duration-300 mb-8"
-          >
-            <FiArrowLeft className="w-4 h-4 mr-2" />
-            Back to Resources
-          </Link>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex flex-wrap items-center gap-4 text-sm opacity-90 mb-4">
-              <div className="flex items-center">
-                <FiUser className="w-4 h-4 mr-1" />
-                {article.author}
-              </div>
-              <div className="flex items-center">
-                <FiCalendar className="w-4 h-4 mr-1" />
-                {article.date}
-              </div>
-              <div className="flex items-center">
-                <FiClock className="w-4 h-4 mr-1" />
-                {readingTime} min read
-              </div>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              {article.title}
-            </h1>
-            
-            <p className="text-xl opacity-95 mb-8 leading-relaxed">
-              {article.excerpt}
-            </p>
-            
-            <div className="flex flex-wrap gap-2">
-              {article.tags.map((tag) => (
-                <span key={tag} className="bg-church-yellow bg-opacity-20 text-church-yellow px-3 py-1 rounded-full text-sm">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Article Image */}
-      <section className="relative">
-        <img
-          src={article.image}
-          alt={article.title}
-          className="w-full h-96 object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-      </section>
-
+    <div className="min-h-screen bg-gray-50">
       {/* Article Content */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="prose prose-lg max-w-none"
-            style={{
-              '--tw-prose-headings': 'rgb(var(--church-sage-dark))',
-              '--tw-prose-body': 'rgb(var(--church-gray))',
-              '--tw-prose-links': 'rgb(var(--church-sage))',
-            }}
-            dangerouslySetInnerHTML={{ __html: article.content }}
-          />
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        {/* Back to Resources Link */}
+        <Link 
+          to="/resources"
+          className="inline-flex items-center text-church-sage hover:text-church-sage-dark transition-colors duration-300 mb-8"
+        >
+          <FiArrowLeft className="w-4 h-4 mr-2" />
+          Back to Resources
+        </Link>
 
-          {/* Share and Download Section */}
-          <div className="border-t border-gray-200 pt-8 mt-12">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-              <div>
-                <p className="text-church-gray mb-4">Share this article:</p>
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={() => handleShare('twitter')}
-                    className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-church-sage hover:bg-church-sage hover:text-white transition-all duration-300"
-                    title="Share on Twitter"
-                  >
-                    <FiTwitter className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={() => handleShare('facebook')}
-                    className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-church-sage hover:bg-church-sage hover:text-white transition-all duration-300"
-                    title="Share on Facebook"
-                  >
-                    <FiFacebook className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={() => handleShare('linkedin')}
-                    className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-church-sage hover:bg-church-sage hover:text-white transition-all duration-300"
-                    title="Share on LinkedIn"
-                  >
-                    <FiLinkedin className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={() => handleShare('email')}
-                    className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-church-sage hover:bg-church-sage hover:text-white transition-all duration-300"
-                    title="Share via Email"
-                  >
-                    <FiMail className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={handleDownloadPDF}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-church-sage text-white hover:bg-church-sage-dark transition-all duration-300 ml-2"
-                    title="Download PDF"
-                  >
-                    <FiDownload className="w-4 h-4" />
-                    <span className="text-sm font-medium">Download PDF</span>
-                  </button>
-                </div>
-              </div>
-              <div className="text-left md:text-right">
-                <p className="text-church-gray text-sm">
-                  By {article.author}
-                </p>
-                <p className="text-church-gray text-xs">
-                  Courtesy of Four12 Global
-                </p>
-              </div>
+        {/* Article Header */}
+        <header className="mb-10">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
+            <div className="flex items-center">
+              <FiUser className="w-4 h-4 mr-1.5" />
+              <span>{article.author}</span>
+            </div>
+            <div className="flex items-center">
+              <FiCalendar className="w-4 h-4 mr-1.5" />
+              <span>{article.date}</span>
+            </div>
+            <div className="flex items-center">
+              <FiClock className="w-4 h-4 mr-1.5" />
+              <span>{readingTime} min read</span>
             </div>
           </div>
+          
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            {article.title}
+          </h1>
+          
+          <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+            {article.excerpt}
+          </p>
+          
+          <div className="flex flex-wrap gap-2">
+            {article.tags.map((tag) => (
+              <span 
+                key={tag} 
+                className="bg-church-sage bg-opacity-10 text-church-sage px-3 py-1 rounded-full text-sm font-medium"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </header>
 
-          {/* Related Articles */}
-          <div className="mt-16 pt-8 border-t border-gray-200">
-            <h3 className="text-2xl font-bold text-church-sage-dark mb-8">More Articles</h3>
+        {/* Article Image - placed within content as per Four12 style */}
+        <div className="mb-10">
+          <img
+            src={article.image}
+            alt={article.title}
+            className="w-full h-auto rounded-lg shadow-md max-w-3xl mx-auto"
+          />
+        </div>
+
+        {/* Article Content */}
+        <div 
+          className="prose prose-lg max-w-none text-gray-700"
+          style={{
+            '--tw-prose-body': 'rgb(55, 65, 81)',
+            '--tw-prose-headings': 'rgb(17, 24, 39)',
+            '--tw-prose-lead': 'rgb(86, 98, 119)',
+            '--tw-prose-links': 'rgb(110, 152, 150)',
+            '--tw-prose-bold': 'rgb(17, 24, 39)',
+            '--tw-prose-counters': 'rgb(107, 114, 128)',
+            '--tw-prose-bullets': 'rgb(156, 163, 175)',
+            '--tw-prose-hr': 'rgb(209, 213, 219)',
+            '--tw-prose-quotes': 'rgb(17, 24, 39)',
+            '--tw-prose-quote-borders': 'rgb(209, 213, 219)',
+            '--tw-prose-captions': 'rgb(107, 114, 128)',
+            '--tw-prose-code': 'rgb(17, 24, 39)',
+            '--tw-prose-pre-code': 'rgb(249, 250, 251)',
+            '--tw-prose-pre-bg': 'rgb(17, 24, 39)',
+            '--tw-prose-th-borders': 'rgb(209, 213, 219)',
+            '--tw-prose-td-borders': 'rgb(229, 231, 235)',
+          }}
+          dangerouslySetInnerHTML={{ __html: processArticleContent(article.content) }}
+        />
+
+        {/* Share and Download Section */}
+        <div className="border-t border-gray-200 pt-8 mt-12">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <p className="text-gray-700 font-medium">Share this article:</p>
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => handleShare('twitter')}
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-700 hover:bg-church-sage hover:text-white transition-all duration-300"
+                  title="Share on Twitter"
+                >
+                  <FiTwitter className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => handleShare('facebook')}
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-700 hover:bg-church-sage hover:text-white transition-all duration-300"
+                  title="Share on Facebook"
+                >
+                  <FiFacebook className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => handleShare('linkedin')}
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-700 hover:bg-church-sage hover:text-white transition-all duration-300"
+                  title="Share on LinkedIn"
+                >
+                  <FiLinkedin className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => handleShare('email')}
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-700 hover:bg-church-sage hover:text-white transition-all duration-300"
+                  title="Share via Email"
+                >
+                  <FiMail className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={handleDownloadPDF}
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-church-sage text-white hover:bg-church-sage-dark transition-all duration-300 ml-0 sm:ml-2"
+                  title="Download PDF"
+                >
+                  <FiDownload className="w-4 h-4" />
+                  <span className="text-sm font-medium">Download PDF</span>
+                </button>
+              </div>
+            </div>
+            <div className="text-left sm:text-right">
+              <p className="text-gray-700 text-sm">
+                By {article.author}
+              </p>
+              <p className="text-gray-500 text-xs mt-1">
+                Courtesy of Four12 Global
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Related Articles Carousel */}
+        <div className="mt-16 pt-8 border-t border-gray-200">
+          <ArticlesCarousel 
+            articles={getRelatedArticles(article, 9)} 
+            title="Related Articles" 
+          />
+          <div className="mt-8 text-center">
             <Link
               to="/articles"
-              className="inline-flex items-center text-church-sage hover:text-church-sage-dark transition-colors duration-300 mb-6"
+              className="inline-flex items-center text-church-sage hover:text-church-sage-dark transition-colors duration-300"
             >
               View all articles
               <FiArrowLeft className="w-4 h-4 ml-2 transform rotate-180" />
             </Link>
           </div>
         </div>
-      </section>
+      </article>
     </div>
   );
 };
