@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fi';
 import ContentCarousel from '../components/ContentCarousel';
 import { getRecentSermons } from '../data/sermonsData';
-import { getRecentArticles } from '../data/articlesData';
+import { getRecentArticles, articlesData } from '../data/articlesData';
 import '../styles/carousel.css';
 
 const Home = () => {
@@ -164,8 +164,8 @@ const Home = () => {
     }
   ];
 
-  // Get recent articles from articlesData
-  const sampleArticles = getRecentArticles(5);
+  // Get ALL articles from articlesData (not just recent ones)
+  const sampleArticles = [...articlesData].sort((a, b) => b.publishDate - a.publishDate);
 
   const ministries = [
     {
