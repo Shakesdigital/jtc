@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { 
-  FiCalendar, 
-  FiClock, 
-  FiMapPin, 
+import {
+  FiCalendar,
+  FiClock,
+  FiMapPin,
   FiArrowLeft,
   FiTwitter,
   FiFacebook,
@@ -11,16 +11,35 @@ import {
   FiMail,
   FiClock as FiTime
 } from 'react-icons/fi';
-import { getEventBySlug } from '../data/eventsData';
+import { getEventBySlug, getAllEvents } from '../data/eventsData';
+import ContentCarousel from '../components/ContentCarousel';
 
 const EventDetail = () => {
   const { slug } = useParams();
   const [event, setEvent] = useState(null);
   const [timeLeft, setTimeLeft] = useState(null);
+  const [relatedEvents, setRelatedEvents] = useState([]);
 
   useEffect(() => {
     const foundEvent = getEventBySlug(slug);
     setEvent(foundEvent);
+
+    // Get related events (same category or upcoming events, excluding current event)
+    if (foundEvent) {
+      const allEvents = getAllEvents();
+      const related = allEvents
+        .filter(e => e.slug !== slug) // Exclude current event
+        .filter(e => {
+          // Prioritize same category
+          if (e.category === foundEvent.category) return true;
+          // Include other upcoming events
+          if (e.displayDate && e.displayDate >= new Date()) return true;
+          return false;
+        })
+        .slice(0, 6); // Limit to 6 related events
+
+      setRelatedEvents(related);
+    }
   }, [slug]);
 
   // Calculate time left if event has a future date
@@ -202,7 +221,7 @@ const EventDetail = () => {
         </div>
 
         {/* Share and Calendar Section */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
+        <div className="border-t border-gray-200 pt-8 mt-12 mb-12">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <p className="text-gray-700 font-medium">Share this event:</p>
@@ -256,6 +275,20 @@ const EventDetail = () => {
           </div>
         </div>
       </article>
+
+      {/* Related Events Carousel */}
+      {relatedEvents.length > 0 && (
+        <div className="bg-white py-16">
+          <ContentCarousel
+            title={<>More <span className="text-church-yellow">Upcoming Events</span></>}
+            subtitle="Discover other events you might be interested in"
+            items={relatedEvents}
+            type="events"
+            ctaLink="/events"
+            ctaText="View All Events"
+          />
+        </div>
+      )}
     </div>
   );
 };
