@@ -10,7 +10,7 @@ import {
   FiChevronDown,
   FiChevronUp
 } from 'react-icons/fi';
-import { getAllEvents, getUpcomingEvents, getRecurringEvents, getAllCategories, getAllTags } from '../data/eventsData';
+import { getAllEvents, getRecurringEvents, getAllCategories, getAllTags } from '../data/eventsData';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -19,7 +19,6 @@ const Events = () => {
   const [selectedTags, setSelectedTags] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [showFilters, setShowFilters] = useState(false);
-  const [expandedEventId, setExpandedEventId] = useState(null);
 
   useEffect(() => {
     setEvents(getAllEvents());
