@@ -32,9 +32,9 @@ export const addParagraphSpacing = (content) => {
   
   // Add margin to other block elements as well
   spacedContent = spacedContent.replace(/<blockquote>/g, '<blockquote class="mb-4">');
-  spacedContent = spacedContent.replace(/<h2>/g, '<h2 class="mb-4">');
-  spacedContent = spacedContent.replace(/<h3>/g, '<h3 class="mb-4">');
-  spacedContent = spacedContent.replace(/<h4>/g, '<h4 class="mb-4">');
+  spacedContent = spacedContent.replace(/<h2>/g, '<h2 class="text-2xl mb-4">');
+  spacedContent = spacedContent.replace(/<h3>/g, '<h3 class="text-xl mb-4">');
+  spacedContent = spacedContent.replace(/<h4>/g, '<h4 class="text-lg mb-4">');
   spacedContent = spacedContent.replace(/<ul>/g, '<ul class="mb-4">');
   spacedContent = spacedContent.replace(/<ol>/g, '<ol class="mb-4">');
   
