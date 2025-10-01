@@ -25,6 +25,7 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import PrayerRequests from './pages/PrayerRequests';
 import Resources from './pages/Resources';
+import Articles from './pages/Articles';
 import ArticleDetail from './pages/ArticleDetail';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -65,7 +66,9 @@ function App() {
           <Route path="blog/:id" element={<BlogPost />} />
           <Route path="prayer-requests" element={<PrayerRequests />} />
           <Route path="resources" element={<Resources />} />
+          <Route path="articles" element={<Articles />} />
           <Route path="resources/articles/:slug" element={<ArticleDetail />} />
+          <Route path="articles/:slug" element={<ArticleDetail />} />
         </Route>
 
         {/* Admin Routes */}
