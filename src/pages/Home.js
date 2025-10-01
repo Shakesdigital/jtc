@@ -488,7 +488,7 @@ const Home = () => {
           subtitle="Discover inspiring articles by Richard van de Ruit and other spiritual resources to deepen your faith journey"
           items={sampleArticles}
           type="articles"
-          ctaLink="/resources/articles/archive"
+          ctaLink="/articles"
           ctaText="View All Articles"
         />
       </div>

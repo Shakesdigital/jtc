@@ -216,7 +216,7 @@ const ArticleDetail = () => {
           <div className="mt-16 pt-8 border-t border-gray-200">
             <h3 className="text-2xl font-bold text-church-sage-dark mb-8">More Articles</h3>
             <Link
-              to="/resources"
+              to="/articles"
               className="inline-flex items-center text-church-sage hover:text-church-sage-dark transition-colors duration-300 mb-6"
             >
               View all articles

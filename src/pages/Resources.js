@@ -263,11 +263,11 @@ const Resources = () => {
       </section>
 
       {/* All Articles Section */}
-      <ResourceCarousel 
+      <ResourceCarousel
         items={articles}
         type="articles"
         sectionTitle="All Articles"
-        archivePath="/resources/articles/archive"
+        archivePath="/articles"
       />
 
       {/* All Events Section */}
