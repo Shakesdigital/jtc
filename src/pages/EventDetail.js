@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
   FiCalendar, 
   FiClock, 
   FiMapPin, 
-  FiShare2, 
-  FiDownload, 
   FiArrowLeft,
   FiTwitter,
   FiFacebook,

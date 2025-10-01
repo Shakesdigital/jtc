@@ -14,7 +14,6 @@ import { getAllEvents, getUpcomingEvents, getRecurringEvents, getAllCategories, 
 
 const Events = () => {
   const [events, setEvents] = useState([]);
-  const [upcomingEvents, setUpcomingEvents] = useState([]);
   const [recurringEvents, setRecurringEvents] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
@@ -24,7 +23,6 @@ const Events = () => {
 
   useEffect(() => {
     setEvents(getAllEvents());
-    setUpcomingEvents(getUpcomingEvents(10)); // Show more upcoming events on this page
     setRecurringEvents(getRecurringEvents());
   }, []);
 
@@ -64,9 +62,7 @@ const Events = () => {
     }
   };
 
-  const toggleEventExpansion = (eventId) => {
-    setExpandedEventId(expandedEventId === eventId ? null : eventId);
-  };
+
 
   return (
     <div className="min-h-screen bg-gray-50">
