@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
   FiChevronLeft,
   FiChevronRight,
   FiArrowRight,
@@ -11,46 +11,11 @@ import {
   FiVideo,
   FiBookOpen
 } from 'react-icons/fi';
+import { articlesData } from '../data/articlesData';
 
 const Resources = () => {
-  // Sample data for each resource type
-  const articles = [
-    {
-      id: 1,
-      title: "How Do We Measure Devotion?",
-      excerpt: "Cultivating the root for better fruit. Exploring what true devotion means in our Christian walk.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
-      slug: "how-do-we-measure-devotion"
-    },
-    {
-      id: 2,
-      title: "Follow Him to Calvary",
-      excerpt: "Counting the cost of living for Jesus. Understanding what it means to truly follow Christ.",
-      image: "https://images.unsplash.com/photo-1516826957135-700dedea698c?w=400&h=300&fit=crop",
-      slug: "follow-him-to-calvary"
-    },
-    {
-      id: 3,
-      title: "The Opinion Virus",
-      excerpt: "Are we building up or voicing unhelpful judgments? How our words can heal or harm.",
-      image: "https://images.unsplash.com/photo-1520637836862-4d197d17c46a?w=400&h=300&fit=crop",
-      slug: "the-opinion-virus"
-    },
-    {
-      id: 4,
-      title: "Dunk or Sprinkle?",
-      excerpt: "What is the pattern of Scripture when it comes to water baptism? Understanding biblical baptism.",
-      image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?w=400&h=300&fit=crop",
-      slug: "dunk-or-sprinkle"
-    },
-    {
-      id: 5,
-      title: "Is Family God's Design?",
-      excerpt: "Why is the family unit worth fighting for, and what is at stake? God's heart for family.",
-      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=300&fit=crop",
-      slug: "is-family-gods-design"
-    }
-  ];
+  // Get articles from articlesData - sorted by publish date (most recent first)
+  const articles = [...articlesData].sort((a, b) => b.publishDate - a.publishDate);
 
   const events = [
     {

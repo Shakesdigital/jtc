@@ -10,6 +10,7 @@ import {
 } from 'react-icons/fi';
 import ContentCarousel from '../components/ContentCarousel';
 import { getRecentSermons } from '../data/sermonsData';
+import { getRecentArticles } from '../data/articlesData';
 import '../styles/carousel.css';
 
 const Home = () => {
@@ -163,56 +164,8 @@ const Home = () => {
     }
   ];
 
-  const sampleArticles = [
-    {
-      id: 1,
-      title: "How Do We Measure Devotion?",
-      excerpt: "Cultivating the root for better fruit. Exploring what true devotion to God looks like in our daily lives and how we can grow deeper in our faith.",
-      image: "/images/dealing-with-temptation.jpg",
-      slug: "how-do-we-measure-devotion",
-      author: "Richard van de Ruit"
-    },
-    {
-      id: 2,
-      title: "Follow Him to Calvary",
-      excerpt: "Counting the cost of living for Jesus. Understanding the sacrificial love of Christ and what it means to take up our cross daily.",
-      image: "/images/pr-richard-preaching.jpg",
-      slug: "follow-him-to-calvary",
-      author: "Richard van de Ruit"
-    },
-    {
-      id: 3,
-      title: "The Opinion Virus",
-      excerpt: "Are we building up or voicing unhelpful judgments? Learning to speak life and encouragement in a world full of criticism.",
-      image: "/images/sermon-2.jpg",
-      slug: "the-opinion-virus",
-      author: "Richard van de Ruit"
-    },
-    {
-      id: 4,
-      title: "Dunk or Sprinkle?",
-      excerpt: "What is the pattern of Scripture when it comes to water baptism? An in-depth look at biblical baptism and its significance.",
-      image: "/images/sermons.jpg",
-      slug: "dunk-or-sprinkle",
-      author: "Richard van de Ruit"
-    },
-    {
-      id: 5,
-      title: "Grace Under Pressure",
-      excerpt: "Finding God's strength in challenging times. Discovering how God's grace sustains us through life's most difficult moments.",
-      image: "/images/pray-together.jpg",
-      slug: "grace-under-pressure",
-      author: "Richard van de Ruit"
-    },
-    {
-      id: 6,
-      title: "The Power of Forgiveness",
-      excerpt: "Breaking free from the chains of unforgiveness. Learn how forgiveness transforms both the forgiver and the forgiven.",
-      image: "/images/charity-worship.jpg",
-      slug: "the-power-of-forgiveness",
-      author: "Richard van de Ruit"
-    }
-  ];
+  // Get recent articles from articlesData
+  const sampleArticles = getRecentArticles(5);
 
   const ministries = [
     {

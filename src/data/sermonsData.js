@@ -2,6 +2,26 @@
 export const sermonsData = [
   {
     id: 1,
+    slug: 'be-encouraged',
+    title: 'Be Encouraged',
+    speaker: 'Pr. Jonathan',
+    date: '2025-09-28',
+    dateFormatted: 'September 28, 2025',
+    image: '/sermons/images/be-encouraged.png',
+    summary: 'In times of difficulty and discouragement, God wants to lift your spirit and renew your strength. Discover how to find encouragement in His promises.',
+    category: 'Encouragement',
+    hasAudio: true,
+    hasVideo: false,
+    hasNotes: false,
+    audioUrl: '/sermons/audio/be-encouraged.wav',
+    videoUrl: null,
+    notesUrl: null,
+    scripture: 'Isaiah 40:28-31',
+    duration: 'TBD',
+    description: `Life can be overwhelming, and discouragement can weigh heavily on our hearts. But God's Word offers us powerful encouragement and hope. In this uplifting message, Pr. Jonathan shares how we can find strength in the Lord, overcome discouragement, and walk in the confidence that God is with us. Learn practical ways to encourage yourself in the Lord, draw strength from His promises, and encourage others who are going through difficult times. Remember, with God, you are never alone, and His grace is sufficient for every challenge you face.`
+  },
+  {
+    id: 2,
     slug: 'finding-your-soulmate',
     title: 'Finding Your Soulmate',
     speaker: 'Pr. Richard',
@@ -21,7 +41,7 @@ export const sermonsData = [
     description: `This sermon explores God's design for relationships and marriage. Learn how to trust God in your search for a life partner, understand biblical principles for godly relationships, and discover how God prepares us for the covenant of marriage. Whether you're single, dating, or preparing for marriage, this message offers practical wisdom and spiritual guidance for one of life's most important decisions.`
   },
   {
-    id: 2,
+    id: 3,
     slug: 'wind-and-waves',
     title: 'Wind and Waves',
     speaker: 'Pr. Jonathan',
@@ -41,7 +61,7 @@ export const sermonsData = [
     description: `In this inspiring message, we examine the story of Jesus calming the storm and discover how His power extends over every circumstance in our lives. When you're facing life's storms - financial struggles, health challenges, relationship difficulties, or spiritual battles - Jesus speaks "Peace, be still" to your situation. Learn to trust in His authority and find rest even when the winds are howling and the waves are crashing around you.`
   },
   {
-    id: 3,
+    id: 4,
     slug: 'why-are-you-hiding',
     title: 'Why Are You Hiding?',
     speaker: 'Pr. Richard',
