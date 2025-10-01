@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   FiArrowLeft,
   FiCalendar,
   FiUser,
-  FiTag,
-  FiShare2,
   FiDownload,
   FiTwitter,
   FiFacebook,
@@ -18,11 +16,8 @@ import { getArticleBySlug } from '../data/articlesData';
 
 const ArticleDetail = () => {
   const { slug } = useParams();
-  const navigate = useNavigate();
   const [article, setArticle] = useState(null);
   const [readingTime, setReadingTime] = useState(0);
-  const [tableOfContents, setTableOfContents] = useState([]);
-  const [showShareMenu, setShowShareMenu] = useState(false);
 
   useEffect(() => {
     const foundArticle = getArticleBySlug(slug);
@@ -33,17 +28,6 @@ const ArticleDetail = () => {
       const wordCount = foundArticle.content.replace(/<[^>]*>/g, '').split(/\s+/).length;
       const minutes = Math.ceil(wordCount / 200);
       setReadingTime(minutes);
-
-      // Generate table of contents from h2 and h3 tags
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(foundArticle.content, 'text/html');
-      const headings = doc.querySelectorAll('h2, h3');
-      const toc = Array.from(headings).map((heading, index) => ({
-        id: `heading-${index}`,
-        text: heading.textContent,
-        level: heading.tagName.toLowerCase()
-      }));
-      setTableOfContents(toc);
     }
   }, [slug]);
 
@@ -68,7 +52,6 @@ const ArticleDetail = () => {
       default:
         break;
     }
-    setShowShareMenu(false);
   };
 
   const handleDownloadPDF = () => {
