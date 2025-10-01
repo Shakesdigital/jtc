@@ -14,8 +14,7 @@ import {
   FiVolumeX,
   FiVideo,
   FiHeadphones,
-  FiTag,
-  FiClock
+  FiTag
 } from 'react-icons/fi';
 import { getSermonBySlug, sermonsData } from '../data/sermonsData';
 
@@ -34,7 +33,6 @@ const SermonDetail = () => {
 
   // Video player state
   const videoRef = useRef(null);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   // Get related sermons (exclude current sermon)
   const relatedSermons = sermonsData.filter(s => s.id !== sermon?.id).slice(0, 3);
@@ -303,7 +301,6 @@ const SermonDetail = () => {
                   <video
                     ref={videoRef}
                     src={sermon.videoUrl}
-                    onEnded={() => setIsVideoPlaying(false)}
                     className="w-full"
                     controls
                   />

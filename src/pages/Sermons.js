@@ -6,19 +6,16 @@ import {
   FiCalendar,
   FiUser,
   FiSearch,
-  FiVideo,
-  FiVolume2,
-  FiDownload,
-  FiShare2,
   FiFilter,
   FiChevronDown,
   FiX,
   FiBookOpen,
   FiClock,
   FiEye,
-  FiHeart,
   FiTrendingUp,
-  FiHeadphones
+  FiHeadphones,
+  FiVideo,
+  FiHeart
 } from 'react-icons/fi';
 import { sermonsData } from '../data/sermonsData';
 

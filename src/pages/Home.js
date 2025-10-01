@@ -6,9 +6,7 @@ import {
   FiClock,
   FiArrowRight,
   FiChevronLeft,
-  FiChevronRight,
-  FiHeadphones,
-  FiPlay
+  FiChevronRight
 } from 'react-icons/fi';
 import ContentCarousel from '../components/ContentCarousel';
 import { getRecentSermons } from '../data/sermonsData';
