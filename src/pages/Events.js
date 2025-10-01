@@ -176,7 +176,7 @@ const Events = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-church-sage"
+                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-church-sage"
                   >
                     <div className="relative overflow-hidden">
                       <img
@@ -186,10 +186,10 @@ const Events = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                     </div>
-                    
+
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-church-sage-dark mb-3 line-clamp-2">{event.title}</h3>
-                      
+
                       <div className="space-y-2 mb-4">
                         <div className="flex items-center text-sm text-church-gray">
                           <FiCalendar className="w-4 h-4 mr-2 text-church-sage" />
@@ -204,11 +204,11 @@ const Events = () => {
                           {event.location}
                         </div>
                       </div>
-                      
+
                       <p className="text-church-gray mb-4 line-clamp-3">
                         {event.excerpt}
                       </p>
-                      
+
                       <div className="flex flex-wrap gap-2 mb-4">
                         <span className="px-2 py-1 bg-church-sage bg-opacity-10 text-church-sage text-xs rounded-full">
                           {event.category}
@@ -219,8 +219,8 @@ const Events = () => {
                           </span>
                         ))}
                       </div>
-                      
-                      <Link 
+
+                      <Link
                         to={`/events/${event.slug}`}
                         className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
                       >
@@ -248,11 +248,16 @@ const Events = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border-l-4 border-church-yellow border border-church-sage"
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-church-sage"
                 >
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-church-sage-dark mb-3">{event.title}</h3>
-                    
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="text-xl font-bold text-church-sage-dark flex-1">{event.title}</h3>
+                      <span className="px-2 py-1 bg-church-yellow text-church-sage-dark text-xs rounded-full font-bold ml-2 flex-shrink-0">
+                        Recurring
+                      </span>
+                    </div>
+
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center text-sm text-church-gray">
                         <FiClock className="w-4 h-4 mr-2 text-church-sage" />
@@ -263,15 +268,12 @@ const Events = () => {
                         {event.location}
                       </div>
                     </div>
-                    
+
                     <p className="text-church-gray mb-4">
                       {event.excerpt}
                     </p>
-                    
+
                     <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="px-2 py-1 bg-church-yellow text-church-sage-dark text-xs rounded-full">
-                        Recurring
-                      </span>
                       <span className="px-2 py-1 bg-church-sage bg-opacity-10 text-church-sage text-xs rounded-full">
                         {event.category}
                       </span>
@@ -281,8 +283,8 @@ const Events = () => {
                         </span>
                       ))}
                     </div>
-                    
-                    <Link 
+
+                    <Link
                       to={`/events/${event.slug}`}
                       className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
                     >
@@ -306,7 +308,7 @@ const Events = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-200 opacity-75"
+                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-300 opacity-75"
                   >
                     <div className="relative overflow-hidden">
                       <img
@@ -314,14 +316,15 @@ const Events = () => {
                         alt={event.title}
                         className="w-full h-48 object-cover"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                       <div className="absolute top-4 right-4 bg-gray-500 text-white px-3 py-1 rounded-full text-xs font-bold">
                         PAST
                       </div>
                     </div>
-                    
+
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-church-sage-dark mb-3">{event.title}</h3>
-                      
+
                       <div className="space-y-2 mb-4">
                         <div className="flex items-center text-sm text-church-gray">
                           <FiCalendar className="w-4 h-4 mr-2 text-church-gray" />
@@ -336,11 +339,11 @@ const Events = () => {
                           {event.location}
                         </div>
                       </div>
-                      
+
                       <p className="text-church-gray mb-4 line-clamp-3">
                         {event.excerpt}
                       </p>
-                      
+
                       <div className="flex flex-wrap gap-2 mb-4">
                         <span className="px-2 py-1 bg-gray-200 text-gray-600 text-xs rounded-full">
                           {event.category}
@@ -351,10 +354,10 @@ const Events = () => {
                           </span>
                         ))}
                       </div>
-                      
-                      <Link 
+
+                      <Link
                         to={`/events/${event.slug}`}
-                        className="w-full bg-gray-400 text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
+                        className="w-full bg-gray-400 hover:bg-gray-500 text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
                       >
                         View Details
                       </Link>

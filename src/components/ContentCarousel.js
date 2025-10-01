@@ -161,22 +161,20 @@ const ContentCarousel = ({
   );
 
   const renderEventCard = (event) => (
-    <div className="carousel-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-l-4 border-church-yellow border border-church-sage">
+    <div className="carousel-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-church-sage">
       <div className="relative overflow-hidden carousel-card-image">
         <img
           src={event.image || "/images/full-church.jpg"}
           alt={event.title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute top-4 right-4 bg-church-yellow text-church-sage-dark px-3 py-1 rounded-full text-xs font-bold">
-          UPCOMING
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       </div>
-      
+
       <div className="carousel-card-content">
-        <h3 className="text-lg font-bold text-church-sage-dark mb-3 line-clamp-2">{event.title}</h3>
-        
-        <div className="space-y-2 mb-4">
+        <h3 className="text-lg font-bold text-church-sage-dark mb-2 line-clamp-2">{event.title}</h3>
+
+        <div className="space-y-1 mb-3">
           <div className="flex items-center text-sm text-church-gray">
             <FiCalendar className="w-4 h-4 mr-2 text-church-sage" />
             {event.date}
@@ -190,14 +188,14 @@ const ContentCarousel = ({
             {event.location}
           </div>
         </div>
-        
-        <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{event.description}</p>
-        
-        <Link 
-          to={event.slug ? `/events/${event.slug}` : '/events/archive'}
+
+        <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{event.excerpt || event.description}</p>
+
+        <Link
+          to={event.slug ? `/events/${event.slug}` : '/events'}
           className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
         >
-          View Event Details
+          Learn More
         </Link>
       </div>
     </div>
