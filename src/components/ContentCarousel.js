@@ -33,11 +33,14 @@ const ContentCarousel = ({
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width >= 769) {
-        // Desktop: exactly 3 cards
+      if (width >= 1024) {
+        // Desktop: 4 cards
+        setItemsPerView(4);
+      } else if (width >= 768) {
+        // Tablet: 3 cards
         setItemsPerView(3);
-      } else if (width >= 481 && width <= 768) {
-        // Tablet: 2 cards
+      } else if (width >= 481) {
+        // Small tablet: 2 cards
         setItemsPerView(2);
       } else {
         // Mobile: 1 card
@@ -223,23 +226,55 @@ const ContentCarousel = ({
     <section className="carousel-section py-20">
       {/* Using container-custom for consistent website alignment */}
       <div className="container-custom">
-        <div className="text-center mb-16">
+        {/* Header with Navigation Arrows */}
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="flex-1"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-church-sage-dark mb-2">
               {title}
             </h2>
-            <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
             {subtitle && (
-              <p className="text-lg text-church-gray max-w-3xl mx-auto">
+              <p className="text-base md:text-lg text-church-gray mt-4">
                 {subtitle}
               </p>
             )}
           </motion.div>
+
+          {/* Desktop Navigation Arrows at Top Right */}
+          {items.length > itemsPerView && (
+            <div className="flex items-center gap-3">
+              <button
+                onClick={handlePrev}
+                className="bg-white border border-gray-300 shadow-md hover:shadow-lg text-church-sage hover:bg-church-sage hover:text-white p-3 rounded-full transition-all duration-300"
+                aria-label="Previous items"
+              >
+                <FiChevronLeft className="w-5 h-5" />
+              </button>
+
+              <button
+                onClick={handleNext}
+                className="bg-white border border-gray-300 shadow-md hover:shadow-lg text-church-sage hover:bg-church-sage hover:text-white p-3 rounded-full transition-all duration-300"
+                aria-label="Next items"
+              >
+                <FiChevronRight className="w-5 h-5" />
+              </button>
+
+              {ctaLink && ctaText && (
+                <Link
+                  to={ctaLink}
+                  className="hidden lg:flex items-center text-church-sage hover:text-church-sage-dark font-semibold transition-colors duration-300 ml-2"
+                >
+                  {ctaText}
+                  <FiArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              )}
+            </div>
+          )}
         </div>
 
         <div
@@ -247,26 +282,6 @@ const ContentCarousel = ({
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          {/* Desktop Navigation Buttons (Side) */}
-          {items.length > itemsPerView && (
-            <>
-              <button
-                onClick={handlePrev}
-                className="carousel-nav carousel-nav-prev absolute -left-4 lg:-left-16 top-1/2 transform -translate-y-1/2 z-20 bg-white shadow-lg hover:shadow-xl text-church-sage hover:text-church-sage-dark p-2 lg:p-3 rounded-full transition-all duration-300 hidden md:block"
-                aria-label="Previous items"
-              >
-                <FiChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
-              </button>
-
-              <button
-                onClick={handleNext}
-                className="carousel-nav carousel-nav-next absolute -right-4 lg:-right-16 top-1/2 transform -translate-y-1/2 z-20 bg-white shadow-lg hover:shadow-xl text-church-sage hover:text-church-sage-dark p-2 lg:p-3 rounded-full transition-all duration-300 hidden md:block"
-                aria-label="Next items"
-              >
-                <FiChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
-              </button>
-            </>
-          )}
 
           {/* Carousel Items */}
           <div 
@@ -286,9 +301,9 @@ const ContentCarousel = ({
               >
                 <div className={`carousel-items grid gap-6 ${
                   itemsPerView === 1 ? 'grid-cols-1' :
-                  itemsPerView === 2 ? 'grid-cols-1 md:grid-cols-2' :
-                  itemsPerView === 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' :
-                  'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+                  itemsPerView === 2 ? 'grid-cols-2' :
+                  itemsPerView === 3 ? 'grid-cols-3' :
+                  'grid-cols-4'
                 }`}>
                   {getVisibleItems().map((item, index) => (
                     <motion.div
@@ -305,43 +320,16 @@ const ContentCarousel = ({
             </AnimatePresence>
           </div>
 
-          {/* Mobile Navigation Buttons (Below carousel) */}
+          {/* Dots Indicator */}
           {items.length > itemsPerView && (
-            <div className="flex justify-center items-center gap-4 mt-6 md:hidden">
-              <button
-                onClick={handlePrev}
-                className="bg-white shadow-lg hover:shadow-xl text-church-sage hover:text-church-sage-dark p-3 rounded-full transition-all duration-300 active:scale-95"
-                aria-label="Previous items"
-              >
-                <FiChevronLeft className="w-6 h-6" />
-              </button>
-
-              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md">
-                <span className="text-sm font-medium text-church-sage">
-                  {currentIndex + 1} / {maxIndex + 1}
-                </span>
-              </div>
-
-              <button
-                onClick={handleNext}
-                className="bg-white shadow-lg hover:shadow-xl text-church-sage hover:text-church-sage-dark p-3 rounded-full transition-all duration-300 active:scale-95"
-                aria-label="Next items"
-              >
-                <FiChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-          )}
-
-          {/* Dots Indicator (Desktop) */}
-          {items.length > itemsPerView && (
-            <div className="carousel-dots hidden md:flex justify-center mt-8 space-x-2">
+            <div className="carousel-dots flex justify-center mt-8 space-x-2">
               {[...Array(maxIndex + 1)].map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`carousel-dot w-2 h-2 rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? 'bg-church-yellow w-8'
+                      ? 'bg-church-sage w-8'
                       : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
@@ -351,10 +339,10 @@ const ContentCarousel = ({
           )}
         </div>
 
-        {/* CTA Button */}
+        {/* CTA Button (Mobile/Tablet - shows when hidden in header) */}
         {ctaLink && ctaText && (
-          <div className="text-center mt-12">
-            <Link 
+          <div className="text-center mt-12 lg:hidden">
+            <Link
               to={ctaLink}
               className="inline-flex items-center bg-church-sage hover:bg-church-sage-dark text-white font-bold text-lg px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
