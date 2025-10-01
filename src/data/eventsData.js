@@ -32,12 +32,12 @@ export const eventsData = [
     id: 3,
     title: "Game Night with Worship & Fellowship",
     slug: "game-night-worship-fellowship",
-    date: "TBA",
-    displayDate: null, // Date to be announced
-    time: "7:00 PM",
+    date: "Friday, 10th October 2025",
+    displayDate: new Date("2025-10-10"),
+    time: "Starting at 7:00 PM",
     location: "Pastor Ken's home in Bugembe",
     description: "Get ready for a night of worship, praise, sharing the Word, and fun games with our church family! Join us for an evening of laughter, connection, and spiritual encouragement!",
-    excerpt: "Get ready for a night of worship, praise, sharing the Word, and fun games with our church family! Join us for an evening of laughter, connection, and spiritual encouragement!",
+    excerpt: "Get ready for a night of worship, praise, sharing the Word, and fun games with our church family!",
     image: "/images/events/game-night.jpg",
     category: "Fellowship",
     tags: ["Worship", "Games", "Fellowship"]
