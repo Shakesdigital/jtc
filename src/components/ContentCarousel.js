@@ -359,23 +359,6 @@ const ContentCarousel = ({
             </div>
           )}
 
-          {/* Dots Indicator (Desktop) */}
-          {items.length > itemsPerView && (
-            <div className="carousel-dots hidden md:flex justify-center mt-8 space-x-2">
-              {[...Array(maxIndex + 1)].map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`carousel-dot w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex
-                      ? 'bg-church-yellow w-8'
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-          )}
         </div>
 
         {/* CTA Button */}

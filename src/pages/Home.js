@@ -434,7 +434,6 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <FiHeart className="w-16 h-16 mx-auto mb-8 text-church-yellow" />
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Join Our Diverse Family?
             </h2>
