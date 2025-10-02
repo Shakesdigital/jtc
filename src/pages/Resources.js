@@ -184,7 +184,7 @@ const Resources = () => {
               e.target.style.display = 'none';
             }}
           />
-          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         </div>
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
           <motion.div
