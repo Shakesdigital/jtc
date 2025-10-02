@@ -53,12 +53,12 @@ const Contact = () => {
       icon: FiMapPin,
       title: 'Visit Us',
       details: [
-        'Four12 Global Guesthouse, Wilson Ave Plot 23',
-        'Jinja, Uganda (15-minute walk from town center)'
+        'Arise Jinja Town Church, Benedith School right of Kiira',
+        'road on Arton Street (15-minute walk from town center)'
       ],
       action: {
         text: 'Get Directions',
-        href: 'https://maps.google.com/?q=Wilson+Ave+Plot+23+Jinja+Uganda'
+        href: 'https://maps.google.com/?q=Benedith+School+Arton+Street+Jinja+Uganda'
       }
     },
     {

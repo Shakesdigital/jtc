@@ -303,7 +303,7 @@ const Home = () => {
               </div>
               
               <p className="text-lg text-church-gray leading-relaxed">
-                Our story began almost by accident. We initially held Sunday services for the staff at the Four12 Global Guesthouse, as they were unable to attend church due to work commitments. 
+                Our story began almost by accident. We initially held Sunday services for the staff at the Arise Africa  Guesthouse, as they were unable to attend church due to work commitments. 
                 As attendance grew, we recognized a deep hunger in the Jinja community for a church that embraces 
                 diversity and unity in Christ. Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve.
               </p>
