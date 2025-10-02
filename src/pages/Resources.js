@@ -173,7 +173,7 @@ const Resources = () => {
       <section className="relative h-screen hero-content-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/Church-service-ministry.jpg"
+            src="/images/church-service-ministry.jpg"
             alt="Church Resources Hero"
             className="hero-image"
             style={{
