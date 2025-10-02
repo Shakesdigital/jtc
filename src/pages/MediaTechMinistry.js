@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FiMonitor, 
-  FiMic, 
-  FiVideo, 
+import {
+  FiMonitor,
+  FiMic,
+  FiVideo,
   FiRadio,
   FiEdit3,
   FiPlayCircle,
   FiArrowRight,
-  FiChevronDown,
-  FiChevronUp,
   FiSend,
   FiCheckCircle,
   FiUsers,

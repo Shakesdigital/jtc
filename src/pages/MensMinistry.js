@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  FiUsers, 
-  FiArrowRight, 
-  FiMail, 
+import {
+  FiUsers,
+  FiArrowRight,
+  FiMail,
   FiSend,
-  FiChevronDown,
-  FiChevronUp,
   FiTarget,
   FiHeart,
   FiBookOpen,

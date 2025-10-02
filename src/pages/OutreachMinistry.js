@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FiHeart, 
-  FiGlobe, 
-  FiUsers, 
-  FiCalendar, 
+import {
+  FiHeart,
+  FiGlobe,
+  FiUsers,
+  FiCalendar,
   FiArrowRight,
   FiBookOpen,
   FiPlay,
-  FiChevronDown,
-  FiChevronUp,
   FiSend,
   FiCheckCircle,
   FiTarget,
   FiShield,
   FiTrendingUp,
-  FiGift,
-  FiInfo
+  FiGift
 } from 'react-icons/fi';
 
 const OutreachMinistry = () => {
