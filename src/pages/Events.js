@@ -66,16 +66,33 @@ const Events = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-church-sage to-church-sage-dark text-white py-16">
-        <div className="container-custom">
+      <section className="relative h-screen hero-content-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/images/events-hero.jpg"
+            alt="Events Hero"
+            className="hero-image"
+            style={{
+              filter: 'brightness(0.6)'
+            }}
+            onError={(e) => {
+              console.error('Image failed to load:', e.target.src);
+              e.target.style.display = 'none';
+            }}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        </div>
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="space-y-6"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Upcoming Events</h1>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
+              Upcoming Events
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
               Join us for fellowship, worship, and community activities that bring us closer together
             </p>
           </motion.div>
