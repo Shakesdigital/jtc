@@ -88,40 +88,6 @@ const Footer = () => {
                 </p>
               </div>
 
-              {/* Partnership Banner */}
-              <div className="mb-6">
-                <a
-                  href="https://four12global.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block"
-                >
-                  <div className="bg-white rounded-lg px-4 py-2 shadow-md hover:shadow-lg transition-all duration-200 group-hover:scale-[1.02]">
-                    <div className="flex items-center justify-center md:justify-start space-x-3">
-                      <span className="text-gray-800 font-medium text-base">In Partnership with</span>
-                      <div className="flex items-center space-x-2">
-                        <img
-                          src="/images/four12-logo.webp"
-                          alt="Four12 Global Logo"
-                          className="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
-                          onError={(e) => {
-                            console.error('Four12 logo failed to load:', e.target.src);
-                            e.target.style.display = 'none';
-                            e.target.nextElementSibling.style.display = 'inline';
-                          }}
-                        />
-                        <span
-                          className="text-base font-bold text-red-600 group-hover:text-red-800 transition-colors duration-200"
-                          style={{display: 'none'}}
-                        >
-                          Four12 Global
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
               {/* Social Links */}
               <div>
                 <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
@@ -229,22 +195,39 @@ const Footer = () => {
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
               <span>© {currentYear} Arise Jinja Town Church. All rights reserved.</span>
             </div>
-            
-            <div className="flex items-center space-x-6 text-sm">
-              <Link 
-                to="/privacy" 
-                className="text-gray-400 hover:text-church-gold transition-colors duration-200"
+
+            {/* Partnership Banner */}
+            <div>
+              <a
+                href="https://four12global.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-block"
               >
-                Privacy Policy
-              </Link>
-              <Link 
-                to="/terms" 
-                className="text-gray-400 hover:text-church-gold transition-colors duration-200"
-              >
-                Terms of Service
-              </Link>
+                <div className="bg-white rounded-full px-6 py-2 shadow-md hover:shadow-lg transition-all duration-200 group-hover:scale-[1.02]">
+                  <div className="flex items-center space-x-3">
+                    <span className="text-gray-800 font-medium text-sm">In Partnership with</span>
+                    <img
+                      src="/images/four12-logo.webp"
+                      alt="Four12 Global Logo"
+                      className="h-8 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
+                      onError={(e) => {
+                        console.error('Four12 logo failed to load:', e.target.src);
+                        e.target.style.display = 'none';
+                        e.target.nextElementSibling.style.display = 'inline';
+                      }}
+                    />
+                    <span
+                      className="text-sm font-bold text-red-600 group-hover:text-red-800 transition-colors duration-200"
+                      style={{display: 'none'}}
+                    >
+                      Four12 Global
+                    </span>
+                  </div>
+                </div>
+              </a>
             </div>
-            
+
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
               <span>Designed and Powered by</span>
               <a
