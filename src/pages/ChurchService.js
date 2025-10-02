@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FiClock, FiUsers, FiBook, FiMusic, FiVideo } from 'react-icons/fi';
+import { FiClock, FiUsers, FiBook, FiMusic } from 'react-icons/fi';
 
 const ChurchService = () => {
   const serviceSchedule = [
@@ -25,8 +25,8 @@ const ChurchService = () => {
       services: [
         {
           name: 'Tuesday Prayer Meeting',
-          time: '4:00 PM - 6:00 PM',
-          description: 'Join us every Tuesday from 4:00 PM to 6:00 PM for a time of breaking fast, prayer, and fellowship with our church community family. This mid-week gathering strengthens our bonds and focuses on intercession for personal needs, the community, and global missions.'
+          time: '5:30 PM - 6:30 PM',
+          description: 'Join us every Tuesday from 5:30 PM to 6:30 PM for a time of breaking fast, prayer, and fellowship with our church community family. This mid-week gathering strengthens our bonds and focuses on intercession for personal needs, the community, and global missions.'
         }
       ]
     }
@@ -208,18 +208,31 @@ const ChurchService = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center card p-12"
+            className="card overflow-hidden"
           >
-            <FiVideo className="w-16 h-16 mx-auto mb-6 text-church-red" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Can't Make It This Week?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Catch up on our latest sermons and stay connected with our church family online.
-            </p>
-            <Link to="/church-service/sermons" className="btn-primary text-lg px-8 py-4">
-              Watch Sermons Online
-            </Link>
+            <div className="relative h-64 overflow-hidden">
+              <img
+                src="/images/sermons-cta.jpg"
+                alt="Listen and Watch Sermons"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  console.error('Image failed to load:', e.target.src);
+                  e.target.style.display = 'none';
+                }}
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+            </div>
+            <div className="p-12 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Can't Make It This Week?
+              </h2>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Catch up on our latest sermons and stay connected with our church family online.
+              </p>
+              <Link to="/church-service/sermons" className="btn-primary text-lg px-8 py-4">
+                Listen and Watch Sermons Online
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
