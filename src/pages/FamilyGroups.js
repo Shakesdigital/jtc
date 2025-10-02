@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FiUsers, 
-  FiHeart, 
-  FiMapPin, 
-  FiClock, 
+import {
+  FiUsers,
+  FiHeart,
+  FiMapPin,
+  FiClock,
   FiPhone,
   FiUser,
   FiMessageCircle,
@@ -13,8 +13,6 @@ import {
   FiBookOpen,
   FiDownload,
   FiPlay,
-  FiChevronDown,
-  FiChevronUp,
   FiSend,
   FiCheckCircle,
   FiPlusCircle
@@ -31,7 +29,6 @@ const FamilyGroups = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
 
   // Family Groups data for Arise Jinja Town Church
   const groupTypes = [
@@ -165,40 +162,6 @@ const FamilyGroups = () => {
     }
   ];
 
-  // FAQs data
-  const faqs = [
-    {
-      id: 1,
-      question: "How often do family groups meet?",
-      answer: "Most of our family groups meet weekly, with some meeting bi-weekly. Meeting schedules vary by group to accommodate different family needs and work schedules. You can find specific meeting times for each group in the group descriptions above."
-    },
-    {
-      id: 2,
-      question: "Can I bring my children to family group meetings?",
-      answer: "Absolutely! Our family groups are designed to welcome families with children of all ages. Many groups have specific activities for children and provide childcare during adult discussions. We believe in building faith together as families."
-    },
-    {
-      id: 3,
-      question: "What if I'm new to Jinja or don't know anyone?",
-      answer: "Don't worry! Our family groups are perfect for newcomers. Group leaders and members are committed to welcoming new families and helping you feel at home. You'll quickly build meaningful friendships and feel connected to our church community."
-    },
-    {
-      id: 4,
-      question: "Do I need to be a church member to join a family group?",
-      answer: "No, you don't need to be a church member to join a family group. We welcome anyone interested in growing in faith and building community connections. Family groups are actually a great way to get to know our church family better."
-    },
-    {
-      id: 5,
-      question: "What activities do family groups typically do?",
-      answer: "Family groups engage in Bible study, prayer, fellowship meals, community service projects, family outings, and seasonal celebrations. Each group has its own personality and may focus on different activities based on the interests and needs of its members."
-    },
-    {
-      id: 6,
-      question: "How can I start a new family group in my area?",
-      answer: "We're always excited to help start new family groups! Contact our Family Ministry coordinator through the form below or speak with one of our pastors. We'll provide training, resources, and support to help you launch a successful family group in your neighborhood."
-    }
-  ];
-
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -220,10 +183,6 @@ const FamilyGroups = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
-  };
-
-  const toggleFAQ = (id) => {
-    setExpandedFAQ(expandedFAQ === id ? null : id);
   };
 
   const scrollToForm = () => {
@@ -718,71 +677,6 @@ const FamilyGroups = () => {
         </div>
       </section>
 
-      {/* FAQs Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-              Frequently Asked <span className="text-church-yellow">Questions</span>
-            </h2>
-            <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-            <p className="text-xl text-church-gray max-w-2xl mx-auto">
-              Get answers to common questions about our family groups ministry
-            </p>
-          </motion.div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={faq.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-md overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleFAQ(faq.id)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
-                >
-                  <h3 className="text-lg font-semibold text-church-sage-dark pr-4">
-                    {faq.question}
-                  </h3>
-                  <div className="flex-shrink-0">
-                    {expandedFAQ === faq.id ? (
-                      <FiChevronUp className="w-5 h-5 text-church-sage" />
-                    ) : (
-                      <FiChevronDown className="w-5 h-5 text-church-sage" />
-                    )}
-                  </div>
-                </button>
-                
-                {expandedFAQ === faq.id && (
-                  <motion.div
-                    initial={{ height: 0 }}
-                    animate={{ height: 'auto' }}
-                    exit={{ height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="px-6 pb-4">
-                      <p className="text-church-gray leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

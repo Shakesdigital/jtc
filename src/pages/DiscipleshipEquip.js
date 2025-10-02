@@ -8,8 +8,6 @@ import {
   FiMessageCircle,
   FiArrowRight,
   FiPlay,
-  FiChevronDown,
-  FiChevronUp,
   FiSend,
   FiCheckCircle,
   FiStar,
@@ -17,8 +15,7 @@ import {
   FiGift,
   FiAward,
   FiCompass,
-  FiZap,
-  FiInfo
+  FiZap
 } from 'react-icons/fi';
 
 const DiscipleshipEquip = () => {
@@ -32,7 +29,6 @@ const DiscipleshipEquip = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
 
   // Discipleship programs data
   const programs = [
@@ -188,40 +184,6 @@ const DiscipleshipEquip = () => {
     }
   ];
 
-  // FAQs data
-  const faqs = [
-    {
-      id: 1,
-      question: "Do I need prior Bible knowledge to join these programs?",
-      answer: "Not at all! Our programs are designed for believers at every level of spiritual maturity. We have classes for complete beginners as well as more advanced studies for those who want to go deeper. Our teachers are skilled at meeting you where you are and helping you grow from there."
-    },
-    {
-      id: 2,
-      question: "Are classes available online or only in person?",
-      answer: "We offer both online and in-person options for most of our programs. Many classes have hybrid formats where you can attend in person or join virtually. This flexibility allows you to participate regardless of your schedule or location preferences."
-    },
-    {
-      id: 3,
-      question: "How much time commitment is required?",
-      answer: "Time commitments vary by program. Most classes meet weekly for 1-2 hours, with some additional time for personal study and reflection. We also offer intensive weekend workshops and ongoing mentorship groups with flexible scheduling."
-    },
-    {
-      id: 4,
-      question: "Is there a cost for discipleship programs?",
-      answer: "Most of our core discipleship programs are offered at no cost as part of our commitment to equipping believers. Some specialized workshops or retreats may have minimal fees to cover materials, but financial assistance is always available for those in need."
-    },
-    {
-      id: 5,
-      question: "Can I become a mentor or group leader?",
-      answer: "Absolutely! We're always looking for mature believers to serve as mentors and group leaders. After completing foundational programs and demonstrating spiritual maturity, you can apply for leadership training to guide others in their discipleship journey."
-    },
-    {
-      id: 6,
-      question: "What if I miss a class or need to drop out?",
-      answer: "Life happens, and we understand! Most classes are recorded for makeup purposes, and we provide materials to help you catch up. If you need to take a break, you're welcome to rejoin the next session or find a program that better fits your current season."
-    }
-  ];
-
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -243,10 +205,6 @@ const DiscipleshipEquip = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
-  };
-
-  const toggleFAQ = (id) => {
-    setExpandedFAQ(expandedFAQ === id ? null : id);
   };
 
   const scrollToForm = () => {
@@ -728,92 +686,6 @@ const DiscipleshipEquip = () => {
         </div>
       </section>
 
-      {/* FAQs Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-              Frequently Asked <span className="text-church-yellow">Questions</span>
-            </h2>
-            <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-            <p className="text-xl text-church-gray max-w-2xl mx-auto">
-              Get answers to common questions about our discipleship programs and spiritual growth journey
-            </p>
-          </motion.div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={faq.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100"
-              >
-                <button
-                  onClick={() => toggleFAQ(faq.id)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
-                >
-                  <h3 className="text-lg font-semibold text-church-sage-dark pr-4">
-                    {faq.question}
-                  </h3>
-                  <div className="flex-shrink-0">
-                    {expandedFAQ === faq.id ? (
-                      <FiChevronUp className="w-5 h-5 text-church-sage" />
-                    ) : (
-                      <FiChevronDown className="w-5 h-5 text-church-sage" />
-                    )}
-                  </div>
-                </button>
-                
-                {expandedFAQ === faq.id && (
-                  <motion.div
-                    initial={{ height: 0 }}
-                    animate={{ height: 'auto' }}
-                    exit={{ height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="px-6 pb-4">
-                      <p className="text-church-gray leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Final CTA Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="mt-16 text-center"
-          >
-            <div className="bg-gradient-to-r from-church-sage-light to-church-sage p-8 rounded-2xl text-white">
-              <FiInfo className="w-12 h-12 mx-auto mb-4 text-church-yellow" />
-              <h3 className="text-2xl font-bold mb-4">Ready to Grow Deeper?</h3>
-              <p className="mb-6 opacity-90">Our discipleship team is here to help you find the perfect program for your spiritual growth journey.</p>
-              <button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold px-8 py-3 rounded-full transition-all duration-300"
-              >
-                Contact Our Team
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };
