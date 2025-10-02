@@ -72,11 +72,11 @@ const Footer = () => {
             {/* Church Info */}
             <div className="space-y-6 text-center md:text-left">
               <div>
-                <Link to="/" className="flex flex-col items-center md:items-start mb-6">
+                <Link to="/" className="flex justify-center mb-6">
                   <img
                     src="/images/jtc-logo-enhanced.png"
                     alt="Jinja Town Church Logo"
-                    className="w-32 h-32 md:w-40 md:h-40 object-contain"
+                    className="w-32 h-32 md:w-40 md:h-40 object-contain rounded-2xl"
                     onError={(e) => {
                       console.error('Logo failed to load:', e.target.src);
                       e.target.src = '/JTC-Logo.jpg';
@@ -101,16 +101,17 @@ const Footer = () => {
                       <span className="text-gray-800 font-medium text-base">In Partnership with</span>
                       <div className="flex items-center space-x-2">
                         <img
-                          src="https://aht.nuplink3.net/pool/pub/ca/85/7b/4fb485677dcc3f85547c3d1786ca857b/7060?token=b1e369bcc3ce0fa201ca19bcb19c5629&ts=1757413584&ip=154.227.128.100&x-image-process=style/pvd"
+                          src="/images/four12-logo.webp"
                           alt="Four12 Global Logo"
-                          className="w-16 h-16 object-contain group-hover:opacity-90 transition-opacity duration-200"
+                          className="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
                           onError={(e) => {
+                            console.error('Four12 logo failed to load:', e.target.src);
                             e.target.style.display = 'none';
                             e.target.nextElementSibling.style.display = 'inline';
                           }}
                         />
                         <span
-                          className="text-base font-bold text-blue-600 group-hover:text-blue-800 transition-colors duration-200 hidden"
+                          className="text-base font-bold text-red-600 group-hover:text-red-800 transition-colors duration-200"
                           style={{display: 'none'}}
                         >
                           Four12 Global
