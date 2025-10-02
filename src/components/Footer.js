@@ -72,11 +72,11 @@ const Footer = () => {
             {/* Church Info */}
             <div className="space-y-6 text-center md:text-left">
               <div>
-                <Link to="/" className="flex justify-center mb-6">
+                <Link to="/" className="flex justify-center md:justify-start mb-6">
                   <img
                     src="/images/jtc-logo-enhanced.png"
                     alt="Jinja Town Church Logo"
-                    className="w-32 h-32 md:w-40 md:h-40 object-contain rounded-2xl"
+                    className="w-32 h-32 md:w-40 md:h-40 object-contain rounded-3xl shadow-lg"
                     onError={(e) => {
                       console.error('Logo failed to load:', e.target.src);
                       e.target.src = '/JTC-Logo.jpg';
