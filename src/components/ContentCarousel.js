@@ -223,42 +223,46 @@ const ContentCarousel = ({
     <section className="carousel-section py-20">
       {/* Using container-custom for consistent website alignment */}
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="relative">
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
+            {/* Title and Navigation Container */}
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex-1"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark text-center flex-shrink-0">
                 {title}
               </h2>
 
               {/* Top Navigation Arrows for Desktop/Tablet */}
-              {items.length > itemsPerView && (
-                <div className="hidden md:flex items-center justify-center gap-3 absolute right-0 top-1/2 transform -translate-y-1/2">
-                  <button
-                    onClick={handlePrev}
-                    className="bg-church-sage hover:bg-church-sage-dark text-white p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
-                    aria-label="Previous items"
-                  >
-                    <FiChevronLeft className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={handleNext}
-                    className="bg-church-sage hover:bg-church-sage-dark text-white p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
-                    aria-label="Next items"
-                  >
-                    <FiChevronRight className="w-5 h-5" />
-                  </button>
-                </div>
-              )}
+              <div className="flex-1 flex justify-end">
+                {items.length > itemsPerView && (
+                  <div className="hidden md:flex items-center gap-3">
+                    <button
+                      onClick={handlePrev}
+                      className="bg-church-sage hover:bg-church-sage-dark text-white p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
+                      aria-label="Previous items"
+                    >
+                      <FiChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={handleNext}
+                      className="bg-church-sage hover:bg-church-sage-dark text-white p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
+                      aria-label="Next items"
+                    >
+                      <FiChevronRight className="w-5 h-5" />
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
             {subtitle && (
-              <p className="text-lg text-church-gray max-w-3xl mx-auto">
+              <p className="text-lg text-church-gray max-w-3xl mx-auto text-center">
                 {subtitle}
               </p>
             )}
