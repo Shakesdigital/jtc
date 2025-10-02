@@ -170,17 +170,29 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-church-sage to-church-sage-dark text-white">
-        <div className="container-custom text-center">
+      <section className="relative h-screen hero-content-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/images/Church-service-ministry.jpg"
+            alt="Church Resources Hero"
+            className="hero-image"
+            style={{
+              filter: 'brightness(0.6)'
+            }}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        </div>
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="space-y-6"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
               Church <span className="text-church-yellow">Resources</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-95 max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
               Explore our sermons, articles, and upcoming events to deepen your faith
               and connect with our community at Arise Jinja Town Church.
             </p>
