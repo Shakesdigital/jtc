@@ -289,25 +289,13 @@ const Ministries = () => {
                       {ministry.description}
                     </p>
 
-                    <div className="space-y-2 mb-4">
+                    <div className="space-y-2 mb-6">
                       <div className="flex items-center text-sm text-church-gray">
                         <FiClock className="w-4 h-4 mr-2 text-church-sage" />
                         {ministry.meetingTime}
                       </div>
                     </div>
 
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-church-sage-dark mb-2 text-sm">Highlights:</h4>
-                      <div className="grid grid-cols-2 gap-1">
-                        {ministry.highlights.map((highlight, idx) => (
-                          <div key={idx} className="text-xs text-church-gray flex items-center">
-                            <div className="w-1 h-1 bg-church-yellow rounded-full mr-2"></div>
-                            {highlight}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    
                     <div className="flex space-x-2 ministry-card-actions">
                       <Link 
                         to={
