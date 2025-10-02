@@ -60,7 +60,7 @@ const Footer = () => {
   const serviceSchedule = [
     { day: 'Sunday', time: '9:00 AM - Fellowship', service: 'Prayer & Fellowship' },
     { day: 'Sunday', time: '10:00 AM - 12:30 PM', service: 'Main Service' },
-    { day: 'Tuesday', time: '4:00 PM - 6:00 PM', service: 'Prayer Meeting' },
+    { day: 'Tuesday', time: '5:30 PM - 6:30 PM', service: 'Prayer Meeting' },
   ];
 
   return (

@@ -236,7 +236,7 @@ const Home = () => {
                   Main Service: 10:00 AM - 12:30 PM
                 </div>
               </div>
-              <p className="text-sm opacity-90 mt-3">Tuesday Prayer Meetings: 4:00 PM - 6:00 PM</p>
+              <p className="text-sm opacity-90 mt-3">Tuesday Prayer Meetings: 5:30 PM - 6:30 PM</p>
             </div>
 
             <div className="pt-6 sm:pt-8">
