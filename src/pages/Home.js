@@ -389,6 +389,8 @@ const Home = () => {
           subtitle="Be inspired by God's word through our powerful messages and teachings"
           items={recentSermons}
           type="sermons"
+          autoScroll={true}
+          scrollInterval={5000}
           ctaLink="/sermons/archive"
           ctaText="View All Sermons"
         />
@@ -401,6 +403,8 @@ const Home = () => {
           subtitle="Discover inspiring articles by Richard van de Ruit and other spiritual resources to deepen your faith journey"
           items={sampleArticles}
           type="articles"
+          autoScroll={true}
+          scrollInterval={5000}
           ctaLink="/articles"
           ctaText="View All Articles"
         />
@@ -413,6 +417,8 @@ const Home = () => {
           subtitle="Join us for fellowship, worship, and community activities that bring us closer together"
           items={sampleEvents}
           type="events"
+          autoScroll={true}
+          scrollInterval={5000}
           ctaLink="/events"
           ctaText="See Full Calendar"
         />
