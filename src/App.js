@@ -54,6 +54,7 @@ function App() {
           <Route path="church-service/sermons" element={<Sermons />} />
           <Route path="church-service/sermons/:id" element={<SermonDetail />} />
           <Route path="sermons/archive" element={<Sermons />} />
+          <Route path="sermons/:slug" element={<SermonDetail />} />
           <Route path="sermon/:slug" element={<SermonDetail />} />
           <Route path="events" element={<Events />} />
           <Route path="events/:slug" element={<EventDetail />} />
