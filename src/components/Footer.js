@@ -70,15 +70,15 @@ const Footer = () => {
         <div className="pt-16 pb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Church Info */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-center">
               <div>
-                <Link to="/" className="flex items-center mb-4">
-                  <img 
-                    src="/JTC-Logo.jpg" 
-                    alt="Jinja Town Church Logo" 
+                <Link to="/" className="flex flex-col items-center mb-4">
+                  <img
+                    src="/JTC-Logo.jpg"
+                    alt="Jinja Town Church Logo"
                     className="w-16 h-16 object-contain rounded-lg"
                   />
-                  <div className="ml-3">
+                  <div className="mt-3">
                     <h3 className="text-xl font-bold">Arise<br />Jinja Town Church</h3>
                   </div>
                 </Link>
@@ -89,9 +89,9 @@ const Footer = () => {
 
               {/* Partnership Banner */}
               <div className="mb-6">
-                <a 
-                  href="https://four12global.com/" 
-                  target="_blank" 
+                <a
+                  href="https://four12global.com/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="group block"
                 >
@@ -99,8 +99,8 @@ const Footer = () => {
                     <div className="flex items-center justify-center space-x-3">
                       <span className="text-gray-800 font-medium text-base">In Partnership with</span>
                       <div className="flex items-center space-x-2">
-                        <img 
-                          src="https://aht.nuplink3.net/pool/pub/ca/85/7b/4fb485677dcc3f85547c3d1786ca857b/7060?token=b1e369bcc3ce0fa201ca19bcb19c5629&ts=1757413584&ip=154.227.128.100&x-image-process=style/pvd" 
+                        <img
+                          src="https://aht.nuplink3.net/pool/pub/ca/85/7b/4fb485677dcc3f85547c3d1786ca857b/7060?token=b1e369bcc3ce0fa201ca19bcb19c5629&ts=1757413584&ip=154.227.128.100&x-image-process=style/pvd"
                           alt="Four12 Global Logo"
                           className="w-16 h-16 object-contain group-hover:opacity-90 transition-opacity duration-200"
                           onError={(e) => {
@@ -108,7 +108,7 @@ const Footer = () => {
                             e.target.nextElementSibling.style.display = 'inline';
                           }}
                         />
-                        <span 
+                        <span
                           className="text-base font-bold text-blue-600 group-hover:text-blue-800 transition-colors duration-200 hidden"
                           style={{display: 'none'}}
                         >
@@ -123,7 +123,7 @@ const Footer = () => {
               {/* Social Links */}
               <div>
                 <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
-                <div className="flex space-x-4">
+                <div className="flex justify-center space-x-4">
                   {socialLinks.map((social) => (
                     <motion.a
                       key={social.name}
@@ -143,14 +143,14 @@ const Footer = () => {
             </div>
 
             {/* Quick Links */}
-            <div>
+            <div className="text-center">
               <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-gray-300 hover:text-church-gold transition-colors duration-200 flex items-center group"
+                      className="text-gray-300 hover:text-church-gold transition-colors duration-200 inline-flex items-center group"
                     >
                       <span className="w-2 h-2 bg-church-gold rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                       {link.name}
@@ -161,14 +161,14 @@ const Footer = () => {
             </div>
 
             {/* Resources */}
-            <div>
+            <div className="text-center">
               <h4 className="text-lg font-semibold mb-6">Resources</h4>
               <ul className="space-y-3">
                 {resourceLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-gray-300 hover:text-church-gold transition-colors duration-200 flex items-center group"
+                      className="text-gray-300 hover:text-church-gold transition-colors duration-200 inline-flex items-center group"
                     >
                       <span className="w-2 h-2 bg-church-gold rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                       {link.name}
@@ -179,7 +179,7 @@ const Footer = () => {
             </div>
 
             {/* Contact & Schedule */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-center">
               {/* Contact Info */}
               <div>
                 <h4 className="text-lg font-semibold mb-6">Contact Us</h4>
@@ -188,10 +188,10 @@ const Footer = () => {
                     <li key={index}>
                       <a
                         href={contact.href}
-                        className="flex items-start space-x-3 text-gray-300 hover:text-church-gold transition-colors duration-200 group"
+                        className="inline-flex items-start space-x-3 text-gray-300 hover:text-church-gold transition-colors duration-200 group"
                       >
                         <contact.icon className="w-5 h-5 mt-0.5 text-church-gold group-hover:scale-110 transition-transform duration-200" />
-                        <span className="text-sm">{contact.text}</span>
+                        <span className="text-sm text-left">{contact.text}</span>
                       </a>
                     </li>
                   ))}
@@ -200,14 +200,14 @@ const Footer = () => {
 
               {/* Service Schedule */}
               <div>
-                <h4 className="text-lg font-semibold mb-4 flex items-center">
+                <h4 className="text-lg font-semibold mb-4 flex items-center justify-center">
                   <FiClock className="w-5 h-5 mr-2 text-church-gold" />
                   Service Schedule
                 </h4>
                 <ul className="space-y-3">
                   {serviceSchedule.map((schedule, index) => (
                     <li key={index} className="text-sm">
-                      <div className="flex justify-between items-start">
+                      <div className="flex flex-col items-center">
                         <span className="font-medium text-church-gold">{schedule.day}</span>
                       </div>
                       <div className="text-gray-300">{schedule.time}</div>
