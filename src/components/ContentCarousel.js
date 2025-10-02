@@ -230,9 +230,32 @@ const ContentCarousel = ({
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-              {title}
-            </h2>
+            <div className="relative">
+              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
+                {title}
+              </h2>
+
+              {/* Top Navigation Arrows for Desktop/Tablet */}
+              {items.length > itemsPerView && (
+                <div className="hidden md:flex items-center justify-center gap-3 absolute right-0 top-1/2 transform -translate-y-1/2">
+                  <button
+                    onClick={handlePrev}
+                    className="bg-church-sage hover:bg-church-sage-dark text-white p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
+                    aria-label="Previous items"
+                  >
+                    <FiChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={handleNext}
+                    className="bg-church-sage hover:bg-church-sage-dark text-white p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
+                    aria-label="Next items"
+                  >
+                    <FiChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+              )}
+            </div>
+
             <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
             {subtitle && (
               <p className="text-lg text-church-gray max-w-3xl mx-auto">
