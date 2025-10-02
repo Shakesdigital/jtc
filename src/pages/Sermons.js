@@ -41,16 +41,18 @@ const Sermons = () => {
     'Jude', 'Revelation'
   ];
 
-  // Use real sermon data
-  const allSermons = sermonsData.map(sermon => ({
-    ...sermon,
-    thumbnail: sermon.image,
-    bibleReference: sermon.scripture,
-    series: sermon.category,
-    views: Math.floor(Math.random() * 2000) + 500,
-    isFeatured: sermon.id <= 2,
-    tags: sermon.category.toLowerCase().split(' ')
-  }));
+  // Use real sermon data and sort by date (most recent first)
+  const allSermons = sermonsData
+    .map(sermon => ({
+      ...sermon,
+      thumbnail: sermon.image,
+      bibleReference: sermon.scripture,
+      series: sermon.category,
+      views: Math.floor(Math.random() * 2000) + 500,
+      isFeatured: sermon.id <= 2,
+      tags: sermon.category.toLowerCase().split(' ')
+    }))
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   // Get unique speakers and series for filter options
   const speakers = [...new Set(allSermons.map(sermon => sermon.speaker))];

@@ -94,7 +94,9 @@ export const getSermonBySlug = (slug) => {
 
 // Helper function to get recent sermons
 export const getRecentSermons = (count = 3) => {
-  return sermonsData.slice(0, count);
+  return sermonsData
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, count);
 };
 
 // Helper function to get sermons by category
