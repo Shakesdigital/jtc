@@ -42,8 +42,8 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: FiMapPin,
-      text: 'Wilson Ave Plot 23, Jinja, Uganda',
-      href: 'https://maps.google.com/?q=Wilson+Ave+Plot+23+Jinja+Uganda'
+      text: 'Benedith School a left turn off Kiira road to Arton Street, and right off Wilson Avenue to Arton street',
+      href: 'https://maps.google.com/?q=Benedith+School+Arton+Street+Jinja+Uganda'
     },
     {
       icon: FiPhone,
