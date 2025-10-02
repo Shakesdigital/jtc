@@ -207,13 +207,13 @@ const Home = () => {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 lg:py-16">
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6 sm:space-y-8 md:space-y-10"
+            className="space-y-4 sm:space-y-5 md:space-y-6"
           >
             <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg text-center">
               {heroImages[currentSlide].title}
@@ -223,8 +223,8 @@ const Home = () => {
               {heroImages[currentSlide].subtitle}
             </p>
 
-            <div className="pt-6 sm:pt-8 md:pt-10">
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <div className="pt-4 sm:pt-5 md:pt-6">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
                 <Link
                   to="/church-service"
                   className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl btn-hero w-full sm:w-auto border-2 sm:border-3"
