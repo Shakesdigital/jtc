@@ -29,21 +29,6 @@ const ChurchService = () => {
           description: 'Join us every Tuesday from 4:00 PM to 6:00 PM for a time of breaking fast, prayer, and fellowship with our church community family. This mid-week gathering strengthens our bonds and focuses on intercession for personal needs, the community, and global missions.'
         }
       ]
-    },
-    {
-      day: 'Special Events',
-      services: [
-        {
-          name: 'Annual Youth Jam',
-          time: 'September (Check for updates)',
-          description: 'A lively event celebrating Jesus through music, dance, and testimonies (typically held in September – check for updates).'
-        },
-        {
-          name: 'Mega Fellowships',
-          time: 'Quarterly',
-          description: 'Quarterly celebrations with worship, preaching, and community meals.'
-        }
-      ]
     }
   ];
 
@@ -100,46 +85,48 @@ const ChurchService = () => {
             </p>
           </motion.div>
 
-          <div className="space-y-8">
-            {serviceSchedule.map((day, index) => (
-              <motion.div
-                key={day.day}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="card p-8"
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">{day.day}</h3>
-                <div className="grid gap-6">
-                  {day.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="border-l-4 border-church-red pl-6">
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                        <h4 className="text-xl font-semibold text-gray-900">{service.name}</h4>
-                        <div className="flex items-center text-church-red font-medium">
-                          <FiClock className="w-4 h-4 mr-2" />
-                          {service.time}
-                        </div>
-                      </div>
-                      <p className="text-gray-600">{service.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Location Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="card p-8 mt-12 bg-church-red text-white text-center"
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
           >
-            <FiMapPin className="w-12 h-12 mx-auto mb-4 text-church-gold" />
-            <h3 className="text-2xl font-bold mb-4">Location</h3>
-            <p className="text-lg mb-2">Arise Jinja Town Church</p>
-            <p className="opacity-90 mb-6">Wilson Ave Plot 23, Jinja, Uganda (15-minute walk from town center)</p>
-            <button className="btn-accent">Get Directions</button>
+            {/* Left Column - Image */}
+            <div className="order-2 lg:order-1 h-full">
+              <img
+                src="/images/service-schedule.jpg"
+                alt="Church Service Schedule"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+                style={{ height: '100%', objectFit: 'cover' }}
+                onError={(e) => {
+                  console.error('Image failed to load:', e.target.src);
+                  e.target.style.display = 'none';
+                }}
+              />
+            </div>
+
+            {/* Right Column - Content */}
+            <div className="order-1 lg:order-2 space-y-6">
+              {serviceSchedule.map((day, index) => (
+                <div key={day.day} className="card p-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{day.day}</h3>
+                  <div className="space-y-4">
+                    {day.services.map((service, serviceIndex) => (
+                      <div key={serviceIndex} className="border-l-4 border-church-red pl-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                          <h4 className="text-lg font-semibold text-gray-900">{service.name}</h4>
+                          <div className="flex items-center text-church-red font-medium text-sm sm:text-base">
+                            <FiClock className="w-4 h-4 mr-2" />
+                            {service.time}
+                          </div>
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
