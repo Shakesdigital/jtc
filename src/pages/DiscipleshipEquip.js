@@ -264,8 +264,10 @@ const DiscipleshipEquip = () => {
           <img
             src="/images/Jamesii.jpg"
             alt="Discipleship Hero"
-            className="w-full h-full object-cover"
+            className="w-full h-full"
             style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
               filter: 'brightness(0.6)'
             }}
           />
@@ -362,7 +364,11 @@ const DiscipleshipEquip = () => {
                 <img
                   src="/images/IMG-20250914-WA0044.jpg"
                   alt="Discipleship Study Group"
-                  className="w-full h-[500px] object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[500px] transform hover:scale-105 transition-transform duration-500"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>
@@ -403,7 +409,11 @@ const DiscipleshipEquip = () => {
                 <img
                   src="/images/IMG-20250914-WA0047.jpg"
                   alt="Discipleship Programs"
-                  className="w-full h-[500px] object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[500px] transform hover:scale-105 transition-transform duration-500"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>
@@ -563,7 +573,11 @@ const DiscipleshipEquip = () => {
                 <img
                   src="/images/discipleship-equip-hero.jpg"
                   alt="Discipleship Community"
-                  className="w-full h-[600px] object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[600px] transform hover:scale-105 transition-transform duration-500"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>

@@ -195,8 +195,10 @@ const MensMinistry = () => {
           <img
             src="https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=1920&h=1080&fit=crop"
             alt="Men's Ministry Hero"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full"
             style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
               filter: 'brightness(0.6)'
             }}
           />
@@ -271,7 +273,11 @@ const MensMinistry = () => {
                 <img
                   src="https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=600&h=400&fit=crop"
                   alt="Men in Fellowship"
-                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-96 transform hover:scale-105 transition-transform duration-500"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-800/30 to-transparent"></div>
               </div>
@@ -316,7 +322,11 @@ const MensMinistry = () => {
                     <img
                       src={program.image}
                       alt={program.title}
-                      className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-48 transform group-hover:scale-110 transition-transform duration-500"
+                      style={{
+                        objectFit: 'cover',
+                        objectPosition: 'center'
+                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     <div className="absolute top-4 left-4 bg-church-yellow text-church-sage-dark p-3 rounded-full">

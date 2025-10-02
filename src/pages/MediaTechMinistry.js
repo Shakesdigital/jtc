@@ -221,10 +221,14 @@ const MediaTechMinistry = () => {
         {/* Background Video/Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-church-sage/90 via-church-sage-dark/80 to-church-sage/90 z-10"></div>
-          <img 
+          <img
             src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1920&h=1080&fit=crop"
             alt="Media Tech Team"
-            className="w-full h-full object-cover"
+            className="w-full h-full"
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center'
+            }}
           />
         </div>
 
@@ -319,10 +323,14 @@ const MediaTechMinistry = () => {
             
             <motion.div variants={fadeInUp} className="relative">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img 
+                <img
                   src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=600&fit=crop"
                   alt="Tech Setup"
-                  className="w-full h-96 object-cover"
+                  className="w-full h-96"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               </div>
@@ -361,10 +369,14 @@ const MediaTechMinistry = () => {
                 variants={fadeInUp}
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={role.image} 
+                  <img
+                    src={role.image}
                     alt={role.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-48 group-hover:scale-110 transition-transform duration-300"
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: 'center'
+                    }}
                   />
                   <div className="absolute top-4 left-4 bg-church-yellow/90 backdrop-blur-sm rounded-full p-3">
                     <role.icon className="w-6 h-6 text-church-sage-dark" />
@@ -427,10 +439,14 @@ const MediaTechMinistry = () => {
                 variants={fadeInUp}
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={item.thumbnail} 
+                  <img
+                    src={item.thumbnail}
                     alt={item.title}
-                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-64 group-hover:scale-110 transition-transform duration-300"
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: 'center'
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                   

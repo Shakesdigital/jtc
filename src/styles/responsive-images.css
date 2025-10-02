@@ -1,0 +1,410 @@
+/* ====================================
+   RESPONSIVE IMAGE UTILITIES
+   For Jinja Town Church Website
+   ==================================== */
+
+/*
+ * This CSS file provides responsive image handling utilities
+ * ensuring images fit perfectly across all devices and screen sizes
+ * without cropping, distortion, or pixelation.
+ */
+
+/* ========== BASE IMAGE STYLES ========== */
+
+/* Default responsive image behavior */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========== HERO SECTION IMAGES ========== */
+
+/* Hero sections need full coverage with proper centering */
+.hero-image-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* For hero sections that need to show the full image */
+.hero-image-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background-color: #f3f4f6; /* Fallback background */
+}
+
+/* Hero section container responsive heights */
+.hero-container {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+/* ========== RESPONSIVE ASPECT RATIOS ========== */
+
+/* Maintain 16:9 aspect ratio */
+.aspect-ratio-16-9 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 9/16 = 0.5625 */
+  overflow: hidden;
+}
+
+.aspect-ratio-16-9 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Maintain 4:3 aspect ratio */
+.aspect-ratio-4-3 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; /* 3/4 = 0.75 */
+  overflow: hidden;
+}
+
+.aspect-ratio-4-3 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Maintain 1:1 aspect ratio (square) */
+.aspect-ratio-1-1 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+.aspect-ratio-1-1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ========== CARD IMAGES ========== */
+
+/* Ministry/Content cards with consistent image display */
+.card-image-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.card-image-cover:hover {
+  transform: scale(1.05);
+}
+
+/* Card image containers with fixed heights */
+.card-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+/* ========== BACKGROUND IMAGES ========== */
+
+/* CSS background images with proper fitting */
+.bg-image-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-image-contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+
+/* Mobile devices (320px - 480px) */
+@media (max-width: 480px) {
+  .hero-container {
+    min-height: 50vh;
+    max-height: 70vh;
+  }
+
+  .card-image-container {
+    height: 160px;
+  }
+
+  /* Ensure text overlays remain readable on small screens */
+  .hero-text-overlay {
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-container {
+    min-height: 60vh;
+    max-height: 80vh;
+  }
+
+  .card-image-container {
+    height: 180px;
+  }
+
+  .hero-text-overlay {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Desktop (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-container {
+    min-height: 70vh;
+    max-height: 90vh;
+  }
+
+  .card-image-container {
+    height: 220px;
+  }
+
+  .hero-text-overlay {
+    padding: 2rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* Large Desktop (1025px+) */
+@media (min-width: 1025px) {
+  .hero-container {
+    min-height: 80vh;
+    max-height: 100vh;
+  }
+
+  .card-image-container {
+    height: 240px;
+  }
+
+  .hero-text-overlay {
+    padding: 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* Ultra-wide screens (1920px+) */
+@media (min-width: 1920px) {
+  .card-image-container {
+    height: 280px;
+  }
+}
+
+/* ========== ORIENTATION-SPECIFIC STYLES ========== */
+
+/* Portrait orientation on mobile */
+@media (max-width: 768px) and (orientation: portrait) {
+  .hero-container {
+    min-height: 50vh;
+  }
+
+  /* Stack images vertically for better viewing */
+  .image-grid-portrait {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Landscape orientation on mobile/tablet */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero-container {
+    min-height: 70vh;
+    max-height: 100vh;
+  }
+
+  /* Use 2-column grid for better space utilization */
+  .image-grid-landscape {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* ========== PERFORMANCE OPTIMIZATIONS ========== */
+
+/* Use will-change for smooth animations */
+.image-transition {
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Lazy loading placeholder */
+.image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ========== ACCESSIBILITY ========== */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  img {
+    filter: contrast(1.2);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .image-transition,
+  .card-image-cover,
+  img {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ========== PRINT STYLES ========== */
+
+@media print {
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+
+  .hero-container {
+    max-height: 400px;
+  }
+}
+
+/* ========== RETINA DISPLAY OPTIMIZATION ========== */
+
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi) {
+  /* Images on retina displays should load higher resolution versions */
+  img[srcset] {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ========== FALLBACK STYLES ========== */
+
+/* Older browsers that don't support object-fit */
+@supports not (object-fit: cover) {
+  .hero-image-cover,
+  .card-image-cover {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-image-cover img,
+  .card-image-cover img {
+    opacity: 0;
+  }
+}
+
+/* ========== UTILITY CLASSES ========== */
+
+/* Image filters and effects */
+.image-filter-brightness {
+  filter: brightness(0.6);
+}
+
+.image-filter-grayscale {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.image-filter-grayscale:hover {
+  filter: grayscale(0%);
+}
+
+/* Image overlay gradients */
+.image-overlay-dark {
+  position: relative;
+}
+
+.image-overlay-dark::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
+}
+
+.image-overlay-light {
+  position: relative;
+}
+
+.image-overlay-light::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+/* Rounded corners */
+.image-rounded-sm {
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.image-rounded-md {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.image-rounded-lg {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.image-rounded-xl {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.image-rounded-full {
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+/* ========== END OF RESPONSIVE IMAGES CSS ========== */

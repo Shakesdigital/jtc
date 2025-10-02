@@ -194,8 +194,10 @@ const WomensMinistry = () => {
           <img
             src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&h=1080&fit=crop"
             alt="Women's Ministry Hero"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full"
             style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
               filter: 'brightness(0.6)'
             }}
           />
@@ -281,7 +283,11 @@ const WomensMinistry = () => {
                 <img
                   src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop"
                   alt="Women in Fellowship"
-                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-96 transform hover:scale-105 transition-transform duration-500"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-pink-900/30 to-transparent"></div>
               </div>
@@ -326,7 +332,11 @@ const WomensMinistry = () => {
                     <img
                       src={program.image}
                       alt={program.title}
-                      className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-48 transform group-hover:scale-110 transition-transform duration-500"
+                      style={{
+                        objectFit: 'cover',
+                        objectPosition: 'center'
+                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     <div className="absolute top-4 left-4 bg-church-yellow text-church-sage-dark p-3 rounded-full">

@@ -241,8 +241,10 @@ const FamilyGroups = () => {
           <img
             src="/images/family-groups-hero.jpg"
             alt="Family Groups Hero"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full"
             style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
               filter: 'brightness(0.6)'
             }}
           />
@@ -339,7 +341,11 @@ const FamilyGroups = () => {
                 <img
                   src="/images/family-groups-community.jpg"
                   alt="Families in Fellowship"
-                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-96 transform hover:scale-105 transition-transform duration-500"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>
@@ -382,7 +388,11 @@ const FamilyGroups = () => {
                   <img
                     src={group.image}
                     alt={group.name}
-                    className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-64 transform group-hover:scale-110 transition-transform duration-500"
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: 'center'
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
@@ -553,7 +563,11 @@ const FamilyGroups = () => {
                 <img
                   src="/images/family-groups-form-image.jpg"
                   alt="Family Groups Community"
-                  className="w-full h-[600px] object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[600px] transform hover:scale-105 transition-transform duration-500"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>

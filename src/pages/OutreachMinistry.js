@@ -224,8 +224,10 @@ const OutreachMinistry = () => {
           <img
             src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1920&h=1080&fit=crop"
             alt="Outreach Ministry Hero"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full"
             style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
               filter: 'brightness(0.6)'
             }}
           />
@@ -353,7 +355,11 @@ const OutreachMinistry = () => {
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=500&fit=crop"
                   alt="Outreach in Action"
-                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-96 transform hover:scale-105 transition-transform duration-500"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>
@@ -403,7 +409,11 @@ const OutreachMinistry = () => {
                   <img
                     src={initiative.image}
                     alt={initiative.title}
-                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 transform group-hover:scale-110 transition-transform duration-500"
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: 'center'
+                    }}
                   />
                   <div className={`absolute top-4 right-4 bg-gradient-to-r ${initiative.color} text-white px-3 py-1 rounded-full text-sm font-bold`}>
                     {initiative.category}

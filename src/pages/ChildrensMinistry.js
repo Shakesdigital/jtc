@@ -156,8 +156,10 @@ const ChildrensMinistry = () => {
             <img
               src="/images/children-ministry/hero-image.jpg"
               alt="Joyful children singing and praising God in Sunday school"
-              className="w-full h-full object-cover object-center transition-all duration-300"
+              className="w-full h-full transition-all duration-300"
               style={{
+                objectFit: 'cover',
+                objectPosition: 'center',
                 filter: 'brightness(0.6)'
               }}
             />
@@ -241,7 +243,11 @@ const ChildrensMinistry = () => {
                 <img
                   src="/images/children-ministry/overview-image.jpg"
                   alt="Children participating in Bible stories and craft activities"
-                  className="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-80 transform hover:scale-105 transition-transform duration-500"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
                 
@@ -314,8 +320,12 @@ const ChildrensMinistry = () => {
                 <img
                   src="/images/children-ministry/theme.jpg"
                   alt="Children's Ministry theme showcasing faith activities and community"
-                  className="w-full h-96 lg:h-[500px] object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-96 lg:h-[500px] transform hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">

@@ -167,8 +167,10 @@ const Home = () => {
               <img
                 src={image.url}
                 alt={image.title}
-                className="w-full h-full object-cover object-center transition-all duration-300"
+                className="w-full h-full transition-all duration-300"
                 style={{
+                  objectFit: 'cover',
+                  objectPosition: 'center',
                   filter: 'brightness(0.6)'
                 }}
               />
@@ -304,7 +306,11 @@ const Home = () => {
                 <img
                   src="/images/church-welcome.jpg"
                   alt="Church Welcome"
-                  className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
+                  className="w-full h-96 transform hover:scale-105 transition-transform duration-500"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
               </div>
@@ -348,7 +354,11 @@ const Home = () => {
                   <img
                     src={ministry.image}
                     alt={ministry.title}
-                    className="w-full h-48 object-cover object-center transform hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 transform hover:scale-110 transition-transform duration-500"
+                    style={{
+                      objectFit: 'cover',
+                      objectPosition: 'center'
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 </div>
