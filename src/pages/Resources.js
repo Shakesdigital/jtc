@@ -179,6 +179,10 @@ const Resources = () => {
             style={{
               filter: 'brightness(0.6)'
             }}
+            onError={(e) => {
+              console.error('Image failed to load:', e.target.src);
+              e.target.style.display = 'none';
+            }}
           />
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
