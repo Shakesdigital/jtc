@@ -12,7 +12,6 @@ import {
   FiClock,
   FiEye,
   FiTrendingUp,
-  FiFileText,
   FiHeart,
   FiTag
 } from 'react-icons/fi';

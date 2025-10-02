@@ -14,7 +14,6 @@ import {
   FiEye,
   FiTrendingUp,
   FiHeadphones,
-  FiVideo,
   FiHeart
 } from 'react-icons/fi';
 import { sermonsData } from '../data/sermonsData';
