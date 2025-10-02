@@ -154,17 +154,20 @@ const ChurchService = () => {
               {
                 icon: FiMusic,
                 title: 'Inspiring Worship',
-                description: 'Experience uplifting music and heartfelt worship that draws you closer to God.'
+                description: 'Experience uplifting music and heartfelt worship that draws you closer to God.',
+                image: '/images/inspiring-worship.jpg'
               },
               {
                 icon: FiBook,
                 title: 'Biblical Teaching',
-                description: 'Receive practical, life-changing messages rooted in God\'s Word.'
+                description: 'Receive practical, life-changing messages rooted in God\'s Word.',
+                image: '/images/biblical-teaching.jpg'
               },
               {
                 icon: FiUsers,
                 title: 'Warm Community',
-                description: 'Feel welcomed by our friendly congregation and caring church family.'
+                description: 'Feel welcomed by our friendly congregation and caring church family.',
+                image: '/images/warm-community.jpg'
               }
             ].map((item, index) => (
               <motion.div
@@ -173,10 +176,24 @@ const ChurchService = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="card overflow-hidden"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      console.error('Image failed to load:', e.target.src);
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
