@@ -72,15 +72,16 @@ const Footer = () => {
             {/* Church Info */}
             <div className="space-y-6 text-center md:text-left">
               <div>
-                <Link to="/" className="flex flex-col items-center md:items-start mb-4">
+                <Link to="/" className="flex flex-col items-center md:items-start mb-6">
                   <img
-                    src="/JTC-Logo.jpg"
+                    src="/images/jtc-logo-enhanced.png"
                     alt="Jinja Town Church Logo"
-                    className="w-16 h-16 object-contain rounded-lg"
+                    className="w-32 h-32 md:w-40 md:h-40 object-contain"
+                    onError={(e) => {
+                      console.error('Logo failed to load:', e.target.src);
+                      e.target.src = '/JTC-Logo.jpg';
+                    }}
                   />
-                  <div className="mt-3">
-                    <h3 className="text-xl font-bold">Arise<br />Jinja Town Church</h3>
-                  </div>
                 </Link>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   Arise Jinja Town Church - A welcoming Christian community where all are welcome in Christ's love. Encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ.
