@@ -53,8 +53,8 @@ const Contact = () => {
       icon: FiMapPin,
       title: 'Visit Us',
       details: [
-        'Arise Jinja Town Church, Benedith School right of Kiira',
-        'road on Arton Street (15-minute walk from town center)'
+        'Arise Jinja Town Church, at Benedith School a left turn off Kiira',
+        'to Arton Street, and right off Wilson Avenue to Arton street  (15-minute walk from town center)'
       ],
       action: {
         text: 'Get Directions',
@@ -91,7 +91,7 @@ const Contact = () => {
       title: 'Service Times',
       details: [
         'Sunday: 9:00 AM (Prayer), 10:00 AM - 12:30 PM (Service)',
-        'Tuesday: 4:00 PM - 6:00 PM (Prayer Meeting)',
+        'Tuesday: 5:30 PM - 6:30 PM (Prayer Meeting)',
         'Family Groups: Various times (see Family Groups page)'
       ]
     }
@@ -108,14 +108,15 @@ const Contact = () => {
     {
       day: 'Tuesday',
       services: [
-        { name: 'Prayer Meeting', time: '4:00 PM - 6:00 PM' }
+        { name: 'Prayer Meeting', time: '5:30 PM - 6:30 PM' }
       ]
     },
     {
       day: 'Special Events',
       services: [
-        { name: 'Annual Youth Jam', time: 'September (Check for updates)' },
-        { name: 'Mega Fellowships', time: 'Quarterly' }
+        { name: 'Bring, Share, Braai Family Group Gathering', time: 'Thursday, 9th October 2025' },
+        { name: 'Game Night with Worship & Fellowship', time: 'Friday, 10th October 2025' },
+        { name: 'Leadership Teaching with Sue & Lance McIntosh', time: 'Saturday, 11th October 2025' }
       ]
     }
   ];

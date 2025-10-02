@@ -68,7 +68,8 @@
       "Bash(test:*)",
       "Bash(git lfs:*)",
       "Bash(git reset:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "Bash(git revert:*)"
     ],
     "deny": [],
     "ask": []
