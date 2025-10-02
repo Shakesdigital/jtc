@@ -70,9 +70,9 @@ const Footer = () => {
         <div className="pt-16 pb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Church Info */}
-            <div className="space-y-6 text-center">
+            <div className="space-y-6 text-center md:text-left">
               <div>
-                <Link to="/" className="flex flex-col items-center mb-4">
+                <Link to="/" className="flex flex-col items-center md:items-start mb-4">
                   <img
                     src="/JTC-Logo.jpg"
                     alt="Jinja Town Church Logo"
@@ -96,7 +96,7 @@ const Footer = () => {
                   className="group block"
                 >
                   <div className="bg-white rounded-lg px-4 py-2 shadow-md hover:shadow-lg transition-all duration-200 group-hover:scale-[1.02]">
-                    <div className="flex items-center justify-center space-x-3">
+                    <div className="flex items-center justify-center md:justify-start space-x-3">
                       <span className="text-gray-800 font-medium text-base">In Partnership with</span>
                       <div className="flex items-center space-x-2">
                         <img
@@ -123,7 +123,7 @@ const Footer = () => {
               {/* Social Links */}
               <div>
                 <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center md:justify-start space-x-4">
                   {socialLinks.map((social) => (
                     <motion.a
                       key={social.name}
@@ -143,11 +143,11 @@ const Footer = () => {
             </div>
 
             {/* Quick Links */}
-            <div className="text-center">
+            <div className="text-center md:text-left">
               <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
-                  <li key={link.name}>
+                  <li key={link.name} className="flex justify-center md:justify-start">
                     <Link
                       to={link.href}
                       className="text-gray-300 hover:text-church-gold transition-colors duration-200 inline-flex items-center group"
@@ -161,11 +161,11 @@ const Footer = () => {
             </div>
 
             {/* Resources */}
-            <div className="text-center">
+            <div className="text-center md:text-left">
               <h4 className="text-lg font-semibold mb-6">Resources</h4>
               <ul className="space-y-3">
                 {resourceLinks.map((link) => (
-                  <li key={link.name}>
+                  <li key={link.name} className="flex justify-center md:justify-start">
                     <Link
                       to={link.href}
                       className="text-gray-300 hover:text-church-gold transition-colors duration-200 inline-flex items-center group"
@@ -179,13 +179,13 @@ const Footer = () => {
             </div>
 
             {/* Contact & Schedule */}
-            <div className="space-y-6 text-center">
+            <div className="space-y-6 text-center md:text-left">
               {/* Contact Info */}
               <div>
                 <h4 className="text-lg font-semibold mb-6">Contact Us</h4>
                 <ul className="space-y-4">
                   {contactInfo.map((contact, index) => (
-                    <li key={index}>
+                    <li key={index} className="flex justify-center md:justify-start">
                       <a
                         href={contact.href}
                         className="inline-flex items-start space-x-3 text-gray-300 hover:text-church-gold transition-colors duration-200 group"
@@ -200,14 +200,14 @@ const Footer = () => {
 
               {/* Service Schedule */}
               <div>
-                <h4 className="text-lg font-semibold mb-4 flex items-center justify-center">
+                <h4 className="text-lg font-semibold mb-4 flex items-center justify-center md:justify-start">
                   <FiClock className="w-5 h-5 mr-2 text-church-gold" />
                   Service Schedule
                 </h4>
                 <ul className="space-y-3">
                   {serviceSchedule.map((schedule, index) => (
                     <li key={index} className="text-sm">
-                      <div className="flex flex-col items-center">
+                      <div className="flex flex-col items-center md:items-start">
                         <span className="font-medium text-church-gold">{schedule.day}</span>
                       </div>
                       <div className="text-gray-300">{schedule.time}</div>
