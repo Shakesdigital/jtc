@@ -215,7 +215,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6 sm:space-y-8 md:space-y-10"
           >
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg text-center">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg text-center">
               {heroImages[currentSlide].title}
             </h1>
 
