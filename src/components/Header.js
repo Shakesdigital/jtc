@@ -69,11 +69,11 @@ const Header = () => {
           <Link 
             to="/" 
             className="flex items-center flex-shrink-0"
-            aria-label="Jinja Town Church Home"
+            aria-label="Arise Jinja Town Church Home"
           >
-            <img 
-              src="/JTC-Logo.jpg" 
-              alt="Jinja Town Church Logo" 
+            <img
+              src="/logo.png"
+              alt="Arise Jinja Town Church Logo"
               className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain"
             />
           </Link>
