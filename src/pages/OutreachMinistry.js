@@ -30,7 +30,6 @@ const OutreachMinistry = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
 
   // Outreach initiatives data
   const initiatives = [
@@ -148,40 +147,6 @@ const OutreachMinistry = () => {
     }
   ];
 
-  // FAQs data
-  const faqs = [
-    {
-      id: 1,
-      question: "How can I volunteer with the Outreach Ministry?",
-      answer: "Getting started is easy! Fill out our volunteer form above, attend a brief orientation session, and choose from various opportunities that match your interests and schedule. We welcome volunteers of all ages and skill levels."
-    },
-    {
-      id: 2,
-      question: "Are there family-friendly outreach opportunities?",
-      answer: "Absolutely! Many of our initiatives are designed for families to serve together. Food drives, community events, and local partnerships often have roles for children and teens alongside their parents."
-    },
-    {
-      id: 3,
-      question: "What training is required for volunteers?",
-      answer: "Basic orientation covers our mission, safety protocols, and service principles. Specific initiatives may require additional training, which we provide free of charge. Most training sessions are 1-2 hours and offered multiple times per month."
-    },
-    {
-      id: 4,
-      question: "Can I join mission trips if I'm new to the church?",
-      answer: "Yes! While we encourage involvement in local outreach first, mission trip participation is open to committed volunteers. Applications typically open 6 months before trips, and we provide pre-trip training and preparation."
-    },
-    {
-      id: 5,
-      question: "How are outreach programs funded?",
-      answer: "Our outreach is supported through church tithes, special offerings, fundraising events, and partnerships with local businesses and organizations. We're committed to transparency and efficient use of all donated funds."
-    },
-    {
-      id: 6,
-      question: "What if I can't volunteer regularly but want to help?",
-      answer: "There are many ways to contribute! You can donate goods or funds, participate in one-time events, help with special projects, or simply spread the word about our initiatives in your community."
-    }
-  ];
-
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -203,10 +168,6 @@ const OutreachMinistry = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
-  };
-
-  const toggleFAQ = (id) => {
-    setExpandedFAQ(expandedFAQ === id ? null : id);
   };
 
   const scrollToForm = () => {
@@ -685,92 +646,6 @@ const OutreachMinistry = () => {
         </div>
       </section>
 
-      {/* FAQs Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-              Frequently Asked <span className="text-church-yellow">Questions</span>
-            </h2>
-            <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-            <p className="text-xl text-church-gray max-w-2xl mx-auto">
-              Get answers to common questions about volunteering and serving with our outreach ministry
-            </p>
-          </motion.div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={faq.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100"
-              >
-                <button
-                  onClick={() => toggleFAQ(faq.id)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
-                >
-                  <h3 className="text-lg font-semibold text-church-sage-dark pr-4">
-                    {faq.question}
-                  </h3>
-                  <div className="flex-shrink-0">
-                    {expandedFAQ === faq.id ? (
-                      <FiChevronUp className="w-5 h-5 text-church-sage" />
-                    ) : (
-                      <FiChevronDown className="w-5 h-5 text-church-sage" />
-                    )}
-                  </div>
-                </button>
-                
-                {expandedFAQ === faq.id && (
-                  <motion.div
-                    initial={{ height: 0 }}
-                    animate={{ height: 'auto' }}
-                    exit={{ height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="px-6 pb-4">
-                      <p className="text-church-gray leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Contact Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="mt-16 text-center"
-          >
-            <div className="bg-gradient-to-r from-church-sage-light to-church-sage p-8 rounded-2xl text-white">
-              <FiInfo className="w-12 h-12 mx-auto mb-4 text-church-yellow" />
-              <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
-              <p className="mb-6 opacity-90">Our outreach team is here to help you find the perfect way to serve and make a difference.</p>
-              <button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold px-8 py-3 rounded-full transition-all duration-300"
-              >
-                Contact Our Team
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };

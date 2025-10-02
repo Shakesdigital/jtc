@@ -31,7 +31,6 @@ const MediaTechMinistry = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
 
   // Tech roles data
   const techRoles = [
@@ -146,35 +145,6 @@ const MediaTechMinistry = () => {
       icon: FiTrendingUp,
       description: "Latest tips and industry insights",
       link: "#"
-    }
-  ];
-
-  // FAQ data
-  const faqs = [
-    {
-      id: 1,
-      question: "Do I need professional experience to join?",
-      answer: "Not at all! We welcome volunteers at all skill levels. Whether you're a beginner eager to learn or an experienced professional, there's a place for you on our team. We provide training and mentorship to help you grow."
-    },
-    {
-      id: 2,
-      question: "What equipment and software do you use?",
-      answer: "We use industry-standard equipment including digital mixing consoles, professional cameras, streaming encoders, and lighting systems. Our software includes ProPresenter, OBS, Adobe Creative Suite, and various audio/video editing tools."
-    },
-    {
-      id: 3,
-      question: "How much time commitment is required?",
-      answer: "We're flexible with scheduling! Most volunteers serve once or twice a month during services, plus occasional special events. Training sessions are typically held monthly, and you can participate based on your availability."
-    },
-    {
-      id: 4,
-      question: "Can I serve remotely or do I need to be on-site?",
-      answer: "Most roles require on-site presence during services, but we also have remote opportunities in graphic design, social media content creation, and post-production editing that can be done from home."
-    },
-    {
-      id: 5,
-      question: "What if I'm not sure which role fits me best?",
-      answer: "That's perfectly fine! We'll arrange for you to shadow different teams, try various roles, and discover where your interests and skills align best. Our team leads will help guide you to the perfect fit."
     }
   ];
 
@@ -667,57 +637,6 @@ const MediaTechMinistry = () => {
                 </button>
               </div>
             )}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20" style={{ backgroundColor: '#f9fafc' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-church-gray">
-              Got questions? We've got answers to help you get started.
-            </p>
-          </motion.div>
-
-          <motion.div 
-            className="space-y-4"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            {faqs.map((faq) => (
-              <motion.div 
-                key={faq.id}
-                className="bg-white rounded-xl shadow-md overflow-hidden"
-                variants={fadeInUp}
-              >
-                <button
-                  onClick={() => setExpandedFAQ(expandedFAQ === faq.id ? null : faq.id)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-church-sage/5 transition-colors"
-                >
-                  <span className="font-semibold text-gray-900">{faq.question}</span>
-                  {expandedFAQ === faq.id ? (
-                    <FiChevronUp className="w-5 h-5 text-church-sage" />
-                  ) : (
-                    <FiChevronDown className="w-5 h-5 text-church-sage" />
-                  )}
-                </button>
-                {expandedFAQ === faq.id && (
-                  <div className="px-6 pb-4">
-                    <p className="text-church-gray leading-relaxed">{faq.answer}</p>
-                  </div>
-                )}
-              </motion.div>
-            ))}
           </motion.div>
         </div>
       </section>

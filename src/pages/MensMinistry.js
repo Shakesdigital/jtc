@@ -31,7 +31,6 @@ const MensMinistry = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
-  const [openFAQ, setOpenFAQ] = useState(null);
 
   // Programs data
   const programs = [
@@ -129,35 +128,6 @@ const MensMinistry = () => {
     }
   ];
 
-  // FAQs
-  const faqs = [
-    {
-      id: 1,
-      question: "Do I need to be a church member to join?",
-      answer: "Not at all! Our Men's Ministry is open to all men, whether you're a longtime member, new to our church, or just exploring faith. Come as you are."
-    },
-    {
-      id: 2,
-      question: "What are the meeting times like?",
-      answer: "We offer flexible options to fit busy schedules. Most Bible studies meet weekly for 90 minutes, accountability groups meet bi-weekly, and service projects are typically on Saturdays. Evening and weekend options are available."
-    },
-    {
-      id: 3,
-      question: "What ages participate in Men's Ministry?",
-      answer: "We welcome men of all ages, from college students to seniors. Many of our programs have mixed age groups to encourage mentorship and diverse perspectives."
-    },
-    {
-      id: 4,
-      question: "Is there a cost to participate?",
-      answer: "Most programs are free. Some retreats or special events may have a small fee to cover meals and materials, but financial assistance is always available if needed."
-    },
-    {
-      id: 5,
-      question: "How do I get started?",
-      answer: "Simply fill out the form below or contact our Men's Ministry leader. We'll help you find the right group and answer any questions you might have."
-    }
-  ];
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -181,10 +151,6 @@ const MensMinistry = () => {
     }
 
     setTimeout(() => setSubmitStatus(null), 3000);
-  };
-
-  const toggleFAQ = (id) => {
-    setOpenFAQ(openFAQ === id ? null : id);
   };
 
   return (
@@ -666,57 +632,6 @@ const MensMinistry = () => {
         </div>
       </section>
 
-      {/* FAQs Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
-                Frequently Asked <span className="text-church-yellow">Questions</span>
-              </h2>
-              <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
-              <p className="text-lg text-church-gray">
-                Get answers to common questions about joining our Men's Ministry
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={faq.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleFAQ(faq.id)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-church-yellow transition-colors duration-300"
-                >
-                  <span className="font-semibold text-church-sage-dark">{faq.question}</span>
-                  {openFAQ === faq.id ? (
-                    <FiChevronUp className="w-5 h-5 text-church-yellow" />
-                  ) : (
-                    <FiChevronDown className="w-5 h-5 text-gray-500" />
-                  )}
-                </button>
-                {openFAQ === faq.id && (
-                  <div className="px-6 pb-4">
-                    <p className="text-church-gray leading-relaxed">{faq.answer}</p>
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
