@@ -171,10 +171,10 @@ const Home = () => {
                 style={{
                   objectFit: 'cover',
                   objectPosition: 'center',
-                  filter: 'brightness(0.6)'
+                  filter: 'brightness(0.75)'
                 }}
               />
-              <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-10"></div>
             </motion.div>
           ))}
         </div>
@@ -220,35 +220,20 @@ const Home = () => {
               {heroImages[currentSlide].title}
             </h1>
 
-            <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow text-center">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto leading-relaxed responsive-text-balance text-shadow text-center">
               {heroImages[currentSlide].subtitle}
             </p>
 
-            <div className="bg-black bg-opacity-20 backdrop-blur-sm rounded-xl p-4 sm:p-6 max-w-2xl mx-auto">
-              <p className="text-base sm:text-lg mb-3 sm:mb-4 opacity-95">Join us for worship every Sunday</p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center text-sm sm:text-base">
-                <div className="flex items-center justify-center">
-                  <FiClock className="w-4 h-4 mr-2" />
-                  Prayer & Fellowship: 9:00 AM
-                </div>
-                <div className="flex items-center justify-center">
-                  <FiClock className="w-4 h-4 mr-2" />
-                  Main Service: 10:00 AM - 12:30 PM
-                </div>
-              </div>
-              <p className="text-sm opacity-90 mt-3">Tuesday Prayer Meetings: 5:30 PM - 6:30 PM</p>
-            </div>
-
-            <div className="pt-6 sm:pt-8">
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-                <Link 
+            <div className="pt-8 sm:pt-10 md:pt-12">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+                <Link
                   to="/church-service"
                   className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl btn-hero w-full sm:w-auto border-2 sm:border-3"
                 >
                   Join Us This Sunday at 10:00 AM
                 </Link>
-                
-                <Link 
+
+                <Link
                   to="/about"
                   className="bg-transparent border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-xl btn-hero w-full sm:w-auto"
                 >
