@@ -240,12 +240,6 @@ const OutreachMinistry = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <div className="flex justify-center mb-3 sm:mb-4">
-              <div className="bg-church-yellow bg-opacity-20 backdrop-blur-sm rounded-full p-6">
-                <FiHeart className="w-16 h-16 text-church-yellow" />
-              </div>
-            </div>
-            
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Outreach Ministry: <br />
               <span className="text-church-yellow">Serving Our Community with Love</span>

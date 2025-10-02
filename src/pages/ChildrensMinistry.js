@@ -173,20 +173,6 @@ const ChildrensMinistry = () => {
             transition={{ duration: 0.8 }}
             className="space-y-4 sm:space-y-6 md:space-y-8"
           >
-            <motion.div
-              animate={{ 
-                y: [0, -10, 0],
-                rotate: [0, 5, -5, 0]
-              }}
-              transition={{ 
-                duration: 3, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-            >
-              <FiHeart className="w-24 h-24 mx-auto mb-3 sm:mb-4 text-church-yellow" />
-            </motion.div>
-            
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
               Children's Ministry: <span className="text-white drop-shadow-lg">Growing in Faith and Fun!</span>
             </h1>

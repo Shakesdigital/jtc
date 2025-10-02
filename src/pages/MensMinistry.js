@@ -210,7 +210,6 @@ const MensMinistry = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <FiShield className="w-20 h-20 mx-auto mb-3 sm:mb-4 text-church-yellow" />
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Men's Ministry: <span className="text-church-yellow">Building Godly Men</span>
             </h1>
