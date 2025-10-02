@@ -138,30 +138,6 @@ const Home = () => {
       title: "Discipleship Equip Ministry",
       image: "/images/ministries/discipleship-equip-ministry.jpg",
       description: "Equipping believers with biblical knowledge, spiritual disciplines, and practical skills for Christian living and ministry service."
-    },
-    {
-      id: 5,
-      title: "Media and Tech Ministry",
-      image: "/images/ministries/media-tech-ministry.jpg",
-      description: "Supporting worship services and church communications through audio-visual technology, live streaming, and digital outreach."
-    },
-    {
-      id: 6,
-      title: "Men's Ministry",
-      image: "/images/ministries/mens-ministry.jpg",
-      description: "Building strong Christian men through brotherhood, accountability, service projects, and spiritual growth in community."
-    },
-    {
-      id: 7,
-      title: "Outreach Ministry",
-      image: "/images/ministries/outreach-ministry.jpg",
-      description: "Reaching out to the community with God's love through evangelism, charity work, and social services that make a difference."
-    },
-    {
-      id: 8,
-      title: "Women's Ministry",
-      image: "/images/ministries/womens-ministry.jpg",
-      description: "Empowering women to grow in faith, connect in community, and serve with purpose through fellowship and spiritual development."
     }
   ];
 
@@ -387,11 +363,7 @@ const Home = () => {
                         ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
                         ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
                         ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
-                        ministry.title === "Outreach Ministry" ? "/ministries/outreach-ministry" :
                         ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
-                        ministry.title === "Media and Tech Ministry" ? "/ministries/media-tech-ministry" :
-                        ministry.title === "Men's Ministry" ? "/ministries/mens-ministry" :
-                        ministry.title === "Women's Ministry" ? "/ministries/womens-ministry" :
                         "/ministries"
                       }
                       className="inline-flex items-center text-church-sage hover:text-church-sage-dark font-semibold transition-colors duration-300"
