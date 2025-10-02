@@ -283,12 +283,12 @@ const DiscipleshipEquip = () => {
             className="space-y-4 sm:space-y-6"
           >
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-center">
               Discipleship Equip Ministry: <br />
               <span className="text-church-yellow">Growing Deeper in Faith</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
+            <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed opacity-90 text-center">
               Equipping you to live out God's purpose through transformational learning and spiritual growth
             </p>
 

@@ -216,11 +216,11 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="space-y-4 sm:space-y-6 md:space-y-8"
           >
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg text-center">
               {heroImages[currentSlide].title}
             </h1>
 
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
+            <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow text-center">
               {heroImages[currentSlide].subtitle}
             </p>
 

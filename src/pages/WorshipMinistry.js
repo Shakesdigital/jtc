@@ -182,11 +182,11 @@ const WorshipMinistry = () => {
             className="space-y-4 sm:space-y-6 md:space-y-8"
           >
             
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-center">
               Worship Ministry: <span className="text-church-yellow drop-shadow-lg">Glorifying God Through Song</span>
             </h1>
 
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed text-center">
               Join us in passionate, Spirit-led worship that creates space for authentic encounters with God
             </p>
 

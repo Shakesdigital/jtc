@@ -128,11 +128,11 @@ const Sermons = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-center">
               Sermons: <span className="text-church-yellow">Timeless Truths for Today</span>
             </h1>
-            
-            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+
+            <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed text-center">
               Explore teachings that transform lives and discover God's word for every season
             </p>
 

@@ -239,20 +239,20 @@ const MediaTechMinistry = () => {
           animate="visible"
           variants={fadeInUp}
         >
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+          <motion.h1
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight text-center"
             variants={fadeInUp}
           >
             Media & Tech Ministry
           </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl mb-8 text-church-yellow font-light"
+          <motion.p
+            className="text-base sm:text-lg md:text-xl mb-8 text-church-yellow font-light text-center"
             variants={fadeInUp}
           >
             Amplifying God's Message Through Innovation
           </motion.p>
-          <motion.p 
-            className="text-lg md:text-xl mb-12 text-church-yellow/90 max-w-3xl mx-auto"
+          <motion.p
+            className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl mb-12 text-church-yellow/90 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto text-center"
             variants={fadeInUp}
           >
             Using cutting-edge technology to inspire worship, connect communities, and extend our reach across Uganda and beyond

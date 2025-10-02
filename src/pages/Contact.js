@@ -143,11 +143,11 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg text-center">
               Get In Touch
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow">
-              We'd love to hear from you. Reach out with questions, prayer requests, 
+            <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow text-center">
+              We'd love to hear from you. Reach out with questions, prayer requests,
               or to learn more about our church community.
             </p>
           </motion.div>
