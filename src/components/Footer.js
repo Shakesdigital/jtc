@@ -83,9 +83,6 @@ const Footer = () => {
                     }}
                   />
                 </Link>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Arise Jinja Town Church - A welcoming Christian community where all are welcome in Christ's love. Encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ.
-                </p>
               </div>
 
               {/* Social Links */}
