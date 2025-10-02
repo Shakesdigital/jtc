@@ -207,23 +207,23 @@ const Home = () => {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 lg:py-20">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-4 sm:space-y-6 md:space-y-8"
+            className="space-y-6 sm:space-y-8 md:space-y-10"
           >
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg text-center">
               {heroImages[currentSlide].title}
             </h1>
 
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto leading-relaxed responsive-text-balance text-shadow text-center">
+            <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow text-center">
               {heroImages[currentSlide].subtitle}
             </p>
 
-            <div className="pt-8 sm:pt-10 md:pt-12">
+            <div className="pt-6 sm:pt-8 md:pt-10">
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
                 <Link
                   to="/church-service"
