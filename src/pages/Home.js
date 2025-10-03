@@ -148,9 +148,10 @@ const Home = () => {
           height: heroHeight,
           minHeight: '100vh'
         }}
+        aria-label="Hero banner carousel"
       >
         {/* Carousel Background Images */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full" role="img" aria-label={heroImages[currentSlide].title}>
           {heroImages.map((image, index) => (
             <motion.div
               key={image.id}
@@ -161,18 +162,20 @@ const Home = () => {
               }}
               transition={{ duration: 1 }}
               className="absolute inset-0 w-full h-full"
+              aria-hidden={index !== currentSlide}
             >
               <img
                 src={image.url}
-                alt={image.title}
+                alt={index === currentSlide ? image.title : ''}
                 className="w-full h-full transition-all duration-300"
                 style={{
                   objectFit: 'cover',
                   objectPosition: 'center',
-                  filter: 'brightness(0.75)'
+                  filter: 'brightness(0.7)'
                 }}
+                loading={index === 0 ? 'eager' : 'lazy'}
               />
-              <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30"></div>
             </motion.div>
           ))}
         </div>
@@ -180,27 +183,32 @@ const Home = () => {
         {/* Carousel Navigation */}
         <button
           onClick={prevSlide}
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300"
+          className="absolute left-3 sm:left-6 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-40 hover:bg-opacity-60 text-white p-2 sm:p-3 rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] focus:outline-none focus:ring-2 focus:ring-church-yellow focus:ring-offset-2"
+          aria-label="Previous slide"
         >
-          <FiChevronLeft className="w-6 h-6" />
+          <FiChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
         </button>
-        
+
         <button
           onClick={nextSlide}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300"
+          className="absolute right-3 sm:right-6 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-40 hover:bg-opacity-60 text-white p-2 sm:p-3 rounded-full transition-all duration-300 min-h-[44px] min-w-[44px] focus:outline-none focus:ring-2 focus:ring-church-yellow focus:ring-offset-2"
+          aria-label="Next slide"
         >
-          <FiChevronRight className="w-6 h-6" />
+          <FiChevronRight className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
         </button>
 
         {/* Carousel Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3" role="tablist" aria-label="Carousel slides">
           {heroImages.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-church-yellow' : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-church-yellow focus:ring-offset-2 ${
+                index === currentSlide ? 'bg-church-yellow scale-125' : 'bg-white bg-opacity-50 hover:bg-opacity-75'
               }`}
+              aria-label={`Go to slide ${index + 1}`}
+              aria-selected={index === currentSlide}
+              role="tab"
             />
           ))}
         </div>

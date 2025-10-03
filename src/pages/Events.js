@@ -66,12 +66,12 @@ const Events = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-screen hero-content-center overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/images/events-hero.jpg"
             alt="Events Hero"
-            className="hero-image"
+            className="w-full h-full object-cover"
             style={{
               filter: 'brightness(0.6)'
             }}
@@ -82,17 +82,17 @@ const Events = () => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         </div>
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-shadow-lg">
               Upcoming Events
             </h1>
-            <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow text-center">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed text-shadow">
               Join us for fellowship, worship, and community activities that bring us closer together
             </p>
           </motion.div>
@@ -100,18 +100,18 @@ const Events = () => {
       </section>
 
       {/* Filters Section */}
-      <section className="bg-white py-8 border-b border-gray-200">
+      <section className="bg-white py-6 sm:py-8 border-b border-gray-200">
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <div className="flex flex-col sm:flex-row gap-4 flex-1">
+          <div className="flex flex-col md:flex-row gap-3 sm:gap-4 items-stretch md:items-center justify-between">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 flex-1">
               {/* Search */}
-              <div className="relative">
+              <div className="relative flex-1 sm:flex-initial">
                 <input
                   type="text"
                   placeholder="Search events..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-transparent"
+                  className="w-full sm:w-64 px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-transparent"
                 />
               </div>
 
@@ -119,7 +119,7 @@ const Events = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-transparent"
+                className="px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-transparent"
               >
                 <option value="">All Categories</option>
                 {categories.map(category => (
@@ -130,16 +130,16 @@ const Events = () => {
 
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center gap-2 px-4 py-2 bg-church-sage hover:bg-church-sage-dark text-white rounded-lg transition-colors"
+              className="flex items-center justify-center gap-2 px-3 sm:px-4 py-2 text-sm sm:text-base bg-church-sage hover:bg-church-sage-dark text-white rounded-lg transition-colors"
             >
-              <FiFilter />
+              <FiFilter className="w-4 h-4" />
               <span>Tags</span>
               {selectedTags.length > 0 && (
                 <span className="bg-church-yellow text-church-sage-dark text-xs px-2 py-1 rounded-full">
                   {selectedTags.length}
                 </span>
               )}
-              {showFilters ? <FiChevronUp /> : <FiChevronDown />}
+              {showFilters ? <FiChevronUp className="w-4 h-4" /> : <FiChevronDown className="w-4 h-4" />}
             </button>
           </div>
 
@@ -179,67 +179,72 @@ const Events = () => {
       </section>
 
       {/* Events Content */}
-      <section className="py-12">
+      <section className="py-8 sm:py-10 md:py-12">
         <div className="container-custom">
           {/* Upcoming Events */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-church-sage-dark mb-8 text-center">Upcoming Events</h2>
+          <div className="mb-12 sm:mb-14 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-church-sage-dark mb-6 sm:mb-8 text-center">Upcoming Events</h2>
             
             {upcomingEventsFiltered.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {upcomingEventsFiltered.map((event, index) => (
                   <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-church-sage"
+                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-church-sage flex flex-col"
                   >
                     <div className="relative overflow-hidden">
                       <img
                         src={event.image}
                         alt={event.title}
-                        className="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500"
+                        className="w-full h-44 sm:h-48 md:h-52 object-cover transform hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                     </div>
 
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-church-sage-dark mb-3 line-clamp-2">{event.title}</h3>
+                    <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-1">
+                      <h3 className="text-lg sm:text-xl font-bold text-church-sage-dark mb-3 line-clamp-2">{event.title}</h3>
 
                       <div className="space-y-2 mb-4">
-                        <div className="flex items-center text-sm text-church-gray">
-                          <FiCalendar className="w-4 h-4 mr-2 text-church-sage" />
-                          {event.date}
+                        <div className="flex items-center text-xs sm:text-sm text-church-gray">
+                          <FiCalendar className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-church-sage flex-shrink-0" />
+                          <span className="line-clamp-1">{event.date}</span>
                         </div>
-                        <div className="flex items-center text-sm text-church-gray">
-                          <FiClock className="w-4 h-4 mr-2 text-church-sage" />
-                          {event.time}
+                        <div className="flex items-center text-xs sm:text-sm text-church-gray">
+                          <FiClock className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-church-sage flex-shrink-0" />
+                          <span className="line-clamp-1">{event.time}</span>
                         </div>
-                        <div className="flex items-center text-sm text-church-gray">
-                          <FiMapPin className="w-4 h-4 mr-2 text-church-sage" />
-                          {event.location}
+                        <div className="flex items-center text-xs sm:text-sm text-church-gray">
+                          <FiMapPin className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-church-sage flex-shrink-0" />
+                          <span className="line-clamp-1">{event.location}</span>
                         </div>
                       </div>
 
-                      <p className="text-church-gray mb-4 line-clamp-3">
+                      <p className="text-xs sm:text-sm text-church-gray mb-4 line-clamp-3">
                         {event.excerpt}
                       </p>
 
-                      <div className="flex flex-wrap gap-2 mb-4">
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
                         <span className="px-2 py-1 bg-church-sage bg-opacity-10 text-church-sage text-xs rounded-full">
                           {event.category}
                         </span>
-                        {event.tags.map(tag => (
+                        {event.tags.slice(0, 2).map(tag => (
                           <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
                             {tag}
                           </span>
                         ))}
+                        {event.tags.length > 2 && (
+                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                            +{event.tags.length - 2}
+                          </span>
+                        )}
                       </div>
 
                       <Link
                         to={`/events/${event.slug}`}
-                        className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
+                        className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-2.5 sm:py-3 text-sm sm:text-base rounded-lg transition-all duration-300 block mt-auto"
                       >
                         Learn More
                       </Link>
@@ -248,62 +253,67 @@ const Events = () => {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">No upcoming events found.</p>
+              <div className="text-center py-8 sm:py-12">
+                <p className="text-gray-500 text-base sm:text-lg">No upcoming events found.</p>
               </div>
             )}
           </div>
 
           {/* Recurring Events */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-church-sage-dark mb-8 text-center">Recurring Events</h2>
+          <div className="mb-12 sm:mb-14 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-church-sage-dark mb-6 sm:mb-8 text-center">Recurring Events</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               {recurringEvents.map((event, index) => (
                 <motion.div
                   key={event.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-church-sage"
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-church-sage flex flex-col"
                 >
-                  <div className="p-6">
-                    <div className="flex items-start justify-between mb-3">
-                      <h3 className="text-xl font-bold text-church-sage-dark flex-1">{event.title}</h3>
-                      <span className="px-2 py-1 bg-church-yellow text-church-sage-dark text-xs rounded-full font-bold ml-2 flex-shrink-0">
+                  <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-1">
+                    <div className="flex items-start justify-between mb-3 gap-2">
+                      <h3 className="text-lg sm:text-xl font-bold text-church-sage-dark flex-1">{event.title}</h3>
+                      <span className="px-2 py-1 bg-church-yellow text-church-sage-dark text-xs rounded-full font-bold flex-shrink-0">
                         Recurring
                       </span>
                     </div>
 
                     <div className="space-y-2 mb-4">
-                      <div className="flex items-center text-sm text-church-gray">
-                        <FiClock className="w-4 h-4 mr-2 text-church-sage" />
-                        {event.time}
+                      <div className="flex items-center text-xs sm:text-sm text-church-gray">
+                        <FiClock className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-church-sage flex-shrink-0" />
+                        <span className="line-clamp-1">{event.time}</span>
                       </div>
-                      <div className="flex items-center text-sm text-church-gray">
-                        <FiMapPin className="w-4 h-4 mr-2 text-church-sage" />
-                        {event.location}
+                      <div className="flex items-center text-xs sm:text-sm text-church-gray">
+                        <FiMapPin className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-church-sage flex-shrink-0" />
+                        <span className="line-clamp-1">{event.location}</span>
                       </div>
                     </div>
 
-                    <p className="text-church-gray mb-4">
+                    <p className="text-xs sm:text-sm text-church-gray mb-4 line-clamp-3">
                       {event.excerpt}
                     </p>
 
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
                       <span className="px-2 py-1 bg-church-sage bg-opacity-10 text-church-sage text-xs rounded-full">
                         {event.category}
                       </span>
-                      {event.tags.map(tag => (
+                      {event.tags.slice(0, 2).map(tag => (
                         <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
                           {tag}
                         </span>
                       ))}
+                      {event.tags.length > 2 && (
+                        <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                          +{event.tags.length - 2}
+                        </span>
+                      )}
                     </div>
 
                     <Link
                       to={`/events/${event.slug}`}
-                      className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
+                      className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-2.5 sm:py-3 text-sm sm:text-base rounded-lg transition-all duration-300 block mt-auto"
                     >
                       Learn More
                     </Link>
@@ -316,9 +326,9 @@ const Events = () => {
           {/* Past Events */}
           {pastEventsFiltered.length > 0 && (
             <div>
-              <h2 className="text-3xl font-bold text-church-sage-dark mb-8 text-center">Past Events</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-church-sage-dark mb-6 sm:mb-8 text-center">Past Events</h2>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {pastEventsFiltered.map((event, index) => (
                   <motion.div
                     key={event.id}

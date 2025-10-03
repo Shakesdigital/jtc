@@ -124,29 +124,29 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-screen hero-content-center overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/images/contact-us.jpg"
             alt="Contact Us Hero"
-            className="hero-image"
+            className="w-full h-full object-cover"
             style={{
               filter: 'brightness(0.6)'
             }}
           />
           <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         </div>
-        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
+        <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-shadow-lg">
               Get In Touch
             </h1>
-            <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow text-center">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed text-shadow">
               We'd love to hear from you. Reach out with questions, prayer requests,
               or to learn more about our church community.
             </p>
@@ -154,19 +154,19 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="py-8 sm:py-12 md:py-16">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="card p-8"
+              className="card p-4 sm:p-6 md:p-8"
             >
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
-                <p className="text-gray-600">
+              <div className="mb-6 sm:mb-8">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Send Us a Message</h2>
+                <p className="text-sm sm:text-base text-gray-600">
                   Fill out the form below and we'll get back to you as soon as possible.
                 </p>
               </div>
@@ -198,14 +198,14 @@ const Contact = () => {
                 </motion.div>
               )}
 
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
-                    <label 
-                      htmlFor="firstName" 
-                      className="flex items-center text-sm font-medium text-gray-700 mb-2"
+                    <label
+                      htmlFor="firstName"
+                      className="flex items-center text-xs sm:text-sm font-medium text-gray-700 mb-2"
                     >
-                      <FiUser className="w-4 h-4 mr-2" />
+                      <FiUser className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                       First Name
                     </label>
                     <input
@@ -214,21 +214,21 @@ const Contact = () => {
                       {...register('firstName', {
                         required: 'First name is required'
                       })}
-                      className={`form-input ${errors.firstName ? 'border-red-500' : ''}`}
+                      className={`form-input text-sm sm:text-base ${errors.firstName ? 'border-red-500' : ''}`}
                       placeholder="Enter your first name"
                       disabled={isSubmitting}
                     />
                     {errors.firstName && (
-                      <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>
+                      <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.firstName.message}</p>
                     )}
                   </div>
 
                   <div>
-                    <label 
-                      htmlFor="lastName" 
-                      className="flex items-center text-sm font-medium text-gray-700 mb-2"
+                    <label
+                      htmlFor="lastName"
+                      className="flex items-center text-xs sm:text-sm font-medium text-gray-700 mb-2"
                     >
-                      <FiUser className="w-4 h-4 mr-2" />
+                      <FiUser className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                       Last Name
                     </label>
                     <input
@@ -237,22 +237,22 @@ const Contact = () => {
                       {...register('lastName', {
                         required: 'Last name is required'
                       })}
-                      className={`form-input ${errors.lastName ? 'border-red-500' : ''}`}
+                      className={`form-input text-sm sm:text-base ${errors.lastName ? 'border-red-500' : ''}`}
                       placeholder="Enter your last name"
                       disabled={isSubmitting}
                     />
                     {errors.lastName && (
-                      <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>
+                      <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.lastName.message}</p>
                     )}
                   </div>
                 </div>
 
                 <div>
-                  <label 
-                    htmlFor="email" 
-                    className="flex items-center text-sm font-medium text-gray-700 mb-2"
+                  <label
+                    htmlFor="email"
+                    className="flex items-center text-xs sm:text-sm font-medium text-gray-700 mb-2"
                   >
-                    <FiMail className="w-4 h-4 mr-2" />
+                    <FiMail className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                     Email Address
                   </label>
                   <input
@@ -265,39 +265,39 @@ const Contact = () => {
                         message: 'Please enter a valid email address'
                       }
                     })}
-                    className={`form-input ${errors.email ? 'border-red-500' : ''}`}
+                    className={`form-input text-sm sm:text-base ${errors.email ? 'border-red-500' : ''}`}
                     placeholder="Enter your email address"
                     disabled={isSubmitting}
                   />
                   {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                    <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.email.message}</p>
                   )}
                 </div>
 
                 <div>
-                  <label 
-                    htmlFor="phone" 
-                    className="flex items-center text-sm font-medium text-gray-700 mb-2"
+                  <label
+                    htmlFor="phone"
+                    className="flex items-center text-xs sm:text-sm font-medium text-gray-700 mb-2"
                   >
-                    <FiPhone className="w-4 h-4 mr-2" />
+                    <FiPhone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                     Phone Number (Optional)
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     {...register('phone')}
-                    className="form-input"
+                    className="form-input text-sm sm:text-base"
                     placeholder="Enter your phone number"
                     disabled={isSubmitting}
                   />
                 </div>
 
                 <div>
-                  <label 
-                    htmlFor="subject" 
-                    className="flex items-center text-sm font-medium text-gray-700 mb-2"
+                  <label
+                    htmlFor="subject"
+                    className="flex items-center text-xs sm:text-sm font-medium text-gray-700 mb-2"
                   >
-                    <FiMessageSquare className="w-4 h-4 mr-2" />
+                    <FiMessageSquare className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                     Subject
                   </label>
                   <select
@@ -305,7 +305,7 @@ const Contact = () => {
                     {...register('subject', {
                       required: 'Please select a subject'
                     })}
-                    className={`form-input ${errors.subject ? 'border-red-500' : ''}`}
+                    className={`form-input text-sm sm:text-base ${errors.subject ? 'border-red-500' : ''}`}
                     disabled={isSubmitting}
                   >
                     <option value="">Select a subject</option>
@@ -319,36 +319,36 @@ const Contact = () => {
                     <option value="other">Other</option>
                   </select>
                   {errors.subject && (
-                    <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
+                    <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.subject.message}</p>
                   )}
                 </div>
 
                 <div>
-                  <label 
-                    htmlFor="message" 
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                  <label
+                    htmlFor="message"
+                    className="block text-xs sm:text-sm font-medium text-gray-700 mb-2"
                   >
                     Message
                   </label>
                   <textarea
                     id="message"
-                    rows={6}
+                    rows={5}
                     {...register('message', {
                       required: 'Please enter your message'
                     })}
-                    className={`form-textarea ${errors.message ? 'border-red-500' : ''}`}
+                    className={`form-textarea text-sm sm:text-base ${errors.message ? 'border-red-500' : ''}`}
                     placeholder="Tell us how we can help you..."
                     disabled={isSubmitting}
                   />
                   {errors.message && (
-                    <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+                    <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.message.message}</p>
                   )}
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-primary py-4 text-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full btn-primary py-3 sm:py-4 text-base sm:text-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
@@ -357,7 +357,7 @@ const Contact = () => {
                     </>
                   ) : (
                     <>
-                      <FiSend className="w-5 h-5 mr-2" />
+                      <FiSend className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       Send Message
                     </>
                   )}
@@ -370,28 +370,28 @@ const Contact = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
             >
               {/* Contact Details */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
-                <div className="space-y-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Contact Information</h2>
+                <div className="space-y-4 sm:space-y-6">
                   {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-church-red bg-opacity-10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <info.icon className="w-6 h-6 text-church-red" />
+                    <div key={index} className="flex items-start space-x-3 sm:space-x-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-church-red bg-opacity-10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-church-red" />
                       </div>
-                      <div className="flex-grow">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
+                      <div className="flex-grow min-w-0">
+                        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">{info.title}</h3>
                         {info.details.map((detail, idx) => (
-                          <p key={idx} className="text-gray-600 mb-1">{detail}</p>
+                          <p key={idx} className="text-xs sm:text-sm md:text-base text-gray-600 mb-1 break-words">{detail}</p>
                         ))}
                         {info.action && (
                           <a
                             href={info.action.href}
                             target={info.action.href.startsWith('http') ? '_blank' : undefined}
                             rel={info.action.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            className="text-church-red hover:text-church-burgundy font-medium inline-flex items-center mt-2 transition-colors duration-200"
+                            className="text-xs sm:text-sm md:text-base text-church-red hover:text-church-burgundy font-medium inline-flex items-center mt-2 transition-colors duration-200"
                           >
                             {info.action.text}
                           </a>
@@ -403,20 +403,20 @@ const Contact = () => {
               </div>
 
               {/* Service Schedule */}
-              <div className="card p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                  <FiClock className="w-6 h-6 mr-3 text-church-red" />
+              <div className="card p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center">
+                  <FiClock className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-church-red" />
                   Service Schedule
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {serviceSchedule.map((schedule, index) => (
-                    <div key={index} className="border-b border-gray-100 last:border-b-0 pb-4 last:pb-0">
-                      <h4 className="font-semibold text-gray-900 mb-2">{schedule.day}</h4>
-                      <div className="space-y-1">
+                    <div key={index} className="border-b border-gray-100 last:border-b-0 pb-3 sm:pb-4 last:pb-0">
+                      <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">{schedule.day}</h4>
+                      <div className="space-y-1 sm:space-y-2">
                         {schedule.services.map((service, idx) => (
-                          <div key={idx} className="flex justify-between items-center">
-                            <span className="text-gray-600">{service.name}</span>
-                            <span className="text-church-red font-medium">{service.time}</span>
+                          <div key={idx} className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+                            <span className="text-xs sm:text-sm text-gray-600">{service.name}</span>
+                            <span className="text-xs sm:text-sm text-church-red font-medium">{service.time}</span>
                           </div>
                         ))}
                       </div>
@@ -426,13 +426,14 @@ const Contact = () => {
               </div>
 
               {/* Map Embed */}
-              <div className="card p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Find Us</h3>
-                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+              <div className="card p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Find Us</h3>
+                <div className="rounded-lg overflow-hidden">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.4!2d33.204167!3d0.431389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sWilson+Ave+Plot+23+Jinja+Uganda!5e0!3m2!1sen!2sus!4v1234567890"
                     width="100%"
-                    height="250"
+                    height="200"
+                    className="sm:h-[250px] md:h-[300px]"
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
