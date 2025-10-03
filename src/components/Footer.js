@@ -111,7 +111,7 @@ const Footer = () => {
             {/* Quick Links */}
             <div className="text-center sm:text-left">
               <h4 className="text-base sm:text-lg font-semibold mb-6">Quick Links</h4>
-              <ul className="space-y-3" role="list">
+              <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name} className="flex justify-center sm:justify-start">
                     <Link
@@ -129,7 +129,7 @@ const Footer = () => {
             {/* Resources */}
             <div className="text-center sm:text-left">
               <h4 className="text-base sm:text-lg font-semibold mb-6">Resources</h4>
-              <ul className="space-y-3" role="list">
+              <ul className="space-y-3">
                 {resourceLinks.map((link) => (
                   <li key={link.name} className="flex justify-center sm:justify-start">
                     <Link
@@ -149,7 +149,7 @@ const Footer = () => {
               {/* Contact Info */}
               <div>
                 <h4 className="text-base sm:text-lg font-semibold mb-6">Contact Us</h4>
-                <ul className="space-y-4" role="list">
+                <ul className="space-y-4">
                   {contactInfo.map((contact, index) => (
                     <li key={index} className="flex justify-center sm:justify-start">
                       <a
@@ -172,7 +172,7 @@ const Footer = () => {
                   <FiClock className="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-church-yellow" aria-hidden="true" />
                   Service Schedule
                 </h4>
-                <ul className="space-y-3" role="list">
+                <ul className="space-y-3">
                   {serviceSchedule.map((schedule, index) => (
                     <li key={index} className="text-xs sm:text-sm">
                       <div className="flex flex-col items-center sm:items-start">
