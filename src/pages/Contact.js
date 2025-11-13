@@ -371,7 +371,7 @@ const Contact = () => {
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Find Us</h3>
                 <div className="rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.6461937171795!2d33.19835!3d0.433247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwMjUnNTkuNyJOIDMzwrAxMicwMy4xIkU!5e0!3m2!1sen!2sug!4v1700000000000!5m2!1sen!2sug"
+                    src="https://www.google.com/maps?q=0.433247,33.200851&output=embed"
                     width="100%"
                     height="200"
                     className="sm:h-[250px] md:h-[300px]"
