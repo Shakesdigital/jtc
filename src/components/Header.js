@@ -53,6 +53,11 @@ const Header = () => {
       icon: FiBook,
     },
     {
+      name: 'Give',
+      href: '/give',
+      icon: FiHeart,
+    },
+    {
       name: 'Contact',
       href: '/contact',
       icon: FiMail,

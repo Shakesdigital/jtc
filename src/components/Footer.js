@@ -42,8 +42,8 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: FiMapPin,
-      text: 'Benedith School a left turn off Kiira road to Arton Street, and right off Wilson Avenue to Arton street',
-      href: 'https://maps.google.com/?q=Benedith+School+Arton+Street+Jinja+Uganda'
+      text: 'Bendith School a left turn off Kiira road to Arton Street, and right off Wilson Avenue to Arton street',
+      href: 'https://maps.google.com/?q=Bendith+School+Arton+Street+Jinja+Uganda'
     },
     {
       icon: FiPhone,

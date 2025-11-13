@@ -53,12 +53,12 @@ const Contact = () => {
       icon: FiMapPin,
       title: 'Visit Us',
       details: [
-        'Arise Jinja Town Church, at Benedith School a left turn off Kiira',
+        'Arise Jinja Town Church, at Bendith School a left turn off Kiira',
         'to Arton Street, and right off Wilson Avenue to Arton street  (15-minute walk from town center)'
       ],
       action: {
         text: 'Get Directions',
-        href: 'https://maps.google.com/?q=Benedith+School+Arton+Street+Jinja+Uganda'
+        href: 'https://maps.google.com/?q=Bendith+School+Arton+Street+Jinja+Uganda'
       }
     },
     {
@@ -162,43 +162,44 @@ const Contact = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="card p-4 sm:p-6 md:p-8"
+              className="space-y-6 sm:space-y-8"
             >
-              <div className="mb-6 sm:mb-8">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Send Us a Message</h2>
-                <p className="text-sm sm:text-base text-gray-600">
-                  Fill out the form below and we'll get back to you as soon as possible.
-                </p>
-              </div>
+              <div className="card p-4 sm:p-6 md:p-8">
+                <div className="mb-6 sm:mb-8">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Send Us a Message</h2>
+                  <p className="text-sm sm:text-base text-gray-600">
+                    Fill out the form below and we'll get back to you as soon as possible.
+                  </p>
+                </div>
 
-              {/* Success Message */}
-              {submitSuccess && (
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="bg-green-50 border border-green-200 text-green-800 px-6 py-4 rounded-lg mb-6 flex items-center"
-                >
-                  <FiCheck className="w-5 h-5 mr-3 text-green-600" />
-                  <div>
-                    <h3 className="font-semibold mb-1">Message Sent Successfully!</h3>
-                    <p className="text-sm">Thank you for reaching out. We'll respond to you soon.</p>
-                  </div>
-                </motion.div>
-              )}
+                {/* Success Message */}
+                {submitSuccess && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="bg-green-50 border border-green-200 text-green-800 px-6 py-4 rounded-lg mb-6 flex items-center"
+                  >
+                    <FiCheck className="w-5 h-5 mr-3 text-green-600" />
+                    <div>
+                      <h3 className="font-semibold mb-1">Message Sent Successfully!</h3>
+                      <p className="text-sm">Thank you for reaching out. We'll respond to you soon.</p>
+                    </div>
+                  </motion.div>
+                )}
 
-              {/* Error Message */}
-              {submitError && (
-                <motion.div
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="bg-red-50 border border-red-200 text-red-800 px-6 py-4 rounded-lg mb-6"
-                >
-                  <p className="font-semibold">Error</p>
-                  <p className="text-sm">{submitError}</p>
-                </motion.div>
-              )}
+                {/* Error Message */}
+                {submitError && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="bg-red-50 border border-red-200 text-red-800 px-6 py-4 rounded-lg mb-6"
+                  >
+                    <p className="font-semibold">Error</p>
+                    <p className="text-sm">{submitError}</p>
+                  </motion.div>
+                )}
 
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label
@@ -362,7 +363,26 @@ const Contact = () => {
                     </>
                   )}
                 </button>
-              </form>
+                </form>
+              </div>
+
+              {/* Map Embed */}
+              <div className="card p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Find Us</h3>
+                <div className="rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.665985726894!2d33.19860297496999!3d0.46175099966131415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db95596c4f3a3%3A0x7dfa8b1e8c0f0e4a!2sBendith%20School!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                    width="100%"
+                    height="200"
+                    className="sm:h-[250px] md:h-[300px]"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Arise Jinja Town Church Location - Bendith School, Arton Street, Jinja"
+                  ></iframe>
+                </div>
+              </div>
             </motion.div>
 
             {/* Contact Information */}
@@ -422,24 +442,6 @@ const Contact = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              {/* Map Embed */}
-              <div className="card p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Find Us</h3>
-                <div className="rounded-lg overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.4!2d33.204167!3d0.431389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sWilson+Ave+Plot+23+Jinja+Uganda!5e0!3m2!1sen!2sus!4v1234567890"
-                    width="100%"
-                    height="200"
-                    className="sm:h-[250px] md:h-[300px]"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Arise Jinja Town Church Location - Wilson Ave Plot 23"
-                  ></iframe>
                 </div>
               </div>
             </motion.div>

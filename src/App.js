@@ -21,6 +21,7 @@ import EventDetail from './pages/EventDetail';
 import Multimedia from './pages/Multimedia';
 import Contact from './pages/Contact';
 import Donate from './pages/Donate';
+import Give from './pages/Give';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import PrayerRequests from './pages/PrayerRequests';
@@ -63,6 +64,7 @@ function App() {
           <Route path="multimedia/audio" element={<Multimedia />} />
           <Route path="contact" element={<Contact />} />
           <Route path="donate" element={<Donate />} />
+          <Route path="give" element={<Give />} />
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:id" element={<BlogPost />} />
           <Route path="prayer-requests" element={<PrayerRequests />} />

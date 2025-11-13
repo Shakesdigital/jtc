@@ -63,9 +63,9 @@ export const recurringEvents = [
     title: "Prayer and Fasting",
     slug: "prayer-and-fasting",
     time: "Every Tuesday",
-    location: "Benedith School",
-    description: "Prayer and Fasting: Every Tuesday at Benedith School. Come together for a powerful time of prayer and seeking God.",
-    excerpt: "Come together for a powerful time of prayer and seeking God every Tuesday at Benedith School.",
+    location: "Bendith School",
+    description: "Prayer and Fasting: Every Tuesday at Bendith School. Come together for a powerful time of prayer and seeking God.",
+    excerpt: "Come together for a powerful time of prayer and seeking God every Tuesday at Bendith School.",
     image: "/images/events/prayer-fasting.jpg",
     category: "Prayer",
     tags: ["Prayer", "Fasting", "Weekly"]
