@@ -369,12 +369,11 @@ const Contact = () => {
               {/* Map Embed */}
               <div className="card p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Find Us</h3>
-                <div className="rounded-lg overflow-hidden">
+                <div className="rounded-lg overflow-hidden" style={{ height: '200px' }}>
                   <iframe
-                    src="https://www.google.com/maps?q=0.433247,33.200851&output=embed"
+                    src="https://maps.google.com/maps?q=0.433247,33.200851&hl=en&z=15&output=embed"
                     width="100%"
-                    height="200"
-                    className="sm:h-[250px] md:h-[300px]"
+                    height="100%"
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
