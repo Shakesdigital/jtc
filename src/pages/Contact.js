@@ -371,7 +371,7 @@ const Contact = () => {
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Find Us</h3>
                 <div className="rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.665985726894!2d33.19860297496999!3d0.46175099966131415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db95596c4f3a3%3A0x7dfa8b1e8c0f0e4a!2sBendith%20School!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.6461937171795!2d33.19835!3d0.433247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwMjUnNTkuNyJOIDMzwrAxMicwMy4xIkU!5e0!3m2!1sen!2sug!4v1700000000000!5m2!1sen!2sug"
                     width="100%"
                     height="200"
                     className="sm:h-[250px] md:h-[300px]"
