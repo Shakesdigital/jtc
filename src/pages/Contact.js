@@ -366,20 +366,29 @@ const Contact = () => {
                 </form>
               </div>
 
-              {/* Map Embed */}
+              {/* Interactive Map */}
               <div className="card p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Find Us</h3>
-                <div className="rounded-lg overflow-hidden" style={{ height: '200px' }}>
+                <div className="rounded-lg overflow-hidden">
                   <iframe
-                    src="https://maps.google.com/maps?q=0.433247,33.200851&hl=en&z=15&output=embed"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=33.198851,0.431247,33.202851,0.435247&layer=mapnik&marker=0.433247,33.200851"
                     width="100%"
-                    height="100%"
+                    height="200"
+                    className="sm:h-[250px] md:h-[300px]"
                     style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
                     title="Arise Jinja Town Church Location - Bendith School, Arton Street, Jinja"
                   ></iframe>
+                </div>
+                <div className="mt-3 flex items-center justify-center">
+                  <a
+                    href="https://maps.app.goo.gl/YqFfYmQy5KZkHv73A"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 text-church-red hover:text-church-burgundy font-medium text-sm transition-colors duration-200"
+                  >
+                    <FiMapPin className="w-4 h-4" />
+                    <span>Open in Google Maps</span>
+                  </a>
                 </div>
               </div>
             </motion.div>
