@@ -47,7 +47,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000); // Change slide every 5 seconds
+    }, 8000); // Change slide every 8 seconds (slower transition)
 
     return () => clearInterval(timer);
   }, [heroImages.length]);
@@ -160,7 +160,7 @@ const Home = () => {
                 opacity: index === currentSlide ? 1 : 0,
                 scale: index === currentSlide ? 1 : 1.05
               }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
               className="absolute inset-0 w-full h-full"
               aria-hidden={index !== currentSlide}
             >
@@ -219,7 +219,7 @@ const Home = () => {
             key={currentSlide}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: "easeOut" }}
             className="space-y-4 sm:space-y-5 md:space-y-6"
           >
             <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight tracking-tight responsive-text-balance text-shadow-lg text-center">
