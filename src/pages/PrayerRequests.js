@@ -52,7 +52,7 @@ const PrayerRequests = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-church-red to-church-burgundy text-white overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>

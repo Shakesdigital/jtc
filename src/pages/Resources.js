@@ -168,7 +168,7 @@ const Resources = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-full overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-screen hero-content-center overflow-hidden">
         <div className="absolute inset-0">

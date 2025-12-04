@@ -55,7 +55,7 @@ const BlogPost = () => {
   const post = blogPost.data;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden">
       <div className="container-custom py-8">
         {/* Back Button */}
         <motion.div

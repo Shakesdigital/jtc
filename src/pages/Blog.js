@@ -46,7 +46,7 @@ const Blog = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-br from-church-red to-church-burgundy text-white overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>

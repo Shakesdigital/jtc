@@ -33,7 +33,7 @@ const ChurchService = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-screen hero-content-center overflow-hidden">
         <div className="absolute inset-0">

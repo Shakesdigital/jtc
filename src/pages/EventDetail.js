@@ -103,7 +103,7 @@ const EventDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden">
       <article className="container-custom py-8 sm:py-12">
         {/* Back to Events Link */}
         <Link 

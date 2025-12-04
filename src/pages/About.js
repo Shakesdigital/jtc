@@ -148,7 +148,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden">
       {/* Hero Carousel Section */}
       <section
         className="relative w-full flex items-center justify-center overflow-hidden"

@@ -214,7 +214,7 @@ const DiscipleshipEquip = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden">
       {/* Hero Banner Section */}
       <section className="relative h-screen w-full flex items-center justify-center">
         {/* Background Image - Full Width */}

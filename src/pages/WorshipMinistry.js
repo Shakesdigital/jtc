@@ -142,7 +142,7 @@ const WorshipMinistry = () => {
 
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-full overflow-x-hidden">
       {/* Hero Banner Section */}
       <section
         className="relative w-full flex items-center justify-center overflow-hidden"

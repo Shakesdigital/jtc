@@ -5,7 +5,7 @@ import { FiHome, FiArrowLeft } from 'react-icons/fi';
 
 const NotFound = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 w-full overflow-x-hidden">
       <div className="text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
