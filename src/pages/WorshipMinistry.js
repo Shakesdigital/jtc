@@ -172,7 +172,7 @@ const WorshipMinistry = () => {
             <div className="absolute inset-0 bg-black bg-opacity-10"></div>
           </motion.div>
         </div>
-        
+
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 lg:py-20">
           <motion.div
@@ -181,7 +181,7 @@ const WorshipMinistry = () => {
             transition={{ duration: 0.8 }}
             className="space-y-4 sm:space-y-6 md:space-y-8"
           >
-            
+
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-center">
               Worship Ministry: <span className="text-church-yellow drop-shadow-lg">Glorifying God Through Song</span>
             </h1>
@@ -190,21 +190,6 @@ const WorshipMinistry = () => {
               Join us in passionate, Spirit-led worship that creates space for authentic encounters with God
             </p>
 
-            <div className="pt-6 sm:pt-8 gap-3 sm:gap-4 flex flex-col sm:flex-row justify-center">
-              <button
-                onClick={() => document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' })}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 inline-flex items-center justify-center w-full sm:w-auto border-2 sm:border-3"
-              >
-                <FiUsers className="mr-2" />
-                Join Our Team
-              </button>
-              <button
-                onClick={() => document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
-              >
-                Join Us Sunday
-              </button>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -226,7 +211,7 @@ const WorshipMinistry = () => {
                 </h2>
                 <div className="w-20 h-1 bg-church-yellow rounded-full mb-6"></div>
               </div>
-              
+
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our Worship Ministry aims to guide the congregation into God's presence through praise, worship, and prayer.
                 We believe worship transcends songs and musical instruments; it's about creating heartfelt moments that connect us with our Creator.
@@ -253,7 +238,7 @@ const WorshipMinistry = () => {
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
-                
+
               </div>
             </motion.div>
           </div>
@@ -397,15 +382,15 @@ const WorshipMinistry = () => {
                 <div className="bg-church-sage text-white rounded-full w-14 h-14 flex items-center justify-center mb-4 group-hover:bg-church-sage-dark transition-colors duration-300">
                   <resource.icon className="w-7 h-7" />
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-church-sage-dark mb-2 group-hover:text-church-yellow transition-colors duration-300">
                   {resource.title}
                 </h3>
-                
+
                 <p className="text-gray-700 mb-4 text-sm leading-relaxed">
                   {resource.description}
                 </p>
-                
+
                 {resource.type === 'playlist' && (
                   <div className="space-y-2">
                     {resource.links.map((link, idx) => (
@@ -422,7 +407,7 @@ const WorshipMinistry = () => {
                     ))}
                   </div>
                 )}
-                
+
                 {resource.type === 'download' && (
                   <div className="space-y-1">
                     {resource.files.map((file, idx) => (
@@ -433,9 +418,9 @@ const WorshipMinistry = () => {
                     ))}
                   </div>
                 )}
-                
+
                 {(resource.type === 'blog' || resource.type === 'audio') && (
-                  <Link 
+                  <Link
                     to={resource.link}
                     className="flex items-center text-church-sage hover:text-church-sage-dark font-medium text-sm"
                   >
@@ -479,7 +464,7 @@ const WorshipMinistry = () => {
               <h3 className="text-2xl font-bold text-church-sage-dark mb-6">
                 Sign Up to Serve
               </h3>
-              
+
               {formSubmitted ? (
                 <div className="text-center py-8">
                   <FiMusic className="w-16 h-16 mx-auto mb-4 text-church-yellow" />
@@ -506,7 +491,7 @@ const WorshipMinistry = () => {
                       required
                     />
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="tel"
@@ -530,7 +515,7 @@ const WorshipMinistry = () => {
                       <option value="Any Role">Any Role</option>
                     </select>
                   </div>
-                  
+
                   <textarea
                     placeholder="Tell us about your musical background, heart for worship, and availability..."
                     value={volunteerForm.message}
@@ -539,7 +524,7 @@ const WorshipMinistry = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-church-sage outline-none resize-none"
                     required
                   />
-                  
+
                   <button
                     type="submit"
                     className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-bold py-4 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
@@ -562,7 +547,7 @@ const WorshipMinistry = () => {
               <h3 className="text-2xl font-bold text-church-sage-dark mb-6">
                 Other Ways to Connect
               </h3>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center p-4 bg-church-sage/10 rounded-lg hover:bg-church-sage/20 transition-colors duration-200 cursor-pointer">
                   <FiCalendar className="w-6 h-6 text-church-sage mr-4" />
@@ -571,7 +556,7 @@ const WorshipMinistry = () => {
                     <p className="text-sm text-gray-600">Wednesdays 7:00-9:00 PM • Sanctuary</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center p-4 bg-church-yellow/10 rounded-lg hover:bg-church-yellow/20 transition-colors duration-200 cursor-pointer">
                   <FiMic className="w-6 h-6 text-church-sage mr-4" />
                   <div>
@@ -579,7 +564,7 @@ const WorshipMinistry = () => {
                     <p className="text-sm text-gray-600">First Saturday of each month • 10:00 AM</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center p-4 bg-church-gray/10 rounded-lg hover:bg-church-gray/20 transition-colors duration-200 cursor-pointer">
                   <FiUsers className="w-6 h-6 text-church-sage mr-4" />
                   <div>
@@ -587,7 +572,7 @@ const WorshipMinistry = () => {
                     <p className="text-sm text-gray-600">Monthly team dinners and bonding activities</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center p-4 bg-church-cream/30 rounded-lg hover:bg-church-cream/50 transition-colors duration-200 cursor-pointer">
                   <FiStar className="w-6 h-6 text-church-sage mr-4" />
                   <div>
@@ -596,7 +581,7 @@ const WorshipMinistry = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <h4 className="font-bold text-church-sage-dark mb-3">Contact Our Team</h4>
                 <div className="space-y-2">

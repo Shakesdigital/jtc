@@ -84,7 +84,7 @@ const Ministries = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission (replace with actual API call)
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
@@ -101,8 +101,8 @@ const Ministries = () => {
   };
 
   const scrollToMinistries = () => {
-    document.getElementById('ministries-grid').scrollIntoView({ 
-      behavior: 'smooth' 
+    document.getElementById('ministries-grid').scrollIntoView({
+      behavior: 'smooth'
     });
   };
 
@@ -122,7 +122,7 @@ const Ministries = () => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         </div>
-        
+
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
           <motion.div
@@ -139,14 +139,6 @@ const Ministries = () => {
               Discover how you can get involved and grow in community through our diverse ministry opportunities
             </p>
 
-            <div className="pt-6 sm:pt-8">
-              <button 
-                onClick={scrollToMinistries}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl btn-hero w-full sm:w-auto border-2 sm:border-3"
-              >
-                Explore Ministries
-              </button>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -168,11 +160,11 @@ const Ministries = () => {
                 </h2>
                 <div className="w-20 h-1 bg-church-yellow rounded-full mb-6"></div>
               </div>
-              
+
               <p className="text-lg text-church-gray leading-relaxed">
                 At Arise Jinja Town Church, our ministries are the heartbeat of our community. They equip believers, nurture growth, and extend God's love to Jinja and beyond. Whether you're passionate about children, media, or outreach, there's a place for you to serve.
               </p>
-              
+
               <p className="text-lg text-church-gray leading-relaxed">
                 Our ministries provide meaningful ways for every member to connect with God, grow in faith, and serve others with purpose and joy. Whether you're looking to use your talents, develop new skills, or simply find your place in our church family, there's a ministry where you can make a difference and experience the fulfillment that comes from serving together.
               </p>
@@ -193,7 +185,7 @@ const Ministries = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
               </div>
-              
+
             </motion.div>
           </div>
         </div>
@@ -241,12 +233,12 @@ const Ministries = () => {
                       {ministry.ageRange}
                     </div>
                   </div>
-                  
+
                   <div className="ministry-card-content">
                     <h3 className="text-xl font-bold text-church-sage-dark mb-3 group-hover:text-church-yellow transition-colors duration-300">
                       {ministry.title}
                     </h3>
-                    
+
                     <p className="text-church-gray mb-4 leading-relaxed text-sm ministry-card-description">
                       {ministry.description}
                     </p>
@@ -262,10 +254,10 @@ const Ministries = () => {
                       <Link
                         to={
                           ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
-                          ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
-                          ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
-                          ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
-                          "/contact"
+                            ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
+                              ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
+                                ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
+                                  "/contact"
                         }
                         className="flex-1 bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300 text-sm"
                       >
@@ -275,17 +267,17 @@ const Ministries = () => {
                         <Link
                           to={
                             ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
-                            ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
-                            ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
-                            ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
-                            "/contact"
+                              ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
+                                ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
+                                  ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
+                                    "/contact"
                           }
                           className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300 text-sm"
                         >
                           Join Now
                         </Link>
                       ) : (
-                        <button 
+                        <button
                           onClick={() => setFormData(prev => ({ ...prev, ministry: ministry.title }))}
                           className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold text-center py-3 px-4 rounded-lg transition-all duration-300 text-sm"
                         >
@@ -343,7 +335,7 @@ const Ministries = () => {
                     placeholder="Your full name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-semibold text-church-sage-dark mb-2">
                     Email Address *
@@ -376,7 +368,7 @@ const Ministries = () => {
                     placeholder="Your phone number"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="ministry" className="block text-sm font-semibold text-church-sage-dark mb-2">
                     Preferred Ministry
@@ -440,13 +432,12 @@ const Ministries = () => {
                 </button>
 
                 {submitStatus && (
-                  <div className={`mt-4 p-4 rounded-lg ${
-                    submitStatus === 'success' 
-                      ? 'bg-green-100 text-green-800 border border-green-200' 
+                  <div className={`mt-4 p-4 rounded-lg ${submitStatus === 'success'
+                      ? 'bg-green-100 text-green-800 border border-green-200'
                       : 'bg-red-100 text-red-800 border border-red-200'
-                  }`}>
-                    {submitStatus === 'success' 
-                      ? "Thank you! We'll contact you soon about ministry opportunities." 
+                    }`}>
+                    {submitStatus === 'success'
+                      ? "Thank you! We'll contact you soon about ministry opportunities."
                       : "There was an error submitting your form. Please try again."}
                   </div>
                 )}
@@ -455,7 +446,7 @@ const Ministries = () => {
 
             <div className="mt-8 text-center">
               <p className="text-church-gray mb-4">Or reach out to us directly:</p>
-              <Link 
+              <Link
                 to="/contact"
                 className="inline-flex items-center text-church-sage hover:text-church-sage-dark font-semibold transition-colors duration-300"
               >

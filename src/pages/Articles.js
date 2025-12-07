@@ -54,7 +54,7 @@ const Articles = () => {
 
   // Sort articles
   const sortedArticles = [...filteredArticles].sort((a, b) => {
-    switch(sortBy) {
+    switch (sortBy) {
       case 'date-desc':
         return b.publishDate - a.publishDate;
       case 'date-asc':
@@ -135,14 +135,6 @@ const Articles = () => {
               Explore in-depth teachings on faith, culture, and Christian living from Richard van de Ruit
             </p>
 
-            <div className="pt-6 sm:pt-8">
-              <button
-                onClick={scrollToLatestArticle}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 w-full sm:w-auto border-2 sm:border-3"
-              >
-                Read Latest Article
-              </button>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -410,11 +402,10 @@ const Articles = () => {
                       <button
                         key={page}
                         onClick={() => setCurrentPage(page)}
-                        className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
-                          page === currentPage
+                        className={`px-4 py-2 rounded-lg transition-colors duration-200 ${page === currentPage
                             ? 'bg-church-sage text-white'
                             : 'border border-gray-300 hover:bg-gray-50'
-                        }`}
+                          }`}
                       >
                         {page}
                       </button>
@@ -539,11 +530,10 @@ const Articles = () => {
                           setSelectedCategory(category);
                           setCurrentPage(1);
                         }}
-                        className={`w-full text-left px-3 py-2 rounded-lg transition-colors duration-200 ${
-                          selectedCategory === category
+                        className={`w-full text-left px-3 py-2 rounded-lg transition-colors duration-200 ${selectedCategory === category
                             ? 'bg-church-sage text-white'
                             : 'hover:bg-gray-50 text-church-gray'
-                        }`}
+                          }`}
                       >
                         <span className="font-medium">{category}</span>
                         <span className="float-right text-sm">({count})</span>

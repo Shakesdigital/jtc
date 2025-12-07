@@ -60,16 +60,16 @@ const Sermons = () => {
 
   // Filter sermons based on search and filters
   const filteredSermons = allSermons.filter(sermon => {
-    const matchesSearch = !searchQuery || 
+    const matchesSearch = !searchQuery ||
       sermon.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       sermon.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       sermon.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesSpeaker = selectedSpeaker === 'all' || sermon.speaker === selectedSpeaker;
     const matchesSeries = selectedSeries === 'all' || sermon.series === selectedSeries;
-    const matchesBibleBook = !selectedBibleBook || 
+    const matchesBibleBook = !selectedBibleBook ||
       sermon.bibleReference.toLowerCase().includes(selectedBibleBook.toLowerCase());
-    
+
     return matchesSearch && matchesSpeaker && matchesSeries && matchesBibleBook;
   });
 
@@ -92,8 +92,8 @@ const Sermons = () => {
   }, [searchQuery, selectedSpeaker, selectedSeries, selectedBibleBook]);
 
   const scrollToLatestSermon = () => {
-    document.getElementById('sermons-display').scrollIntoView({ 
-      behavior: 'smooth' 
+    document.getElementById('sermons-display').scrollIntoView({
+      behavior: 'smooth'
     });
   };
 
@@ -121,7 +121,7 @@ const Sermons = () => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         </div>
-        
+
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
           <motion.div
@@ -138,14 +138,6 @@ const Sermons = () => {
               Explore teachings that transform lives and discover God's word for every season
             </p>
 
-            <div className="pt-6 sm:pt-8">
-              <button 
-                onClick={scrollToLatestSermon}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 w-full sm:w-auto border-2 sm:border-3"
-              >
-                Watch Latest Sermon
-              </button>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -340,15 +332,15 @@ const Sermons = () => {
                           </div>
                         </div>
                       </div>
-                      
+
                       <div className="p-6">
                         <div className="flex items-center justify-between text-sm text-church-gray mb-3">
                           <span className="flex items-center">
                             <FiCalendar className="w-4 h-4 mr-2" />
-                            {new Date(sermon.date).toLocaleDateString('en-US', { 
-                              year: 'numeric', 
-                              month: 'short', 
-                              day: 'numeric' 
+                            {new Date(sermon.date).toLocaleDateString('en-US', {
+                              year: 'numeric',
+                              month: 'short',
+                              day: 'numeric'
                             })}
                           </span>
                           <span className="flex items-center">
@@ -356,26 +348,26 @@ const Sermons = () => {
                             {sermon.speaker.split(' ')[1]}
                           </span>
                         </div>
-                        
+
                         <div className="text-xs text-church-sage font-semibold mb-2 uppercase tracking-wide">
                           {sermon.series}
                         </div>
-                        
+
                         <h3 className="text-lg font-bold text-church-sage-dark mb-3 group-hover:text-church-sage transition-colors duration-300 line-clamp-2">
                           {sermon.title}
                         </h3>
-                        
+
                         <p className="text-church-gray mb-4 text-sm leading-relaxed line-clamp-3">
                           {sermon.description}
                         </p>
-                        
+
                         {sermon.bibleReference && (
                           <div className="flex items-center text-church-sage font-semibold mb-4 text-sm">
                             <FiBookOpen className="w-4 h-4 mr-2" />
                             {sermon.bibleReference}
                           </div>
                         )}
-                        
+
                         <div className="flex space-x-2">
                           {sermon.hasAudio && (
                             <Link
@@ -420,21 +412,20 @@ const Sermons = () => {
                     >
                       Previous
                     </button>
-                    
+
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                       <button
                         key={page}
                         onClick={() => setCurrentPage(page)}
-                        className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
-                          page === currentPage
+                        className={`px-4 py-2 rounded-lg transition-colors duration-200 ${page === currentPage
                             ? 'bg-church-sage text-white'
                             : 'border border-gray-300 hover:bg-gray-50'
-                        }`}
+                          }`}
                       >
                         {page}
                       </button>
                     ))}
-                    
+
                     <button
                       onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                       disabled={currentPage === totalPages}

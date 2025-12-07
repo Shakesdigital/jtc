@@ -6,12 +6,15 @@
 @import './styles/responsive-images.css';
 
 @layer base {
+
   /* ========================================
      CRITICAL: Page Stability & Full-Screen Fixes
      Prevents bouncing, shifting, and ensures full viewport coverage
      ======================================== */
   html {
     scroll-behavior: smooth;
+    /* Set base font size for better rem calculations */
+    font-size: 16px;
     /* Enable touch optimization */
     -webkit-tap-highlight-color: rgba(110, 152, 150, 0.2);
     -webkit-touch-callout: none;
@@ -29,6 +32,9 @@
 
   body {
     @apply font-sans text-church-sage-dark bg-white;
+    /* Global recommended font size for better readability */
+    font-size: 20px;
+    line-height: 1.6;
     /* Enable smooth scrolling on touch devices */
     -webkit-overflow-scrolling: touch;
     /* Prevent ALL overscroll bounce effects */
@@ -55,33 +61,47 @@
     overflow-x: hidden;
     position: relative;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold leading-tight;
   }
-  
+
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl;
   }
-  
+
   h2 {
     @apply text-3xl md:text-4xl lg:text-5xl;
   }
-  
+
   h3 {
     @apply text-2xl md:text-3xl lg:text-4xl;
   }
-  
+
   h4 {
     @apply text-xl md:text-2xl lg:text-3xl;
   }
-  
+
   h5 {
     @apply text-lg md:text-xl lg:text-2xl;
   }
-  
+
   h6 {
     @apply text-base md:text-lg lg:text-xl;
+  }
+
+  /* Ensure paragraphs and general text use the body font size */
+  p,
+  li,
+  span,
+  div {
+    font-size: inherit;
+    line-height: 1.6;
   }
 }
 
@@ -92,22 +112,23 @@
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
-    min-height: 44px; /* Minimum touch target size */
+    min-height: 44px;
+    /* Minimum touch target size */
     min-width: 44px;
   }
-  
+
   .btn-primary {
     @apply btn bg-church-sage hover:bg-church-sage-dark text-white focus:ring-church-sage;
   }
-  
+
   .btn-secondary {
     @apply btn bg-transparent border-2 border-church-sage text-church-sage hover:bg-church-sage hover:text-white focus:ring-church-sage;
   }
-  
+
   .btn-accent {
     @apply btn bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark focus:ring-church-yellow;
   }
-  
+
   .card {
     @apply bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105;
     /* Touch optimization */
@@ -119,31 +140,31 @@
   .card:active {
     @apply transform scale-100;
   }
-  
+
   .form-input {
     @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-church-sage focus:ring-2 focus:ring-church-sage focus:ring-opacity-20 transition-colors duration-200;
   }
-  
+
   .form-textarea {
     @apply form-input resize-none;
   }
-  
+
   .section-padding {
     @apply py-16 md:py-20 lg:py-24;
   }
-  
+
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
+
   .text-gradient {
     @apply bg-gradient-to-r from-church-sage to-church-sage-dark bg-clip-text text-transparent;
   }
-  
+
   .hero-gradient {
     background: linear-gradient(135deg, rgba(110, 152, 150, 0.9) 0%, rgba(90, 125, 123, 0.8) 100%);
   }
-  
+
   .loading-spinner {
     @apply inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-church-sage;
   }
@@ -153,11 +174,11 @@
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+
   .text-shadow-lg {
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   .backdrop-blur-light {
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.8);
@@ -231,12 +252,29 @@
   }
 
   /* Enhanced responsive spacing */
-  .hero-spacing-xs { padding: 2rem 1rem; }
-  .hero-spacing-sm { padding: 3rem 1.5rem; }
-  .hero-spacing-md { padding: 4rem 2rem; }
-  .hero-spacing-lg { padding: 5rem 3rem; }
-  .hero-spacing-xl { padding: 6rem 4rem; }
-  .hero-spacing-2xl { padding: 7rem 5rem; }
+  .hero-spacing-xs {
+    padding: 2rem 1rem;
+  }
+
+  .hero-spacing-sm {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-spacing-md {
+    padding: 4rem 2rem;
+  }
+
+  .hero-spacing-lg {
+    padding: 5rem 3rem;
+  }
+
+  .hero-spacing-xl {
+    padding: 6rem 4rem;
+  }
+
+  .hero-spacing-2xl {
+    padding: 7rem 5rem;
+  }
 
   /* Image aspect ratio preservation */
   .aspect-hero {
@@ -273,12 +311,12 @@
       padding-top: calc(env(safe-area-inset-top, 0px) + 1.5rem);
       padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1.5rem);
     }
-    
+
     .responsive-text-balance {
       line-height: 1.25;
       letter-spacing: -0.01em;
     }
-    
+
     /* Ensure text is legible on small screens */
     .hero-image {
       object-fit: cover;
@@ -290,7 +328,7 @@
       object-position: center center;
     }
   }
-  
+
   /* Tablet optimizations (481px-768px) */
   @media (min-width: 481px) and (max-width: 768px) {
     .hero-content-center {
@@ -315,7 +353,7 @@
       object-position: center center;
     }
   }
-  
+
   /* General mobile text readability */
   @media (max-width: 768px) {
     .responsive-text-balance {
@@ -359,7 +397,9 @@
   }
 
   /* High DPI display optimizations */
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+
     .hero-image,
     .hero-image-contain {
       image-rendering: -webkit-optimize-contrast;
@@ -380,6 +420,7 @@
 
   /* Fallback for older browsers */
   @supports not (object-fit: cover) {
+
     .hero-image,
     .hero-image-contain {
       max-width: 100%;
@@ -439,7 +480,8 @@
   .hero-image-contain::before {
     content: '';
     display: block;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 56.25%;
+    /* 16:9 aspect ratio */
   }
 
   /* Ministry card optimizations */
@@ -521,7 +563,7 @@
     }
 
     /* Position 4th card (Discipleship Equip) centered in second row */
-    .ministry-grid > *:nth-child(4) {
+    .ministry-grid>*:nth-child(4) {
       grid-column: 2 / 3;
     }
   }
@@ -533,11 +575,11 @@
       gap: 1.5rem;
       padding: 0 1rem;
     }
-    
+
     .ministry-card-content {
       padding: 1.25rem;
     }
-    
+
     .ministry-card-image {
       height: 200px;
     }
@@ -565,7 +607,11 @@
      ======================================== */
 
   /* Global touch-friendly link and button styles */
-  a, button, [role="button"], input[type="submit"], input[type="button"] {
+  a,
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"] {
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -574,13 +620,21 @@
 
   /* Increase tap target sizes for touch devices */
   @media (hover: none) and (pointer: coarse) {
-    a, button, [role="button"], .btn, .card, .ministry-card {
+
+    a,
+    button,
+    [role="button"],
+    .btn,
+    .card,
+    .ministry-card {
       min-height: 44px;
       min-width: 44px;
     }
 
     /* Add spacing for easier tapping */
-    button, .btn, a[class*="btn"] {
+    button,
+    .btn,
+    a[class*="btn"] {
       padding: 0.875rem 1.5rem;
     }
   }
@@ -599,6 +653,7 @@
 
   /* Active state feedback for touch */
   @media (hover: none) {
+
     .btn:active,
     button:active,
     a:active,
@@ -619,14 +674,21 @@
   }
 
   /* Prevent double-tap zoom on touch devices */
-  button, a, input, textarea, select {
+  button,
+  a,
+  input,
+  textarea,
+  select {
     touch-action: manipulation;
   }
 
   /* Touch-friendly form inputs */
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     min-height: 44px;
-    font-size: 16px; /* Prevents iOS zoom on focus */
+    font-size: 16px;
+    /* Prevents iOS zoom on focus */
   }
 
   /* Carousel touch optimization */
@@ -638,7 +700,8 @@
   }
 
   /* Navigation menu touch optimization */
-  nav a, nav button {
+  nav a,
+  nav button {
     min-height: 44px;
     display: flex;
     align-items: center;
@@ -669,7 +732,11 @@
   }
 
   /* Prevent text selection on interactive elements during touch */
-  .card, .ministry-card, .btn, button, a[class*="btn"] {
+  .card,
+  .ministry-card,
+  .btn,
+  button,
+  a[class*="btn"] {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -677,7 +744,11 @@
   }
 
   /* Allow text selection in content areas */
-  p, li, article, .text-content, span:not([class*="btn"]) {
+  p,
+  li,
+  article,
+  .text-content,
+  span:not([class*="btn"]) {
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
@@ -688,7 +759,8 @@
   .carousel-card img,
   .ministry-card img,
   .card img {
-    pointer-events: none; /* Prevent image drag on touch */
+    pointer-events: none;
+    /* Prevent image drag on touch */
     -webkit-user-drag: none;
     user-select: none;
   }
@@ -768,6 +840,7 @@
 
   /* Mobile-specific fixes for preventing edge gaps */
   @media (max-width: 768px) {
+
     .page-wrapper,
     .full-screen-section,
     .stable-content {
@@ -822,7 +895,8 @@
   }
 
   /* Ensure videos and iframes are touch-friendly */
-  video, iframe {
+  video,
+  iframe {
     touch-action: pan-x pan-y pinch-zoom;
   }
 

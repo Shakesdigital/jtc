@@ -166,13 +166,13 @@ const FamilyGroups = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', preferredGroup: '', message: '' });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
     }, 2000);
@@ -186,8 +186,8 @@ const FamilyGroups = () => {
   };
 
   const scrollToForm = () => {
-    document.getElementById('get-involved').scrollIntoView({ 
-      behavior: 'smooth' 
+    document.getElementById('get-involved').scrollIntoView({
+      behavior: 'smooth'
     });
   };
 
@@ -209,7 +209,7 @@ const FamilyGroups = () => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         </div>
-        
+
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
           <motion.div
@@ -218,7 +218,7 @@ const FamilyGroups = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            
+
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-center">
               Family Groups Ministry: <br />
               <span className="text-church-yellow">Building Stronger Connections</span>
@@ -228,20 +228,6 @@ const FamilyGroups = () => {
               Find a group to grow, share, and serve together in the heart of Jinja's communities
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-6 sm:pt-8">
-              <button 
-                onClick={scrollToForm}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto border-2 sm:border-3"
-              >
-                Find a Group
-              </button>
-              <button 
-                onClick={() => document.getElementById('groups').scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
-              >
-                Browse Groups
-              </button>
-            </div>
           </motion.div>
         </div>
 
@@ -264,16 +250,16 @@ const FamilyGroups = () => {
                 </h2>
                 <div className="w-20 h-1 bg-church-yellow rounded-full mb-6"></div>
               </div>
-              
+
               <p className="text-lg text-church-gray leading-relaxed">
-                Our Family Groups Ministry is the heartbeat of authentic relationships at Jinja Town Church. 
-                We believe that faith grows best in the context of genuine community, where families can share 
+                Our Family Groups Ministry is the heartbeat of authentic relationships at Jinja Town Church.
+                We believe that faith grows best in the context of genuine community, where families can share
                 life's joys and challenges together.
               </p>
 
               <p className="text-lg text-church-gray leading-relaxed">
-                Through small group gatherings across Jinja's neighborhoods, we foster spiritual growth, 
-                provide mutual support, and create spaces where every family member—from children to 
+                Through small group gatherings across Jinja's neighborhoods, we foster spiritual growth,
+                provide mutual support, and create spaces where every family member—from children to
                 grandparents—can experience God's love in practical, meaningful ways.
               </p>
 
@@ -308,7 +294,7 @@ const FamilyGroups = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>
-              
+
             </motion.div>
           </div>
         </div>
@@ -355,12 +341,12 @@ const FamilyGroups = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-church-sage-dark mb-2 group-hover:text-church-sage transition-colors duration-300">
                     {group.name}
                   </h3>
-                  
+
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center text-sm text-church-gray">
                       <FiMapPin className="w-4 h-4 mr-2 text-church-sage" />
@@ -375,8 +361,8 @@ const FamilyGroups = () => {
                       {group.leaders}
                     </div>
                   </div>
-                  
-                  
+
+
                 </div>
               </motion.div>
             ))}
@@ -417,19 +403,19 @@ const FamilyGroups = () => {
                 <div className="flex items-center justify-center w-12 h-12 bg-church-sage bg-opacity-10 rounded-lg mb-4 group-hover:bg-church-sage group-hover:text-white transition-all duration-300">
                   {resource.icon}
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-church-sage-dark mb-2 group-hover:text-church-sage transition-colors duration-300">
                   {resource.title}
                 </h3>
-                
+
                 <div className="text-sm text-church-yellow font-semibold mb-3">
                   {resource.type}
                 </div>
-                
+
                 <p className="text-church-gray text-sm leading-relaxed mb-4">
                   {resource.description}
                 </p>
-                
+
                 <div className="flex items-center text-church-sage font-semibold text-sm group-hover:text-church-sage-dark transition-colors duration-300">
                   Access Resource
                   <FiArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
@@ -499,7 +485,7 @@ const FamilyGroups = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            
+
             <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
               Join a Family Group and <span className="text-church-yellow">Grow Together!</span>
             </h2>
@@ -540,138 +526,138 @@ const FamilyGroups = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-church-sage-light to-church-sage rounded-2xl shadow-2xl p-8 text-white"
             >
-            {isSubmitted ? (
-              <div className="text-center py-12">
-                <FiCheckCircle className="w-16 h-16 mx-auto mb-6 text-church-yellow" />
-                <h3 className="text-2xl font-bold mb-4">Thank you for your interest!</h3>
-                <p className="text-lg opacity-90">
-                  We've received your request and one of our family group leaders will contact you within 24 hours.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
+              {isSubmitted ? (
+                <div className="text-center py-12">
+                  <FiCheckCircle className="w-16 h-16 mx-auto mb-6 text-church-yellow" />
+                  <h3 className="text-2xl font-bold mb-4">Thank you for your interest!</h3>
+                  <p className="text-lg opacity-90">
+                    We've received your request and one of our family group leaders will contact you within 24 hours.
+                  </p>
                 </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-semibold mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
+                        placeholder="Your full name"
+                      />
+                    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
-                      placeholder="+256 XXX XXX XXX"
-                    />
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-semibold mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
                   </div>
-                  
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-semibold mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
+                        placeholder="+256 XXX XXX XXX"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="preferredGroup" className="block text-sm font-semibold mb-2">
+                        Preferred Group Location
+                      </label>
+                      <select
+                        id="preferredGroup"
+                        name="preferredGroup"
+                        value={formData.preferredGroup}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
+                      >
+                        <option value="">Select a location</option>
+                        {groupTypes.map(group => (
+                          <option key={group.id} value={group.name}>{group.name}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
                   <div>
-                    <label htmlFor="preferredGroup" className="block text-sm font-semibold mb-2">
-                      Preferred Group Location
+                    <label htmlFor="message" className="block text-sm font-semibold mb-2">
+                      Message or Special Requests
                     </label>
-                    <select
-                      id="preferredGroup"
-                      name="preferredGroup"
-                      value={formData.preferredGroup}
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
+                      rows="4"
+                      className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300 resize-none"
+                      placeholder="Tell us about your family, interests, or any questions you have..."
+                    ></textarea>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold py-4 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                     >
-                      <option value="">Select a location</option>
-                      {groupTypes.map(group => (
-                        <option key={group.id} value={group.name}>{group.name}</option>
-                      ))}
-                    </select>
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-2 border-church-sage-dark border-t-transparent mr-2"></div>
+                          Submitting...
+                        </>
+                      ) : (
+                        <>
+                          <FiSend className="w-5 h-5 mr-2" />
+                          Sign Up Now
+                        </>
+                      )}
+                    </button>
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold mb-2">
-                    Message or Special Requests
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows="4"
-                    className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300 resize-none"
-                    placeholder="Tell us about your family, interests, or any questions you have..."
-                  ></textarea>
-                </div>
-
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold py-4 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-2 border-church-sage-dark border-t-transparent mr-2"></div>
-                        Submitting...
-                      </>
-                    ) : (
-                      <>
-                        <FiSend className="w-5 h-5 mr-2" />
-                        Sign Up Now
-                      </>
-                    )}
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t border-white border-opacity-20">
-                  <button
-                    type="button"
-                    className="flex items-center justify-center bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300"
-                  >
-                    <FiPlusCircle className="w-5 h-5 mr-2" />
-                    Start a New Group
-                  </button>
-                  <button
-                    type="button"
-                    className="flex items-center justify-center bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300"
-                  >
-                    <FiPhone className="w-5 h-5 mr-2" />
-                    Contact a Leader
-                  </button>
-                </div>
-              </form>
-            )}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t border-white border-opacity-20">
+                    <button
+                      type="button"
+                      className="flex items-center justify-center bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300"
+                    >
+                      <FiPlusCircle className="w-5 h-5 mr-2" />
+                      Start a New Group
+                    </button>
+                    <button
+                      type="button"
+                      className="flex items-center justify-center bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300"
+                    >
+                      <FiPhone className="w-5 h-5 mr-2" />
+                      Contact a Leader
+                    </button>
+                  </div>
+                </form>
+              )}
             </motion.div>
           </div>
         </div>

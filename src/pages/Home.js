@@ -17,7 +17,7 @@ const Home = () => {
 
   // Responsive height state for hero section
   const [heroHeight, setHeroHeight] = useState('100vh');
-  
+
   // Hero carousel images - using authentic church photos
   const heroImages = [
     {
@@ -101,7 +101,7 @@ const Home = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
   };
-  
+
 
   // Get real sermon data
   const recentSermons = getRecentSermons(3);
@@ -203,16 +203,15 @@ const Home = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-church-yellow focus:ring-offset-2 ${
-                index === currentSlide ? 'bg-church-yellow scale-125' : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-              }`}
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-church-yellow focus:ring-offset-2 ${index === currentSlide ? 'bg-church-yellow scale-125' : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                }`}
               aria-label={`Go to slide ${index + 1}`}
               aria-selected={index === currentSlide}
               role="tab"
             />
           ))}
         </div>
-        
+
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 lg:py-16">
           <motion.div
@@ -229,24 +228,6 @@ const Home = () => {
             <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed responsive-text-balance text-shadow text-center">
               {heroImages[currentSlide].subtitle}
             </p>
-
-            <div className="pt-4 sm:pt-5 md:pt-6">
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-                <Link
-                  to="/church-service"
-                  className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl btn-hero w-full sm:w-auto border-2 sm:border-3"
-                >
-                  Join Us This Sunday at 10:00 AM
-                </Link>
-
-                <Link
-                  to="/about"
-                  className="bg-transparent border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-xl btn-hero w-full sm:w-auto"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </div>
 
           </motion.div>
         </div>
@@ -270,14 +251,14 @@ const Home = () => {
                 </h2>
                 <div className="w-20 h-1 bg-church-yellow rounded-full mb-6"></div>
               </div>
-              
+
               <p className="text-lg text-church-gray leading-relaxed">
-                Our story began almost by accident. We initially held Sunday services for the staff at the Arise Africa  Guesthouse, as they were unable to attend church due to work commitments. 
-                As attendance grew, we recognized a deep hunger in the Jinja community for a church that embraces 
+                Our story began almost by accident. We initially held Sunday services for the staff at the Arise Africa  Guesthouse, as they were unable to attend church due to work commitments.
+                As attendance grew, we recognized a deep hunger in the Jinja community for a church that embraces
                 diversity and unity in Christ. Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve.
               </p>
 
-              <Link 
+              <Link
                 to="/about"
                 className="inline-flex items-center bg-church-sage hover:bg-church-sage-dark text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
@@ -305,7 +286,7 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/30 to-transparent"></div>
               </div>
-              
+
             </motion.div>
           </div>
         </div>
@@ -353,19 +334,19 @@ const Home = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 </div>
-                
+
                 <div className="ministry-card-content">
                   <h3 className="text-xl font-bold text-church-sage-dark mb-3">{ministry.title}</h3>
                   <p className="text-church-gray mb-6 leading-relaxed ministry-card-description">{ministry.description}</p>
-                  
+
                   <div className="ministry-card-actions">
-                    <Link 
+                    <Link
                       to={
                         ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
-                        ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
-                        ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
-                        ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
-                        "/ministries"
+                          ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
+                            ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
+                              ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
+                                "/ministries"
                       }
                       className="inline-flex items-center text-church-sage hover:text-church-sage-dark font-semibold transition-colors duration-300"
                     >
@@ -379,7 +360,7 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Link 
+            <Link
               to="/ministries"
               className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
@@ -445,17 +426,17 @@ const Home = () => {
               Ready to Join Our Diverse Family?
             </h2>
             <p className="text-xl md:text-2xl mb-12 opacity-95 leading-relaxed">
-              Whether you're new to faith or a lifelong believer, we invite you to experience 
+              Whether you're new to faith or a lifelong believer, we invite you to experience
               the life-changing love of Jesus with us. Come as you are - everyone is welcome.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link 
+              <Link
                 to="/contact"
                 className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-12 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300"
               >
                 Contact Us or Visit This Sunday!
               </Link>
-              <Link 
+              <Link
                 to="/about"
                 className="bg-transparent border-3 border-church-yellow text-church-yellow hover:bg-church-yellow hover:text-church-sage-dark font-bold text-lg px-12 py-5 rounded-full shadow-xl transition-all duration-300"
               >

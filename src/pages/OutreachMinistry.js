@@ -148,13 +148,13 @@ const OutreachMinistry = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', preferredArea: '', message: '' });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
     }, 2000);
@@ -168,8 +168,8 @@ const OutreachMinistry = () => {
   };
 
   const scrollToForm = () => {
-    document.getElementById('get-involved').scrollIntoView({ 
-      behavior: 'smooth' 
+    document.getElementById('get-involved').scrollIntoView({
+      behavior: 'smooth'
     });
   };
 
@@ -191,7 +191,7 @@ const OutreachMinistry = () => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         </div>
-        
+
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 py-24 md:py-32">
           <motion.div
@@ -209,20 +209,6 @@ const OutreachMinistry = () => {
               Join us to make a difference locally and globally through acts of compassion and service
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-6 sm:pt-8">
-              <button 
-                onClick={scrollToForm}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto border-2 sm:border-3"
-              >
-                Get Involved
-              </button>
-              <button 
-                onClick={() => document.getElementById('initiatives').scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
-              >
-                See Our Work
-              </button>
-            </div>
           </motion.div>
         </div>
 
@@ -237,7 +223,7 @@ const OutreachMinistry = () => {
             <div className="text-3xl font-bold text-church-yellow">2000+</div>
             <div className="text-sm opacity-90">Lives Impacted</div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -247,7 +233,7 @@ const OutreachMinistry = () => {
             <div className="text-3xl font-bold text-church-yellow">25+</div>
             <div className="text-sm opacity-90">Community Partners</div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -277,16 +263,16 @@ const OutreachMinistry = () => {
                 </h2>
                 <div className="w-20 h-1 bg-church-yellow rounded-full mb-6"></div>
               </div>
-              
+
               <p className="text-lg text-church-gray leading-relaxed">
-                Our Outreach Ministry embodies Christ's call to love our neighbors through tangible acts of compassion and service. 
-                We believe that faith becomes real when it meets the practical needs of our community and reaches beyond our 
+                Our Outreach Ministry embodies Christ's call to love our neighbors through tangible acts of compassion and service.
+                We believe that faith becomes real when it meets the practical needs of our community and reaches beyond our
                 church walls to touch lives locally and globally.
               </p>
 
               <p className="text-lg text-church-gray leading-relaxed">
-                Through strategic partnerships, community programs, and mission initiatives, we work to address poverty, 
-                provide hope, and share God's love with those who need it most. Every volunteer, every donation, and every 
+                Through strategic partnerships, community programs, and mission initiatives, we work to address poverty,
+                provide hope, and share God's love with those who need it most. Every volunteer, every donation, and every
                 act of service creates ripples of transformation that extend far beyond what we can see.
               </p>
 
@@ -321,7 +307,7 @@ const OutreachMinistry = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
               </div>
-              
+
               {/* Floating Testimonial Card */}
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border-l-4 border-church-yellow max-w-xs">
                 <p className="text-sm text-church-gray italic mb-3">
@@ -377,7 +363,7 @@ const OutreachMinistry = () => {
                     {initiative.category}
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   {/* Floating Icon */}
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="bg-church-yellow bg-opacity-90 backdrop-blur-sm rounded-full p-4">
@@ -385,23 +371,23 @@ const OutreachMinistry = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-church-sage-dark mb-2 group-hover:text-church-sage transition-colors duration-300">
                     {initiative.title}
                   </h3>
-                  
+
                   <p className="text-church-gray mb-4 text-sm leading-relaxed">
                     {initiative.description}
                   </p>
-                  
+
                   <div className="flex items-center justify-between mb-6">
                     <div className="text-church-yellow font-semibold text-sm">
                       {initiative.impact}
                     </div>
                   </div>
-                  
-                  <button 
+
+                  <button
                     onClick={scrollToForm}
                     className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center"
                   >
@@ -430,7 +416,7 @@ const OutreachMinistry = () => {
                 <FiHeart className="w-12 h-12 text-church-sage" />
               </div>
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
               Serve with us to <span className="text-church-yellow">change lives!</span>
             </h2>
@@ -473,7 +459,7 @@ const OutreachMinistry = () => {
                       placeholder="Your full name"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-semibold mb-2">
                       Email Address *
@@ -506,7 +492,7 @@ const OutreachMinistry = () => {
                       placeholder="+256 XXX XXX XXX"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="preferredArea" className="block text-sm font-semibold mb-2">
                       Preferred Outreach Area
@@ -620,19 +606,19 @@ const OutreachMinistry = () => {
                 <div className="flex items-center justify-center w-12 h-12 bg-church-sage bg-opacity-10 rounded-lg mb-4 group-hover:bg-church-sage group-hover:text-white transition-all duration-300">
                   {resource.icon}
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-church-sage-dark mb-2 group-hover:text-church-sage transition-colors duration-300">
                   {resource.title}
                 </h3>
-                
+
                 <div className="text-sm text-church-yellow font-semibold mb-3">
                   {resource.type}
                 </div>
-                
+
                 <p className="text-church-gray text-sm leading-relaxed mb-4">
                   {resource.description}
                 </p>
-                
+
                 <div className="flex items-center text-church-sage font-semibold text-sm group-hover:text-church-sage-dark transition-colors duration-300">
                   Access Resource
                   <FiArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />

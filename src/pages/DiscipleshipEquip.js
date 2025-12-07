@@ -188,13 +188,13 @@ const DiscipleshipEquip = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', preferredProgram: '', message: '' });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
     }, 2000);
@@ -208,8 +208,8 @@ const DiscipleshipEquip = () => {
   };
 
   const scrollToForm = () => {
-    document.getElementById('get-involved').scrollIntoView({ 
-      behavior: 'smooth' 
+    document.getElementById('get-involved').scrollIntoView({
+      behavior: 'smooth'
     });
   };
 
@@ -250,20 +250,6 @@ const DiscipleshipEquip = () => {
               Equipping you to live out God's purpose through transformational learning and spiritual growth
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 sm:pt-6 md:pt-8">
-              <button
-                onClick={scrollToForm}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-3 lg:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto border-2"
-              >
-                Start Your Journey
-              </button>
-              <button
-                onClick={() => document.getElementById('programs').scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-white text-white hover:bg-white hover:text-church-sage font-bold text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-3 lg:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
-              >
-                Explore Programs
-              </button>
-            </div>
           </motion.div>
         </div>
 
@@ -286,16 +272,16 @@ const DiscipleshipEquip = () => {
                 </h2>
                 <div className="w-20 h-1 bg-church-yellow rounded-full mb-6"></div>
               </div>
-              
+
               <p className="text-lg text-church-gray leading-relaxed">
-                Our Discipleship Equip Ministry is designed to take you deeper in your walk with Christ through 
-                systematic learning, practical application, and meaningful community. Whether you're a new believer 
+                Our Discipleship Equip Ministry is designed to take you deeper in your walk with Christ through
+                systematic learning, practical application, and meaningful community. Whether you're a new believer
                 or have been following Jesus for years, we provide the tools and training you need to grow spiritually.
               </p>
 
               <p className="text-lg text-church-gray leading-relaxed">
-                Through Bible study, leadership development, mentorship, and hands-on ministry experience, we equip 
-                believers to not only grow in their personal faith but also to effectively disciple others. Our goal 
+                Through Bible study, leadership development, mentorship, and hands-on ministry experience, we equip
+                believers to not only grow in their personal faith but also to effectively disciple others. Our goal
                 is to see every believer walking confidently in their God-given calling and purpose.
               </p>
 
@@ -427,15 +413,15 @@ const DiscipleshipEquip = () => {
                     {step.icon}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-church-sage-dark mb-4">
                   {step.title}
                 </h3>
-                
+
                 <p className="text-church-gray mb-6 leading-relaxed">
                   {step.description}
                 </p>
-                
+
               </motion.div>
             ))}
           </div>
@@ -475,19 +461,19 @@ const DiscipleshipEquip = () => {
                 <div className="flex items-center justify-center w-12 h-12 bg-church-sage bg-opacity-10 rounded-lg mb-4 group-hover:bg-church-sage group-hover:text-white transition-all duration-300">
                   {resource.icon}
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-church-sage-dark mb-2 group-hover:text-church-sage transition-colors duration-300">
                   {resource.title}
                 </h3>
-                
+
                 <div className="text-sm text-church-yellow font-semibold mb-3">
                   {resource.type}
                 </div>
-                
+
                 <p className="text-church-gray text-sm leading-relaxed mb-4">
                   {resource.description}
                 </p>
-                
+
                 <div className="flex items-center text-church-sage font-semibold text-sm group-hover:text-church-sage-dark transition-colors duration-300">
                   Access Resource
                   <FiArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
@@ -508,7 +494,7 @@ const DiscipleshipEquip = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            
+
             <h2 className="text-4xl md:text-5xl font-bold text-church-sage-dark mb-6">
               Take the next step in your <span className="text-church-yellow">faith journey!</span>
             </h2>
@@ -549,138 +535,138 @@ const DiscipleshipEquip = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-church-sage-light to-church-sage rounded-2xl shadow-2xl p-8 text-white"
             >
-            {isSubmitted ? (
-              <div className="text-center py-12">
-                <FiCheckCircle className="w-16 h-16 mx-auto mb-6 text-church-yellow" />
-                <h3 className="text-2xl font-bold mb-4">Welcome to the journey!</h3>
-                <p className="text-lg opacity-90">
-                  Thank you for your interest in growing deeper in faith. Our discipleship coordinator will contact you within 24 hours to discuss the best program for your spiritual growth.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
+              {isSubmitted ? (
+                <div className="text-center py-12">
+                  <FiCheckCircle className="w-16 h-16 mx-auto mb-6 text-church-yellow" />
+                  <h3 className="text-2xl font-bold mb-4">Welcome to the journey!</h3>
+                  <p className="text-lg opacity-90">
+                    Thank you for your interest in growing deeper in faith. Our discipleship coordinator will contact you within 24 hours to discuss the best program for your spiritual growth.
+                  </p>
                 </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-semibold mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
+                        placeholder="Your full name"
+                      />
+                    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
-                      placeholder="+256 XXX XXX XXX"
-                    />
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-semibold mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
                   </div>
-                  
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-semibold mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
+                        placeholder="+256 XXX XXX XXX"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="preferredProgram" className="block text-sm font-semibold mb-2">
+                        Preferred Program
+                      </label>
+                      <select
+                        id="preferredProgram"
+                        name="preferredProgram"
+                        value={formData.preferredProgram}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
+                      >
+                        <option value="">Select a program</option>
+                        {programs.map(program => (
+                          <option key={program.id} value={program.title}>{program.title}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
                   <div>
-                    <label htmlFor="preferredProgram" className="block text-sm font-semibold mb-2">
-                      Preferred Program
+                    <label htmlFor="message" className="block text-sm font-semibold mb-2">
+                      Message or Questions
                     </label>
-                    <select
-                      id="preferredProgram"
-                      name="preferredProgram"
-                      value={formData.preferredProgram}
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300"
+                      rows="4"
+                      className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300 resize-none"
+                      placeholder="Tell us about your spiritual goals or any questions you have about our programs..."
+                    ></textarea>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold py-4 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                     >
-                      <option value="">Select a program</option>
-                      {programs.map(program => (
-                        <option key={program.id} value={program.title}>{program.title}</option>
-                      ))}
-                    </select>
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-2 border-church-sage-dark border-t-transparent mr-2"></div>
+                          Submitting...
+                        </>
+                      ) : (
+                        <>
+                          <FiSend className="w-5 h-5 mr-2" />
+                          Join Now
+                        </>
+                      )}
+                    </button>
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold mb-2">
-                    Message or Questions
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows="4"
-                    className="w-full px-4 py-3 rounded-lg text-church-sage-dark bg-white focus:ring-2 focus:ring-church-yellow focus:outline-none transition-all duration-300 resize-none"
-                    placeholder="Tell us about your spiritual goals or any questions you have about our programs..."
-                  ></textarea>
-                </div>
-
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="flex-1 bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold py-4 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-2 border-church-sage-dark border-t-transparent mr-2"></div>
-                        Submitting...
-                      </>
-                    ) : (
-                      <>
-                        <FiSend className="w-5 h-5 mr-2" />
-                        Join Now
-                      </>
-                    )}
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t border-white border-opacity-20">
-                  <button
-                    type="button"
-                    className="flex items-center justify-center bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300"
-                  >
-                    <FiUsers className="w-5 h-5 mr-2" />
-                    Become a Mentor
-                  </button>
-                  <button
-                    type="button"
-                    className="flex items-center justify-center bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300"
-                  >
-                    <FiCalendar className="w-5 h-5 mr-2" />
-                    Info Session
-                  </button>
-                </div>
-              </form>
-            )}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t border-white border-opacity-20">
+                    <button
+                      type="button"
+                      className="flex items-center justify-center bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300"
+                    >
+                      <FiUsers className="w-5 h-5 mr-2" />
+                      Become a Mentor
+                    </button>
+                    <button
+                      type="button"
+                      className="flex items-center justify-center bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300"
+                    >
+                      <FiCalendar className="w-5 h-5 mr-2" />
+                      Info Session
+                    </button>
+                  </div>
+                </form>
+              )}
             </motion.div>
           </div>
         </div>

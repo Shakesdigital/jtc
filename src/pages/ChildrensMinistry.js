@@ -166,7 +166,7 @@ const ChildrensMinistry = () => {
             <div className="absolute inset-0 bg-black bg-opacity-10"></div>
           </motion.div>
         </div>
-        
+
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 lg:py-20">
           <motion.div
@@ -183,21 +183,6 @@ const ChildrensMinistry = () => {
               Safe, exciting spaces for kids ages 0-12 to discover Jesus through play, worship, and community
             </p>
 
-            <div className="pt-6 sm:pt-8 gap-3 sm:gap-4 flex flex-col sm:flex-row justify-center">
-              <button 
-                onClick={() => document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' })}
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300 inline-flex items-center justify-center w-full sm:w-auto border-2 sm:border-3"
-              >
-                <FiArrowRight className="mr-2" />
-                Join Us This Sunday
-              </button>
-              <button 
-                onClick={() => document.getElementById('overview').scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 sm:border-3 border-white text-white hover:bg-white hover:text-church-sage-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
-              >
-                Learn More
-              </button>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -219,15 +204,15 @@ const ChildrensMinistry = () => {
                 </h2>
                 <div className="w-20 h-1 bg-church-yellow rounded-full mb-6"></div>
               </div>
-              
+
               <p className="text-lg text-church-gray leading-relaxed">
-                Our Children's Ministry is where young hearts discover the amazing love of Jesus through engaging Bible stories, 
-                joyful worship, creative activities, and meaningful friendships. We help your child build a lifelong relationship 
+                Our Children's Ministry is where young hearts discover the amazing love of Jesus through engaging Bible stories,
+                joyful worship, creative activities, and meaningful friendships. We help your child build a lifelong relationship
                 with God in a safe, fun environment designed just for them.
               </p>
-              
+
               <p className="text-lg text-church-gray leading-relaxed">
-                From nursery care to pre-teen activities, every program is crafted to meet children where they are and 
+                From nursery care to pre-teen activities, every program is crafted to meet children where they are and
                 help them grow in faith, character, and community. Join us in raising the next generation of world-changers!
               </p>
             </motion.div>
@@ -250,7 +235,7 @@ const ChildrensMinistry = () => {
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-church-sage-dark/20 to-transparent"></div>
-                
+
               </div>
             </motion.div>
           </div>
@@ -373,15 +358,15 @@ const ChildrensMinistry = () => {
                 <div className="bg-church-sage text-white rounded-full w-14 h-14 flex items-center justify-center mb-4 group-hover:bg-church-sage-dark transition-colors duration-300">
                   <resource.icon className="w-7 h-7" />
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-church-sage-dark mb-2 group-hover:text-church-sage transition-colors duration-300">
                   {resource.title}
                 </h3>
-                
+
                 <p className="text-church-gray mb-4 text-sm leading-relaxed">
                   {resource.description}
                 </p>
-                
+
                 <div className="flex items-center text-church-sage font-semibold text-sm">
                   {resource.type === 'download' && <FiDownload className="w-4 h-4 mr-2" />}
                   {resource.type === 'external' && <FiExternalLink className="w-4 h-4 mr-2" />}
@@ -425,7 +410,7 @@ const ChildrensMinistry = () => {
               <h3 className="text-2xl font-bold text-church-sage-dark mb-6">
                 Register Your Child
               </h3>
-              
+
               {formSubmitted ? (
                 <div className="text-center py-8">
                   <FiCheckCircle className="w-16 h-16 mx-auto mb-4 text-church-sage" />
@@ -452,7 +437,7 @@ const ChildrensMinistry = () => {
                       required
                     />
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="number"
@@ -471,7 +456,7 @@ const ChildrensMinistry = () => {
                       required
                     />
                   </div>
-                  
+
                   <input
                     type="email"
                     placeholder="Email Address"
@@ -480,7 +465,7 @@ const ChildrensMinistry = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-church-sage outline-none"
                     required
                   />
-                  
+
                   <textarea
                     placeholder="Any questions or special needs we should know about?"
                     value={signUpForm.message}
@@ -488,7 +473,7 @@ const ChildrensMinistry = () => {
                     rows="3"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-church-sage focus:border-church-sage outline-none resize-none"
                   />
-                  
+
                   <button
                     type="submit"
                     className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-bold py-4 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
@@ -511,7 +496,7 @@ const ChildrensMinistry = () => {
               <h3 className="text-2xl font-bold text-church-sage-dark mb-6">
                 Volunteer Opportunities
               </h3>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center p-4 bg-church-yellow/10 rounded-lg hover:bg-church-yellow/20 transition-colors duration-200 cursor-pointer">
                   <FiUsers className="w-6 h-6 text-church-sage mr-4" />
@@ -520,7 +505,7 @@ const ChildrensMinistry = () => {
                     <p className="text-sm text-church-gray">Lead activities and share God's love</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center p-4 bg-church-sage/10 rounded-lg hover:bg-church-sage/20 transition-colors duration-200 cursor-pointer">
                   <FiShield className="w-6 h-6 text-church-sage mr-4" />
                   <div>
@@ -528,7 +513,7 @@ const ChildrensMinistry = () => {
                     <p className="text-sm text-church-gray">Help with check-in and security</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center p-4 bg-church-gray/10 rounded-lg hover:bg-church-gray/20 transition-colors duration-200 cursor-pointer">
                   <FiStar className="w-6 h-6 text-church-sage mr-4" />
                   <div>
@@ -536,7 +521,7 @@ const ChildrensMinistry = () => {
                     <p className="text-sm text-church-gray">Seasonal programs and celebrations</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center p-4 bg-church-cream/30 rounded-lg hover:bg-church-cream/50 transition-colors duration-200 cursor-pointer">
                   <FiGift className="w-6 h-6 text-church-sage mr-4" />
                   <div>
@@ -545,7 +530,7 @@ const ChildrensMinistry = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <h4 className="font-bold text-church-sage-dark mb-3">Special Milestones</h4>
                 <div className="space-y-2">
@@ -559,9 +544,9 @@ const ChildrensMinistry = () => {
                   </Link>
                 </div>
               </div>
-              
-              <Link 
-                to="/volunteer" 
+
+              <Link
+                to="/volunteer"
                 className="mt-6 w-full bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold py-4 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
               >
                 <FiArrowRight className="w-5 h-5 mr-2" />
