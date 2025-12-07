@@ -88,12 +88,6 @@ const Articles = () => {
     setCurrentPage(1);
   }, [searchQuery, selectedCategory, selectedTag, sortBy]);
 
-  const scrollToLatestArticle = () => {
-    document.getElementById('articles-display').scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
-
   const clearAllFilters = () => {
     setSearchQuery('');
     setSelectedCategory('all');
@@ -403,8 +397,8 @@ const Articles = () => {
                         key={page}
                         onClick={() => setCurrentPage(page)}
                         className={`px-4 py-2 rounded-lg transition-colors duration-200 ${page === currentPage
-                            ? 'bg-church-sage text-white'
-                            : 'border border-gray-300 hover:bg-gray-50'
+                          ? 'bg-church-sage text-white'
+                          : 'border border-gray-300 hover:bg-gray-50'
                           }`}
                       >
                         {page}
@@ -531,8 +525,8 @@ const Articles = () => {
                           setCurrentPage(1);
                         }}
                         className={`w-full text-left px-3 py-2 rounded-lg transition-colors duration-200 ${selectedCategory === category
-                            ? 'bg-church-sage text-white'
-                            : 'hover:bg-gray-50 text-church-gray'
+                          ? 'bg-church-sage text-white'
+                          : 'hover:bg-gray-50 text-church-gray'
                           }`}
                       >
                         <span className="font-medium">{category}</span>

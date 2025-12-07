@@ -91,12 +91,6 @@ const Sermons = () => {
     setCurrentPage(1);
   }, [searchQuery, selectedSpeaker, selectedSeries, selectedBibleBook]);
 
-  const scrollToLatestSermon = () => {
-    document.getElementById('sermons-display').scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
-
   const clearAllFilters = () => {
     setSearchQuery('');
     setSelectedSpeaker('all');
@@ -418,8 +412,8 @@ const Sermons = () => {
                         key={page}
                         onClick={() => setCurrentPage(page)}
                         className={`px-4 py-2 rounded-lg transition-colors duration-200 ${page === currentPage
-                            ? 'bg-church-sage text-white'
-                            : 'border border-gray-300 hover:bg-gray-50'
+                          ? 'bg-church-sage text-white'
+                          : 'border border-gray-300 hover:bg-gray-50'
                           }`}
                       >
                         {page}

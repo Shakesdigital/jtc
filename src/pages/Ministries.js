@@ -100,12 +100,6 @@ const Ministries = () => {
     setTimeout(() => setSubmitStatus(null), 3000);
   };
 
-  const scrollToMinistries = () => {
-    document.getElementById('ministries-grid').scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
-
   return (
     <div className="min-h-screen bg-white w-full overflow-x-hidden">
       {/* Hero Banner Section */}
@@ -433,8 +427,8 @@ const Ministries = () => {
 
                 {submitStatus && (
                   <div className={`mt-4 p-4 rounded-lg ${submitStatus === 'success'
-                      ? 'bg-green-100 text-green-800 border border-green-200'
-                      : 'bg-red-100 text-red-800 border border-red-200'
+                    ? 'bg-green-100 text-green-800 border border-green-200'
+                    : 'bg-red-100 text-red-800 border border-red-200'
                     }`}>
                     {submitStatus === 'success'
                       ? "Thank you! We'll contact you soon about ministry opportunities."

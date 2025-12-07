@@ -185,12 +185,6 @@ const FamilyGroups = () => {
     });
   };
 
-  const scrollToForm = () => {
-    document.getElementById('get-involved').scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
-
   return (
     <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden">
       {/* Hero Banner Section */}
