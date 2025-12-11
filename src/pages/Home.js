@@ -390,23 +390,23 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Join Our Diverse Family?
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Come and Fellowship With Us
             </h2>
-            <p className="text-xl md:text-2xl mb-12 opacity-95 leading-relaxed">
+            <p className="text-lg md:text-xl mb-10 opacity-95 leading-relaxed">
               Whether you're new to faith or a lifelong believer, we invite you to experience
               the life-changing love of Jesus with us. Come as you are - everyone is welcome.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
-                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-12 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300"
+                className="bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-base px-8 py-3 rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all duration-300"
               >
                 Contact Us or Visit This Sunday!
               </Link>
               <Link
                 to="/about"
-                className="bg-transparent border-3 border-church-yellow text-church-yellow hover:bg-church-yellow hover:text-church-sage-dark font-bold text-lg px-12 py-5 rounded-full shadow-xl transition-all duration-300"
+                className="bg-transparent border-3 border-church-yellow text-church-yellow hover:bg-church-yellow hover:text-church-sage-dark font-bold text-base px-8 py-3 rounded-full shadow-xl transition-all duration-300"
               >
                 Learn Our Story
               </Link>
