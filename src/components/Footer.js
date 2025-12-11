@@ -246,18 +246,7 @@ const Footer = () => {
                       alt="Arise Africa International"
                       className="h-5 sm:h-6 md:h-8 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
                       loading="lazy"
-                      onError={(e) => {
-                        console.error('Arise Africa logo failed to load:', e.target.src);
-                        e.target.style.display = 'none';
-                        e.target.nextElementSibling.style.display = 'inline';
-                      }}
                     />
-                    <span
-                      className="text-xs sm:text-sm font-bold text-church-sage group-hover:text-church-sage-dark transition-colors duration-200"
-                      style={{display: 'none'}}
-                    >
-                      Arise Africa International
-                    </span>
                   </div>
                 </div>
               </a>
