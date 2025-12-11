@@ -277,7 +277,7 @@ const Multimedia = () => {
                     )}
                     
                     {media.category && (
-                      <div className="absolute top-3 right-3 bg-church-gold text-white px-2 py-1 rounded-full text-xs font-medium">
+                      <div className="absolute top-3 right-3 bg-church-gold text-white px-2 py-1 rounded-full text-sm font-medium">
                         {media.category}
                       </div>
                     )}
@@ -293,13 +293,13 @@ const Multimedia = () => {
                         {media.tags.slice(0, 2).map((tag, tagIndex) => (
                           <span
                             key={tagIndex}
-                            className="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
+                            className="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-sm"
                           >
                             {tag}
                           </span>
                         ))}
                         {media.tags.length > 2 && (
-                          <span className="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">
+                          <span className="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">
                             +{media.tags.length - 2} more
                           </span>
                         )}
@@ -335,7 +335,7 @@ const Multimedia = () => {
                         </button>
                       </div>
                       
-                      <span className="text-xs text-gray-500">
+                      <span className="text-sm text-gray-500">
                         {(media.fileSize / (1024 * 1024)).toFixed(1)} MB
                       </span>
                     </div>

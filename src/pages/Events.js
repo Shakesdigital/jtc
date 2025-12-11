@@ -131,7 +131,7 @@ const Events = () => {
               <FiFilter className="w-4 h-4" />
               <span>Tags</span>
               {selectedTags.length > 0 && (
-                <span className="bg-church-yellow text-church-sage-dark text-xs px-2 py-1 rounded-full">
+                <span className="bg-church-yellow text-church-sage-dark text-sm px-2 py-1 rounded-full">
                   {selectedTags.length}
                 </span>
               )}
@@ -223,16 +223,16 @@ const Events = () => {
                       </p>
 
                       <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
-                        <span className="px-2 py-1 bg-church-sage bg-opacity-10 text-church-sage text-xs rounded-full">
+                        <span className="px-2 py-1 bg-church-sage bg-opacity-10 text-church-sage text-sm rounded-full">
                           {event.category}
                         </span>
                         {event.tags.slice(0, 2).map(tag => (
-                          <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                          <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
                             {tag}
                           </span>
                         ))}
                         {event.tags.length > 2 && (
-                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
                             +{event.tags.length - 2}
                           </span>
                         )}
@@ -271,7 +271,7 @@ const Events = () => {
                   <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-1">
                     <div className="flex items-start justify-between mb-3 gap-2">
                       <h3 className="text-lg sm:text-xl font-bold text-church-sage-dark flex-1">{event.title}</h3>
-                      <span className="px-2 py-1 bg-church-yellow text-church-sage-dark text-xs rounded-full font-bold flex-shrink-0">
+                      <span className="px-2 py-1 bg-church-yellow text-church-sage-dark text-sm rounded-full font-bold flex-shrink-0">
                         Recurring
                       </span>
                     </div>
@@ -292,16 +292,16 @@ const Events = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
-                      <span className="px-2 py-1 bg-church-sage bg-opacity-10 text-church-sage text-xs rounded-full">
+                      <span className="px-2 py-1 bg-church-sage bg-opacity-10 text-church-sage text-sm rounded-full">
                         {event.category}
                       </span>
                       {event.tags.slice(0, 2).map(tag => (
-                        <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                        <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
                           {tag}
                         </span>
                       ))}
                       {event.tags.length > 2 && (
-                        <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
+                        <span className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
                           +{event.tags.length - 2}
                         </span>
                       )}

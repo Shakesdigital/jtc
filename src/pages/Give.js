@@ -187,7 +187,7 @@ const Give = () => {
                 <div className="bg-church-sage text-white px-6 py-3 rounded-full font-bold text-2xl inline-block">
                   614144
                 </div>
-                <p className="text-xs text-church-gray mt-2">Arise Jinja Town Church</p>
+                <p className="text-sm text-church-gray mt-2">Arise Jinja Town Church</p>
               </div>
 
               {/* Instructions */}

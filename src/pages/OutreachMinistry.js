@@ -313,7 +313,7 @@ const OutreachMinistry = () => {
                 <p className="text-sm text-church-gray italic mb-3">
                   "Through this outreach ministry, I've discovered that serving others is one of the greatest joys in life."
                 </p>
-                <div className="text-xs font-semibold text-church-sage-dark">- Sarah Namubiru, Volunteer</div>
+                <div className="text-sm font-semibold text-church-sage-dark">- Sarah Namubiru, Volunteer</div>
               </div>
             </motion.div>
           </div>

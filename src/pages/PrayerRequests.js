@@ -261,7 +261,7 @@ const PrayerRequests = () => {
                       />
                       <div>
                         <span className="text-sm font-medium text-gray-900">Share my name</span>
-                        <p className="text-xs text-gray-600">
+                        <p className="text-sm text-gray-600">
                           Include my name with the prayer request
                         </p>
                       </div>
@@ -277,7 +277,7 @@ const PrayerRequests = () => {
                       />
                       <div>
                         <span className="text-sm font-medium text-gray-900">Keep anonymous</span>
-                        <p className="text-xs text-gray-600">
+                        <p className="text-sm text-gray-600">
                           Don't include my name with the prayer request
                         </p>
                       </div>
@@ -296,7 +296,7 @@ const PrayerRequests = () => {
                         <span className="text-sm font-medium text-gray-900">
                           Add to prayer wall
                         </span>
-                        <p className="text-xs text-gray-600">
+                        <p className="text-sm text-gray-600">
                           Share this request on our public prayer wall for the whole congregation
                         </p>
                       </div>

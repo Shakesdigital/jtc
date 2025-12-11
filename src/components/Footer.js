@@ -155,7 +155,7 @@ const Footer = () => {
                         rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       >
                         <contact.icon className="w-5 h-5 sm:w-6 sm:h-6 mt-0.5 text-church-yellow group-hover:scale-110 group-focus:scale-110 transition-transform duration-200 flex-shrink-0" aria-hidden="true" />
-                        <span className="text-xs sm:text-sm text-left max-w-[200px] sm:max-w-none">{contact.text}</span>
+                        <span className="text-sm sm:text-sm text-left max-w-[200px] sm:max-w-none">{contact.text}</span>
                       </a>
                     </li>
                   ))}
@@ -170,12 +170,12 @@ const Footer = () => {
                 </h4>
                 <ul className="space-y-3">
                   {serviceSchedule.map((schedule, index) => (
-                    <li key={index} className="text-xs sm:text-sm">
+                    <li key={index} className="text-sm sm:text-sm">
                       <div className="flex flex-col items-center sm:items-start">
                         <span className="font-medium text-church-yellow text-sm sm:text-base">{schedule.day}</span>
                       </div>
                       <div className="text-gray-300">{schedule.time}</div>
-                      <div className="text-gray-400 text-xs">{schedule.service}</div>
+                      <div className="text-gray-400 text-sm">{schedule.service}</div>
                     </li>
                   ))}
                 </ul>
@@ -188,13 +188,13 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-gray-600">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0 gap-4">
-            <div className="flex items-center space-x-2 text-gray-400 text-xs sm:text-sm text-center lg:text-left order-1 lg:order-1">
+            <div className="flex items-center space-x-2 text-gray-400 text-sm sm:text-sm text-center lg:text-left order-1 lg:order-1">
               <span>© {currentYear} Arise Jinja Town Church. All rights reserved.</span>
             </div>
 
             {/* Partnership Banners */}
             <div className="order-3 lg:order-2 flex flex-col sm:flex-row items-center gap-3">
-              <span className="text-gray-400 font-medium text-xs sm:text-sm whitespace-nowrap">In Partnership with</span>
+              <span className="text-gray-400 font-medium text-sm sm:text-sm whitespace-nowrap">In Partnership with</span>
               
               {/* Four12 Global */}
               <a
@@ -248,7 +248,7 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center lg:justify-end gap-1 text-gray-400 text-xs sm:text-sm text-center lg:text-right order-2 lg:order-3">
+            <div className="flex flex-wrap items-center justify-center lg:justify-end gap-1 text-gray-400 text-sm sm:text-sm text-center lg:text-right order-2 lg:order-3">
               <span>Designed and Powered by</span>
               <a
                 href="https://www.shakesdigital.com"

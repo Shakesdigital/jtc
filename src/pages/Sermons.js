@@ -311,17 +311,17 @@ const Sermons = () => {
                           </div>
                         </div>
                         {sermon.isFeatured && (
-                          <div className="absolute top-4 right-4 bg-church-yellow text-church-sage-dark px-3 py-1 rounded-full text-xs font-bold">
+                          <div className="absolute top-4 right-4 bg-church-yellow text-church-sage-dark px-3 py-1 rounded-full text-sm font-bold">
                             FEATURED
                           </div>
                         )}
                         <div className="absolute bottom-4 left-4 flex items-center space-x-3">
-                          <div className="flex items-center bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
-                            <FiClock className="w-3 h-3 mr-1" />
+                          <div className="flex items-center bg-black bg-opacity-50 text-white px-2 py-1 rounded text-sm">
+                            <FiClock className="w-4 h-4 mr-1" />
                             {sermon.duration}
                           </div>
-                          <div className="flex items-center bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
-                            <FiEye className="w-3 h-3 mr-1" />
+                          <div className="flex items-center bg-black bg-opacity-50 text-white px-2 py-1 rounded text-sm">
+                            <FiEye className="w-4 h-4 mr-1" />
                             {sermon.views}
                           </div>
                         </div>

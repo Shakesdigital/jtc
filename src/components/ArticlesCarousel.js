@@ -98,7 +98,7 @@ const ArticlesCarousel = ({ articles, title = "Related Articles" }) => {
                 </div>
 
                 <div className="p-4">
-                  <div className="text-xs text-church-sage font-semibold mb-2 uppercase tracking-wide">
+                  <div className="text-sm text-church-sage font-semibold mb-2 uppercase tracking-wide">
                     {article.category}
                   </div>
 
@@ -110,7 +110,7 @@ const ArticlesCarousel = ({ articles, title = "Related Articles" }) => {
                     {article.excerpt}
                   </p>
 
-                  <div className="flex items-center text-xs text-gray-500 mb-3">
+                  <div className="flex items-center text-sm text-gray-500 mb-3">
                     <span>{article.author}</span>
                     <span className="mx-2">•</span>
                     <span>{article.date}</span>
