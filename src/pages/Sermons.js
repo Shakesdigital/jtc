@@ -398,35 +398,55 @@ const Sermons = () => {
 
                 {/* Pagination */}
                 {totalPages > 1 && (
-                  <div className="flex items-center justify-center space-x-2">
-                    <button
-                      onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                      disabled={currentPage === 1}
-                      className="px-4 py-2 border border-gray-300 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors duration-200"
-                    >
-                      Previous
-                    </button>
-
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="flex items-center space-x-2">
                       <button
-                        key={page}
-                        onClick={() => setCurrentPage(page)}
-                        className={`px-4 py-2 rounded-lg transition-colors duration-200 ${page === currentPage
-                          ? 'bg-church-sage text-white'
-                          : 'border border-gray-300 hover:bg-gray-50'
-                          }`}
+                        onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                        disabled={currentPage === 1}
+                        className="px-4 py-2 bg-church-sage text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-church-sage-dark transition-all duration-200 font-medium"
                       >
-                        {page}
+                        Previous
                       </button>
-                    ))}
 
-                    <button
-                      onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                      disabled={currentPage === totalPages}
-                      className="px-4 py-2 border border-gray-300 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors duration-200"
-                    >
-                      Next
-                    </button>
+                      <div className="flex items-center space-x-2">
+                        {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
+                          let pageNum;
+                          if (totalPages <= 5) {
+                            pageNum = i + 1;
+                          } else if (currentPage <= 3) {
+                            pageNum = i + 1;
+                          } else if (currentPage >= totalPages - 2) {
+                            pageNum = totalPages - 4 + i;
+                          } else {
+                            pageNum = currentPage - 2 + i;
+                          }
+                          return (
+                            <button
+                              key={pageNum}
+                              onClick={() => setCurrentPage(pageNum)}
+                              className={`w-10 h-10 rounded-lg transition-all duration-200 font-medium ${
+                                pageNum === currentPage
+                                  ? 'bg-church-sage text-white shadow-lg'
+                                  : 'bg-white text-church-gray hover:bg-gray-100 border border-gray-300'
+                              }`}
+                            >
+                              {pageNum}
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      <button
+                        onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                        disabled={currentPage === totalPages}
+                        className="px-4 py-2 bg-church-sage text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-church-sage-dark transition-all duration-200 font-medium"
+                      >
+                        Next
+                      </button>
+                    </div>
+                    <p className="text-sm text-church-gray">
+                      Page {currentPage} of {totalPages}
+                    </p>
                   </div>
                 )}
               </>
