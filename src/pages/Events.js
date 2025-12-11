@@ -44,14 +44,10 @@ const Events = () => {
     return matchesCategory && matchesTag && matchesSearch;
   });
 
-  // Separate upcoming and past events
+  // Filter for upcoming events only
   const upcomingEventsFiltered = filteredEvents.filter(event => {
     return event.displayDate && event.displayDate >= now;
   }).sort((a, b) => a.displayDate - b.displayDate);
-
-  const pastEventsFiltered = filteredEvents.filter(event => {
-    return event.displayDate && event.displayDate < now;
-  }).sort((a, b) => b.displayDate - a.displayDate);
 
   const toggleTag = (tag) => {
     if (selectedTags.includes(tag)) {
@@ -323,77 +319,6 @@ const Events = () => {
             </div>
           </div>
 
-          {/* Past Events */}
-          {pastEventsFiltered.length > 0 && (
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-church-sage-dark mb-6 sm:mb-8 text-center">Past Events</h2>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {pastEventsFiltered.map((event, index) => (
-                  <motion.div
-                    key={event.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-300 opacity-75"
-                  >
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={event.image}
-                        alt={event.title}
-                        className="w-full h-48 object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                      <div className="absolute top-4 right-4 bg-gray-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                        PAST
-                      </div>
-                    </div>
-
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-church-sage-dark mb-3">{event.title}</h3>
-
-                      <div className="space-y-2 mb-4">
-                        <div className="flex items-center text-sm text-church-gray">
-                          <FiCalendar className="w-4 h-4 mr-2 text-church-gray" />
-                          {event.date}
-                        </div>
-                        <div className="flex items-center text-sm text-church-gray">
-                          <FiClock className="w-4 h-4 mr-2 text-church-gray" />
-                          {event.time}
-                        </div>
-                        <div className="flex items-center text-sm text-church-gray">
-                          <FiMapPin className="w-4 h-4 mr-2 text-church-gray" />
-                          {event.location}
-                        </div>
-                      </div>
-
-                      <p className="text-church-gray mb-4 line-clamp-3">
-                        {event.excerpt}
-                      </p>
-
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        <span className="px-2 py-1 bg-gray-200 text-gray-600 text-xs rounded-full">
-                          {event.category}
-                        </span>
-                        {event.tags.map(tag => (
-                          <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      <Link
-                        to={`/events/${event.slug}`}
-                        className="w-full bg-gray-400 hover:bg-gray-500 text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
-                      >
-                        View Details
-                      </Link>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </section>
     </div>
