@@ -197,20 +197,6 @@ const Home = () => {
           <FiChevronRight className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
         </button>
 
-        {/* Carousel Indicators */}
-        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3" role="tablist" aria-label="Carousel slides">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-church-yellow focus:ring-offset-2 ${index === currentSlide ? 'bg-church-yellow scale-125' : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-                }`}
-              aria-label={`Go to slide ${index + 1}`}
-              aria-selected={index === currentSlide}
-              role="tab"
-            />
-          ))}
-        </div>
 
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 lg:py-16">
@@ -338,22 +324,6 @@ const Home = () => {
                 <div className="ministry-card-content">
                   <h3 className="text-xl font-bold text-church-sage-dark mb-3">{ministry.title}</h3>
                   <p className="text-church-gray mb-6 leading-relaxed ministry-card-description">{ministry.description}</p>
-
-                  <div className="ministry-card-actions">
-                    <Link
-                      to={
-                        ministry.title === "Children Ministry" ? "/ministries/childrens-ministry" :
-                          ministry.title === "Worship Ministry" ? "/ministries/worship-ministry" :
-                            ministry.title === "Family Groups Ministry" ? "/ministries/family-groups" :
-                              ministry.title === "Discipleship Equip Ministry" ? "/ministries/discipleship-equip" :
-                                "/ministries"
-                      }
-                      className="inline-flex items-center text-church-sage hover:text-church-sage-dark font-semibold transition-colors duration-300"
-                    >
-                      Learn More
-                      <FiArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
                 </div>
               </motion.div>
             ))}

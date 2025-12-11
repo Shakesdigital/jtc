@@ -7,7 +7,7 @@
 
 .carousel-container {
   position: relative;
-  padding: 0 10px;
+  padding: 0;
 }
 
 .carousel-track {
@@ -88,7 +88,7 @@
 /* Desktop (769px+) */
 @media (min-width: 769px) {
   .carousel-container {
-    padding: 0 80px;
+    padding: 0;
   }
   
   .carousel-card-image {
@@ -120,7 +120,7 @@
 /* Large Desktop (1280px+) */
 @media (min-width: 1280px) {
   .carousel-container {
-    padding: 0 100px;
+    padding: 0;
   }
   
   .carousel-nav-prev {
@@ -135,7 +135,7 @@
 /* Tablet (481px–768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .carousel-container {
-    padding: 0 20px;
+    padding: 0;
   }
   
   .carousel-card-image {
@@ -159,7 +159,7 @@
 /* Mobile (320px–480px) */
 @media (max-width: 480px) {
   .carousel-container {
-    padding: 0 1rem;
+    padding: 0;
   }
   
   .carousel-card {
@@ -353,7 +353,7 @@
 /* Very large screens */
 @media (min-width: 1536px) {
   .carousel-container {
-    padding: 0 120px;
+    padding: 0;
   }
   
   .carousel-card-image {

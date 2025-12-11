@@ -117,22 +117,22 @@ const ContentCarousel = ({
       </div>
       
       <div className="carousel-card-content">
-        <h3 className="text-lg font-bold text-church-sage-dark mb-2 line-clamp-2">{sermon.title}</h3>
-        <p className="text-sm text-church-gray mb-3">{sermon.speaker}</p>
-        <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{sermon.description}</p>
+        <h3 className="text-xl font-bold text-church-sage-dark mb-2 line-clamp-2">{sermon.title}</h3>
+        <p className="text-base text-church-gray mb-3">{sermon.speaker}</p>
+        <p className="text-base text-church-gray mb-6 leading-relaxed line-clamp-3">{sermon.description}</p>
         
         <div className="flex justify-center space-x-4">
           <Link to="/sermons/archive" className="flex items-center space-x-1 text-church-sage hover:text-church-sage-dark transition-colors duration-300">
-            <FiVolume2 className="w-4 h-4" />
-            <span className="text-sm font-medium">Listen</span>
+            <FiVolume2 className="w-5 h-5" />
+            <span className="text-base font-medium">Listen</span>
           </Link>
           <Link to="/sermons/archive" className="flex items-center space-x-1 text-church-sage hover:text-church-sage-dark transition-colors duration-300">
-            <FiPlay className="w-4 h-4" />
-            <span className="text-sm font-medium">Watch</span>
+            <FiPlay className="w-5 h-5" />
+            <span className="text-base font-medium">Watch</span>
           </Link>
           <button className="flex items-center space-x-1 text-church-sage hover:text-church-sage-dark transition-colors duration-300">
-            <FiShare2 className="w-4 h-4" />
-            <span className="text-sm font-medium">Share</span>
+            <FiShare2 className="w-5 h-5" />
+            <span className="text-base font-medium">Share</span>
           </button>
         </div>
       </div>
@@ -151,13 +151,13 @@ const ContentCarousel = ({
       </div>
       
       <div className="carousel-card-content">
-        <h3 className="text-lg font-bold text-church-sage-dark mb-2 line-clamp-2">{article.title}</h3>
-        <p className="text-xs text-church-sage mb-3 font-medium">By {article.author || 'Church Staff'}</p>
-        <p className="text-sm text-church-gray mb-6 leading-relaxed line-clamp-3">{article.excerpt}</p>
+        <h3 className="text-xl font-bold text-church-sage-dark mb-2 line-clamp-2">{article.title}</h3>
+        <p className="text-sm text-church-sage mb-3 font-medium">By {article.author || 'Church Staff'}</p>
+        <p className="text-base text-church-gray mb-6 leading-relaxed line-clamp-3">{article.excerpt}</p>
         
         <Link 
           to={article.slug ? `/resources/articles/${article.slug}` : '/resources/articles/archive'}
-          className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
+          className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-base text-center py-3 rounded-lg transition-all duration-300 block"
         >
           Read Article
         </Link>
