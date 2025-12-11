@@ -347,8 +347,7 @@ const Home = () => {
           subtitle="Be inspired by God's word through our powerful messages and teachings"
           items={recentSermons}
           type="sermons"
-          autoScroll={true}
-          scrollInterval={5000}
+          autoScroll={false}
           ctaLink="/sermons/archive"
           ctaText="View All Sermons"
         />
@@ -361,8 +360,7 @@ const Home = () => {
           subtitle="Discover inspiring articles by Richard van de Ruit and other spiritual resources to deepen your faith journey"
           items={sampleArticles}
           type="articles"
-          autoScroll={true}
-          scrollInterval={5000}
+          autoScroll={false}
           ctaLink="/articles"
           ctaText="View All Articles"
         />

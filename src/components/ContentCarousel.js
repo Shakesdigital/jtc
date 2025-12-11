@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   FiChevronLeft, 
@@ -28,6 +28,7 @@ const ContentCarousel = ({
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [slideDirection, setSlideDirection] = useState('next');
 
   // Determine items per view based on screen size
   useEffect(() => {
@@ -52,6 +53,7 @@ const ContentCarousel = ({
 
   // Navigation functions
   const handleNext = useCallback(() => {
+    setSlideDirection('next');
     const currentMaxIndex = Math.max(0, Math.ceil(items.length / itemsPerView) - 1);
     setCurrentIndex((prev) => (prev >= currentMaxIndex ? 0 : prev + 1));
   }, [items.length, itemsPerView]);
@@ -70,6 +72,7 @@ const ContentCarousel = ({
   }, [autoScroll, scrollInterval, isHovered, handleNext]);
 
   const handlePrev = () => {
+    setSlideDirection('prev');
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
 
@@ -302,34 +305,26 @@ const ContentCarousel = ({
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="carousel-items-container"
-              >
-                <div className={`carousel-items grid gap-6 ${
-                  itemsPerView === 1 ? 'grid-cols-1' :
-                  itemsPerView === 2 ? 'grid-cols-1 md:grid-cols-2' :
-                  itemsPerView === 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' :
-                  'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
-                }`}>
-                  {getVisibleItems().map((item, index) => (
-                    <motion.div
-                      key={item.id || index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                    >
-                      {renderCard(item)}
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            </AnimatePresence>
+            <motion.div 
+              key={currentIndex}
+              initial={{ x: slideDirection === 'next' ? 100 : -100 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="carousel-items-container"
+            >
+              <div className={`carousel-items grid gap-6 ${
+                itemsPerView === 1 ? 'grid-cols-1' :
+                itemsPerView === 2 ? 'grid-cols-1 md:grid-cols-2' :
+                itemsPerView === 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' :
+                'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+              }`}>
+                {getVisibleItems().map((item, index) => (
+                  <div key={item.id || index}>
+                    {renderCard(item)}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
 
           {/* Mobile Navigation Buttons (Below carousel) */}
