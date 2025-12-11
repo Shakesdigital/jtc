@@ -328,8 +328,8 @@ const SermonDetail = () => {
             >
               <h2 className="text-2xl font-bold text-church-sage-dark mb-6">About This Sermon</h2>
               <div className="prose prose-lg max-w-none text-church-gray">
-                <p className="text-lg leading-relaxed mb-4">{sermon.summary}</p>
-                <p className="leading-relaxed">{sermon.description}</p>
+                <p className="text-xl leading-relaxed mb-4">{sermon.summary}</p>
+                <p className="text-base leading-relaxed">{sermon.description}</p>
               </div>
             </motion.div>
 
@@ -345,13 +345,13 @@ const SermonDetail = () => {
                   <FiBookOpen className="mr-3 text-church-sage" />
                   Sermon Notes
                 </h2>
-                <p className="text-church-gray mb-6">
+                <p className="text-base text-church-gray mb-6">
                   Download the sermon notes to follow along, take additional notes, or for further personal study and reflection.
                 </p>
                 <a
                   href={sermon.notesUrl}
                   download={`${sermon.slug}-notes.docx`}
-                  className="inline-flex items-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
+                  className="inline-flex items-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 text-base"
                 >
                   <FiDownload className="mr-2" />
                   Download Notes (DOCX)
@@ -383,10 +383,10 @@ const SermonDetail = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-lg font-bold text-church-sage-dark mb-4">Share This Sermon</h3>
+              <h3 className="text-xl font-bold text-church-sage-dark mb-4">Share This Sermon</h3>
               <button
                 onClick={handleShare}
-                className="w-full flex items-center justify-center bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
+                className="w-full flex items-center justify-center bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold py-3 px-6 rounded-lg transition-colors duration-300 text-base"
               >
                 <FiShare2 className="mr-2" />
                 Share
@@ -400,8 +400,8 @@ const SermonDetail = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-white rounded-xl shadow-lg p-6"
             >
-              <h3 className="text-lg font-bold text-church-sage-dark mb-4">Sermon Details</h3>
-              <div className="space-y-4 text-sm">
+              <h3 className="text-xl font-bold text-church-sage-dark mb-4">Sermon Details</h3>
+              <div className="space-y-4 text-base">
                 <div className="flex items-start">
                   <FiUser className="w-5 h-5 mr-3 text-church-sage flex-shrink-0 mt-0.5" />
                   <div>
@@ -443,7 +443,7 @@ const SermonDetail = () => {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="bg-white rounded-xl shadow-lg p-6"
               >
-                <h3 className="text-lg font-bold text-church-sage-dark mb-4">More Sermons</h3>
+                <h3 className="text-xl font-bold text-church-sage-dark mb-4">More Sermons</h3>
                 <div className="space-y-4">
                   {relatedSermons.map((relatedSermon) => (
                     <Link
@@ -458,10 +458,10 @@ const SermonDetail = () => {
                           className="w-20 h-20 object-cover rounded-lg flex-shrink-0"
                         />
                         <div className="flex-1 min-w-0">
-                          <h4 className="font-semibold text-church-sage-dark group-hover:text-church-sage transition-colors line-clamp-2 text-sm mb-1">
+                          <h4 className="font-semibold text-church-sage-dark group-hover:text-church-sage transition-colors line-clamp-2 text-base mb-1">
                             {relatedSermon.title}
                           </h4>
-                          <p className="text-xs text-church-gray">{relatedSermon.speaker}</p>
+                          <p className="text-sm text-church-gray">{relatedSermon.speaker}</p>
                         </div>
                       </div>
                     </Link>
@@ -469,7 +469,7 @@ const SermonDetail = () => {
                 </div>
                 <Link
                   to="/sermons/archive"
-                  className="mt-4 block text-center text-church-sage hover:text-church-sage-dark font-semibold text-sm transition-colors"
+                  className="mt-4 block text-center text-church-sage hover:text-church-sage-dark font-semibold text-base transition-colors"
                 >
                   View All Sermons →
                 </Link>

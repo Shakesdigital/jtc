@@ -287,7 +287,7 @@ const Sermons = () => {
 
             {paginatedSermons.length > 0 ? (
               <>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                   {paginatedSermons.map((sermon, index) => (
                     <motion.div
                       key={sermon.id}
@@ -328,9 +328,9 @@ const Sermons = () => {
                       </div>
 
                       <div className="p-6">
-                        <div className="flex items-center justify-between text-sm text-church-gray mb-3">
+                        <div className="flex items-center justify-between text-base text-church-gray mb-3">
                           <span className="flex items-center">
-                            <FiCalendar className="w-4 h-4 mr-2" />
+                            <FiCalendar className="w-5 h-5 mr-2" />
                             {new Date(sermon.date).toLocaleDateString('en-US', {
                               year: 'numeric',
                               month: 'short',
@@ -338,26 +338,26 @@ const Sermons = () => {
                             })}
                           </span>
                           <span className="flex items-center">
-                            <FiUser className="w-4 h-4 mr-2" />
+                            <FiUser className="w-5 h-5 mr-2" />
                             {sermon.speaker.split(' ')[1]}
                           </span>
                         </div>
 
-                        <div className="text-xs text-church-sage font-semibold mb-2 uppercase tracking-wide">
+                        <div className="text-sm text-church-sage font-semibold mb-2 uppercase tracking-wide">
                           {sermon.series}
                         </div>
 
-                        <h3 className="text-lg font-bold text-church-sage-dark mb-3 group-hover:text-church-sage transition-colors duration-300 line-clamp-2">
+                        <h3 className="text-xl font-bold text-church-sage-dark mb-3 group-hover:text-church-sage transition-colors duration-300 line-clamp-2">
                           {sermon.title}
                         </h3>
 
-                        <p className="text-church-gray mb-4 text-sm leading-relaxed line-clamp-3">
+                        <p className="text-church-gray mb-4 text-base leading-relaxed line-clamp-3">
                           {sermon.description}
                         </p>
 
                         {sermon.bibleReference && (
-                          <div className="flex items-center text-church-sage font-semibold mb-4 text-sm">
-                            <FiBookOpen className="w-4 h-4 mr-2" />
+                          <div className="flex items-center text-church-sage font-semibold mb-4 text-base">
+                            <FiBookOpen className="w-5 h-5 mr-2" />
                             {sermon.bibleReference}
                           </div>
                         )}
@@ -366,27 +366,27 @@ const Sermons = () => {
                           {sermon.hasAudio && (
                             <Link
                               to={`/sermon/${sermon.slug}`}
-                              className="flex-1 flex items-center justify-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-sm"
+                              className="flex-1 flex items-center justify-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-base"
                             >
-                              <FiHeadphones className="w-4 h-4 mr-2" />
+                              <FiHeadphones className="w-5 h-5 mr-2" />
                               Listen
                             </Link>
                           )}
                           {sermon.hasVideo && (
                             <Link
                               to={`/sermon/${sermon.slug}`}
-                              className="flex-1 flex items-center justify-center bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-sm"
+                              className="flex-1 flex items-center justify-center bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-base"
                             >
-                              <FiPlay className="w-4 h-4 mr-2" />
+                              <FiPlay className="w-5 h-5 mr-2" />
                               Watch
                             </Link>
                           )}
                           {!sermon.hasAudio && !sermon.hasVideo && (
                             <Link
                               to={`/sermon/${sermon.slug}`}
-                              className="flex-1 flex items-center justify-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-sm"
+                              className="flex-1 flex items-center justify-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-base"
                             >
-                              <FiBookOpen className="w-4 h-4 mr-2" />
+                              <FiBookOpen className="w-5 h-5 mr-2" />
                               Read
                             </Link>
                           )}
@@ -468,16 +468,16 @@ const Sermons = () => {
                           className="w-16 h-12 object-cover rounded"
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded">
-                          <FiPlay className="w-4 h-4 text-white" />
+                          <FiPlay className="w-5 h-5 text-white" />
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-semibold text-church-sage-dark line-clamp-2 group-hover:text-church-sage transition-colors duration-200">
+                        <h4 className="text-base font-semibold text-church-sage-dark line-clamp-2 group-hover:text-church-sage transition-colors duration-200">
                           {sermon.title}
                         </h4>
-                        <p className="text-xs text-church-gray mt-1">{sermon.speaker.split(' ')[1]}</p>
-                        <div className="flex items-center text-xs text-church-gray mt-2">
-                          <FiEye className="w-3 h-3 mr-1" />
+                        <p className="text-sm text-church-gray mt-1">{sermon.speaker.split(' ')[1]}</p>
+                        <div className="flex items-center text-sm text-church-gray mt-2">
+                          <FiEye className="w-4 h-4 mr-1" />
                           {sermon.views} views
                         </div>
                       </div>
@@ -506,10 +506,10 @@ const Sermons = () => {
                             <FiPlay className="w-6 h-6 text-white" />
                           </div>
                         </div>
-                        <h4 className="font-semibold text-church-sage-dark text-sm line-clamp-2 group-hover:text-church-sage transition-colors duration-200">
+                        <h4 className="font-semibold text-church-sage-dark text-base line-clamp-2 group-hover:text-church-sage transition-colors duration-200">
                           {sermon.title}
                         </h4>
-                        <p className="text-xs text-church-gray mt-1">{sermon.speaker}</p>
+                        <p className="text-sm text-church-gray mt-1">{sermon.speaker}</p>
                       </div>
                     ))}
                   </div>
@@ -521,18 +521,18 @@ const Sermons = () => {
                 <h3 className="text-xl font-bold mb-3">
                   Subscribe for Sermon Updates
                 </h3>
-                <p className="text-sm opacity-90 mb-4">
+                <p className="text-base opacity-90 mb-4">
                   Get notified when new sermons are uploaded
                 </p>
                 <form className="space-y-3">
                   <input
                     type="email"
                     placeholder="Your email address"
-                    className="w-full px-4 py-2 rounded-lg text-church-sage-dark focus:ring-2 focus:ring-church-yellow focus:outline-none"
+                    className="w-full px-4 py-2 rounded-lg text-church-sage-dark text-base focus:ring-2 focus:ring-church-yellow focus:outline-none"
                   />
                   <button
                     type="submit"
-                    className="w-full bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold py-2 rounded-lg transition-colors duration-300"
+                    className="w-full bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold py-2 rounded-lg transition-colors duration-300 text-base"
                   >
                     Subscribe
                   </button>
