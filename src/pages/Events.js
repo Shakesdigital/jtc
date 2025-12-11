@@ -204,21 +204,21 @@ const Events = () => {
                       <h3 className="text-lg sm:text-xl font-bold text-church-sage-dark mb-3 line-clamp-2">{event.title}</h3>
 
                       <div className="space-y-2 mb-4">
-                        <div className="flex items-center text-xs sm:text-sm text-church-gray">
-                          <FiCalendar className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-church-sage flex-shrink-0" />
+                        <div className="flex items-center text-base text-church-gray">
+                          <FiCalendar className="w-4 h-4 mr-2 text-church-sage flex-shrink-0" />
                           <span className="line-clamp-1">{event.date}</span>
                         </div>
-                        <div className="flex items-center text-xs sm:text-sm text-church-gray">
-                          <FiClock className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-church-sage flex-shrink-0" />
+                        <div className="flex items-center text-base text-church-gray">
+                          <FiClock className="w-4 h-4 mr-2 text-church-sage flex-shrink-0" />
                           <span className="line-clamp-1">{event.time}</span>
                         </div>
-                        <div className="flex items-center text-xs sm:text-sm text-church-gray">
-                          <FiMapPin className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-church-sage flex-shrink-0" />
+                        <div className="flex items-center text-base text-church-gray">
+                          <FiMapPin className="w-4 h-4 mr-2 text-church-sage flex-shrink-0" />
                           <span className="line-clamp-1">{event.location}</span>
                         </div>
                       </div>
 
-                      <p className="text-xs sm:text-sm text-church-gray mb-4 line-clamp-3">
+                      <p className="text-base text-church-gray mb-4 line-clamp-3">
                         {event.excerpt}
                       </p>
 
@@ -277,17 +277,17 @@ const Events = () => {
                     </div>
 
                     <div className="space-y-2 mb-4">
-                      <div className="flex items-center text-xs sm:text-sm text-church-gray">
-                        <FiClock className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-church-sage flex-shrink-0" />
+                      <div className="flex items-center text-base text-church-gray">
+                        <FiClock className="w-4 h-4 mr-2 text-church-sage flex-shrink-0" />
                         <span className="line-clamp-1">{event.time}</span>
                       </div>
-                      <div className="flex items-center text-xs sm:text-sm text-church-gray">
-                        <FiMapPin className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-church-sage flex-shrink-0" />
+                      <div className="flex items-center text-base text-church-gray">
+                        <FiMapPin className="w-4 h-4 mr-2 text-church-sage flex-shrink-0" />
                         <span className="line-clamp-1">{event.location}</span>
                       </div>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-church-gray mb-4 line-clamp-3">
+                    <p className="text-base text-church-gray mb-4 line-clamp-3">
                       {event.excerpt}
                     </p>
 
