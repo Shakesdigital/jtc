@@ -6,8 +6,6 @@ import {
   FiX, 
   FiHome,
   FiUsers,
-  FiHeart,
-  FiCalendar,
   FiVideo,
   FiMail,
   FiBook
