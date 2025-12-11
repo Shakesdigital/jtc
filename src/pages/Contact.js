@@ -408,20 +408,20 @@ const Contact = () => {
                 <div className="space-y-4 sm:space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start space-x-3 sm:space-x-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-church-red bg-opacity-10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-church-red" />
+                      <div className="w-12 h-12 sm:w-12 sm:h-12 bg-church-red bg-opacity-10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <info.icon className="w-6 h-6 sm:w-6 sm:h-6 text-church-red" />
                       </div>
                       <div className="flex-grow min-w-0">
-                        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">{info.title}</h3>
+                        <h3 className="text-lg sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">{info.title}</h3>
                         {info.details.map((detail, idx) => (
-                          <p key={idx} className="text-xs sm:text-sm md:text-base text-gray-600 mb-1 break-words">{detail}</p>
+                          <p key={idx} className="text-sm sm:text-sm md:text-base text-gray-600 mb-1 break-words">{detail}</p>
                         ))}
                         {info.action && (
                           <a
                             href={info.action.href}
                             target={info.action.href.startsWith('http') ? '_blank' : undefined}
                             rel={info.action.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            className="text-xs sm:text-sm md:text-base text-church-red hover:text-church-burgundy font-medium inline-flex items-center mt-2 transition-colors duration-200"
+                            className="text-sm sm:text-sm md:text-base text-church-red hover:text-church-burgundy font-medium inline-flex items-center mt-2 transition-colors duration-200"
                           >
                             {info.action.text}
                           </a>
@@ -434,19 +434,19 @@ const Contact = () => {
 
               {/* Service Schedule */}
               <div className="card p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center">
-                  <FiClock className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-church-red" />
+                <h3 className="text-xl sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center">
+                  <FiClock className="w-6 h-6 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-church-red" />
                   Service Schedule
                 </h3>
                 <div className="space-y-3 sm:space-y-4">
                   {serviceSchedule.map((schedule, index) => (
                     <div key={index} className="border-b border-gray-100 last:border-b-0 pb-3 sm:pb-4 last:pb-0">
-                      <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">{schedule.day}</h4>
+                      <h4 className="text-base sm:text-base font-semibold text-gray-900 mb-2">{schedule.day}</h4>
                       <div className="space-y-1 sm:space-y-2">
                         {schedule.services.map((service, idx) => (
                           <div key={idx} className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
-                            <span className="text-xs sm:text-sm text-gray-600">{service.name}</span>
-                            <span className="text-xs sm:text-sm text-church-red font-medium">{service.time}</span>
+                            <span className="text-sm sm:text-sm text-gray-600">{service.name}</span>
+                            <span className="text-sm sm:text-sm text-church-red font-medium">{service.time}</span>
                           </div>
                         ))}
                       </div>
