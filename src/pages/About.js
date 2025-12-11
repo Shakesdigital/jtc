@@ -119,30 +119,30 @@ const About = () => {
 
   const leadership = [
     {
-      name: 'Pr. Richard',
-      role: 'Senior Leader',
+      name: 'Richard',
+      role: 'Lead Elder',
       image: '/images/pr-richard-latest.jpg',
-      bio: 'Pr. Richard oversees the overall vision and ministries of Jinja Town Church, with a heart for encouraging people to love God and love one another as a faith family community.',
+      bio: 'Richard oversees the overall vision and ministries of Jinja Town Church, with a heart for encouraging people to love God and love one another as a faith family community.',
       contact: '+31627997562'
     },
     {
-      name: 'Pr. Jonathan',
+      name: 'Jonathan',
       role: 'Leader - Discipleship & Outreach',
       image: '/images/pr-jonathan-latest.jpg',
-      bio: 'Pr. Jonathan focuses on discipleship training and evangelism, equipping believers to share the Gospel with confidence and love.',
+      bio: 'Jonathan focuses on discipleship training and evangelism, equipping believers to share the Gospel with confidence and love.',
       contact: '+256784805817'
     },
     {
-      name: 'Pr. Kenneth',
+      name: 'Kenneth',
       role: 'Leader - Worship & Family Groups',
       image: '/images/pr-kenneth-latest.jpg',
-      bio: 'Pr. Kenneth guides our worship ministry and oversees family group coordination, fostering deeper spiritual connections.'
+      bio: 'Kenneth guides our worship ministry and oversees family group coordination, fostering deeper spiritual connections.'
     },
     {
-      name: 'Elder Joshua',
-      role: 'Elder - Men\'s Ministry',
+      name: 'Joshua',
+      role: 'Men\'s Ministry',
       image: '/images/elder-joshua-latest.jpg',
-      bio: 'Elder Joshua supports men\'s ministry and serves on the elders\' council, providing spiritual guidance and mentorship.',
+      bio: 'Joshua supports men\'s ministry and serves on the elders\' council, providing spiritual guidance and mentorship.',
       contact: '+256774775058'
     }
   ];
