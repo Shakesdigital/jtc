@@ -26,7 +26,7 @@ const Resources = () => {
   // Carousel component
   const ResourceCarousel = ({ items, type, sectionTitle, archivePath }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerView = window.innerWidth >= 1024 ? 4 : window.innerWidth >= 768 ? 3 : window.innerWidth >= 640 ? 2 : 1;
+    const itemsPerView = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
     const maxIndex = Math.max(0, items.length - itemsPerView);
 
     const nextSlide = () => {
@@ -98,7 +98,6 @@ const Resources = () => {
               >
                 {items.map((item, index) => (
                   <div key={item.id} className={`flex-shrink-0 px-3 ${
-                    itemsPerView === 4 ? 'w-1/4' : 
                     itemsPerView === 3 ? 'w-1/3' : 
                     itemsPerView === 2 ? 'w-1/2' : 'w-full'
                   }`}>
@@ -119,28 +118,28 @@ const Resources = () => {
                       </div>
                       
                       <div className="p-6">
-                        <h3 className="text-lg font-bold text-church-sage-dark mb-2 line-clamp-2">{item.title}</h3>
+                        <h3 className="text-xl font-bold text-church-sage-dark mb-2 line-clamp-2">{item.title}</h3>
 
                         {type === 'sermons' && item.speaker && (
-                          <p className="text-sm text-church-sage mb-2 font-medium">By {item.speaker}</p>
+                          <p className="text-base text-church-sage mb-2 font-medium">By {item.speaker}</p>
                         )}
 
                         {type === 'articles' && item.author && (
-                          <p className="text-sm text-church-sage mb-2 font-medium">By {item.author}</p>
+                          <p className="text-base text-church-sage mb-2 font-medium">By {item.author}</p>
                         )}
 
-                        <p className="text-sm text-church-gray mb-4 line-clamp-3">
+                        <p className="text-base text-church-gray mb-4 line-clamp-3">
                           {type === 'sermons' ? item.summary :
                            type === 'articles' ? item.excerpt :
                            item.excerpt}
                         </p>
 
                         {type === 'sermons' && item.dateFormatted && (
-                          <p className="text-xs text-church-sage mb-3 font-medium">{item.dateFormatted}</p>
+                          <p className="text-sm text-church-sage mb-3 font-medium">{item.dateFormatted}</p>
                         )}
 
                         {type === 'events' && item.date && (
-                          <p className="text-xs text-church-sage mb-3 font-medium">{item.date}</p>
+                          <p className="text-sm text-church-sage mb-3 font-medium">{item.date}</p>
                         )}
 
                         <Link
@@ -149,7 +148,7 @@ const Resources = () => {
                             type === 'articles' ? `/resources/articles/${item.slug}` :
                             type === 'events' ? `/events/${item.slug}` : '#'
                           }
-                          className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-center py-3 rounded-lg transition-all duration-300 block"
+                          className="w-full bg-church-sage hover:bg-church-sage-dark text-white font-semibold text-base text-center py-3 rounded-lg transition-all duration-300 block"
                         >
                           {type === 'sermons' ? 'Listen to Sermon' :
                            type === 'articles' ? 'Read Article' :
