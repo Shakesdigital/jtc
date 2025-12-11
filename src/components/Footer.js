@@ -242,7 +242,7 @@ const Footer = () => {
                 <div className="bg-white rounded-full px-3 sm:px-4 md:px-6 py-2 shadow-md hover:shadow-lg transition-all duration-200 group-hover:scale-[1.02]">
                   <div className="flex items-center justify-center">
                     <img
-                      src="/images/Arise Africa international.jpg"
+                      src="/images/arise-africa-international.jpg"
                       alt="Arise Africa International"
                       className="h-5 sm:h-6 md:h-8 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
                       loading="lazy"
