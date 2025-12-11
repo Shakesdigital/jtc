@@ -28,9 +28,9 @@ const Header = () => {
       icon: FiHome,
     },
     {
-      name: 'Ministries',
-      href: '/ministries',
-      icon: FiHeart,
+      name: 'About',
+      href: '/about',
+      icon: FiUsers,
     },
     {
       name: 'Sermons',
@@ -38,24 +38,9 @@ const Header = () => {
       icon: FiVideo,
     },
     {
-      name: 'Events',
-      href: '/events',
-      icon: FiCalendar,
-    },
-    {
-      name: 'About',
-      href: '/about',
-      icon: FiUsers,
-    },
-    {
       name: 'Resources',
       href: '/resources',
       icon: FiBook,
-    },
-    {
-      name: 'Give',
-      href: '/give',
-      icon: FiHeart,
     },
     {
       name: 'Contact',
