@@ -10,7 +10,7 @@ import {
   FiMusic
 } from 'react-icons/fi';
 import { articlesData } from '../data/articlesData';
-import { getAllEvents } from '../data/eventsData';
+import { getUpcomingEvents } from '../data/eventsData';
 import { getAllSermons } from '../data/sermonsData';
 
 const Resources = () => {
@@ -20,8 +20,8 @@ const Resources = () => {
   // Get articles from articlesData - sorted by publish date (most recent first)
   const articles = [...articlesData].sort((a, b) => b.publishDate - a.publishDate);
 
-  // Get all events from eventsData
-  const events = getAllEvents();
+  // Get only upcoming events from eventsData
+  const events = getUpcomingEvents(10); // Get up to 10 upcoming events
 
   // Carousel component
   const ResourceCarousel = ({ items, type, sectionTitle, archivePath }) => {
@@ -220,11 +220,11 @@ const Resources = () => {
         archivePath="/articles"
       />
 
-      {/* All Events Section */}
+      {/* Upcoming Events Section */}
       <ResourceCarousel
         items={events}
         type="events"
-        sectionTitle="All Events"
+        sectionTitle="Upcoming Events"
         archivePath="/events"
       />
 
