@@ -19,8 +19,6 @@ const Footer = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Ministries', href: '/ministries' },
     { name: 'Events', href: '/events' },
-    { name: 'Sermons', href: '/church-service/sermons' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -28,8 +26,6 @@ const Footer = () => {
     { name: 'All Resources', href: '/resources' },
     { name: 'All Article Reads', href: '/articles' },
     { name: 'All Events', href: '/events' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Sermons', href: '/church-service/sermons' },
   ];
 
   const socialLinks = [
