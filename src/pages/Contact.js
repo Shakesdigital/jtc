@@ -9,7 +9,9 @@ import {
   FiSend, 
   FiCheck,
   FiUser,
-  FiMessageSquare
+  FiMessageSquare,
+  FiHeart,
+  FiCheckCircle
 } from 'react-icons/fi';
 import { apiService } from '../services/api';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -454,6 +456,166 @@ const Contact = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Give Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-church-sage-dark mb-6">
+              Support Our <span className="text-church-yellow">Ministry</span>
+            </h2>
+            <div className="w-20 h-1 bg-church-yellow rounded-full mx-auto mb-6"></div>
+            <p className="text-lg text-church-gray max-w-3xl mx-auto">
+              Your generosity transforms lives in Jinja and beyond. Give securely through Mobile Money and support worship, community outreach, youth programs, and missions.
+            </p>
+          </motion.div>
+
+          {/* MoMo Payment Instructions */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 md:p-8 border-2 border-church-sage shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <h3 className="text-2xl md:text-3xl font-bold text-church-sage-dark text-center mb-6">
+                Give via Mobile Money (MoMo)
+              </h3>
+
+              <div className="space-y-6">
+                {/* Recipient Number */}
+                <div className="text-center bg-church-yellow bg-opacity-10 rounded-xl p-5">
+                  <p className="text-sm font-semibold text-church-gray mb-2">Send your tithes and offerings to:</p>
+                  <div className="bg-church-sage text-white px-6 py-3 rounded-full font-bold text-2xl inline-block">
+                    614144
+                  </div>
+                  <p className="text-xs text-church-gray mt-2">Arise Jinja Town Church</p>
+                </div>
+
+                {/* Instructions */}
+                <div className="space-y-5">
+                  <h4 className="text-lg font-semibold text-church-sage-dark text-center mb-4">How to Give:</h4>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-gray-50 rounded-xl p-5">
+                      <p className="font-semibold text-church-sage-dark mb-3 text-center">Method 1: Using MoMo App</p>
+                      <ol className="space-y-2 text-sm text-church-gray">
+                        <li className="flex items-start">
+                          <span className="font-bold text-church-sage mr-2">•</span>
+                          <span>Open your Mobile Money app</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="font-bold text-church-sage mr-2">•</span>
+                          <span>Select "Send Money" or "Transfer"</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="font-bold text-church-sage mr-2">•</span>
+                          <span>Enter <strong className="text-church-sage-dark">614144</strong> as recipient</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="font-bold text-church-sage mr-2">•</span>
+                          <span>Enter amount and confirm with PIN</span>
+                        </li>
+                      </ol>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-xl p-5">
+                      <p className="font-semibold text-church-sage-dark mb-3 text-center">Method 2: Using USSD Code</p>
+                      <ol className="space-y-2 text-sm text-church-gray">
+                        <li className="flex items-start">
+                          <span className="font-bold text-church-sage mr-2">•</span>
+                          <span>Dial <strong className="text-church-sage-dark">*165*3#</strong> on your phone</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="font-bold text-church-sage mr-2">•</span>
+                          <span>Select "Send Money" from menu</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="font-bold text-church-sage mr-2">•</span>
+                          <span>Enter <strong className="text-church-sage-dark">614144</strong> as recipient</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="font-bold text-church-sage mr-2">•</span>
+                          <span>Enter amount and complete with PIN</span>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div className="bg-church-yellow bg-opacity-20 rounded-lg p-4 text-center">
+                    <p className="text-church-sage-dark font-semibold text-sm">
+                      Fast, secure, and no fees for you. Your entire gift goes directly to ministry work!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Bible Verse */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <div className="p-6 bg-gray-50 rounded-xl shadow-md border-l-4 border-church-yellow">
+              <p className="text-lg italic text-church-gray text-center">
+                "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion,
+                for God loves a cheerful giver."
+              </p>
+              <p className="text-sm font-semibold text-church-sage-dark mt-3 text-center">— 2 Corinthians 9:7</p>
+            </div>
+          </motion.div>
+
+          {/* Trust Elements */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap items-center justify-center gap-6 text-church-gray text-sm mt-12"
+          >
+            <div className="flex items-center">
+              <FiCheckCircle className="w-5 h-5 text-church-sage mr-2" />
+              <span>Secure & Confidential</span>
+            </div>
+            <div className="flex items-center">
+              <FiCheckCircle className="w-5 h-5 text-church-sage mr-2" />
+              <span>100% Goes to Ministry</span>
+            </div>
+            <div className="flex items-center">
+              <FiCheckCircle className="w-5 h-5 text-church-sage mr-2" />
+              <span>Trusted by Our Community</span>
+            </div>
+          </motion.div>
+
+          {/* Link to Full Give Page */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center mt-10"
+          >
+            <a
+              href="/give"
+              className="inline-flex items-center bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-bold text-lg px-10 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              <FiHeart className="w-5 h-5 mr-2" />
+              Learn More About Giving
+            </a>
+          </motion.div>
         </div>
       </section>
 
