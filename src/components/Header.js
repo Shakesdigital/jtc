@@ -63,7 +63,7 @@ const Header = () => {
             <img
               src="/logo.png"
               alt="Arise Jinja Town Church Logo"
-              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 object-contain"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain"
               loading="eager"
             />
           </Link>

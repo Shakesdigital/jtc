@@ -33,7 +33,7 @@
   body {
     @apply font-sans text-church-sage-dark bg-white;
     /* Global recommended font size for better readability */
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
     /* Enable smooth scrolling on touch devices */
     -webkit-overflow-scrolling: touch;

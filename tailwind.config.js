@@ -62,7 +62,7 @@ module.exports = {
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1.5' }],      // 12px - small labels, captions
         'sm': ['0.875rem', { lineHeight: '1.5' }],     // 14px - secondary text
-        'base': ['1.25rem', { lineHeight: '1.6' }],    // 20px - body text (matches body font-size)
+        'base': ['1.125rem', { lineHeight: '1.6' }],   // 18px - body text (matches body font-size)
         'lg': ['1.375rem', { lineHeight: '1.6' }],     // 22px - slightly larger body text
         'xl': ['1.5rem', { lineHeight: '1.5' }],       // 24px - lead text
         '2xl': ['1.75rem', { lineHeight: '1.4' }],     // 28px - small headings
