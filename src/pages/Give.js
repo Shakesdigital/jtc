@@ -258,24 +258,6 @@ const Give = () => {
             </motion.div>
           </div>
 
-          {/* International Givers Note */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-gray-50 rounded-xl p-6 border-l-4 border-church-sage mb-16"
-          >
-            <p className="text-church-gray text-center">
-              <strong className="text-church-sage-dark">International Givers:</strong> We're adding global payment options soon!
-              For bank transfer details, please contact us at{' '}
-              <a href="mailto:info@jtc.shakesdigital.com" className="text-church-sage hover:text-church-sage-dark underline">
-                info@jtc.shakesdigital.com
-              </a>
-              {' '}or call us at <a href="tel:+256772123456" className="text-church-sage hover:text-church-sage-dark underline">+256 772 123 456</a>.
-            </p>
-          </motion.div>
-
           {/* Trust Elements */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
