@@ -126,17 +126,17 @@ const ArticleDetail = () => {
 
         {/* Article Header */}
         <header className="mb-10">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
+          <div className="flex flex-wrap items-center gap-4 text-base text-gray-600 mb-6">
             <div className="flex items-center">
-              <FiUser className="w-4 h-4 mr-1.5" />
+              <FiUser className="w-5 h-5 mr-1.5" />
               <span>{article.author}</span>
             </div>
             <div className="flex items-center">
-              <FiCalendar className="w-4 h-4 mr-1.5" />
+              <FiCalendar className="w-5 h-5 mr-1.5" />
               <span>{article.date}</span>
             </div>
             <div className="flex items-center">
-              <FiClock className="w-4 h-4 mr-1.5" />
+              <FiClock className="w-5 h-5 mr-1.5" />
               <span>{readingTime} min read</span>
             </div>
           </div>
@@ -145,7 +145,7 @@ const ArticleDetail = () => {
             {article.title}
           </h1>
           
-          <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+          <p className="text-2xl text-gray-700 mb-8 leading-relaxed">
             {article.excerpt}
           </p>
           
@@ -153,7 +153,7 @@ const ArticleDetail = () => {
             {article.tags.map((tag) => (
               <span 
                 key={tag} 
-                className="bg-church-sage bg-opacity-10 text-church-sage px-3 py-1 rounded-full text-sm font-medium"
+                className="bg-church-sage bg-opacity-10 text-church-sage px-3 py-1 rounded-full text-base font-medium"
               >
                 {tag}
               </span>
@@ -172,7 +172,7 @@ const ArticleDetail = () => {
 
         {/* Article Content */}
         <div 
-          className="prose prose-lg max-w-none text-gray-700"
+          className="prose prose-xl max-w-none text-gray-700"
           style={{
             '--tw-prose-body': 'rgb(55, 65, 81)',
             '--tw-prose-headings': 'rgb(17, 24, 39)',
@@ -198,7 +198,7 @@ const ArticleDetail = () => {
         <div className="border-t border-gray-200 pt-8 mt-12">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-              <p className="text-gray-700 font-medium">Share this article:</p>
+              <p className="text-gray-700 font-medium text-base">Share this article:</p>
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => handleShare('twitter')}
@@ -233,16 +233,16 @@ const ArticleDetail = () => {
                   className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-church-sage text-white hover:bg-church-sage-dark transition-all duration-300 ml-0 sm:ml-2"
                   title="Download PDF"
                 >
-                  <FiDownload className="w-4 h-4" />
-                  <span className="text-sm font-medium">Download PDF</span>
+                  <FiDownload className="w-5 h-5" />
+                  <span className="text-base font-medium">Download PDF</span>
                 </button>
               </div>
             </div>
             <div className="text-left sm:text-right">
-              <p className="text-gray-700 text-sm">
+              <p className="text-gray-700 text-base">
                 By {article.author}
               </p>
-              <p className="text-gray-500 text-xs mt-1">
+              <p className="text-gray-500 text-sm mt-1">
                 Courtesy of Four12 Global
               </p>
             </div>

@@ -294,7 +294,7 @@ const Articles = () => {
 
             {paginatedArticles.length > 0 ? (
               <>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                   {paginatedArticles.map((article, index) => (
                     <motion.div
                       key={article.id}
@@ -335,34 +335,34 @@ const Articles = () => {
                       </div>
 
                       <div className="p-6">
-                        <div className="flex items-center justify-between text-sm text-church-gray mb-3">
+                        <div className="flex items-center justify-between text-base text-church-gray mb-3">
                           <span className="flex items-center">
-                            <FiCalendar className="w-4 h-4 mr-2" />
+                            <FiCalendar className="w-5 h-5 mr-2" />
                             {article.date}
                           </span>
                           <span className="flex items-center">
-                            <FiUser className="w-4 h-4 mr-2" />
+                            <FiUser className="w-5 h-5 mr-2" />
                             {article.author.split(' ')[0]}
                           </span>
                         </div>
 
-                        <div className="text-xs text-church-sage font-semibold mb-2 uppercase tracking-wide">
+                        <div className="text-sm text-church-sage font-semibold mb-2 uppercase tracking-wide">
                           {article.category}
                         </div>
 
-                        <h3 className="text-lg font-bold text-church-sage-dark mb-3 group-hover:text-church-sage transition-colors duration-300 line-clamp-2">
+                        <h3 className="text-xl font-bold text-church-sage-dark mb-3 group-hover:text-church-sage transition-colors duration-300 line-clamp-2">
                           {article.title}
                         </h3>
 
-                        <p className="text-church-gray mb-4 text-sm leading-relaxed line-clamp-3">
+                        <p className="text-church-gray mb-4 text-base leading-relaxed line-clamp-3">
                           {article.excerpt}
                         </p>
 
                         {article.tags && article.tags.length > 0 && (
                           <div className="flex flex-wrap gap-1 mb-4">
                             {article.tags.slice(0, 3).map((tag, idx) => (
-                              <span key={idx} className="inline-flex items-center text-xs bg-gray-100 text-church-gray px-2 py-1 rounded">
-                                <FiTag className="w-3 h-3 mr-1" />
+                              <span key={idx} className="inline-flex items-center text-sm bg-gray-100 text-church-gray px-2 py-1 rounded">
+                                <FiTag className="w-4 h-4 mr-1" />
                                 {tag}
                               </span>
                             ))}
@@ -371,9 +371,9 @@ const Articles = () => {
 
                         <Link
                           to={`/resources/articles/${article.slug}`}
-                          className="flex items-center justify-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-sm w-full"
+                          className="flex items-center justify-center bg-church-sage hover:bg-church-sage-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 text-base w-full"
                         >
-                          <FiBookOpen className="w-4 h-4 mr-2" />
+                          <FiBookOpen className="w-5 h-5 mr-2" />
                           Read More
                         </Link>
                       </div>
@@ -383,35 +383,55 @@ const Articles = () => {
 
                 {/* Pagination */}
                 {totalPages > 1 && (
-                  <div className="flex items-center justify-center space-x-2">
-                    <button
-                      onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                      disabled={currentPage === 1}
-                      className="px-4 py-2 border border-gray-300 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors duration-200"
-                    >
-                      Previous
-                    </button>
-
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="flex items-center space-x-2">
                       <button
-                        key={page}
-                        onClick={() => setCurrentPage(page)}
-                        className={`px-4 py-2 rounded-lg transition-colors duration-200 ${page === currentPage
-                          ? 'bg-church-sage text-white'
-                          : 'border border-gray-300 hover:bg-gray-50'
-                          }`}
+                        onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                        disabled={currentPage === 1}
+                        className="px-4 py-2 bg-church-sage text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-church-sage-dark transition-all duration-200 font-medium"
                       >
-                        {page}
+                        Previous
                       </button>
-                    ))}
 
-                    <button
-                      onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                      disabled={currentPage === totalPages}
-                      className="px-4 py-2 border border-gray-300 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50 transition-colors duration-200"
-                    >
-                      Next
-                    </button>
+                      <div className="flex items-center space-x-2">
+                        {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => {
+                          let pageNum;
+                          if (totalPages <= 5) {
+                            pageNum = i + 1;
+                          } else if (currentPage <= 3) {
+                            pageNum = i + 1;
+                          } else if (currentPage >= totalPages - 2) {
+                            pageNum = totalPages - 4 + i;
+                          } else {
+                            pageNum = currentPage - 2 + i;
+                          }
+                          return (
+                            <button
+                              key={pageNum}
+                              onClick={() => setCurrentPage(pageNum)}
+                              className={`w-10 h-10 rounded-lg transition-all duration-200 font-medium ${
+                                pageNum === currentPage
+                                  ? 'bg-church-sage text-white shadow-lg'
+                                  : 'bg-white text-church-gray hover:bg-gray-100 border border-gray-300'
+                              }`}
+                            >
+                              {pageNum}
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      <button
+                        onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                        disabled={currentPage === totalPages}
+                        className="px-4 py-2 bg-church-sage text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-church-sage-dark transition-all duration-200 font-medium"
+                      >
+                        Next
+                      </button>
+                    </div>
+                    <p className="text-sm text-church-gray">
+                      Page {currentPage} of {totalPages}
+                    </p>
                   </div>
                 )}
               </>
@@ -457,16 +477,16 @@ const Articles = () => {
                           className="w-16 h-12 object-cover rounded"
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded">
-                          <FiBookOpen className="w-4 h-4 text-white" />
+                          <FiBookOpen className="w-5 h-5 text-white" />
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-semibold text-church-sage-dark line-clamp-2 group-hover:text-church-sage transition-colors duration-200">
+                        <h4 className="text-base font-semibold text-church-sage-dark line-clamp-2 group-hover:text-church-sage transition-colors duration-200">
                           {article.title}
                         </h4>
-                        <p className="text-xs text-church-gray mt-1">{article.author.split(' ')[0]}</p>
-                        <div className="flex items-center text-xs text-church-gray mt-2">
-                          <FiEye className="w-3 h-3 mr-1" />
+                        <p className="text-sm text-church-gray mt-1">{article.author.split(' ')[0]}</p>
+                        <div className="flex items-center text-sm text-church-gray mt-2">
+                          <FiEye className="w-4 h-4 mr-1" />
                           {article.views} reads
                         </div>
                       </div>
@@ -499,10 +519,10 @@ const Articles = () => {
                             <FiBookOpen className="w-6 h-6 text-white" />
                           </div>
                         </div>
-                        <h4 className="font-semibold text-church-sage-dark text-sm line-clamp-2 group-hover:text-church-sage transition-colors duration-200">
+                        <h4 className="font-semibold text-church-sage-dark text-base line-clamp-2 group-hover:text-church-sage transition-colors duration-200">
                           {article.title}
                         </h4>
-                        <p className="text-xs text-church-gray mt-1">{article.author}</p>
+                        <p className="text-sm text-church-gray mt-1">{article.author}</p>
                       </Link>
                     ))}
                   </div>
@@ -542,18 +562,18 @@ const Articles = () => {
                 <h3 className="text-xl font-bold mb-3">
                   Subscribe for Article Updates
                 </h3>
-                <p className="text-sm opacity-90 mb-4">
+                <p className="text-base opacity-90 mb-4">
                   Get notified when new articles are published
                 </p>
                 <form className="space-y-3">
                   <input
                     type="email"
                     placeholder="Your email address"
-                    className="w-full px-4 py-2 rounded-lg text-church-sage-dark focus:ring-2 focus:ring-church-yellow focus:outline-none"
+                    className="w-full px-4 py-2 rounded-lg text-church-sage-dark text-base focus:ring-2 focus:ring-church-yellow focus:outline-none"
                   />
                   <button
                     type="submit"
-                    className="w-full bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold py-2 rounded-lg transition-colors duration-300"
+                    className="w-full bg-church-yellow hover:bg-church-yellow-dark text-church-sage-dark font-semibold py-2 rounded-lg transition-colors duration-300 text-base"
                   >
                     Subscribe
                   </button>
