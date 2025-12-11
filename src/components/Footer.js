@@ -196,8 +196,11 @@ const Footer = () => {
               <span>© {currentYear} Arise Jinja Town Church. All rights reserved.</span>
             </div>
 
-            {/* Partnership Banner */}
-            <div className="order-3 lg:order-2">
+            {/* Partnership Banners */}
+            <div className="order-3 lg:order-2 flex flex-col sm:flex-row items-center gap-3">
+              <span className="text-gray-400 font-medium text-xs sm:text-sm whitespace-nowrap">In Partnership with</span>
+              
+              {/* Four12 Global */}
               <a
                 href="https://four12global.com/"
                 target="_blank"
@@ -206,8 +209,7 @@ const Footer = () => {
                 aria-label="Visit Four12 Global website"
               >
                 <div className="bg-white rounded-full px-3 sm:px-4 md:px-6 py-2 shadow-md hover:shadow-lg transition-all duration-200 group-hover:scale-[1.02]">
-                  <div className="flex items-center space-x-2 sm:space-x-3">
-                    <span className="text-gray-800 font-medium text-xs sm:text-sm whitespace-nowrap">In Partnership with</span>
+                  <div className="flex items-center justify-center">
                     <img
                       src="/images/four12-logo.webp"
                       alt="Four12 Global"
@@ -224,6 +226,37 @@ const Footer = () => {
                       style={{display: 'none'}}
                     >
                       Four12 Global
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              {/* Arise Africa International */}
+              <a
+                href="https://ariseafricainternational.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-block focus:outline-none focus:ring-2 focus:ring-church-yellow focus:ring-offset-2 focus:ring-offset-gray-700 rounded-full"
+                aria-label="Visit Arise Africa International website"
+              >
+                <div className="bg-white rounded-full px-3 sm:px-4 md:px-6 py-2 shadow-md hover:shadow-lg transition-all duration-200 group-hover:scale-[1.02]">
+                  <div className="flex items-center justify-center">
+                    <img
+                      src="/images/Arise Africa international.jpg"
+                      alt="Arise Africa International"
+                      className="h-5 sm:h-6 md:h-8 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
+                      loading="lazy"
+                      onError={(e) => {
+                        console.error('Arise Africa logo failed to load:', e.target.src);
+                        e.target.style.display = 'none';
+                        e.target.nextElementSibling.style.display = 'inline';
+                      }}
+                    />
+                    <span
+                      className="text-xs sm:text-sm font-bold text-church-sage group-hover:text-church-sage-dark transition-colors duration-200"
+                      style={{display: 'none'}}
+                    >
+                      Arise Africa International
                     </span>
                   </div>
                 </div>
