@@ -92,28 +92,28 @@ const About = () => {
 
   const values = [
     {
-      icon: FiHeart,
-      title: 'Inclusivity',
-      description: 'Everyone is welcome, just as they are. Encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ.',
-      image: '/images/value-inclusivity.jpg'
-    },
-    {
-      icon: FiUsers,
-      title: 'Community',
-      description: 'Building strong bonds through fellowship and service. We are a richly diverse family united in faith.',
-      image: '/images/value-community.jpg'
-    },
-    {
       icon: FiTarget,
-      title: 'Growth',
+      title: 'Discipleship / Growth in Christ',
       description: 'Equipping believers to live out their faith daily, discovering their purpose in Christ through discipleship and service.',
       image: '/images/value-growth.jpg'
     },
     {
+      icon: FiUsers,
+      title: 'Community / Fellowship',
+      description: 'Building strong bonds through fellowship and service. We are a richly diverse family united in faith.',
+      image: '/images/value-community.jpg'
+    },
+    {
       icon: FiStar,
-      title: 'Outreach',
+      title: 'Outreach / Evangelism',
       description: 'Sharing the Gospel locally and beyond through church planting, community development, pastor training, and global missions.',
       image: '/images/value-outreach.jpg'
+    },
+    {
+      icon: FiHeart,
+      title: 'Come As You Are',
+      description: 'Everyone is welcome, just as they are. Encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ.',
+      image: '/images/value-inclusivity.jpg'
     }
   ];
 
@@ -291,17 +291,7 @@ const About = () => {
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   <strong>Our mission is rooted in John 3:16 and 1 Timothy 2:1-4:</strong> "All people can be saved if they believe in Christ Jesus our Lord."
-                  We strive to reach out to ALL people in Jinja Town, encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ. Whether you're new to faith or a lifelong believer, we invite you to experience the life-changing love of Jesus with us.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Our <span className="text-gradient">Story</span>
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Our story began almost by accident. We initially held Sunday services for the staff at the Arise Africa  Guesthouse, as they were unable to attend church due to work commitments. As attendance grew, we recognized a deep hunger
-                  in the Jinja community for a church that embraces diversity and unity in Christ. Today, we are a richly diverse family, with people of various ethnicities, backgrounds, and life experiences coming together to worship, pray, and serve.
+                  We strive to reach out to ALL people in Jinja Town, encouraging people to love God and love one another and to grow together as one faith family community in Jesus Christ. We believe in the transformative power of being born again through faith in Christ, experiencing new life and spiritual renewal. Whether you're new to faith or a lifelong believer, we invite you to experience the life-changing love of Jesus with us and discover what it means to be made new in Him.
                 </p>
               </div>
 
