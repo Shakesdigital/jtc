@@ -206,9 +206,9 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="firstName"
-                      className="flex items-center text-xs sm:text-sm font-medium text-gray-700 mb-2"
+                      className="flex items-center text-sm sm:text-base font-medium text-gray-700 mb-2"
                     >
-                      <FiUser className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+                      <FiUser className="w-4 h-4 sm:w-4 sm:h-4 mr-2" />
                       First Name
                     </label>
                     <input
@@ -217,21 +217,21 @@ const Contact = () => {
                       {...register('firstName', {
                         required: 'First name is required'
                       })}
-                      className={`form-input text-sm sm:text-base ${errors.firstName ? 'border-red-500' : ''}`}
+                      className={`form-input text-base sm:text-base ${errors.firstName ? 'border-red-500' : ''}`}
                       placeholder="Enter your first name"
                       disabled={isSubmitting}
                     />
                     {errors.firstName && (
-                      <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.firstName.message}</p>
+                      <p className="text-red-500 text-sm sm:text-sm mt-1">{errors.firstName.message}</p>
                     )}
                   </div>
 
                   <div>
                     <label
                       htmlFor="lastName"
-                      className="flex items-center text-xs sm:text-sm font-medium text-gray-700 mb-2"
+                      className="flex items-center text-sm sm:text-base font-medium text-gray-700 mb-2"
                     >
-                      <FiUser className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+                      <FiUser className="w-4 h-4 sm:w-4 sm:h-4 mr-2" />
                       Last Name
                     </label>
                     <input
@@ -240,12 +240,12 @@ const Contact = () => {
                       {...register('lastName', {
                         required: 'Last name is required'
                       })}
-                      className={`form-input text-sm sm:text-base ${errors.lastName ? 'border-red-500' : ''}`}
+                      className={`form-input text-base sm:text-base ${errors.lastName ? 'border-red-500' : ''}`}
                       placeholder="Enter your last name"
                       disabled={isSubmitting}
                     />
                     {errors.lastName && (
-                      <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.lastName.message}</p>
+                      <p className="text-red-500 text-sm sm:text-sm mt-1">{errors.lastName.message}</p>
                     )}
                   </div>
                 </div>
@@ -253,9 +253,9 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="flex items-center text-xs sm:text-sm font-medium text-gray-700 mb-2"
+                    className="flex items-center text-sm sm:text-base font-medium text-gray-700 mb-2"
                   >
-                    <FiMail className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+                    <FiMail className="w-4 h-4 sm:w-4 sm:h-4 mr-2" />
                     Email Address
                   </label>
                   <input
@@ -268,28 +268,28 @@ const Contact = () => {
                         message: 'Please enter a valid email address'
                       }
                     })}
-                    className={`form-input text-sm sm:text-base ${errors.email ? 'border-red-500' : ''}`}
+                    className={`form-input text-base sm:text-base ${errors.email ? 'border-red-500' : ''}`}
                     placeholder="Enter your email address"
                     disabled={isSubmitting}
                   />
                   {errors.email && (
-                    <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.email.message}</p>
+                    <p className="text-red-500 text-sm sm:text-sm mt-1">{errors.email.message}</p>
                   )}
                 </div>
 
                 <div>
                   <label
                     htmlFor="phone"
-                    className="flex items-center text-xs sm:text-sm font-medium text-gray-700 mb-2"
+                    className="flex items-center text-sm sm:text-base font-medium text-gray-700 mb-2"
                   >
-                    <FiPhone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+                    <FiPhone className="w-4 h-4 sm:w-4 sm:h-4 mr-2" />
                     Phone Number (Optional)
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     {...register('phone')}
-                    className="form-input text-sm sm:text-base"
+                    className="form-input text-base sm:text-base"
                     placeholder="Enter your phone number"
                     disabled={isSubmitting}
                   />
@@ -298,9 +298,9 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="flex items-center text-xs sm:text-sm font-medium text-gray-700 mb-2"
+                    className="flex items-center text-sm sm:text-base font-medium text-gray-700 mb-2"
                   >
-                    <FiMessageSquare className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+                    <FiMessageSquare className="w-4 h-4 sm:w-4 sm:h-4 mr-2" />
                     Subject
                   </label>
                   <select
@@ -308,7 +308,7 @@ const Contact = () => {
                     {...register('subject', {
                       required: 'Please select a subject'
                     })}
-                    className={`form-input text-sm sm:text-base ${errors.subject ? 'border-red-500' : ''}`}
+                    className={`form-input text-base sm:text-base ${errors.subject ? 'border-red-500' : ''}`}
                     disabled={isSubmitting}
                   >
                     <option value="">Select a subject</option>
@@ -322,14 +322,14 @@ const Contact = () => {
                     <option value="other">Other</option>
                   </select>
                   {errors.subject && (
-                    <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.subject.message}</p>
+                    <p className="text-red-500 text-sm sm:text-sm mt-1">{errors.subject.message}</p>
                   )}
                 </div>
 
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-xs sm:text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm sm:text-base font-medium text-gray-700 mb-2"
                   >
                     Message
                   </label>
@@ -339,12 +339,12 @@ const Contact = () => {
                     {...register('message', {
                       required: 'Please enter your message'
                     })}
-                    className={`form-textarea text-sm sm:text-base ${errors.message ? 'border-red-500' : ''}`}
+                    className={`form-textarea text-base sm:text-base ${errors.message ? 'border-red-500' : ''}`}
                     placeholder="Tell us how we can help you..."
                     disabled={isSubmitting}
                   />
                   {errors.message && (
-                    <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.message.message}</p>
+                    <p className="text-red-500 text-sm sm:text-sm mt-1">{errors.message.message}</p>
                   )}
                 </div>
 
@@ -560,23 +560,6 @@ const Contact = () => {
               </div>
             </motion.div>
           </div>
-
-          {/* Bible Verse */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
-          >
-            <div className="p-6 bg-gray-50 rounded-xl shadow-md border-l-4 border-church-yellow">
-              <p className="text-lg italic text-church-gray text-center">
-                "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion,
-                for God loves a cheerful giver."
-              </p>
-              <p className="text-sm font-semibold text-church-sage-dark mt-3 text-center">— 2 Corinthians 9:7</p>
-            </div>
-          </motion.div>
 
           {/* Trust Elements */}
           <motion.div

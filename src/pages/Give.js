@@ -144,14 +144,6 @@ const Give = () => {
               </motion.div>
             </div>
 
-            {/* Bible Verse */}
-            <div className="mt-12 p-6 bg-white rounded-xl shadow-md border-l-4 border-church-yellow">
-              <p className="text-lg italic text-church-gray">
-                "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion,
-                for God loves a cheerful giver."
-              </p>
-              <p className="text-sm font-semibold text-church-sage-dark mt-2">— 2 Corinthians 9:7</p>
-            </div>
           </motion.div>
         </div>
       </section>
