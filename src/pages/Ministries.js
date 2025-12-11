@@ -1,26 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  FiClock,
-  FiArrowRight,
-  FiMail,
-  FiSend
-} from 'react-icons/fi';
+import { FiClock } from 'react-icons/fi';
 
 const Ministries = () => {
-  // Static ministry data based on the church's actual ministries
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    ministry: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
-
   const ministries = [
     {
       id: 1,
@@ -59,33 +41,6 @@ const Ministries = () => {
       highlights: ["Bible Study", "Leadership Training", "Mentorship", "Spiritual Gifts Discovery"]
     }
   ];
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission (replace with actual API call)
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', phone: '', ministry: '', message: '' });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-
-    // Clear status after 3 seconds
-    setTimeout(() => setSubmitStatus(null), 3000);
-  };
 
   return (
     <div className="min-h-screen bg-white w-full overflow-x-hidden">
