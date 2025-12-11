@@ -233,11 +233,11 @@ const Footer = () => {
 
               {/* Arise Africa International */}
               <a
-                href="https://ariseafricainternational.org/"
+                href="https://www.facebook.com/ariseafricaint/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-block focus:outline-none focus:ring-2 focus:ring-church-yellow focus:ring-offset-2 focus:ring-offset-gray-700 rounded-full"
-                aria-label="Visit Arise Africa International website"
+                aria-label="Visit Arise Africa International Facebook page"
               >
                 <div className="bg-white rounded-full px-3 sm:px-4 md:px-6 py-2 shadow-md hover:shadow-lg transition-all duration-200 group-hover:scale-[1.02]">
                   <div className="flex items-center justify-center">
